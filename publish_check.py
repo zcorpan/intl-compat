@@ -1,0 +1,136 @@
+# Scans for things that mustn't be published: every file in every commit (run before every push),
+# or with --staged only the staged files (hooks/pre-commit runs that on every commit).
+# Usage: python3 publish_check.py [--staged] [--crawl=GLOB,...] [EXTRA_TERM ...]
+#   Terms: the tester's public IP, city, region, country name and demonym, one per line in
+#   .publish-terms (gitignored), plus any EXTRA_TERM. --crawl: files of crawl data, scanned only for
+#   tokens GitHub's secret scanning alerts on (public client IDs too; redact them), and whose URLs
+#   are allowed anywhere (default queries/**/*,crawl/**/*; only files in git count, so gitignored
+#   downloads don't slow every commit). Bug links (Bugzilla and WebKit `show_bug.cgi?id=N`) are
+#   allowed too.
+# Without --staged, also fails while HEAD's LICENSE has an unfilled <placeholder>.
+# Exits 1 and lists matches if anything is found. Fix it in history (not just HEAD) before pushing.
+# With --staged, staged images are OCRed with ocr_check.py and checked for nudity with nsfw_check.py,
+# and review images or screenshots of pages in nsfw.csv are blocked (other images aren't scanned).
+# Images that passed are remembered by blob and terms, so a retried commit doesn't recheck them.
+import csv, glob, hashlib, os, re, subprocess, sys, tempfile
+
+
+def run(*args):
+    return subprocess.run(args, capture_output=True, text=True).stdout.strip()
+
+
+terms = {t for t in [
+    os.path.expanduser('~'), os.environ.get('USER', ''),
+    run('git', 'config', 'user.email'),
+    run('gcloud', 'config', 'get-value', 'account'),
+    run('gcloud', 'config', 'get-value', 'project'),
+    *(open('.publish-terms').read().splitlines() if os.path.exists('.publish-terms') else []),
+    *[a for a in sys.argv[1:] if not a.startswith('--')],
+] if len(t.strip()) > 2}
+patterns = {
+    'personal or billing info': re.compile('|'.join(re.escape(t) for t in terms), re.I),
+    'BigQuery job ID': re.compile(r'bq[j]ob_|job_[A-Za-z0-9_-]{20,}'),
+    'IP address': re.compile(r'(?<![\d./v])(?!127\.0\.0\.1|0\.0\.0\.0)(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)(?![\d.])|(?<![\w/:])(?:[0-9a-f]{1,4}:){4,7}[0-9a-f]{1,4}\b', re.I),
+    'URL with query string': re.compile(r'[a-z][a-z0-9+.-]*://[^\s"\'<>,\\]+\?[^\s"\'<>,\\]*[=&][^\s"\'<>,\\]*'),
+    'country-specific host': re.compile(r'\b(?:google|bing|yahoo|amazon|facebook)\.(?:co\.)?(?!com\b|net\b|org\b)[a-z]{2}\b'),
+    # Base64 mixes cases and digits; a long URL slug doesn't.
+    'long base64 payload': re.compile(r'(?<!base64,)(?<![A-Za-z0-9+/_-])(?=[a-z0-9+/_-]*[A-Z])(?=[A-Z0-9+/_-]*[a-z])(?=[A-Za-z+/_-]*\d)[A-Za-z0-9+/_-]{200,}={0,2}'),
+    'long hex payload': re.compile(r'(?<![0-9A-Za-z])[0-9A-Fa-f]{200,}(?![0-9A-Za-z])'),
+}
+# Tokens that web pages and URLs carry and GitHub alerts on in public repos, see
+# https://docs.github.com/en/code-security/secret-scanning/introduction/supported-secret-scanning-patterns
+secret_patterns = {'secret-scanner pattern': re.compile('|'.join([
+    r'\bwx[0-9a-f]{16}\b',  # WeChat app ID
+    r'AIza[0-9A-Za-z_-]{35}',  # Google API key
+    r'\b[ps]k\.eyJ[0-9A-Za-z_-]{20,}',  # Mapbox
+    r'\b(?:AKIA|ASIA)[0-9A-Z]{16}\b',  # AWS
+    r'\b[rs]k_live_[0-9A-Za-z]{20,}',  # Stripe
+    r'\bxox[abposr]-[0-9A-Za-z-]{10,}',  # Slack
+    r'\bgh[pousr]_[0-9A-Za-z]{36}|\bgithub_pat_[0-9A-Za-z_]{40,}',  # GitHub
+    r'-----BEGIN [A-Z ]*PRIVATE KEY-----',
+]))}
+# URLs from the crawl data were recorded by HTTP Archive, not by us; allow them anywhere.
+crawl_globs = next((a[8:] for a in sys.argv[1:] if a.startswith('--crawl=')), 'queries/**/*,crawl/**/*').split(',')
+in_git = set(run('git', 'ls-files').splitlines())
+crawl_files = {f for g in crawl_globs for f in glob.glob(g, recursive=True) if f in in_git}
+allowed = set()
+# Bug tracker links carry only a bug number in the query string.
+bug_link = re.compile(r'https://(?:bugzilla\.mozilla\.org|bugs\.webkit\.org)/show_bug\.cgi\?id=\d+(?:#c?\d+)?[).,;:!\]]*')
+for path in crawl_files:
+    allowed.update(patterns['URL with query string'].findall(open(path, errors='replace').read()))
+if '--staged' in sys.argv:
+    # (label, path, blob sha) for each staged file
+    blobs = [('staged', path, meta.split()[1]) for meta, path in
+             (l.split('\t', 1) for l in run('git', 'ls-files', '-s').splitlines())]
+    blobs = [b for b in blobs if b[1] in set(run('git', 'diff', '--cached', '--name-only', '--diff-filter=ACMR').splitlines())]
+else:
+    blobs = [(commit[:8], path, meta.split()[2]) for commit in run('git', 'rev-list', '--all').split()
+             for meta, path in (l.split('\t', 1) for l in run('git', 'ls-tree', '-r', commit).splitlines())]
+seen, found, images = set(), 0, []
+for label, path, sha in blobs:
+    crawl = path in crawl_files
+    # Third-party libraries copied from a CDN for repro pages, not live-load output.
+    if (sha, crawl) in seen or '/vendor/' in '/' + path:
+        continue
+    seen.add((sha, crawl))
+    blob = subprocess.run(['git', 'cat-file', 'blob', sha], capture_output=True).stdout
+    if b'\0' in blob[:8000]:
+        if not crawl and path.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')):
+            images.append((path, blob, sha))
+        continue
+    text = blob.decode('utf8', 'replace')
+    for name, pat in (secret_patterns if crawl else patterns | secret_patterns).items():
+        hits = [h for h in pat.findall(text) if h not in allowed and not bug_link.fullmatch(h)]
+        if hits:
+            found += 1
+            print(f'{label} {path}: {name} ({len(hits)}): {hits[0][:80]!r}')
+if '--staged' in sys.argv and images:
+    import nsfw_check, ocr_check
+    cache = run('git', 'rev-parse', '--git-path', 'publish-check-clean')
+    key = hashlib.sha1('\n'.join(sorted(terms)).encode()).hexdigest()[:12]
+    clean = set(open(cache).read().split()) if os.path.exists(cache) else set()
+    for path, blob, sha in images:
+        # out*/review/<idx>.png and out*/shots/<idx>-<tag>.png of pages flagged in out*/nsfw.csv
+        out_dir, kind = os.path.split(os.path.dirname(path))[0], os.path.basename(os.path.dirname(path))
+        m = re.match(r'\d+', os.path.basename(path))
+        flagged = os.path.join(out_dir, 'nsfw.csv')
+        if kind in ('review', 'shots') and m and os.path.exists(flagged) and \
+                int(m.group()) in {int(r['idx']) for r in csv.DictReader(open(flagged))}:
+            print(f'staged {path}: page is in {flagged}; commit a repro test instead')
+            found += 1
+    with tempfile.TemporaryDirectory() as tmp:
+        files, shas, hit = {}, {}, set()
+        for i, (path, blob, sha) in enumerate(images):
+            if f'{sha}-{key}' in clean:
+                continue
+            f = os.path.join(tmp, f'{i}{os.path.splitext(path)[1]}')
+            files[f], shas[f] = path, sha
+            open(f, 'wb').write(blob)
+        if not ocr_check.backend():
+            print('no OCR backend for staged images: pip install pyobjc-framework-Vision (macOS) or install tesseract')
+            found += 1
+        else:
+            for f, x, y, line in ocr_check.check(list(files)):
+                print(f'staged {files[f]}: OCR text (tile at x {x:.2f}, y {y:.2f}): {line[:80]!r}')
+                found += 1
+                hit.add(f)
+        if not nsfw_check.backend():
+            print('no nudity check for staged images: pip install nudenet')
+            found += 1
+        else:
+            for f, x, y, label, score in nsfw_check.check(list(files)):
+                print(f'staged {files[f]}: adult content ({label} {score}, tile at x {x:.2f}, y {y:.2f})')
+                found += 1
+                hit.add(f)
+        if ocr_check.backend() and nsfw_check.backend():
+            with open(cache, 'a') as c:
+                c.writelines(f'{shas[f]}-{key}\n' for f in files if f not in hit)
+if '--staged' not in sys.argv:
+    placeholder = re.search(r'<[^<>\n]+>', run('git', 'show', 'HEAD:LICENSE'))
+    if placeholder:
+        print(f'LICENSE: unfilled placeholder {placeholder.group()!r}')
+        found += 1
+if not os.path.exists('.publish-terms'):
+    print('no .publish-terms: add the tester\'s public IP, city, region, country name and demonym')
+    found += 1
+sys.exit(1 if found else 0)
