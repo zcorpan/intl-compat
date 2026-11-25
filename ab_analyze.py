@@ -6,11 +6,13 @@ usage: python3 ab_analyze.py out-ab-*/results.jsonl > out-ab/flagged.md
 import collections, json, re, sys
 
 NUM = re.compile(r'\d+')
+# Per-visit ids (blob URLs, UUIDs, hex tokens) would make the same error look new.
+IDS = re.compile(r'blob:\S+|\b[0-9a-f]{8}-[0-9a-f-]{27}\b|\b(?=[a-z]*\d)[0-9a-f]{8,}\b', re.I)
 
 
 def errs(v):
-    # Page errors and console errors/warnings, numbers masked (IDs, timestamps).
-    return {NUM.sub('N', e) for e in v.get('pageErrors', []) + [c for c in v.get('console', []) if c.startswith('error')]}
+    # Page errors and console errors/warnings, ids and numbers masked (timestamps).
+    return {NUM.sub('N', IDS.sub('ID', e)) for e in v.get('pageErrors', []) + [c for c in v.get('console', []) if c.startswith('error')]}
 
 
 def tokens(v):

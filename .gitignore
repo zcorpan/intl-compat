@@ -29,3 +29,10 @@ dossiers2c/
 dossiers3/
 dossiers3c/
 out-ab-*/*.before-update.*
+out-ab-*/review/
+out-ab-*/passback-samples.jsonl
+out-detect2/results.jsonl
+out-ab-henri-chrome-headed/
+out-detect2/groups-locale*.json
+out-detect2/groups-new.json
+out-detect2/review-batches.json

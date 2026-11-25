@@ -15,7 +15,7 @@
     if (Array.isArray(loc) && typeof loc[0] === 'string' && originalOf.has(loc[0])) return [originalOf.get(loc[0]), ...loc.slice(1)];
     return undefined;
   };
-  const show = v => { try { return typeof v === 'string' ? v : JSON.stringify(v); } catch (e) { return String(v); } };
+  const show = v => { try { return typeof v === 'string' ? v : JSON.stringify(v) ?? String(v); } catch (e) { return String(v); } };
   const record = (what, got, want) => {
     stats.calls++;
     const g = show(got), w = show(want);
