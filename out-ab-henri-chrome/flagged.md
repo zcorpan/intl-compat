@@ -1,3 +1,10 @@
+Each page was loaded three times per run: A and A2 as a user with that locale, B the same with the option
+applied to `resolvedOptions().locale` (see the README). Listed: pages where B differs from A by more than A2 does.
+Flags: `text x→y` is the page-text similarity A↔A2 → A↔B (1 = identical); `pixels x→y` the share of differing
+screenshot pixels A↔A2 → A↔B; `new errors` JS errors only in B; `rewrites` the reads B changed. Classes as in the
+README, plus `locale-unsettled` (an `Intl.Locale` use reviewers couldn't settle) and `luxon-static` (Luxon found in
+the response bodies). Flagged doesn't mean broken: each was checked by hand, and the README lists what B changed.
+
 ## chrome en-US B3: 189 pages, B rewrote a read on 133, 3 failed in all visits, 29 flagged
 
 | idx | class | rewrites | flags |
