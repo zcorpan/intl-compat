@@ -114,7 +114,7 @@ B1 on 101 pages ([ab_pages.py](ab_pages.py): all passthrough, tag-sensitive, fal
 | Setup | Pages with a rewritten read | Pass a rewritten tag back during load | Output differs | Examples |
 |---|---|---|---|---|
 | Chrome `en-GB` | 76 of 101 | 8 | 4 | `19 November 2026` → `November 19, 2026`, `23 Nov 2026` → `Nov 23, 2026`, `Sept` → `Sep` |
-| Firefox `ar-EG` | not counted | 3 | 3 | `قبل ٥ أيام` → `قبل 5 أيام` in a reviews widget, visible in the page text |
+| Firefox `ar-EG` | 77 of 101 | 3 | 3 | `قبل ٥ أيام` → `قبل 5 أيام` in a reviews widget, visible in the page text |
 | Firefox `en-FI` | 75 of 101 | (run before the recorder) | | |
 
 The other 47 passthrough pages didn't pass the value back during load: their libraries format later, or with the site's own locale. Pixel diffs were mostly lazy loading, which is why the recorder above was added. A sign-in page that showed only a spinner in Chrome's B rendered normally in Firefox's. Challenge tokens (`cf-turnstile-response`, `h-captcha-response`, `g-recaptcha-response`) were empty in every visit, so load-only visits can't tell whether a changed locale fails a challenge.
