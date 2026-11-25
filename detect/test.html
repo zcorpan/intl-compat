@@ -1,0 +1,15 @@
+<!doctype html><meta charset=utf-8><title>trace test</title>
+<script>
+// Exercises every way a script can read the resolved locale; detect.py --selftest checks each is logged.
+function viaProp() { return new Intl.DateTimeFormat().resolvedOptions().locale; }
+function viaDestructure() { const { locale } = new Intl.NumberFormat('pt-BR').resolvedOptions(); return locale; }
+function viaSpread() { return { ...Intl.Collator('zh-TW').resolvedOptions() }.locale; }
+function viaJSON() { return JSON.stringify(new Intl.Segmenter('is-IS').resolvedOptions()); }
+function viaAssign() { return Object.assign({}, new Intl.PluralRules(['en-GB']).resolvedOptions()); }
+function timeZoneOnly() { return Intl.DateTimeFormat().resolvedOptions().timeZone; }
+function viaSupported() { return Intl.NumberFormat.supportedLocalesOf(['en-US', 'xx']); }
+const r = [viaProp(), viaDestructure(), viaSpread(), viaJSON(), viaAssign(), timeZoneOnly(), viaSupported(),
+           String(Intl.DateTimeFormat.prototype.resolvedOptions), Intl.DateTimeFormat.name,
+           new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat, Intl.DateTimeFormat.length];
+document.title = JSON.stringify(r);
+</script>

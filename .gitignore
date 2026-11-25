@@ -16,3 +16,6 @@ prompt/
 # Untrusted page material for reviewers (dossiers, beautified code)
 dossiers/
 .claude/settings.local.json
+queries/*.err
+out-detect/*.log
+env/*.err
