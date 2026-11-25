@@ -1,0 +1,693 @@
+group,key,pages,category,vendor,note,source
+0,challenges.cloudflare.com/(turnstile),1055,bot-or-fraud,Cloudflare Turnstile,signal in a bot-challenge or fraud-scoring payload,earlier review
+1,js.hs-analytics.net/analytics,300,fingerprint-id,FingerprintJS in HubSpot analytics,component of a hashed visitor or ad ID,earlier review
+2,assets.calendly.com/assets/booking/js/booking-<h>.js,67,passthrough,Luxon (Calendly),default locale passed back to Intl,review
+3,static.parastorage.com/services/<id>/<v>/<id>.bundle.min.js,54,passthrough,intl-messageformat in Wix widgets,stored as a library default locale and passed back to Intl,earlier review
+4,newassets.hcaptcha.com/hsw.js,52,bot-or-fraud,hCaptcha,signal in a bot-challenge or fraud-scoring payload,earlier review
+5,c.adsco.re/,48,bot-or-fraud,Adscore,signal in a bot-challenge or fraud-scoring payload,earlier review
+6,cdn.tsyndicate.com/sdk,41,fingerprint-id,TrafficStars ad SDK,fed back with -u-nu-latn to derive a 12/24 h signal,earlier review
+7,tag.digitaltarget.ru/adcm.js,26,fingerprint-id,Amber ID (FingerprintJS-derived),component of a hashed visitor or ad ID,earlier review
+8,static.parastorage.com/services/pro-gallery-tpa/<v>/<id>.bundle.min.js,24,passthrough,intl-messageformat (Wix pro-gallery),stored as a library default locale and passed back to Intl,earlier review
+9,events.framer.com/script,22,analytics,Framer events,"sent as telemetry, not used locally",earlier review
+10,patient.klara.com/assets/luxon-Bu6Dt1mS.js,18,passthrough,Luxon,matched code of an earlier group,fingerprint
+11,beacon.riskified.com/,18,bot-or-fraud,Riskified beacon,signal in a bot-challenge or fraud-scoring payload,earlier review
+12,cdn-scripts.signifyd.com/o/lite.js,15,bot-or-fraud,Signifyd,signal in a bot-challenge or fraud-scoring payload,earlier review
+13,cdn.shopify.com/extensions/<h>-<n>-740e-b0fe-<h>/<id>/assets/ip-blocker-embed.min.js,13,tag-sensitive,Blockify (Shopify IP blocker app),"exact zh-HK/zh-TW comparison, ORed with navigator.language and time zone, picks HK/TW/CN area for a store IP-block app",earlier review
+14,marketplace-web-assets.vinted.com/_next/static/chunks/2l9v12psf6cwd.js,13,bot-or-fraud,Vinted device fingerprint,signal in a bot-challenge or fraud-scoring payload,earlier review
+15,static.parastorage.com/services/form-app/<v>/<id>.bundle.min.js,12,passthrough,intl-messageformat (Wix form-app),stored as a library default locale and passed back to Intl,earlier review
+16,cdn.shopify.com/extensions/<h>-ca2b-<n>-<n>-<h>/<id>/assets/ip-blocker-embed.min.js,12,tag-sensitive,Blockify (Shopify IP blocker app),matched code of an earlier group,fingerprint
+17,f.vimeocdn.com/p/<v>/js/player.module.js,11,analytics,Vimeo player telemetry,"sent as telemetry, not used locally",earlier review
+18,assets.squarespace.com/universal/scripts-compressed/<n>-<h>-min.en-US.js,11,analytics,Sentry CultureContext,"sent as telemetry, not used locally",earlier review
+19,apps.mews.com/distributor/release/production/<v>/distributor-app.js,10,passthrough,Luxon (Mews booking),stored as a library default locale and passed back to Intl,earlier review
+20,sf16-website-login.neutral.ttwstatic.com/obj/<id>/webmssdk/<v>/webmssdk.js,10,bot-or-fraud,TikTok webmssdk,anti-bot VM signal,review
+21,cdn.traffmovie.com/libs/e.js,9,fingerprint-id,traffmovie ad network,component of a hashed visitor or ad ID,earlier review
+22,cdn.shopify.com/extensions/<h>-127e-76c4-ba23-<h>/<id>/assets/fingerprint.<h>.chunk.js,8,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+23,v3.traincdn.com/sys-static/shared-assets/Desktop/__shared_base-app_<h>.js,7,fingerprint-id,1xBet platform,device fingerprint,review
+24,bridge.shopflo.com/js/shopflo.bundle.js,7,fingerprint-id,Shopflo checkout,component of a hashed visitor or ad ID,earlier review
+25,deo.shopeemobile.com/shopee/<id>/assets/sfu-stable.<h>.<n>.js,7,bot-or-fraud,Shopee anti-fraud SDK,signal in a bot-challenge or fraud-scoring payload,earlier review
+26,connect.podium.com/widget.js,6,passthrough,react-intl (Podium),stored as a library default locale and passed back to Intl,earlier review
+27,ab-ct.ru/fields.js,6,bot-or-fraud,-,signal payload with webdriver canvas webgl,review
+28,(no url frame: inline/eval),5,unclear,inline/eval,script body not captured,earlier review
+29,js.prosopo.io/js/<h>-CKyj1kPo.js,5,bot-or-fraud,Procaptcha,captcha device signal,review
+30,g.lazcdn.com/g/lzd_sec/epssw/<v>/epssw.js,5,bot-or-fraud,Lazada security,risk token signal,review
+31,ask.ai.finalsite.com/chatbot/static/widget.js,4,fingerprint-id,FingerprintJS in Finalsite chatbot,component of a hashed visitor or ad ID,earlier review
+32,thehotelsnetwork.com/cdn/v200/@thehotelsnetwork/agent-fingerprint@<v>/<id>/es<n>/agent-fingerprint.system.js,4,fingerprint-id,The Hotels Network,component of a hashed visitor or ad ID,earlier review
+33,sf16-website-login.neutral.tiktokcdn-eu.com/obj/<id>/webmssdk/<v>/webmssdk.js,4,bot-or-fraud,TikTok webmssdk,signal in a bot-challenge or fraud-scoring payload,earlier review
+34,shopify-checkout.cashfree.com/cf-widget/<v>/cf-widget.js,4,fingerprint-id,Cashfree widget (FingerprintJS),component of a hashed visitor or ad ID,earlier review
+35,static.hivebrite.com/alumni-connect/packs/js/vendor-sentry-<h>.js,4,analytics,Sentry,CultureContext culture.locale,review
+36,mosaic01.ztat.net/pgs/rendering-engine/re-common-chunk/index-<h>.js,4,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+37,ob.segreencolumn.com/i/<h>.js,4,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+38,discovery.evvnt.com/prd/<h>.discovery_plugin.chunk.js,4,passthrough,Luxon,system default locale passed to Intl formatters; isEnglish uses startsWith en so en works,review
+39,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/gec/altas/account-exp/js/jcg88ck6.js,4,unclear,TikTok Shop,stored as platform-store locale; consumer not shown,review
+40,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/gec/atlas/account-l2l/js/qxat1f9f.js,4,unclear,TikTok Shop,stored in store state; consumer not shown,review
+41,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/atlas/account/page/account_login_sea/js/seller.gio0gjxo.js,4,unclear,TikTok Shop,stored in store state; consumer not shown,review
+42,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/gec/atlas/account-l2l/js/gbz6wo1a.js,4,unclear,TikTok Shop,stored in store state; consumer not shown,review
+43,static.parastorage.com/services/events-viewer/<v>/<id>.bundle.min.js,3,passthrough,intl-messageformat in Wix events-viewer,stored as a library default locale and passed back to Intl,earlier review
+44,procomms.cafe24.com/web/upload/<id>.js,3,tag-sensitive,Cafe24 locale popup,zh-Hant or TW/HK/MO picks zh-tw; bare zh gets zh-cn; navigator.languages first,review
+45,ob.powerstarsbuilding.com/i/<h>.js,3,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+46,static.parastorage.com/services/wix-vod-widget/<v>/<id>.bundle.min.js,3,passthrough,intl-messageformat (Wix pro-gallery),matched code of an earlier group,fingerprint
+47,dl1bocu0zkzhm.cloudfront.net/<h>-<h>/public/static/js/npm.liquidjs.<h>.chunk.js,3,passthrough,LiquidJS (Glood.ai Shopify),matched code of an earlier group,fingerprint
+48,cdn.shopify.com/extensions/<h>-6f1d-770b-9a9c-<h>/<id>/assets/samita.lock.chunk.561.<h>.min.js,3,passthrough,LiquidJS,default locale for date filters,review
+49,sf16-website-login.neutral.ttwstatic.com/obj/<id>/ttweb_webmssdk_ex/<v>/webmssdk_ex.js,3,bot-or-fraud,TikTok webmssdk,signal in a bot-challenge or fraud-scoring payload,earlier review
+50,eu.frcapi.com/api/v2/captcha/agent,3,bot-or-fraud,Friendly Captcha,DTF resolvedOptions in captcha signal,review
+51,t.whop.tw/fingerprint.js,3,fingerprint-id,FingerprintJS,dateTimeLocale component of hashed visitorId,review
+52,shopper.returnscenter.com/_next/static/chunks/rc-async-vendor-<h>.js,3,analytics,Sentry,CultureContext culture.locale,review
+53,ob.byroundprince.com/i/<h>.js,3,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+54,webresource.tripcdn.com/ares2/risk/ubtrms/*/default/dist/new/d.min.js,3,bot-or-fraud,Trip.com risk control,signal in a bot-challenge or fraud-scoring payload,earlier review
+55,ezojs.com/detroitchicago/columbus.js,3,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+56,hw-cdn2.adtng.com/delivery/idsync/idsync.min.js,3,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+57,webmessenger.ekonsilio.io/static/js/48.<h>.chunk.js,3,passthrough,Luxon,default locale passed back to Intl,review
+58,f.static.mmcdn.com/aG34bH-ant.min.js,3,bot-or-fraud,Fingerprint Pro 3.12,signal in a bot-challenge or fraud-scoring payload,earlier review
+59,assets.alicdn.com/g/lzd_sec/epssw/<v>/epssw.js,3,bot-or-fraud,Lazada security,risk signal in VM,review
+60,assets.adobedtm.com/<h>/<h>/launch-<h>.min.js,2,fingerprint-id,FingerprintJS inside Adobe Launch,component of a hashed visitor or ad ID,earlier review
+61,static.matterport.com/showcase/<v>.3_webgl-<n>-g<h>/js/showcase.js,2,tag-sensitive,Matterport,Intl.Locale region picks imperial; no region falls back to navigator.language,review
+62,embed.laylo.com/assets/main-<h>.js,2,tag-sensitive,Laylo,region as phone country fallback; no region gives no default country,review
+63,checkoutshopper-live.adyen.com/checkoutshopper/assets/js/<id>/risk.<v>.js,2,bot-or-fraud,Adyen risk.js (FingerprintJS),signal in a bot-challenge or fraud-scoring payload,earlier review
+64,ob.healthroundprince.com/i/<h>.js,2,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+65,plugin.pexipengage.com/assets/entry.client-DKBce5GM.js,2,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+66,cdn.diginetica.net/fingerprint/bundle.anyquery.js,2,fingerprint-id,Diginetica,dedupes locale from seven services incl Collator,review
+67,js.comet-serve.com/script.js,2,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+68,c.riskified.com/,2,bot-or-fraud,Riskified,signal in a bot-challenge or fraud-scoring payload,earlier review
+69,ob.cheqzone.com/<id>.js,2,bot-or-fraud,CHEQ ClickTrue,signal in a bot-challenge or fraud-scoring payload,earlier review
+70,cdn.shopify.com/extensions/<h>-b36f-72a8-a07e-<h>/<id>/assets/glood-ai-bundles.js,2,passthrough,LiquidJS (Glood.ai Shopify),stored as a library default locale and passed back to Intl,earlier review
+71,cdn.jsdelivr.net/npm/luxon@<v>/build/global/luxon.min.js,2,passthrough,Luxon 2.3.1,stored as a library default locale and passed back to Intl,earlier review
+72,cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@<v>/dist/fp.min.js,2,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+73,shopify-checkout.cashfree.com/bundle.js,2,analytics,Sentry,CultureContext culture.locale,review
+74,global.frcapi.com/api/v2/captcha/agent,2,bot-or-fraud,Friendly Captcha,locale with calendar and timeZone in captcha agent signal,review
+75,usync.ingage.tech/,2,tag-sensitive,usync (ad sync),splits region as country for GDPR/CCPA sync gating; no region falls back to navigator.language,review
+76,browser.sentry-cdn.com/<v>/bundle.tracing.replay.logs.metrics.min.js,2,analytics,Sentry,CultureContext culture.locale,review
+77,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/i18n/ecom/TTS/normal/main/static/js/<n>.<h>.js,2,unclear,TikTok Shop,body not captured,review
+78,aswpsdkeu.com/notify/v2/ua-sdk.min.js,2,tag-sensitive,Airship Web SDK,split region becomes locale_country; no region uses navigator.languages; zh-Hant gives Hant,review
+79,viadata.store/tag/fpv5.js,2,fingerprint-id,FingerprintJS fork,visitor fingerprint,review
+80,kick.com/UcggFnr2hNhLCwLf/ylHrE6EhtV2cmcV8/web/v4/<id>,2,bot-or-fraud,Fingerprint Pro agent v4 (Kick),signal in a bot-challenge or fraud-scoring payload,earlier review
+81,d2nttevkh1mtzs.cloudfront.net/mosaic-versions/<h>-fb6d-4a5d-adbd-<h>/www/<id>.bundle.esm.js,2,passthrough,Amazon Audible,default locale for localization context,review
+82,m.media-amazon.com/images/S/sash/TpnVJl-v3BUgmsE.js,2,passthrough,Amazon localization,default locale fallback for localization context,review
+83,verified.capitalone.com/assets/enterprise/js/cp_common.js,2,fallback-probe,ZZ-probe VM (Capital One),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense",earlier review
+84,fpjscdn.net/v4/<id>,2,bot-or-fraud,Fingerprint Pro agent v4 (Kick),matched code of an earlier group,fingerprint
+85,cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@<v>/+esm,2,fingerprint-id,FingerprintJS,dateTimeLocale component of hashed visitorId,review
+86,sso.hotmart.com/themes/hotmart/js/hotmart.bundle.min.js,2,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+87,wac-web.prod-east.frontend.public.atl-paas.net/assets/castle.<h>.js,2,bot-or-fraud,Castle,risk payload,review
+88,e.issuu.com/reader4/1c2b930/_next/static/chunks/531-<h>.js,2,analytics,PicoX,event context field,review
+89,ob.cheqzone.com/i/<h>.js,2,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+90,fpnpmcdn.net/v3/<id>/loader_v3.<v>.js,2,bot-or-fraud,Fingerprint Pro,signal in a bot-challenge or fraud-scoring payload,earlier review
+91,cdn.shopify.com/extensions/<h>-e75e-7be8-<n>-<h>/simesy-faq-76/assets/simesy-faq.js,2,passthrough,LiquidJS (Simesy FAQ),stored as a library default locale and passed back to Intl,earlier review
+92,cds-sdkcfg.onlineaccess1.com/common.js,2,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+93,cdn.runative-syndicate.com/sdk/v1/ms.js,2,fingerprint-id,RUNative,hour-cycle probe hashed into ID,review
+94,js.pelcro.com/sdk/main.min.js,1,analytics,Pelcro SDK,"sent as telemetry, not used locally",earlier review
+95,framerusercontent.com/sites/<id>/script_main.BrEVegrI.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally",earlier review
+96,framerusercontent.com/sites/<id>/framer.D8TYbhpa.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally",earlier review
+97,ob.itstarsbuilding.com/i/<h>.js,1,bot-or-fraud,unknown bot/fraud vendor,signal in a bot-challenge or fraud-scoring payload,earlier review
+98,e-office.itb.ac.id/web/assets/<n>-<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),stored as a library default locale and passed back to Intl,earlier review
+99,cdn2.booqable.com/vite/assets/datePicker-DcJ2sD_8.js,1,fingerprint-id,FingerprintJS in Booqable,matched code of an earlier group,fingerprint
+100,cdnjs.cloudflare.com/ajax/libs/luxon/<v>/luxon.min.js,1,passthrough,Luxon 3.0.3,stored as a library default locale and passed back to Intl,earlier review
+101,mypopups.com/api/embed/element,1,language-only,MyPopUps,only the language subtag is used,earlier review
+102,js.hubspot.com/analytics/<n>.js,1,fingerprint-id,FingerprintJS in HubSpot,component of a hashed visitor or ad ID,earlier review
+103,s.uenicdn.com/assets/<h>/static/js/vendors.<h>.js,1,passthrough,react-intl (UENI),stored as a library default locale and passed back to Intl,earlier review
+104,eadtu.odoo.com/web/assets/1/<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),stored as a library default locale and passed back to Intl,earlier review
+105,stroly.com/_next/static/chunks/main-<h>.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally",earlier review
+106,personaliuudised.ee/_next/static/chunks/38n3rt3hid1jw.js,1,passthrough,Luxon (Next.js),stored as a library default locale and passed back to Intl,earlier review
+107,personaliuudised.ee/_next/static/chunks/20v1pqzqmqa8n.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally",earlier review
+108,jatapronto.com.br/_next/static/chunks/0-uz1i2n97mbo.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally",earlier review
+109,framerusercontent.com/sites/<id>/script_main.DnH1X_hh.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally",earlier review
+110,framerusercontent.com/sites/<id>/framer.D95LZcls.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally",earlier review
+111,cdn.botpress.cloud/webchat/v3.3/messagePreview.js,1,passthrough,Luxon (Botpress webchat),stored as a library default locale and passed back to Intl,earlier review
+112,production-<id>.z01.azurefd.net/sitecontent/website/scripts/luxon.min.js,1,passthrough,Luxon,stored as a library default locale and passed back to Intl,earlier review
+113,cdn-lightspeed.teamwork.com/static/js/useI18n-BsxJYe_b.js,1,passthrough,likely Luxon (Teamwork),stored as a library default locale and passed back to Intl,earlier review
+114,virtualtours.360totaal.nl/mp-sdk/<v>/js/showcase.<h>.js,1,language-only,Matterport SDK,only the language subtag is used,earlier review
+115,canadairan.ca/wp-content/plugins/<id>/assets/frontend/min-js/luxon.min.js,1,passthrough,Luxon,default locale passed back to Intl,review
+116,cibernetica.odoo.com/web/assets/1/b8f37a1/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+117,colphand.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon (Notion),body not captured; sibling bundle,review
+118,g.alicdn.com/cn-yz/umi-end-join/<v>/umi.js,1,passthrough,intl-messageformat (Wix pro-gallery),matched code of an earlier group,fingerprint
+119,studentpayplus.com.au/common.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+120,framerusercontent.com/sites/<id>/script_main.DAyECpeS.mjs,1,analytics,Framer,locale field in pageview event,review
+121,framerusercontent.com/sites/<id>/framer.BCBnxs5z.mjs,1,analytics,Framer,locale sent in tracking events,review
+122,celuslibres.com/_next/static/chunks/<n>.<h>.js,1,analytics,Sentry (likely),body not captured,review
+123,static.cademy.io/_next/static/chunks/974-<h>.js,1,passthrough,-,React hook keeps locale as state; consumer unseen,review
+124,t.rightmessage.com/<h>.js,1,passthrough,LiquidJS (Glood.ai),matched code of an earlier group,fingerprint
+125,mercedesbenztrucks.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+126,framerusercontent.com/sites/<id>/script_main.B03LpKyT.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+127,framerusercontent.com/sites/<id>/framer.5obcecVl.mjs,1,analytics,Framer,pageview event field,review
+128,hamiltonhonda.com/resources/taggbaa/chunks/fingerprintjs.<h>.js,1,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+129,scripts.orb.ee/5k75Bp5H/gdpr/bundles/<h>-ac85-4fab-8c91-<h>/__orbee_5k75Bp5H/bundle.min.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+130,booking-flow-production-c.squarecdn.com/assets/<id>.js,1,passthrough,Luxon (Angular),matched code of an earlier group,fingerprint
+131,tradestaq.com/_next/static/chunks/<n>-<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+132,fhk.gr.jp/wp-content/plugins/wp-slimstat/wp-slimstat.min.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+133,yolopass.com.br/build/assets/app-D88JURcz.js,1,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+134,cdn.botpress.cloud/webchat/v3.7/inject.js,1,passthrough,Luxon (Botpress),default locale passed back to Intl,review
+135,brightonandhovehockeyclub.net/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon (calciomercato),matched code of an earlier group,fingerprint
+136,framerusercontent.com/sites/<id>/script_main.DTNxrAJQ.mjs,1,analytics,Framer,pageview event field,review
+137,framerusercontent.com/sites/<id>/framer.B4buIYcQ.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+138,taddjenkinscdjr.com/resources/taggbaa/chunks/fingerprintjs.<h>.js,1,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+139,web-app.blueframetech.com/js/app.js,1,tag-sensitive,v-calendar,full-tag table lookup then language fallback; region drop may lose regional masks and first day,review
+140,cdn.shopify.com/extensions/<h>-216d-7c0d-b6f4-<h>/<id>/assets/shieldy-embed.min.js,1,tag-sensitive,Blockify (Shopify IP blocker app),matched code of an earlier group,fingerprint
+141,far-spatula-62a.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon,system default locale passed to Intl formatters,review
+142,dulceria-sam-y-clau.odoo.com/web/assets/1/<n>ff5/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+143,app.fastflo.ai/_next/static/chunks/<n>-<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+144,bo.as-motorsport.com/web/assets/941-1be0fbf/1/web.<id>.min.js,1,passthrough,Luxon (Odoo),default locale,review
+145,foresthillah.com/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon,default locale and weekInfo,review
+146,cdn.jsdelivr.net/wp/wp-slimstat/tags/<v>/wp-slimstat.min.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+147,sheer-summer-4dc.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon (Notion),default locale passed back to Intl,review
+148,giftcash.ca/assets/index-CPfDpoa5.js,1,analytics,Sentry,CultureContext culture.locale,review
+149,framerusercontent.com/sites/<id>/script_main.CbRfmuTo.mjs,1,analytics,Framer,pageview event field,review
+150,framerusercontent.com/sites/<id>/framer.0EpcPuzV.mjs,1,analytics,Framer,pageview event field,review
+151,bitregions.com/wp-content/plugins/wp-slimstat/wp-slimstat.min.js,1,fingerprint-id,FingerprintJS,bundled in WP SlimStat; hashed visitor fingerprint,review
+152,proklean.maxilead.ai/api/v1/tracking/public/script.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+153,status.langfuse.com/_next/static/chunks/1scfbvtmq1sig.js,1,passthrough,Luxon (Mews booking),matched code of an earlier group,fingerprint
+154,app.eu.cal.com/_next/static/chunks/1khiul5em470l.js,1,passthrough,Cal.com,passed to 24-hour clock detection,review
+155,digital-retail.autodriven.com/enterprise/cof_common1.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+156,abten.net/wp/wp-content/plugins/wp-slimstat/wp-slimstat.min.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+157,webapp.escrowtab.com/vendor.<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+158,yudij.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon (Notion),default locale passed back to Intl,review
+159,carolinamueller.com/assets/<id>.js,1,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+160,recy.net/_next/static/chunks/03t-dwpr0q1mg.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+161,score.kaeka.jp/_next/static/chunks/pages/_app-<h>.js,1,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+162,ieebi.org/web/assets/1/ed<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+163,donerightmerchandising.com/wp-content/plugins/wp-slimstat/wp-slimstat.min.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+164,kiteplatform-movistar-mx.telefonica.com/main.<h>.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+165,framerusercontent.com/sites/<id>/script_main.CsHnth4X.mjs,1,analytics,Framer,locale field in pageview event,review
+166,framerusercontent.com/sites/<id>/framer.lArWRxH7.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+167,prostoria.com/_next/static/chunks/377-<h>.js,1,passthrough,Luxon,default locale,review
+168,pontardawetownafc.co.uk/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon (calciomercato),matched code of an earlier group,fingerprint
+169,vacancies360.com/web/assets/1/2ee25ad/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+170,framerusercontent.com/sites/<id>/script_main.DORyZySw.mjs,1,analytics,Framer,pageview event field,review
+171,framerusercontent.com/sites/<id>/framer.5XuDX3YY.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+172,arapahoerental.com/static/js/index-ByKrkIoM.js,1,passthrough,Luxon (older),matched code of an earlier group,fingerprint
+173,app.just.ad/assets/index-Bl26UzHm.js,1,analytics,Sentry,CultureContext culture.locale,review
+174,icmar.org.mx/web/assets/1/778d257/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+175,preferredchryslerjeepdodgeramofgrandhaven.com/resources/taggbaa/chunks/fingerprintjs.<h>.js,1,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+176,grabix.ru/_next/static/chunks/<n>-<h>.js,1,fingerprint-id,FingerprintJS 5.1.0,matched code of an earlier group,fingerprint
+177,adventurous-molybdenum-973.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon (Notion),default locale passed back to Intl,review
+178,framerusercontent.com/sites/<id>/script_main.gsCabGQ3.mjs,1,analytics,Framer,pageview event field,review
+179,framerusercontent.com/sites/<id>/framer.BFDT1DCI.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+180,jerryscars.com/resources/taggbaa/chunks/fingerprintjs.<h>.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+181,framerusercontent.com/sites/<id>/script_main.B8sfJftn.mjs,1,analytics,Framer,pageview event field,review
+182,framerusercontent.com/sites/<id>/framer.K7jgHjLg.mjs,1,analytics,Framer,pageview event field,review
+183,framerusercontent.com/sites/<id>/script_main.Di6dF1xa.mjs,1,analytics,Framer,pageview event field,review
+184,framerusercontent.com/sites/<id>/framer.D6hb9pmf.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+185,inliberta.it/wp-content/plugins/wp-slimstat/wp-slimstat.min.js,1,fingerprint-id,FingerprintJS,bundled in WP SlimStat; hashed visitor fingerprint,review
+186,reservations.aqua-dome.at/_nuxt/DxE_7VL8.js,1,passthrough,Luxon (Botpress webchat),matched code of an earlier group,fingerprint
+187,assistant.flyweight.io/chat/main-DKwv7WOS.js,1,language-only,chat widget,Intl.Locale language as UI language fallback,review
+188,chaoyue.shop/theme/default/assets/vendors.js,1,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+189,framerusercontent.com/sites/<id>/script_main.BNztkX8K.mjs,1,analytics,Framer,pageview event field,review
+190,framerusercontent.com/sites/<id>/framer.KMdT-l_u.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+191,8hourscycling.com/web/assets/20/<n>f/web.<id>.min.js,1,passthrough,Luxon,default locale passed back to Intl,review
+192,dearsystems.com.au/web/assets/6/90f6a02/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+193,euob.healthroundprince.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+194,hotelaeropuertomorelia.com/web/assets/1/5d162af/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+195,murraycashandcarry.com/web/assets/1/808ffd1/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+196,ongefilterd.com/web/assets/1/ea1c621/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+197,cedar-dirt-06a.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon (older),default locale passed to Intl,review
+198,bookem.com/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+199,naturaldispensary.odoo.com/web/assets/<n>d/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+200,no.shop.monil.com/web/assets/8/<n>f89/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+201,essgadgets.com/web/assets/1/e<n>a/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+202,my.sai-kehila.com/web/assets/1/a2cd1ef/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+203,nz.mountainbuggy.com/web/assets/3/8cc9dea/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+204,app.osteocollective.com/assets/<id>.js,1,passthrough,LiquidJS,default locale for date filters,review
+205,comune.sandonatomilanese.mi.it/static/js/client.<h>.js,1,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+206,es.quatra.com/web/assets/18/cff2bbd/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+207,notariaat-drongen.be/common.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+208,westinhealthcare.ca/web/assets/1/4d<n>c/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+209,miofi.mx/web/assets/2/007daf3/web.<id>.min.js,1,passthrough,Luxon,Odoo; systemLocale default for formatters and weekInfo,review
+210,eumetrology.hu/web/assets/1/1e<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+211,ark-climate.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon (Notion),default locale passed back to Intl,review
+212,e-office.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon,default locale passed back to Intl,review
+213,cdn.xsolla.net/login-widget/v-<n>-11-19-01/js/27.<h>.chunk.js,1,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+214,haveyoursay.portphillip.vic.gov.au/application/js/dist/fe/vendors.js,1,passthrough,Luxon,system default locale passed to Intl formatters,review
+215,bagsetc.com/web/assets/1/47c5d3e/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+216,generaloctober.com/web/assets/1/11bc4c8/web.<id>.min.js,1,passthrough,Luxon (Odoo),default locale,review
+217,damas.com.mv/web/assets/4/8fa822c/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+218,alattar-mobile-store.odoo.com/web/assets/6/a27c195/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+219,sammen.no/_app/immutable/entry/app.MTyHfJcA.js,1,analytics,Sentry,CultureContext culture.locale,review
+220,business.torrefactory.coffee/web/assets/1/<n>dc0/web.<id>.min.js,1,passthrough,Luxon (Odoo),default locale,review
+221,vetaprima.ar/web/assets/1/<n>c5/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+222,nutradrip.com/web/assets/2/91e<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+223,k.twitchcdn.net/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,body not captured; reads Collator among others,review
+224,saporitopizza.be/web/assets/1/f13fdc1/web.<id>.min.js,1,passthrough,Luxon (Odoo),default locale and weekInfo,review
+225,garageverhoeven.be/web/assets/7/e6d<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+226,fingerprint.t-static-online.com/<id>.js,1,fingerprint-id,T-Bank fingerprint,dedups locales incl Collator,review
+227,ilimit.com/web/assets/1/<n>c5/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+228,auth.factory.ai/apps/hosted-authkit/production/_next/static/chunks/<n>.<h>.js,1,bot-or-fraud,WorkOS AuthKit,deduped locale set over 7 services incl Collator,review
+229,bachmannschumacher.de/web/assets/1/8b5b78e/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+230,pulsewerk.de/web/assets/1/<n>b70/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+231,assets.coubic.com/reserve/_next/static/chunks/pages/_app-<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+232,imagetostl.io/_next/static/chunks/<h>.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+233,villamaria.dipromas.com.ar/web/assets/6/<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+234,carcenterpoelmans.be/web/assets/7/4e4d8f1/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+235,static.aviasales.com/selene-static/spa/monitoring.<h>.min.js,1,analytics,Sentry,CultureContext culture.locale,review
+236,titulus.be/web/assets/1/<n>bb/web.<id>.min.js,1,passthrough,Luxon,default locale passed back to Intl,review
+237,order.theproteinbar.com/static/js/main.<h>.js,1,passthrough,Luxon,default locale also feeds Intl.Locale weekInfo,review
+238,teacheast.recruitsmart.io/_next/static/chunks/17fzcovs-4ka2.js,1,analytics,Sentry,CultureContext culture.locale,review
+239,encuentroarlog.com.ar/web/assets/8/d<n>d/web.<id>.min.js,1,passthrough,Luxon (Odoo),default locale and weekInfo,review
+240,ktm-xbow.com/web/assets/1/<n>cd/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+241,concordecinema.com/app-<h>.js,1,passthrough,Luxon,default locale passed back to Intl,review
+242,flytconsulting.no/web/assets/9/37de097/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+243,linearstatus.com/_next/static/chunks/1scfbvtmq1sig.js,1,passthrough,Luxon (Mews booking),matched code of an earlier group,fingerprint
+244,booxi.com/booknow/assets/<id>.js,1,passthrough,Luxon,default locale for formatters and weekInfo,review
+245,<n>database.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon (older),default locale,review
+246,cdn.shopify.com/extensions/<h>-d050-7b9a-aec9-<h>/v0.<v>/assets/main-DKwv7WOS.js,1,language-only,Shopify chat app,Intl.Locale language as UI fallback,review
+247,martinvelarde.notion.site/_assets/<n>-<h>.js,1,passthrough,Luxon (Notion),default locale passed back to Intl,review
+248,ochs.edu.om/web/assets/1/0bb609d/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+249,animatefactory.com/web/assets/1/cdf2daf/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+250,plasticodysseyacademy.org/web/assets/2/d<n>/web.<id>.min.js,1,passthrough,Luxon,default locale passed back to Intl,review
+251,anticimexforsakringar.se/<h>-<h>.js,1,passthrough,Luxon (Elfsight reviews widget),matched code of an earlier group,fingerprint
+252,alwaseet-helpdesk.erpreel.com/im_livechat/assets_embed.js,1,passthrough,Luxon,Odoo livechat; systemLocale default for formatters and weekInfo,review
+253,ecosem.be/web/assets/1/49c734d/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+254,gaming.najjarmarket.com/web/assets/4/<n>e/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+255,au-<id>.odoo.com/web/assets/1/2a0e3e3/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+256,archproject.com.br/web/assets/1/c<n>b7/web.<id>.min.js,1,passthrough,Luxon,default locale for formatters and weekInfo,review
+257,gainsmeals.com/web/assets/1/1e0de7d/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+258,inlire.odoo.com/web/assets/1/9e5c209/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+259,gestaltguibor.com/web/assets/2/<n>e/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+260,bycommute.com/web/assets/1/<n>c/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+261,antera.com.uy/web/assets/6/48bf032/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+262,canineallies.co.uk/web/assets/1/d9f<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+263,theburgerroom.com/web/assets/1/594e117/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+264,cookies.prod.tekla.com/main.js,1,passthrough,Luxon,default locale passed back to Intl,review
+265,fp.moonpay.com/web/v3/<id>/loader_v3.<v>.js,1,bot-or-fraud,Fingerprint Pro,matched code of an earlier group,fingerprint
+266,raleighnc.essper.com/assets/index-D8zQCX0M.js,1,passthrough,Luxon,default locale for Intl formatters and Intl.Locale weekInfo,review
+267,cdn.botpress.cloud/webchat/v0/index.<h>.js,1,passthrough,intl-messageformat (Wix pro-gallery),matched code of an earlier group,fingerprint
+268,mysay.ballarat.vic.gov.au/application/js/dist/fe/vendors.js,1,passthrough,Luxon,default locale,review
+269,app.cal.com/_next/static/chunks/1khiul5em470l.js,1,unclear,Cal.com,passed to 24-hour clock helper not shown,review
+270,givelink.app/_next/static/chunks/0w9e5glx_mrrq.js,1,passthrough,@internationalized/number,resolved options passed back to NumberFormat,review
+271,online.greateralliancefcu.org/static/bundle/assets/ApiHttp-C8x9Ku6D.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+272,luckycustom.olx.uz/app/static/js/<n>.<h>.chunk.js,1,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+273,framerusercontent.com/sites/<id>/script_main.CEYOwjuu.mjs,1,analytics,Framer,pageview event field,review
+274,framerusercontent.com/sites/<id>/framer.DjrWhdQp.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+275,ob.roundprincemusic.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+276,cloud.factro.com/assets/vendor-CVp-dSlg.js,1,analytics,Sentry (inferred),body not captured,review
+277,peers.live/_next/static/chunks/<n>-<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+278,framerusercontent.com/sites/<id>/script_main.DcK2ShNr.mjs,1,analytics,Framer,pageview event field,review
+279,framerusercontent.com/sites/<id>/framer.BFbpWxQN.mjs,1,analytics,Framer,locale sent in pageview event,review
+280,framerusercontent.com/sites/<id>/script_main.DUJoRhAz.mjs,1,analytics,Framer,pageview event field,review
+281,framerusercontent.com/sites/<id>/framer.DLTBsCaA.mjs,1,analytics,Framer,pageview event field,review
+282,hosierbrown.framer.website/,1,passthrough,Framer,cache key for SSR-formatted dates; miss reformats,review
+283,mtfbaskets.hdfcsec.com/vendors.<h>.bundle.js,1,analytics,Sentry (inferred),body not captured,review
+284,notarisvh.be/common.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+285,obenan.ai/_next/static/chunks/<n>-<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+286,hrl.uni-bonn.de/static/js/client.<h>.js,1,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+287,kcf.canimmunize.ca/assets/index-Czgm0hKe.js,1,tag-sensitive,-,lowercased includes us picks imperial units; en would flip US users to metric,review
+288,bonduelle-lp26-ro.b-cdn.net/assets/entry.client-CamW3EpJ.js,1,analytics,Sentry,CultureContext culture.locale on error events,review
+289,webbulktranslator.com/_next/static/chunks/764.<h>.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+290,philadelphia.brooklynbowl.com/_next/static/immutable/chunks/2h365i1ticd6v.js,1,analytics,Sentry,CultureContext culture.locale,review
+291,despetitshauts.prod.imagino.com/code/app.<h>.js,1,tag-sensitive,imagino,likely Intl.Locale region into date format settings,review
+292,login.runwayml.com/apps/hosted-authkit/production/_next/static/chunks/<n>.<h>.js,1,bot-or-fraud,WorkOS AuthKit,deduped locale set over 7 services incl Collator,review
+293,exciteme.ai/assets/index-CDplx_nh.js,1,analytics,Sentry,CultureContext culture.locale,review
+294,assets.squarespace.com/universal/scripts-compressed/<n>-<h>-min.de-DE.js,1,analytics,Sentry,CultureContext culture.locale,review
+295,app.clickmaint.ca/generated_assets/index-C62nWS1Z.js,1,analytics,Sentry,CultureContext culture.locale,review
+296,boca.lol/_app/immutable/chunks/BPa1ZtFR.js,1,passthrough,Luxon,default locale for Intl formatters and Intl.Locale weekInfo,review
+297,webfiles.cdn.raxbooker.com/nl-NL/chunk-ZRQ7BQGR.js,1,tag-sensitive,Luxon,isEnglish full-tag check; miss only changes listing path,review
+298,colonialleague.org/_next/static/chunks/3si9ko75ols-s.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+299,comune.vaiano.po.it/static/js/client.<h>.js,1,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+300,youth.mastersandrobots.tech/assets/index-sE2PLPTM.js,1,analytics,Sentry,CultureContext culture.locale,review
+301,flamingonewhomes.com/_next/static/chunks/<n>.<h>.js,1,passthrough,@internationalized/number,explicit locale passed back to NumberFormat,review
+302,smallcases.fundzbazar.com/vendors.<h>.bundle.js,1,analytics,Sentry,CultureContext culture.locale,review
+303,order.westsidepizza.com/static/js/main.<h>.js,1,passthrough,Luxon,default locale and weekInfo,review
+304,cdn.seonintelligence.com/js/v6/agent.umd.js,1,bot-or-fraud,SEON fraud agent,signal in a bot-challenge or fraud-scoring payload,earlier review
+305,adalytics.prixacdn.net/static/dist/js/adalytics.js,1,fingerprint-id,Prixa adalytics,component of a hashed visitor or ad ID,earlier review
+306,vansmx.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl/intl-messageformat (VTEX),stored as a library default locale and passed back to Intl,earlier review
+307,frontend-cdn.housecallpro.com/pros/<n>-<h>.chunk.js,1,unclear,Housecall Pro bundle,script body not captured,earlier review
+308,aripaev.ee/_next/static/chunks/38n3rt3hid1jw.js,1,passthrough,Luxon,stored as a library default locale and passed back to Intl,earlier review
+309,aripaev.ee/_next/static/chunks/20v1pqzqmqa8n.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally",earlier review
+310,widget-assets.ap3.ee/assets/Spinner-<h>.js,1,passthrough,Luxon (older),stored as a library default locale and passed back to Intl,earlier review
+311,modivo.ua/pwa/assets/312.<n>dc8.chunk.js,1,passthrough,Luxon (modivo),stored as a library default locale and passed back to Intl,earlier review
+312,myntraspectrum.myntassets.com/spectrum-assets/spectrum/partners/assets/<id>.<h>.js,1,passthrough,Luxon 1.x (Myntra partners),stored as a library default locale and passed back to Intl,earlier review
+313,oekastatic.orf.at/mojo.compressed/1_4_1/oeka//oeka/main.js,1,tag-sensitive,ORF ad setup,"startsWith(""de-AT"") ORed with time zone and another locale value flags Austrian users for ad targeting",earlier review
+314,identity.healthsafe-id.com/static/js/summer.js,1,fallback-probe,ZZ-probe VM (healthsafe-id),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense",earlier review
+315,servicepipe.tech/static/checkjs/345b01/8Vu6I60Y7h.js,1,bot-or-fraud,Servicepipe,body not captured,review
+316,edv.ecsc.gov.et/ICSMISCensus/main-SBGIPVXC.js,1,passthrough,Luxon (Angular),stored as a library default locale and passed back to Intl,earlier review
+317,portal.ifood.com.br/static/js/async/f5.<h>.js,1,unclear,iFood portal bundle,script body not captured,earlier review
+318,portal.ifood.com.br/static/js/async/06.<h>.js,1,unclear,iFood portal bundle,script body not captured,earlier review
+319,stevia.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl,earlier review
+320,jtexpress.mx/js/vendor.<h>.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID,earlier review
+321,p.toadmash.net/<h>/<h>-63d3-<n>-93a1-<h>.js,1,bot-or-fraud,-,obfuscated device-signal collector,review
+322,skechers.cl/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload,earlier review
+323,attijarinet.attijariwafa.com/attijarinettlmtr.js,1,fallback-probe,obfuscated VM bot defense,"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense",earlier review
+324,integration.prefixbox.com/<h>-5bb5-4d6b-b27a-<h>,1,passthrough,LiquidJS (Prefixbox),stored as a library default locale and passed back to Intl,earlier review
+325,trackfield.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl,earlier review
+326,netshort.com/_next/static/chunks/<n>.<h>.js,1,fingerprint-id,FingerprintJS 5.1.0,component of a hashed visitor or ad ID,earlier review
+327,skechers.hu/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload,earlier review
+328,cdn.shopify.com/extensions/<h>-b36f-72a8-a07e-<h>/<id>/assets/<id>.js,1,passthrough,LiquidJS (Glood.ai),stored as a library default locale and passed back to Intl,earlier review
+329,skechers.in/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada (likely),VM reads 11 services incl Collator locale,review
+330,euob.seaskydvd.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+331,integration.prefixbox.com/<h>-17b7-49eb-97fb-<h>,1,passthrough,LiquidJS,template engine default locale,review
+332,pixel.scoring.ru/pixel.js,1,bot-or-fraud,scoring pixel (FingerprintJS),antifraud pixel signal,review
+333,eventbrite.co.uk/eb-web-assets/_next/static/chunks/0u_o67m_iuh_h.js,1,analytics,PicoX,event context field,review
+334,passport.amazon.jobs/main.js,1,passthrough,Amazon,default locale for localization context,review
+335,package.true.th/_next/static/chunks/1kspv6ywvxerp.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+336,a1cdn.a1.art/static/js/async/<n>.<h>.js,1,passthrough,intl-messageformat (Wix form-app),matched code of an earlier group,fingerprint
+337,s.livechart.me/packs/js/<n>-<h>.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+338,supermxmcr.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+339,verify.coinbase.com/e_CSf6tcxi.js,1,fingerprint-id,FingerprintJS (Coinbase),device ID component,review
+340,fp.coinbase.com/web/v3/<id>,1,bot-or-fraud,Fingerprint Pro,matched code of an earlier group,fingerprint
+341,fp.coinbase.com/web/v4/<id>,1,bot-or-fraud,Fingerprint Pro agent v4 (Kick),matched code of an earlier group,fingerprint
+342,assets.mongodb-cdn.com/mms/static/dist/0.<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+343,mt.getsbet.ro/vv7My41CPBvR3t8h/web/v4/<id>,1,fingerprint-id,Fingerprint Pro (inferred),body not captured,review
+344,webshop.monster-strike.com/_next/static/chunks/2s553_lu0vuhd.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+345,ob.system1onesource.com/i/<h>.js,1,bot-or-fraud,System1,traffic-quality signal,review
+346,framerusercontent.com/sites/<id>/script_main.b1BqxdHF.mjs,1,analytics,Framer,pageview event field,review
+347,framerusercontent.com/sites/<id>/framer.CPKDPbJx.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+348,betway.co.tz/_nuxt/entry.<h>-466d-481f-a065-<h>.js,1,passthrough,Luxon,system default locale passed to Intl formatters,review
+349,1password.com/_next/static/chunks/<n>-<h>.js,1,passthrough,Luxon,default locale,review
+350,integration.prefixbox.com/<h>-d6a0-<n>-b981-<h>,1,passthrough,LiquidJS (Glood.ai Shopify),matched code of an earlier group,fingerprint
+351,cdn.litres.ru/_next/static/chunks/<n>oq9w1iryv.js,1,analytics,Sentry,CultureContext culture.locale,review
+352,openfpcdn.io/fingerprintjs/v4,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+353,integration.prefixbox.com/<h>-b02c-424f-a0d6-<h>/,1,passthrough,LiquidJS (Glood.ai Shopify),matched code of an earlier group,fingerprint
+354,replay.lsm.lv/_replay/f<n>f.js,1,tag-sensitive,Luxon,isEnglish full-tag check; negligible,review
+355,kreuzfahrtberater.de/_nuxt/C1vutKQ8.js,1,passthrough,Luxon,default locale passed back to Intl,review
+356,dubaipolice.gov.ae/dpwebsite.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+357,washingtonconnection.org/saw/hure72.js,1,fallback-probe,-,ZZ and [] args; body not captured,review
+358,kinomax.ru/tmgrdfrend.fp.js,1,unclear,-,body not captured; likely fingerprint collector,review
+359,identify.reservamossaas.com/FmFlPOTbJRI31ER9/tz8m3yGYrflpRef9/web/v4/<id>,1,bot-or-fraud,Fingerprint Pro agent v4 (Kick),matched code of an earlier group,fingerprint
+360,forumcinemas.lt/app/themes/forum/assets/positivecinema.js,1,tag-sensitive,Luxon (inferred),isEnglish frames; body not captured,review
+361,chicos.com/_next/static/chunks/<n>-<h>.js,1,tag-sensitive,-,Intl.Locale region sent as GTM country code; no region falls back to US,review
+362,cruceros.es/_next/static/chunks/<h>.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+363,drs1.xyz/bot_device_signals.js,1,bot-or-fraud,bot device signals,DTF and NumberFormat locales in payload,review
+364,drs1.xyz/bot_fp.js,1,bot-or-fraud,ad bot detector,machine fingerprint,review
+365,drs1.xyz/bot_detector.js,1,bot-or-fraud,bot detector,intl signals,review
+366,spider.australiarevival.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+367,aruma.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+368,app.peopleware.com/next-assets/_next/static/chunks/19axd1e74qf-v.js,1,tag-sensitive,-,exact match in supported list incl en-GB else language; en-GB would lose British,review
+369,afl.com.au/resources/v6.<v>/scripts/vendors.js,1,passthrough,Luxon,default locale passed back to Intl,review
+370,flightcentre.com.au/aurora/_next/static/chunks/<h>-<h>.js,1,passthrough,Luxon,system default locale passed to Intl formatters,review
+371,integration.prefixbox.com/<h>-e610-430c-b7bd-<h>,1,passthrough,LiquidJS (Glood.ai Shopify),matched code of an earlier group,fingerprint
+372,p.login.my.cigna.com/assets/js/kj32-vmihsdg7.js,1,fallback-probe,F5/Shape (likely),ZZ and [] probes incl Collator and Segmenter,review
+373,static.tagman.ca/v4/sites/<id>.js,1,analytics,Tagman,lowercased locale stored as country in ad audience info,review
+374,widget.opl.closer.app/widget.js,1,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+375,nexty-patient.lumahealth.io/<n>.<h>.js,1,passthrough,LiquidJS,default locale for date filters,review
+376,eventbrite.ie/eb-web-assets/_next/static/chunks/0u_o67m_iuh_h.js,1,analytics,PicoX,event context field,review
+377,cdn.shopify.com/extensions/<h>-8fdf-794e-9b9c-<h>/<h>-206-1/assets/fp.umd.min.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+378,assets.yellohvillage.fr/_nuxt/D_0SYCsB.js,1,tag-sensitive,v-calendar,full-tag table then language prefix; unmatched gets another table's masks,review
+379,egolomt.mn/_next/static/chunks/2riiq4gvk8s9k.js,1,analytics,Sentry,CultureContext culture.locale,review
+380,integration.prefixbox.com/<h>-defb-41fe-98e9-<h>,1,passthrough,LiquidJS (Glood.ai Shopify),matched code of an earlier group,fingerprint
+381,my.dish.com/commonXCMyDish.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+382,clinikally.com/_next/static/chunks/<h>.js,1,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+383,n9assets.com/C5WJweCsrc52vmbx/GewVDkFHp2tghRSP,1,bot-or-fraud,Fingerprint Pro,matched code of an earlier group,fingerprint
+384,integration.prefixbox.com/<h>-a560-4b21-ab77-<h>,1,passthrough,LiquidJS (Glood.ai Shopify),matched code of an earlier group,fingerprint
+385,ob.greencolumnart.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+386,isthereanydeal.com/public/js/chunks/chunk-6HUUHX3Z.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+387,servicepipe.tech/static/checkjs/345b01/PV0eBcYVkW.js,1,bot-or-fraud,Servicepipe,bot challenge; body not captured,review
+388,naldoar.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+389,dr.com.tr/tsgcheck.js,1,fallback-probe,F5/Shape (likely),ZZ and [] probes incl Collator and Segmenter,review
+390,neteasegamer.com/js/vendor.bundle.js,1,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+391,modivo.ro/pwa/assets/312.<n>dc8.chunk.js,1,passthrough,Luxon (modivo),matched code of an earlier group,fingerprint
+392,cdn.shopify.com/extensions/<h>-<n>-744e-8e0c-<h>/metapic-21/assets/fpjs.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+393,whop.com/_web/assets/gha-<h>-1/fp.esm-CdOI7pmK.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+394,whop.com/_web/assets/gha-<h>-1/index-DEGtEpd9.js,1,analytics,Sentry (inferred),body not captured,review
+395,modivo.it/pwa/assets/312.<n>dc8.chunk.js,1,passthrough,Luxon (modivo),matched code of an earlier group,fingerprint
+396,linemate.io/static/js/main.<h>.js,1,passthrough,-,passed back to DateTimeFormat,review
+397,pinch.lat/026JED08tPAfdbGb/14Nr6VyVoGz6IEmN,1,bot-or-fraud,Fingerprint Pro,matched code of an earlier group,fingerprint
+398,fingerprint.t-static.ru/<id>.js,1,fingerprint-id,T-Bank fingerprint,Collator locale in fingerprint set,review
+399,leilo.com.br/assets/vendor-inicial-<h>.js,1,tag-sensitive,Luxon,isEnglish full-tag check; miss only changes listing path,review
+400,d5fx445wy2wpk.cloudfront.net/release/web-hornet/<v>-hf.3-c90c511/_expo/static/js/web/__common-<h>.js,1,passthrough,Amazon Music,default locale fallback in localization context,review
+401,scoring.ru/js/pixel/pixel2.js,1,bot-or-fraud,scoring pixel (FingerprintJS),antifraud pixel signal,review
+402,bodegasv.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+403,static-sso.gid.ru/resources/<id>.js,1,analytics,Sentry (inferred),body not captured,review
+404,static-sso.gid.ru/assets/<id>.js,1,analytics,Sentry (inferred),body not captured,review
+405,b2ctrendy.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+406,goregrish.com/js/zee/botguard/fingerprintjs/fp.min.js,1,fingerprint-id,FingerprintJS (inferred),body not captured,review
+407,rcbconlinebanking.com/rcbcxcbotdefense.js,1,fallback-probe,-,ZZ and [] args; body not captured,review
+408,auxologico.it/sites/default/files/js/<id>.js,1,passthrough,Luxon,default locale passed back to Intl,review
+409,virtualassistant.alghoncloud.com/js/<v>/algho-viewer.min.js,1,passthrough,Luxon,default locale passed back to Intl,review
+410,zenleafdispensaries.com/_next/static/chunks/3kffqb7mr5y7g.js,1,analytics,Sentry,CultureContext culture.locale on error events,review
+411,lf-gs-frontend-cn.fanchenstatic.com/obj/she-op-static/i18n/ecom/TTS/unihan/main/static/js/432.<h>.js,1,unclear,TikTok Shop,body not captured,review
+412,sf-gs-frontend-sg.fanchenstatic.com/obj/she-op-static-sg/webmssdk/<v>/webmssdk.js,1,bot-or-fraud,TikTok webmssdk,body not captured,review
+413,framerusercontent.com/sites/<id>/script_main.D7erMvhG.mjs,1,analytics,Framer,pageview event field,review
+414,framerusercontent.com/sites/<id>/framer.Cpdd9Wlq.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+415,framer.com/,1,passthrough,Framer,cache key for precomputed formats; miss only,review
+416,underarmourbr.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,intl-messageformat,defaultLocale,review
+417,forms-cdn.clickup.com/statics/initial-03-<h>.js,1,passthrough,intl-messageformat,defaultLocale,review
+418,virginplus.ca/js/vm-tlp-custom.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+419,sourcewhale.app/assets/js/chunks/common-DBj7Nu5j.js,1,unclear,-,NumberFormat locale stored; use not shown,review
+420,ob.herbstarsbuilding.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+421,download.dsaaeg.com/v3/my8/<h>-<v>-fc/memDesktop/vendors/app_<h>.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+422,static.trustdecision.com/tdfp/cn/<h>/fm.js,1,bot-or-fraud,TrustDecision,locale hashed into fraud device fingerprint,review
+423,dn0qt3r0xannq.cloudfront.net/dexerto-Ycgh7qIdSm/dexerto-longform/prebid-wrapper.js,1,analytics,Prebid wrapper,lowercased full locale sent as country ad-targeting field,review
+424,account.my.games/hotbox/account/vendor.js,1,passthrough,intl-messageformat,defaultLocale for formatting,review
+425,store.my.games/hotbox/leela/next/header.js,1,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+426,framerusercontent.com/sites/<id>/script_main.C5neau3Y.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+427,framerusercontent.com/sites/<id>/framer.BT4EAQnG.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+428,staplesadvantage.com/_next/static/chunks/pages/_app-<h>.js,1,passthrough,intl-messageformat (Wix form-app),matched code of an earlier group,fingerprint
+429,download.dsaaeg.com/v3/bs8/<h>-<v>-fc/memDesktop/vendors/app_<h>.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+430,nhsapp.service.nhs.uk/js/chunk-vendors.<h>.js,1,passthrough,Luxon,default locale and weekInfo,review
+431,flirt4free.com/metrics/umd.min.js,1,bot-or-fraud,Fingerprint Pro,matched code of an earlier group,fingerprint
+432,1win.lat/resources/v1/app/assets/fp.esm-Cpxzoe3g.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+433,p.toadmash.net/<h>/<h>-9a9c-<n>-998c-<h>.js,1,bot-or-fraud,-,obfuscated collector; low confidence,review
+434,mercury.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+435,sydneyoperahouse.com/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,VM reads 7 services incl Collator,review
+436,thefarmingforum.co.uk/js/zee/botguard/fingerprintjs/fp.min.js,1,fingerprint-id,FingerprintJS,body not captured,review
+437,meteoeradar.it/chunk-GCCEWEET.js,1,tag-sensitive,Luxon,isEnglish full-tag check; miss only changes listing path,review
+438,app.nickel.eu/assets/vendor-C4oLFGUT.js,1,fingerprint-id,FingerprintJS,dateTimeLocale in hashed visitorId,review
+439,static.geetest.com/g5/v1/static/v1.<v>/js/geeGuard.<h>.js,1,bot-or-fraud,GeeTest,device-check payload,review
+440,streamate.icfcdn.com/search/search-client.fingerprint.<h>.js,1,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+441,jerkmatelive.com/identification/1d3n<h>n-r35ul7/web/v4/<id>,1,bot-or-fraud,Fingerprint Pro agent v4 (Kick),matched code of an earlier group,fingerprint
+442,cdn.thalasseo.com/_nuxt/lVcOCHZq2.js,1,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+443,euob.ofgreencolumn.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+444,digital.idfcfirst.bank.in/api/fpjs/agent,1,bot-or-fraud,Fingerprint Pro,matched code of an earlier group,fingerprint
+445,integration.prefixbox.com/<h>-4d52-<n>-90a4-<h>/,1,passthrough,LiquidJS,default locale for date filters,review
+446,carriers.carecorenational.com/public/digital-experience/js/common.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+447,fplchallenge.premierleague.com/assets/index-RkyVXzrb.js,1,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+448,coolmic.me/assets/main.<n>.js,1,passthrough,Luxon (older),default locale,review
+449,planetzoogame.com/_nuxt/BO0yJB65.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+450,sdk.kade.io/<v>/kade-sdk.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+451,next.ulule.com/_next/static/chunks/3ivmut_bun9so.js,1,analytics,Sentry,CultureContext culture.locale,review
+452,assets.kaartje2go.nl/assets/js/modern/sentry.<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+453,svb.nl/static/<v>/js/uikit.js,1,passthrough,Luxon,default locale passed back to Intl,review
+454,auchan.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+455,download.dsaaeg.com/v3/sw9/<h>-<v>-fc/memDesktop/vendors/app_<h>.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+456,static.lemonlearning.com/player/stable/bundle.js,1,analytics,Sentry (likely),body not captured,review
+457,g.alicdn.com/code/npm/@ali/qianwen-web/<v>/web/js/async/<n>.js,1,fingerprint-id,Alibaba Qwen,locale with calendar numbering system and time zone hashed,review
+458,namazvakitleri.com.tr/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon,default locale,review
+459,claroperupoc.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+460,pa4.fadv.com/chunk-MXYXHJAV.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+461,niteflirt.com/plus_frontend/dist/<id>-<h>-v2.js,1,passthrough,Luxon,default locale passed back to Intl,review
+462,concert-delivery-system.s3.us-east-1.amazonaws.com/optimera-common.js,1,tag-sensitive,Concert ads,lowercased full tag as country targeting; en loses country,review
+463,mytutor.co.uk/_next/static/chunks/main-<h>.js,1,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+464,victoriassecret.com/assets/<id>/vendor/signals-sdk-<v>.js,1,fingerprint-id,FingerprintJS 4.6.1 in signals-sdk,component of a hashed visitor or ad ID,earlier review
+465,sthlstatic.com/sthl/js/fingerprintjs-v4.min.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID,earlier review
+466,cdn.schoolpt.info/_next/static/immutable/chunks/2cmhynr88eyo9.js,1,passthrough,Luxon 3.x with weekSettings,stored as a library default locale and passed back to Intl,earlier review
+467,f.vimeocdn.com/cms/_next/static/chunks/<n>-<h>.js,1,analytics,Vimeo telemetry,"sent as telemetry, not used locally",earlier review
+468,justpaste.it/build/<n>.<h>.js,1,fingerprint-id,FingerprintJS 5.2.0,component of a hashed visitor or ad ID,earlier review
+469,ob.prandolisto.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+470,static.cdn.seaart.me/web/prod/_nuxt/czax7efhumVwnIwJ.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID,earlier review
+471,peacocktv.com/assets/peacock_common.js,1,fallback-probe,ZZ-probe VM (Peacock),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense",earlier review
+472,bilimclass.kz/spa/dateTime-CCwy0O8s.js,1,passthrough,Luxon 3.x,stored as a library default locale and passed back to Intl,earlier review
+473,poppen.de/v2-static/client/js/client.<h>.js,1,fingerprint-id,FingerprintJS 5.2.0,component of a hashed visitor or ad ID,earlier review
+474,cdn.trafficbass.com/libs/e.js,1,fingerprint-id,trafficbass/traffmovie,component of a hashed visitor or ad ID,earlier review
+475,goal.com/_next/static/chunks/<h>-<h>.js,1,passthrough,Luxon (goal.com),stored as a library default locale and passed back to Intl,earlier review
+476,goal.com/_next/static/chunks/<n>-<h>.js,1,passthrough,Luxon (goal.com),stored as a library default locale and passed back to Intl,earlier review
+477,calciomercato.com/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon (calciomercato),stored as a library default locale and passed back to Intl,earlier review
+478,calciomercato.com/_next/static/chunks/<n>-<h>.js,1,passthrough,Luxon (calciomercato),stored as a library default locale and passed back to Intl,earlier review
+479,res.wx.qq.com/mpres/zh_CN/htmledition/pages/vendors~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~album/list/list~b~vendors.<h>.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID,earlier review
+480,mrds66.com/usr/themes/Mirages/js/<v>/fp.min.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID,earlier review
+481,euob.forroundprince.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ-style bot detection,signal in a bot-challenge or fraud-scoring payload,earlier review
+482,91cg1.com/usr/themes/Mirages/js/<v>/fp.min.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+483,voetbalzone.nl/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon,default locale passed back to Intl,review
+484,geocaching.com/play/bundles/lohp,1,passthrough,Luxon,default locale passed back to Intl,review
+485,orf.at/mojo.compressed/1_4_1/news//news/main.js,1,tag-sensitive,ORF ad setup,matched code of an earlier group,fingerprint
+486,sportinglife.com/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon,default locale passed back to Intl,review
+487,edu.go.vn/user/assets/index-Br0ETWTa-<h>.js,1,bot-or-fraud,Adyen risk.js (FingerprintJS),matched code of an earlier group,fingerprint
+488,isinolsun-next.mncdn.com/_next/static/chunks/pages/_app-<h>.js,1,fingerprint-id,FingerprintJS 5.1.0,matched code of an earlier group,fingerprint
+489,consumer-v2.truefitcorp.com/chunks/BBlEYKvY.js,1,passthrough,LiquidJS,default locale for date filters,review
+490,myer.com.au/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,VM reads 7 services incl Collator,review
+491,p.toadmash.net/<h>/<h>-a29b-4ccf-bfc7-<h>.js,1,bot-or-fraud,-,obfuscated collector with screen navigator and UA hints,review
+492,sport.orf.at/mojo.compressed/1_4_1/sport//sport/main.js,1,tag-sensitive,ORF ad setup,matched code of an earlier group,fingerprint
+493,cdn.swadeshonline.com/v2/<id>/swad-p/wrkr/organization/<h>/theme/assets/sentry.themeBundle.<h>.umd.js,1,analytics,Sentry,CultureContext culture.locale,review
+494,euob.starsbuildingweb.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+495,web-jp-assets-v2.mercdn.net/_next/static/chunks/<n>-<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+496,n12.co.il/_next/static/chunks/359-<h>.js,1,unclear,-,body not captured,review
+497,app.notion.com/_assets/<n>-<h>.js,1,passthrough,Luxon (Notion),default locale passed back to Intl,review
+498,framerusercontent.com/sites/<id>/script_main.CmkH-e59.mjs,1,analytics,Framer,pageview event field,review
+499,framerusercontent.com/sites/<id>/framer.B8rA8Bzo.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+500,d18x2fcr51hnc9.cloudfront.net/vendors.bundle.js,1,passthrough,Amazon Prime Video lib-strings,matched code of an earlier group,fingerprint
+501,assets.aolcdn.com/_next/static/chunks/<n>-<h>.js,1,analytics,PicoX,event context field,review
+502,euob.iseaskies.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ,locale in fraud signal payload,review
+503,www6.rbc.com/common/javascript/rbc_common.js,1,fallback-probe,F5/Shape (likely),ZZ and [] probes on DTF Collator DisplayNames Segmenter,review
+504,51cg1.com/usr/themes/Mirages/js/<v>/fp.min.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+505,aura.tango.me/j5jvmk54/web/v4/<id>,1,bot-or-fraud,Fingerprint Pro agent v4 (Kick),matched code of an earlier group,fingerprint
+506,lotto.de/_next/static/immutable/chunks/3v7wxtenz1noo.js,1,passthrough,Luxon,default locale,review
+507,inscription.mesrs-ci.net/web/assets/1/bc1cd97/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+508,weather.gc.ca/vue/ssr/js/chunk-vendors.<h>.js,1,passthrough,Luxon,default locale passed back to Intl,review
+509,assets.higgsfield.ai/tanstack/assets/<h>-TqEsk2Vkbv8Bm0lj.js,1,tag-sensitive,Higgsfield,Intl.Locale region gates locale rollout; navigator.languages also supplies region,review
+510,skechers.com/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,VM reads 7 services incl Collator,review
+511,playwekings.ru/build/assets/x-CEYZ_4wG.js,1,passthrough,Luxon,default locale passed back to Intl,review
+512,motogp.com/resources/v8.<v>/scripts/bundle-es.min.js,1,passthrough,Luxon (inferred),body not captured,review
+513,paguemenos.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+514,paguemenos.vtexassets.com/_v/public/assets/v1/published/bundle/public/react/asset-<h>.min.js,1,passthrough,Luxon (VTEX),default locale passed back to Intl,review
+515,rte.ie/djstatic/dotie/weather-widget/main.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+516,fpnpmcdn.net/v4/<id>,1,bot-or-fraud,Fingerprint Pro agent v4 (Kick),matched code of an earlier group,fingerprint
+517,euob.isstarsbuilding.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+518,eticket.railway.gov.bd/main.<h>.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+519,eventbrite.com/eb-web-assets/_next/static/chunks/0u_o67m_iuh_h.js,1,analytics,Eventbrite,locale in event context,review
+520,ibank.klikbca.com/8OyYt73AP1GnNh4i.js,1,fallback-probe,F5/Shape (likely),ZZ and [] probes on bank login,review
+521,grundos.cafe/static/js/vendor/fingerprintjs.min.<h>.js,1,fingerprint-id,FingerprintJS,dateTimeLocale in hashed visitorId,review
+522,servicepipe.tech/static/checkjs/345b01/3C6h265oUy.js,1,bot-or-fraud,Servicepipe,body not captured,review
+523,euob.tostarsbuilding.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+524,fortune.com/_next/static/chunks/<n>.<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+525,target.com.au/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,VM reads services incl Collator,review
+526,id-frontend.prod-east.frontend.public.atl-paas.net/assets/index.<h>.js,1,bot-or-fraud,-,obfuscated signal collector on a login page,review
+527,soccervista.com/build/assets/utils-<h>.js,1,passthrough,Luxon,default locale,review
+528,fpfcpn2u.uber.com/web/v4/<id>,1,bot-or-fraud,Fingerprint Pro agent v4 (Kick),matched code of an earlier group,fingerprint
+529,p.toadmash.net/<h>/<h>-f335-<n>-<n>-<h>.js,1,bot-or-fraud,-,obfuscated collector; likely ad fraud,review
+530,issuu.com/publisher-space/assets/_next/static/chunks/<n>-<h>.js,1,analytics,PICOX SDK,event context field,review
+531,verified.capitalone.com/auth/main.<h>.js,1,bot-or-fraud,Capital One,locale in device signals at auth,review
+532,lapalabradeldia.com/_astro/Page.DXcvyPLq.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+533,mako.co.il/_next/static/chunks/359-<h>.js,1,unclear,-,body not captured,review
+534,rottentomatoes.com/rt-common.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+535,digitalomni.navyfederal.org/signin/main-L7YKZTEP.js,1,passthrough,Luxon (Angular),matched code of an earlier group,fingerprint
+536,static.chasecdn.com/web/library/pseaegis/aegis-levo/<v>/levo.js,1,bot-or-fraud,Chase,obfuscated field seems to take region; regionless gives undefined,review
+537,chase.com/auth/fcc/js/channela.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+538,11ctch.com/analytics.js,1,fingerprint-id,analytics script,hashed device fingerprint,review
+539,assets.futbol24.com/assets/2/B3nACSHw.js,1,unclear,-,locale returned with date order from formatToParts; callers use order only,review
+540,komoot.com/assets/main.<h>.js,1,analytics,PICOX SDK,event context field,review
+541,news.web.nhk/_next/static/chunks/3om--jb4xxd78.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+542,static.concursolutions.com/coreui/ui-floorplans/ui-floorplans-v5.<v>/ui-floorplans-v5.<v>.js,1,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+543,static.concursolutions.com/nui/signin/master/vendor.bundle.<h>.js,1,passthrough,react-intl (Podium),matched code of an earlier group,fingerprint
+544,consumidor.gov.br/common.js,1,fallback-probe,F5/Shape (likely),ZZ and [] probes; body not captured,review
+545,fantasy.premierleague.com/assets/index-DZSbhisR.js,1,analytics,Sentry,CultureContext culture.locale,review
+546,southwest.com/assets/app/scripts/swa-common.js,1,fallback-probe,F5/Shape (likely),ZZ and [] probes incl Collator and Segmenter,review
+547,ob.youstarsbuilding.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+548,euob.roundprincethere.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+549,cdn-frontend.matchtv.ru/<n>__42-0__<h>/assets/index-BJ8pnsab.js,1,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+550,assets.nhle.com/nhl_d3_widgets/nhl-widgets.bundle.js,1,passthrough,Luxon,default locale passed back to Intl,review
+551,lf16-tiktok-web.tiktokcdn-us.com/obj/tiktok-web-tx/webmssdk/<v>/webmssdk.js,1,bot-or-fraud,TikTok webmssdk,anti-bot VM,review
+552,dnb.no/common/stats.js,1,analytics,stats script,device stats profile,review
+553,acrobat.adobe.com/home/<h>/604-<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+554,comment.vietnamnet.vn/js/vnnidmodule.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+555,framerusercontent.com/sites/<id>/script_main.Dg83mtA6.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+556,framerusercontent.com/sites/<id>/framer.D20WMXY9.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+557,euob.forseasky.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+558,cdn.trafficdok.com/libs/e.js,1,fingerprint-id,trafficbass/traffmovie,matched code of an earlier group,fingerprint
+559,ob.greencolumnblog.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+560,mapquest.com/_next/static/chunks/<n>-<h>.js,1,tag-sensitive,MapLibre ScaleControl,=== en-US picks imperial; en gives US users metric scale,review
+561,tinder.com/static/build/chunks/csh-v1-<h>.js,1,bot-or-fraud,Tinder client signals,locale with automation checks,review
+562,wekings.online/build/assets/x-CEYZ_4wG.js,1,passthrough,Luxon,default locale and weekInfo,review
+563,radar.wo-cloud.com/desktop/chunk-HQWHIZNP.js,1,passthrough,Luxon,resolved locale fed back to setLocale for weekday calc,review
+564,wetteronline.de/www-m3-ng-assets/chunk-GCCEWEET.js,1,tag-sensitive,Luxon,isEnglish full-tag check; miss only changes listing path,review
+565,music.apple.com/includes/js-cdn/musickit/v3/components/musickit-components/p-<h>.js,1,passthrough,Luxon (MusicKit),default locale passed back to Intl,review
+566,chat-assets.frontapp.com/v1/app.bundle.js,1,passthrough,Luxon (inferred),body not captured,review
+567,euob.thisgreencolumn.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+568,1win.com/resources/v1/app/assets/fp.esm-Cpxzoe3g.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+569,costco.ca/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,VM reads 7 services incl Collator,review
+570,a.wb.ru/sdk/sdk.js,1,unclear,-,body not captured,review
+571,totalcasino.pl/<id>/js/app-out/app-launch-timer~date-time-display~last-login-date~~detailed-withdrawal-history.<h>.chunk.js,1,passthrough,Luxon,default locale passed back to Intl,review
+572,img.lb.wbmdstatic.com/webmd_static_vue/file-explorer/webmd/consumer_assets/site_images/webmd-ads-framework/js/<id>.min.js,1,unclear,WebMD ads,lowercased locale stored as device country for ads; consumer not shown,review
+573,cdn.grok.com/_next/static/chunks/3kyu1n5wtr3uc.js,1,analytics,Sentry,CultureContext culture.locale on error events,review
+574,cdn.grok.com/_next/static/chunks/<n>cmvvd0mxy.js,1,bot-or-fraud,anti-bot collector,obfuscated browser-signal collector,review
+575,my.jcb.co.jp/apl/login-prot.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+576,pagedoo.midasbuy.com/cdn/materials/dist/<id>_materials@<h>/<n>.<h>.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+577,unieuro.it/common9.js,1,fallback-probe,-,obfuscated VM ZZ and [] probes incl Segmenter,review
+578,aswpsdkus.com/notify/v1/ua-sdk.min.js,1,tag-sensitive,Airship Web SDK,region becomes locale_country; missing region falls back to navigator.languages,review
+579,veikkaus.fi/_astro/<id>.a2qvg84Y.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+580,js.swagbucks.com/prod/bundle.js,1,bot-or-fraud,Prodege,device-signal schema; likely anti-fraud,review
+581,mcdn.mudah.my/static-assets/md-rom-web/<h>/_next/static/chunks/3yd0b2vkre0-g.js,1,analytics,Sentry,CultureContext culture.locale,review
+582,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/atlas-esm/_atlas-kernel/helper/<v>/<h>/index.js,1,unclear,TikTok Shop,stored as default in platform store; use not shown,review
+583,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/gec/altas/account-exp/entries/<h>/utils.js,1,unclear,TikTok Shop,stored as platform-store locale; consumer not shown,review
+584,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/gec/atlas/account-l2l/js/ofzupxsk.js,1,unclear,TikTok Shop,stored in store state; consumer not shown,review
+585,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/atlas/account/page/<id>/js/seller.fomyuewr.js,1,unclear,TikTok Shop,stored in store state; consumer not shown,review
+586,lf16-scmcdn.oecstatic.com/obj/oec-magellan-sg/gec/atlas/account-l2l/entries/<h>/index.js,1,unclear,TikTok Shop,stored in store state; consumer not shown,review
+587,js.verisoul.ai/prod/bundle.js,1,bot-or-fraud,Verisoul,fraud device payload,review
+588,construplaza.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl,earlier review
+589,fluminense.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl/intl-messageformat (VTEX),stored as a library default locale and passed back to Intl,earlier review
+590,jdw-auth.co.uk/build/assets/AppVersion-<v>.js,1,passthrough,Luxon (newer),stored as a library default locale and passed back to Intl,earlier review
+591,motos.honda.com.gt/web/assets/1/1a5b69b/web.<id>.min.js,1,passthrough,Luxon in Odoo,stored as a library default locale and passed back to Intl,earlier review
+592,framerusercontent.com/sites/<id>/script_main.DDMp_2Of.mjs,1,unclear,Framer runtime,script body not captured,earlier review
+593,framerusercontent.com/sites/<id>/framer.BSsbpkTa.mjs,1,unclear,Framer runtime,script body not captured,earlier review
+594,afirme.com/AfirmebotCert.js,1,fallback-probe,ZZ-probe VM (Afirme),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense",earlier review
+595,gcaptcha.eo.gtimg.com/<id>.js,1,bot-or-fraud,Tencent EdgeOne JS challenge,signal in a bot-challenge or fraud-scoring payload,earlier review
+596,arsonyb2c.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl,earlier review
+597,officemax.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl,earlier review
+598,jollymax.com/_nuxt/<h>.js,1,unclear,JollyMax Nuxt bundle,script body not captured,earlier review
+599,arveres.mbvk.hu/chunk-KROTFIA2.js,1,passthrough,Luxon,stored as a library default locale and passed back to Intl,earlier review
+600,static.elfsight.com/apps/google-reviews/stable/<h>/app/googleReviews.js,1,passthrough,Luxon (Elfsight reviews widget),stored as a library default locale and passed back to Intl,earlier review
+601,bookwalker.com/_next/static/chunks/1g7kr51f7tsb5.js,1,analytics,Sentry (inferred),body not captured,review
+602,framerusercontent.com/sites/<id>/script_main.CFrEKnGa.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally",earlier review
+603,framerusercontent.com/sites/<id>/framer.BA8-MsxN.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally",earlier review
+604,www2.geap.org.br/geap_common.js,1,fallback-probe,ZZ-probe VM (GEAP),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense",earlier review
+605,archi.ru/<id>.js,1,bot-or-fraud,WAF challenge,locale in challenge fingerprint with proof of work,review
+606,taarinisarees.com/web/assets/1/25a7a0c/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+607,install.solta.io/static/kmb-track.js,1,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+608,corporate.trustpilot.com/businesssite-app/_next/static/chunks/<n>-<h>.js,1,analytics,Sentry (likely),CultureContext; body not captured,review
+609,lestoilesdulac.com/app-<h>.js,1,passthrough,Luxon,default locale,review
+610,ob.starsbuildingweb.com/i/<h>.js,1,bot-or-fraud,unrecognized bot detection,signal in a bot-challenge or fraud-scoring payload,earlier review
+611,widget.1price.co/script.js,1,fingerprint-id,1Price,device fingerprint field,review
+612,online.frf1.com/static/bundle/assets/ApiHttp-DgmcC-_l.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+613,telehealth.kareo.com/static/shared-assets-ui/bundle/bundle_<h>.js,1,passthrough,Luxon (Elfsight reviews widget),matched code of an earlier group,fingerprint
+614,simplyfeu.com/web/assets/1/afc9f91/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+615,agebold.com/_next/static/chunks/1qso_li-ge0dn.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+616,optimamx.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+617,payment.trustme.gg/chunk-GL3GZ4K4.js,1,analytics,Sentry,CultureContext culture.locale,review
+618,gingerstoat.top/assets/index-CesaBRjP.js,1,passthrough,-,NumberFormat locale reused for currency formatter,review
+619,goodsamapp.org/assets/js/master.js,1,language-only,-,DisplayNames language compared with page lang,review
+620,dropcontrol.com/new/_next/static/chunks/pages/_app-<h>.js,1,passthrough,-,uses system locale for DTF if it starts with UI language,review
+621,d34v9t9fna52v1.cloudfront.net/chunk-JIEUQ6QH.js,1,passthrough,Luxon (older),default locale to Intl,review
+622,krankenkassenvergleich-praemien.ch/cmDist/jsext/mafgrpt1v-<v>.min.js,1,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+623,fpcdn.customerconnections.io/web/v4/<id>,1,fingerprint-id,Fingerprint Pro,visitor ID component,review
+624,hat.<id>.com/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+625,asset.hqmediago.com/media/assets/js/dist/app.js,1,fingerprint-id,FingerprintJS 4.6.2,matched code of an earlier group,fingerprint
+626,app.holmesdoc.io/assets/<id>.js,1,fingerprint-id,FingerprintJS,dateTimeLocale in device fingerprint,review
+627,jeandarrot.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+628,mareads.com/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon,default locale,review
+629,wolfattackgear.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+630,s1.hdslb.com/bfs/static/maoer-static/assets/fm/js/1.bundle.<h>.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+631,vs.mingle.respondi.it/bundle.js,1,bot-or-fraud,respondi,device-signal payload; likely survey fraud check,review
+632,oneplant.ca/_next/static/chunks/567.<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+633,calypso.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+634,blackanddeckerco.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+635,fatura.imobzi.com/build/main.js,1,tag-sensitive,-,exact pt-BR registers pt locale data; bare pt falls to en default,review
+636,ruscore.ru/_nuxt/l46jIRSa.js,1,tag-sensitive,v-calendar,full-tag table then language fallback; may change masks and week start,review
+637,app.chartacademy.com/assets/index-CVhvwiYT.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+638,cdn.seondf.com/js/v6/agent.umd.js,1,bot-or-fraud,SEON fraud agent,matched code of an earlier group,fingerprint
+639,guitargeargiveaway.co.uk/wp-content/plugins/zap-competitions/public/js/luxon.min.js,1,passthrough,Luxon,default locale passed back to Intl,review
+640,lacasadelacerradura.com.ar/web/assets/1/437dc3a/web.<id>.min.js,1,passthrough,Luxon (Odoo),matched code of an earlier group,fingerprint
+641,mercedescampuzano.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+642,meteo.gc.ca/vue/ssr/js/chunk-vendors.<h>.js,1,passthrough,Luxon,system default locale for Intl formatters and weekInfo,review
+643,fanathem.com/assets/entry.client-B5Ebs_SA.js,1,analytics,Sentry CultureContext,matched code of an earlier group,fingerprint
+644,vstatic.fridayparts.com/_nuxt/DQGI9lk5.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+645,vejrogradar.dk/chunk-GCCEWEET.js,1,tag-sensitive,Luxon,isEnglish full-tag check; miss only changes listing path,review
+646,locatelcolombia.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+647,framerusercontent.com/sites/<id>/script_main.CKW5Bs3f.mjs,1,analytics,Framer,pageview event field,review
+648,framerusercontent.com/sites/<id>/framer.CWan_nkc.mjs,1,analytics,Framer analytics,matched code of an earlier group,fingerprint
+649,amisol.dk/app/plugins/AmisolTheme/webroot/js/scripts.min.js,1,tag-sensitive,v-calendar,full-tag table then first 2 chars; may change table and first day,review
+650,wrexhamafc.co.uk/_nuxt/CiXmygQ9.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+651,online.best.com.pl/static/js/main.<h>.js,1,analytics,Sentry,CultureContext culture.locale,review
+652,paulistaoatacadista.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+653,new.tillersystems.com/_next/static/chunks/751.<h>.js,1,passthrough,Tiller,default locale for currency formatting and region names,review
+654,hotpointit.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),matched code of an earlier group,fingerprint
+655,openfpcdn.io/fingerprintjs/v5,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+656,servicepipe.tech/static/checkjs/345b01/-yCrOGfVJi.js,1,bot-or-fraud,Servicepipe,bot challenge; body not captured,review
+657,jasani.ae/web/assets/1/0d29ffd/web.<id>.min.js,1,passthrough,Luxon (Odoo),default locale,review
+658,fpjscdn.net/v3/<id>,1,bot-or-fraud,Fingerprint Pro,matched code of an earlier group,fingerprint
+659,talkdeskchatsdk.talkdeskapp.com/v2/widget/<v>/assets/<id>.js,1,passthrough,Talkdesk,locale list passed to toLocaleTimeString,review
+660,rrb.nc/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon,default locale and weekInfo,review
+661,euob.seroundprince.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+662,rpmlive.dozee.ai/static/js/main.<h>.js,1,passthrough,Luxon,default locale passed back to Intl,review
+663,skechers.at/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,VM reads 7 services incl Collator,review
+664,patient.talkiatry.com/_next/static/chunks/1fstc8ihik-d-.js,1,analytics,Sentry (inferred),body not captured,review
+665,staff.atheycreek.com/Obsidian/Libs/liquidjs.js,1,passthrough,LiquidJS (Glood.ai Shopify),matched code of an earlier group,fingerprint
+666,staff.atheycreek.com/Obsidian/obsidian-vendor.js,1,passthrough,Luxon,default locale passed back to Intl,review
+667,fnbgasesdeloriente.com/main.<h>.js,1,passthrough,Luxon,system default locale passed to Intl formatters,review
+668,cdn.lipsync.video/_nuxt3/<h>/whYpCEQj.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+669,onlinebank.resursbank.fi/_expo/static/js/web/entry-<h>.js,1,language-only,-,first two chars mapped to i18next language,review
+670,ob.sd<n>.youstarsbuilding.koekisha.co.jp/i/<h>.js,1,bot-or-fraud,CHEQ ClickTrue,matched code of an earlier group,fingerprint
+671,djwmpmz818tx4.cloudfront.net/assets/public_v4-<h>.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+672,litmedia.ai/_nuxt/fp.esm-mMyKXbg8.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+673,bo.betstudio.io/assets/root-DI24Jiqq.js,1,fingerprint-id,FingerprintJS,visitor fingerprint,review
+674,hc.nl/assets/_build/storyblok.context-DFDwSs4J.js,1,passthrough,Luxon,matched code of an earlier group,fingerprint
+675,diks.net/_next/static/chunks/0jntf9sio2efp.js,1,analytics,Sentry,CultureContext culture.locale,review
+676,login.disney.com/_next/static/chunks/<n>-<h>.js,1,passthrough,Luxon 3.x (Disney login),stored as a library default locale and passed back to Intl,earlier review
+677,m.media-amazon.com/images/I/B12b1xb+yiL.js,1,passthrough,Amazon Prime Video lib-strings,stored as a library default locale and passed back to Intl,earlier review
+678,cfl.dropboxstatic.com/static/atlas/warp/<id>/<id>.js,1,bot-or-fraud,Fingerprint Pro (Dropbox),signal in a bot-challenge or fraud-scoring payload,earlier review
+679,kakuyomu.jp/_next/static/chunks/pages/_app-<h>.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally",earlier review
+680,api.nike.com/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada (Nike),signal in a bot-challenge or fraud-scoring payload,earlier review
+681,servicepipe.tech/static/checkjs/345b01/wFqEZacTtp.js,1,bot-or-fraud,Servicepipe,body not captured,review
+682,assets.production.linktr.ee/client-brfp/br-fp-script.js,1,bot-or-fraud,Linktree fingerprint script,signal in a bot-challenge or fraud-scoring payload,earlier review
+683,kick.com/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload,earlier review
+684,assets-netstorage.groww.in/web-assets/<id>/prod/_next/static/chunks/pages/_app-<h>.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally",earlier review
+685,nu.nl/assets/vendor-kW24POmk.js,1,analytics,likely Sentry,"sent as telemetry, not used locally",earlier review
+686,servicos.acesso.gov.br/assets/index-H-R4F0yt.js,1,passthrough,likely Luxon (gov.br SSO),stored as a library default locale and passed back to Intl,earlier review
+687,otto.de/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload,earlier review
+688,publiccdn.litnet.com/super-assets/main-WYCAX3KL.js,1,fingerprint-id,FingerprintJS 5.2.0,matched code of an earlier group,fingerprint
+689,assets.targetimg1.com/ssx/ssx.mod.js,1,fallback-probe,obfuscated VM bot defense (Target),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense",earlier review
+690,costco.com/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload,earlier review
+691,kooora.com/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon isEnglish (kooora),"Luxon isEnglish prefix check against lowercase en-us, which never matches either way",earlier review

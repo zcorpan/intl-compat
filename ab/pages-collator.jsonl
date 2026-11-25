@@ -1,0 +1,95 @@
+{"idx": 11598, "page": "https://www.cypruscu.com/", "client": "desktop", "stratum": "top1M", "class": "fallback-probe", "groups": [1, 92]}
+{"idx": 7379, "page": "https://www.aloyoga.com/", "client": "desktop", "stratum": "top10k", "class": "bot-or-fraud", "groups": [11, 12]}
+{"idx": 6536, "page": "https://www.dolcegabbana.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [11, 12]}
+{"idx": 6128, "page": "https://eu.stanley1913.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 6465, "page": "https://secretlab.co/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 6033, "page": "https://shopakira.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [12, 397]}
+{"idx": 4427, "page": "https://stetson.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 11701, "page": "https://store.theshootingcentre.com/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [12, 658]}
+{"idx": 11185, "page": "https://www.benbridge.com/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 8003, "page": "https://www.cardkingdom.com/", "client": "desktop", "stratum": "top10k", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 10801, "page": "https://www.crimsontrace.com/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 6310, "page": "https://www.did.ie/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 10469, "page": "https://www.philips.hu/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 6835, "page": "https://www.popsockets.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 4897, "page": "https://www.psd.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 7148, "page": "https://www.sram.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [12]}
+{"idx": 1263, "page": "https://www.internationalautooutlet.com/", "client": "desktop", "stratum": "rest", "class": "fallback-probe", "groups": [26, 155]}
+{"idx": 2155, "page": "https://www.notariaat-drongen.be/", "client": "desktop", "stratum": "rest", "class": "fallback-probe", "groups": [65, 207]}
+{"idx": 3801, "page": "https://www.notarisvh.be/", "client": "desktop", "stratum": "rest", "class": "fallback-probe", "groups": [65, 284]}
+{"idx": 3091, "page": "https://krasnodar.sushi-master.ru/", "client": "desktop", "stratum": "rest", "class": "fingerprint-id", "groups": [66]}
+{"idx": 2611, "page": "https://matras-totchas.ru/", "client": "desktop", "stratum": "rest", "class": "fingerprint-id", "groups": [66]}
+{"idx": 12269, "page": "https://kick.com/", "client": "desktop", "stratum": "top1k", "class": "bot-or-fraud", "groups": [80, 683]}
+{"idx": 8707, "page": "https://verified.capitalone.com/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [83, 531]}
+{"idx": 7728, "page": "https://www.capitalone.com/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [83]}
+{"idx": 11291, "page": "https://www.partnersfcu.org/", "client": "desktop", "stratum": "top1M", "class": "fallback-probe", "groups": [92]}
+{"idx": 481, "page": "https://www.studentpayplus.com.au/", "client": "desktop", "stratum": "rest", "class": "fallback-probe", "groups": [119]}
+{"idx": 2409, "page": "https://gamesdonequick.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [223]}
+{"idx": 2469, "page": "https://partners.tbank-online.com/", "client": "desktop", "stratum": "rest", "class": "fingerprint-id", "groups": [226]}
+{"idx": 2509, "page": "https://auth.factory.ai/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [228]}
+{"idx": 3923, "page": "https://login.runwayml.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [292]}
+{"idx": 4498, "page": "https://identity.healthsafe-id.com/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [314]}
+{"idx": 4586, "page": "https://www.skechers.cl/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [322]}
+{"idx": 4626, "page": "https://attijarinet.attijariwafa.com/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [323]}
+{"idx": 4742, "page": "https://www.skechers.hu/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [327]}
+{"idx": 4777, "page": "https://www.skechers.in/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [329]}
+{"idx": 5272, "page": "https://www.dubaipolice.gov.ae/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [356]}
+{"idx": 5294, "page": "https://www.washingtonconnection.org/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [357]}
+{"idx": 5543, "page": "https://my.cigna.com/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [372]}
+{"idx": 5649, "page": "https://my.dish.com/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [381]}
+{"idx": 5951, "page": "https://www.dr.com.tr/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [389]}
+{"idx": 6053, "page": "https://orders.cloudpayments.ru/", "client": "desktop", "stratum": "top100k", "class": "fingerprint-id", "groups": [398]}
+{"idx": 6253, "page": "https://www.rcbconlinebanking.com/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [407]}
+{"idx": 6411, "page": "https://www.virginplus.ca/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [418]}
+{"idx": 6891, "page": "https://www.sydneyoperahouse.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [435]}
+{"idx": 7043, "page": "https://carriers.carecorenational.com/", "client": "desktop", "stratum": "top100k", "class": "fallback-probe", "groups": [446]}
+{"idx": 7625, "page": "https://www.peacocktv.com/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [471]}
+{"idx": 7871, "page": "https://www.myer.com.au/", "client": "desktop", "stratum": "top10k", "class": "passthrough", "groups": [489, 490]}
+{"idx": 8213, "page": "https://www6.rbc.com/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [503]}
+{"idx": 8331, "page": "https://www.skechers.com/", "client": "desktop", "stratum": "top10k", "class": "bot-or-fraud", "groups": [510]}
+{"idx": 8476, "page": "https://ibank.klikbca.com/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [520]}
+{"idx": 8567, "page": "https://www.target.com.au/", "client": "desktop", "stratum": "top10k", "class": "bot-or-fraud", "groups": [525]}
+{"idx": 8756, "page": "https://www.rottentomatoes.com/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [534]}
+{"idx": 8792, "page": "https://www.chase.com/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [536, 537]}
+{"idx": 8926, "page": "https://consumidor.gov.br/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [544]}
+{"idx": 9105, "page": "https://www.southwest.com/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [546]}
+{"idx": 9804, "page": "https://www.costco.ca/", "client": "desktop", "stratum": "top10k", "class": "bot-or-fraud", "groups": [569]}
+{"idx": 9875, "page": "https://my.jcb.co.jp/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [575]}
+{"idx": 9893, "page": "https://www.unieuro.it/", "client": "desktop", "stratum": "top10k", "class": "fallback-probe", "groups": [577]}
+{"idx": 10195, "page": "https://www.afirme.com/", "client": "desktop", "stratum": "top1M", "class": "fallback-probe", "groups": [594]}
+{"idx": 10434, "page": "https://www2.geap.org.br/", "client": "desktop", "stratum": "top1M", "class": "fallback-probe", "groups": [604]}
+{"idx": 11857, "page": "https://www.skechers.at/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [663]}
+{"idx": 12192, "page": "https://www.nike.com/", "client": "desktop", "stratum": "top1k", "class": "bot-or-fraud", "groups": [680]}
+{"idx": 12336, "page": "https://www.otto.de/", "client": "desktop", "stratum": "top1k", "class": "bot-or-fraud", "groups": [687]}
+{"idx": 12359, "page": "https://www.target.com/", "client": "desktop", "stratum": "top1k", "class": "fallback-probe", "groups": [689]}
+{"idx": 12377, "page": "https://www.costco.com/", "client": "desktop", "stratum": "top1k", "class": "bot-or-fraud", "groups": [690]}
+{"idx": 3595, "page": "https://loudounbasements.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0, 2]}
+{"idx": 11559, "page": "https://www.gossard.com/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 1521, "page": "https://dustmagazine.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 3300, "page": "https://hillsclub.toast.site/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 1390, "page": "https://holes.fandom.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 10927, "page": "https://www.glampoutdoor.com/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 309, "page": "https://www.vedabikes.nl/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0, 114]}
+{"idx": 2283, "page": "https://www.home-tavern.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 1420, "page": "https://bullsheathleather.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 848, "page": "https://pergolux-us.zendesk.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 1346, "page": "https://www.rowse-automation.co.uk/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 1634, "page": "https://www.qtowneoaks.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 10604, "page": "https://zoskinhealth.com/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 10053, "page": "https://www.simpsonraceproducts.com/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 11460, "page": "https://disventure-camp.fandom.com/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 7302, "page": "https://mywebcamroom.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 5667, "page": "https://trshop.honor.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 7896, "page": "https://www.ubereats.com/", "client": "desktop", "stratum": "top10k", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 2449, "page": "https://li.nuxe.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 8813, "page": "https://xn--eckwa2aa3a9c8j8bve9d.gamewith.jp/", "client": "desktop", "stratum": "top10k", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 4716, "page": "https://www.dayoutwiththekids.co.uk/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 11461, "page": "https://wh40khomebrew.fandom.com/", "client": "desktop", "stratum": "top1M", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 7126, "page": "https://www.assettoworld.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 5010, "page": "https://ajaib.co.id/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 5617, "page": "https://dungeon-crawler-carl.fandom.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 6675, "page": "https://baldursgate.fandom.com/", "client": "desktop", "stratum": "top100k", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 3421, "page": "https://alittleshady.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 3033, "page": "https://giddy-roundworm-34b.notion.site/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 1084, "page": "https://ispcan.org/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}
+{"idx": 843, "page": "https://ezproc.zendesk.com/", "client": "desktop", "stratum": "rest", "class": "bot-or-fraud", "groups": [0]}

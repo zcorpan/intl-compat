@@ -25,3 +25,6 @@ out-ab-*/*.log
 out-ab-*/diffs.jsonl
 security/
 dossiers2/
+dossiers2c/
+dossiers3/
+dossiers3c/
