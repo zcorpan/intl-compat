@@ -1,8 +1,5 @@
 # Does the web care what `resolvedOptions().locale` returns?
 
-<!-- Fill in or delete every comment and placeholder. Take each number from a committed file and
-     say which. No billing project, account, job IDs, or costs; bytes processed only, in TiB. -->
-
 Options under discussion (unicode-org/icu4x#8736, unicode-org/icu4x#5868, tc39/ecma402#947): ICU4X-based "best fit" locale resolution in engines, which would make ECMA-402 `Intl.*.prototype.resolvedOptions().locale` report less than today's ICU4C-shaped lookup: e.g. `en` instead of `en-US`, `zh-Hant` instead of `zh-TW` or `zh-HK`, and possibly something else for `Intl.Segmenter` and `Intl.Collator`. Formatting output would not change; only the reported locale would.
 
 ## Summary
@@ -181,4 +178,3 @@ python3 ab_analyze.py out-ab-henri-*/results.jsonl; python3 ab_passback.py out-a
 
 MIT, see [LICENSE](LICENSE), for the scripts, analysis and text written for this research. Content from the crawl and the live web (`queries/`, `crawl/`, screenshots, page snippets) and third-party code (`vendor/`) belongs to its owners and isn't covered.
 
-<!-- If the repo has patches to a browser (changes to an engine's code), add the line: Patches are under the license of the code they modify. -->
