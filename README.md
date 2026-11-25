@@ -56,6 +56,8 @@ Locale environments ([env_test.py](env_test.py), [env/](env/)): in Chrome Canary
 
 With the macOS region set to Finland and English (US) kept as the language (`AppleLocale` `en_US@rg=fizzzz`), Chrome Canary and Firefox Nightly still report `en-US` everywhere ([firefox-os-region-fi.jsonl](env/firefox-os-region-fi.jsonl), [chrome-os-region-fi.jsonl](env/chrome-os-region-fi.jsonl)). On macOS, Gecko's "regional prefs" locales are the preferred-language list (`CFLocaleCopyPreferredLanguages`, [OSPreferences_mac.cpp](https://github.com/mozilla-firefox/firefox/blob/47f2a88cbab9072c8f8f156494b92d6891e488fb/intl/locale/mac/OSPreferences_mac.cpp#L59-L62)), not the region, so an `en-FI` default needs `en-FI` in that list. `-AppleLanguages (en-FI)` does give `en-FI` in Firefox's parent process, but content processes don't get the arguments and keep the system list's `en-US` ([env_fx_locales.py](env_fx_locales.py)).
 
+With `en-FI` at the top of the system list (`defaults write -g AppleLanguages`, restored after the test), Firefox Nightly reports `en-FI` in every Intl service and in workers, with Finnish-English formatting (`31/01/2026`, `16.04.00`, `h23`), also with the en-GB langpack, while `navigator.language` stays `en-US` (or `en-GB`) ([firefox-os-lang-en-FI.jsonl](env/firefox-os-lang-en-FI.jsonl)). Chrome Canary gives `en-GB`, its nearest UI language, everywhere ([chrome-os-lang-en-FI.jsonl](env/chrome-os-lang-en-FI.jsonl)), as with `-AppleLanguages (en-FI)`. The BiDi override gives Firefox the same Intl values, but also sets `navigator.language` and Accept-Language to `en-FI`, which the real setup doesn't.
+
 Detection ([detect.py](detect.py), [detect/trace.js](detect/trace.js)): Chrome Canary, headless, 1366x768, default `en-US`, a preload script in all frames making `locale` on every `resolvedOptions()` result a logging accessor (service, constructor locales argument, value, stack), checked on [detect/test.html](detect/test.html) for property reads, destructuring, spread, `JSON.stringify` and `Object.assign`, with page-visible results unchanged. Not traced: workers. Results in [out-detect/results.jsonl](out-detect/results.jsonl), 1885 pages, 35 load errors.
 
 Grouping and review: reads grouped by calling script ([group.py](group.py), [groups.json](out-detect/groups.json), 138 groups), dossiers of beautified code around each frame (not committed: third-party code), each group classified by read-only reviewers, with the tag-sensitive and Luxon groups checked by hand ([classes.csv](out-detect/classes.csv)).
@@ -85,7 +87,7 @@ A/B setup ([ab.py](ab.py) for Chrome, [ab_fx.py](ab_fx.py) for Firefox; pages fr
 
 - Workers (not traced), code that runs after interaction (see Recall), logged-in pages.
 - Server-side use of values sent by bot-defense and fraud scripts: a changed locale only shows in challenge or checkout outcomes, which the A/B comparison will look at.
-- Safari, and Firefox's OS regional-preferences path with a real macOS region change.
+- Safari.
 
 ## Query bytes
 
