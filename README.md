@@ -4,7 +4,7 @@ Options under discussion (unicode-org/icu4x#8736, unicode-org/icu4x#5868, tc39/e
 
 ## Summary
 
-Status: done. Desktop pages, Chrome Canary 160 and Firefox Nightly 163 on macOS; variants defined by Henri (below).
+Desktop pages, Chrome Canary 160 and Firefox Nightly 163 on macOS; variants defined by Henri (below).
 
 - 24.0% (22.1–26.0%) of desktop root pages that construct an Intl object read `resolvedOptions().locale` during load, about 7.4% of all desktop root pages ([class-summary.md](out-detect2/class-summary.md), 12,397 pages). Pages with the `Intl.Locale` or LocaleInfoFunctions counters read it at the same rate (25.9%, 24.1%).
 - What the value is used for, by page (most significant use, % of Intl pages): bot-challenge or fraud signal 10.9%; hashed visitor or ad ID 5.4%; passed back to Intl as a library default 5.3%; telemetry 1.7%; tag- or region-sensitive 0.39% (0.17–0.77%); fallback probe 0.11%; language subtag only 0.10%; unclear 0.15%.
