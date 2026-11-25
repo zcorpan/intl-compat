@@ -1,0 +1,31 @@
+mainDrop: 429 empty region files (472 tag forms); 64 of the empty files are not default content locales: ady_JO az_Arab_IQ az_Arab_TR bgn_AE bgn_AF bgn_IR bgn_OM ca_AD ca_IT ccp_IN da_GL de_BE el_CY en_AS en_PR en_UM en_VI es_EA es_IC ff_Latn_BF ff_Latn_CM ff_Latn_GW ff_Latn_NE fr_BF fr_BJ fr_BL fr_CF fr_CG fr_GA fr_GP fr_GQ fr_MC fr_MF fr_MQ fr_NC fr_NE fr_PF fr_PM fr_TG fr_WF fr_YT ga_GB gsw_FR gsw_LI ha_Arab_SD it_SM it_VA kk_KZ ku_Arab_IR ku_Latn_IQ ku_Latn_SY ku_TR ln_CF ln_CG mrh_MM nb_SJ oka_US pap_AW sdh_IQ shn_TH smj_NO sus_SL syr_SY yue_Hant_MO
+empty region files with a non-truncation parent (not dropped): en_CY: empty but parent is en_001; en_FM: empty but parent is en_001; en_TC: empty but parent is en_001; en_VG: empty but parent is en_001
+  en-US -> en
+  en-GB -> (kept)
+  en-FI -> (kept)
+  ar-EG -> (kept)
+  ar-SA -> (kept)
+  pt-BR -> pt
+  pt-PT -> (kept)
+  zh-CN -> zh
+  zh-TW -> zh-Hant
+  zh-HK -> (kept)
+  zh-Hant-TW -> zh-Hant
+  zh-Hant-HK -> (kept)
+  is-IS -> is
+  sv-SE -> sv
+  de-DE -> de
+  fr-FR -> fr
+  ja-JP -> ja
+collator checks (differs, effective collation for tag, for base):
+  en-US: (False, 'root', 'root')
+  en-GB: (False, 'root', 'root')
+  ar-SA: (False, 'ar', 'ar')
+  zh-CN: (False, 'zh', 'zh')
+  zh-Hans-CN: (False, 'zh', 'zh')
+  zh-TW: (False, 'zh_Hant', 'zh_Hant')
+  zh-HK: (False, 'zh_Hant', 'zh_Hant')
+  zh-Hant-TW: (False, 'zh_Hant', 'zh_Hant')
+  zh-Hant-HK: (False, 'zh_Hant', 'zh_Hant')
+regions that do nothing in main/ but change collation: none
+ar: likely subtags ar_Arab_EG ; default content ['ar_001'] ; ar_EG.xml has ['localeDisplayNames', 'numbers']

@@ -14,7 +14,8 @@ import ab_diff, harness
 FIREFOX = '/Applications/Firefox Nightly.app/Contents/MacOS/firefox'
 # Full page text (not the template's first 3000 characters): formatted dates sit anywhere.
 FULL_TEXT = harness.MEASURE_JS = harness.MEASURE_JS.replace('.slice(0, 3000)', '.slice(0, 50000)')
-REWRITE = open(harness.here('ab', 'rewrite.js')).read()
+REWRITE = open(harness.here('ab', 'rewrite.js')).read().replace(
+    '/*CLDR_TABLE*/null', open(harness.here('ab', 'cldr-table.json')).read())
 PASSBACK = open(harness.here('ab', 'passback.js')).read()
 MEASURE = 'return (' + FULL_TEXT.strip() + ')()'
 EXTRA = """return ((() => {
@@ -138,7 +139,7 @@ def sanity(args):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('locale')
-    ap.add_argument('variant', choices=['B1', 'B2'])
+    ap.add_argument('variant', choices=['B1', 'B2', 'B3', 'C1', 'C2', 'SU', 'SL'])
     ap.add_argument('pages', nargs='?')
     ap.add_argument('out_dir', nargs='?')
     ap.add_argument('--concurrency', type=int, default=5)

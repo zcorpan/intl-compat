@@ -27,17 +27,17 @@ Status: detection and code review done; the A/B comparison waits on the variant 
 
 ## What breaks and why
 
-Not measured yet. Variants proposed for the A/B comparison, to check with Henri:
+Variants (Henri's, replacing the earlier B1/B2 proposals; [ab/rewrite.js](ab/rewrite.js), tables from CLDR 1cfc52b by [cldr_table.py](cldr_table.py), [cldr-report.txt](cldr-report.txt)):
 
-- B1 (stress test): every `resolvedOptions().locale` reports the language only; `zh-TW`/`zh-HK` (and Firefox's `zh-Hant-TW`/`zh-Hant-HK`) report `zh-Hant`; `zh-CN`/`zh-Hans-CN` report `zh`. Formatting is unchanged; only the reported string changes.
-- B2 (likely-subtags dedup, my approximation of the ICU4X "best fit" model): report the first of language, language-Script that maximizes to the same tag as the resolved one: `en-US`→`en`, `pt-BR`→`pt`, `zh-CN`/`zh-Hans-CN`→`zh`, `zh-TW`→`zh-Hant`, `sv-SE`→`sv`, `is-IS`→`is`, `ar-EG`→`ar`; `en-GB`, `pt-PT`, `ar-SA`, `zh-HK` kept. Of the tags tested, only `ar-EG`→`ar` formats differently when passed back ([passback](env/passback.js)), so a model that drops only data-identical regions would keep `ar-EG`.
-- Fallback for invalid or unsupported requests (`"ZZ"`, `[]`) unchanged in both, unless the model changes it.
+- B3: objects other than Collator constructed without a locales argument report the default locale without its region when CLDR's `common/main/<lang>[_<Script>]_<REGION>.xml` has nothing but `<identity>` and its parent is the same locale without the region: `en-US`→`en`, `pt-BR`→`pt`, `zh-CN`→`zh`, `zh-TW` and `zh-Hant-TW`→`zh-Hant`, `is-IS`, `sv-SE`, `de-DE`, `fr-FR`, `ja-JP` likewise; `en-GB`, `en-FI`, `ar-EG`, `ar-SA`, `pt-PT`, `zh-HK` kept. Of the 429 such files (of 750 region files), 64 aren't CLDR default content locales (e.g. `de_BE`, `en_AS`, `fr_MC`), so for those the region still changes region-keyed supplemental data (week, hour cycle, currency); 4 empty `en_*` files whose parent is `en_001` aren't dropped.
+- C1: Collator (with or without a locales argument) reports `en-US`, `en-GB`→`en`, `ar-SA`→`ar`, `zh-CN`→`zh`, and `zh-TW`/`zh-HK`→`zh-Hant`; C2 the same but `zh-TW`/`zh-HK`→`zh-u-co-stroke`. In `common/collation/`, none of these regions changes the collation used (`en_US.xml` is empty, `en_US_POSIX` ignored, `zh_TW`/`zh_HK` resolve to `zh_Hant`).
+- SU: Segmenter reports `und`; SL: Segmenter reports the language only, so it differs from DateTimeFormat.
+- Not tested, as Henri suggested: `supportedLocalesOf()` and the `"ZZ"`/`[]` fallback.
 
-Open questions:
+CLDR checks:
 
-- Is B2 what the ICU4X model would report for each test locale, including `ar-EG` (its data differs from `ar` in Chrome) and `zh-HK` (`zh-Hant-HK`?), and for Collator (`en`/root-valid languages) and Segmenter (language only? something else)?
-- Does the model's deduplication consider region-derived preferences a library gets by passing the tag back (week info, hour cycle, default calendar and numbering system), not only the locale's own data?
-- Does it change `supportedLocalesOf()` results or the fallback for `"ZZ"`/`[]`?
+- `ar` vs `ar-EG`: `ar_EG.xml` sets `defaultNumberingSystem` `arab` (and a display name), so `ar-EG` formats with Arabic-Indic digits and `ar` with Latin ones. That's documented behavior, not a CLDR bug: likely subtags map `ar` to `ar_Arab_EG`, but `ar`'s default content locale is `ar_001`, and TR35 says default content "Should not be used for locale matching or likely subtags" ([tr35.md, Inheritance vs Related Information](https://github.com/unicode-org/cldr/blob/1cfc52bc791ae3058bcc113c6c87e141cf5941f5/docs/ldml/tr35.md#inheritance-vs-related-information)). Default content locales are empty by definition; likely-subtags regions needn't be.
+- No region that is empty in `common/main/` changes collation (checked over all 429 files with `common/collation/` and its collation parent locales), so a no-argument DateTimeFormat locale passed into Collator can't lose a collation distinction under B3.
 
 ## 1. HTTP Archive
 

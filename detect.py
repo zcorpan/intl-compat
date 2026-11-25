@@ -92,6 +92,8 @@ async def guarded(coro, seconds=75):
         return await asyncio.wait_for(coro, seconds)
     except asyncio.TimeoutError:
         return {'error': f'visit timed out after {seconds}s', 'events': []}
+    except Exception as e:  # e.g. the browser crashed under us; the worker relaunches it
+        return {'error': f'{type(e).__name__}: browser closed', 'events': []}
 
 
 async def run(chrome, rows, out, concurrency):

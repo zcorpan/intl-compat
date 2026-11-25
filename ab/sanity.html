@@ -9,10 +9,13 @@ window.__sanity = () => {
   const defaults = Object.fromEntries(svcs.map(s => [s, make(s).resolvedOptions().locale]));
   const explicit = Object.fromEntries(['en-US', 'en-GB', 'ar-EG', 'zh-TW', 'zh-HK', 'zh-Hans-CN', 'pt-BR', 'en-US-u-hc-h23']
     .map(l => [l, new Intl.DateTimeFormat(l).resolvedOptions().locale]));
+  const explicitBy = Object.fromEntries(['Collator', 'Segmenter', 'NumberFormat'].map(s => [s, Object.fromEntries(
+    ['en-US', 'en-GB', 'ar-SA', 'zh-CN', 'zh-TW', 'zh-HK'].map(l => [l, make(s, l).resolvedOptions().locale]))]));
+  const called = Intl.DateTimeFormat().resolvedOptions().locale;  // called without new, no args
   const loc = new Intl.DateTimeFormat().resolvedOptions().locale;
   const d = new Date(Date.UTC(2026, 8, 3, 13, 4));
   return {
-    defaults, explicit, rewrites: window.__abRewrites,
+    defaults, explicit, explicitBy, called, rewrites: window.__abRewrites,
     navigatorLanguage: navigator.language,
     nativeLooking: String(Intl.DateTimeFormat.prototype.resolvedOptions),
     name: Intl.DateTimeFormat.prototype.resolvedOptions.name,

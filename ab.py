@@ -1,7 +1,7 @@
 """A/B comparison of a resolvedOptions().locale variant under one real locale configuration.
 
 A, A2: the browser as a user with <locale> gets it, with ab/rewrite.js counting only; B: the same
-browser and wrapper with <variant> (B1, B2) rewriting `locale`. One Chrome launch per locale, headed
+browser and wrapper with <variant> (see VARIANTS in ab/rewrite.js) rewriting `locale`. One Chrome launch per locale, headed
 (headless Chrome ignores -AppleLanguages), attached over CDP since Playwright rejects those args.
 
 usage: .venv/bin/python ab.py chrome <locale> <variant> ab/pages.jsonl <out-dir> [--concurrency N]
@@ -15,7 +15,8 @@ import ab_diff, change, harness
 CHROME = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
 # Full page text (not the template's first 3000 characters): formatted dates sit anywhere.
 FULL_TEXT = harness.MEASURE_JS = harness.MEASURE_JS.replace('.slice(0, 3000)', '.slice(0, 50000)')
-REWRITE = open(harness.here('ab', 'rewrite.js')).read()
+REWRITE = open(harness.here('ab', 'rewrite.js')).read().replace(
+    '/*CLDR_TABLE*/null', open(harness.here('ab', 'cldr-table.json')).read())
 PASSBACK = open(harness.here('ab', 'passback.js')).read()
 CHALLENGE_JS = """() => {
   const v = s => [...document.querySelectorAll(s)].map(e => (e.value || '').length);
@@ -161,7 +162,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('browser', choices=['chrome'])
     ap.add_argument('locale')
-    ap.add_argument('variant', choices=['B1', 'B2'])
+    ap.add_argument('variant', choices=['B1', 'B2', 'B3', 'C1', 'C2', 'SU', 'SL'])
     ap.add_argument('pages', nargs='?')
     ap.add_argument('out_dir', nargs='?')
     ap.add_argument('--concurrency', type=int, default=4)
