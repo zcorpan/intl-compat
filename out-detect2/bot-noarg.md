@@ -29,18 +29,18 @@ fallback-probe: 28 pages
 | DurationFormat | 0 | 0 | | | |
 
 
-Extrapolated to desktop root pages with an Intl counter (2026-11-01, 3,514,922 pages), weighted by rank stratum:
+Extrapolated to desktop root pages (2026-11-01, 11,388,038 pages, 3,514,922 with an Intl counter), weighted by rank stratum:
 
-| Bot or fraud script reads, after construction without a locales argument | % of Intl pages |
+| Bot or fraud script reads, after construction without a locales argument | % of desktop root pages (95% bounds) |
 |---|---|
-| any | 11.0% |
-| DateTimeFormat | 11.0% |
-| NumberFormat | 10.2% |
-| Collator | 10.0% |
-| PluralRules | 10.2% |
-| RelativeTimeFormat | 10.2% |
-| ListFormat | 10.2% |
-| DisplayNames | 10.2% |
-| Segmenter | 0.0% |
-| fallback probe (`"ZZ"`/`[]`), DateTimeFormat | 0.11% |
-| fallback probe (`"ZZ"`/`[]`), Segmenter | 0.11% |
+| any | 3.39 (2.97–3.84) |
+| DateTimeFormat | 3.39 (2.97–3.84) |
+| NumberFormat | 3.15 (2.75–3.59) |
+| Collator | 3.09 (2.69–3.52) |
+| PluralRules | 3.15 (2.75–3.59) |
+| RelativeTimeFormat | 3.15 (2.75–3.59) |
+| ListFormat | 3.15 (2.75–3.59) |
+| DisplayNames | 3.15 (2.75–3.59) |
+| Segmenter | 0.000 (0.000–0.058) |
+| fallback probe (`"ZZ"`/`[]`), DateTimeFormat | 0.034 (0.005–0.117) |
+| fallback probe (`"ZZ"`/`[]`), Segmenter | 0.034 (0.005–0.117) |

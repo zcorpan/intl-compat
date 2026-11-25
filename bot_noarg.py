@@ -3,9 +3,11 @@ constructor locales argument (none, `[]`, explicit), on the random picks of the 
 
 usage: python3 bot_noarg.py out-detect2/results.jsonl out-detect2/groups.json out-detect2/classes.csv queries/sample2.csv > out-detect2/bot-noarg.md
 A page counts for a category if any of its reads comes from a group of that category (not only its
-most significant one). Extrapolated: per-stratum rates weighted by stratum size, as in classify2.py.
+most significant one). Extrapolated to desktop root pages: per-stratum rates weighted by the stratum's
+Intl-counter pages, over all desktop root pages, with summed Clopper-Pearson bounds, as in classify2.py.
 """
 import collections, csv, json, sys
+from classify2 import cp, pct as fmt_rate
 from group import frames, norm
 
 SVCS = ['DateTimeFormat', 'NumberFormat', 'Collator', 'PluralRules', 'RelativeTimeFormat', 'ListFormat',
@@ -22,7 +24,7 @@ def main(results, groups_path, classes_path, sample_path):
     cls = {int(r['group']): r['category'] for r in csv.DictReader(open(classes_path))}
     cat_of = {g['key']: cls[i] for i, g in enumerate(groups)}
     sample = list(csv.DictReader(open(sample_path)))
-    n, pop = collections.Counter(), {}
+    n, pop, root = collections.Counter(), {}, {}
     reads = {c: collections.defaultdict(lambda: collections.defaultdict(collections.Counter)) for c in CATS}
     for l in open(results):
         r = json.loads(l)
@@ -31,6 +33,7 @@ def main(results, groups_path, classes_path, sample_path):
             continue
         n[s['stratum']] += 1
         pop[s['stratum']] = int(s['stratum_intl_pages'])
+        root[s['stratum']] = int(s['stratum_pages'])
         for e in r.get('events', []):
             if e['kind'] != 'locale':
                 continue
@@ -62,15 +65,19 @@ def main(results, groups_path, classes_path, sample_path):
 
     def rate(ps):
         by = collections.Counter(stratum[p] for p in ps)
-        return 100 * sum(by[s] / n[s] * pop[s] for s in n) / sum(pop.values())
-    print(f'\nExtrapolated to desktop root pages with an Intl counter (2026-11-01, {sum(pop.values()):,} pages), weighted by rank stratum:\n')
-    print('| Bot or fraud script reads, after construction without a locales argument | % of Intl pages |\n|---|---|')
+        d = sum(root.values()) / 100
+        est = sum(by[s] / n[s] * pop[s] for s in n) / d
+        lo = sum(cp(by[s], n[s])[0] * pop[s] for s in n) / d
+        hi = sum(cp(by[s], n[s])[1] * pop[s] for s in n) / d
+        return fmt_rate(est, lo, hi)
+    print(f'\nExtrapolated to desktop root pages (2026-11-01, {sum(root.values()):,} pages, {sum(pop.values()):,} with an Intl counter), '
+          'weighted by rank stratum:\n')
+    print('| Bot or fraud script reads, after construction without a locales argument | % of desktop root pages (95% bounds) |\n|---|---|')
     for svc in ['any'] + SVCS[:-1]:
         ps = [p for p in weighted[('bot-or-fraud', svc)] if svc == 'any' or reads['bot-or-fraud'][p][svc]['none']]
-        print(f'| {svc} | {rate(ps):.1f}% |')
+        print(f'| {svc} | {rate(ps)} |')
     for svc in ('DateTimeFormat', 'Segmenter'):
-        print(f'| fallback probe (`"ZZ"`/`[]`), {svc} | {rate(weighted[("fallback-probe", svc)]):.2f}% |')
-
+        print(f'| fallback probe (`"ZZ"`/`[]`), {svc} | {rate(weighted[("fallback-probe", svc)])} |')
 
 if __name__ == '__main__':
     main(*sys.argv[1:5])

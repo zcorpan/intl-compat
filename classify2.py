@@ -33,7 +33,14 @@ STRATA = ['top1k', 'top10k', 'top100k', 'top1M', 'rest']
 PICKS = {'random': 'stratum_intl_pages', 'locale_info': 'stratum_locale_info_pages', 'intl_locale': 'stratum_intl_locale_pages'}
 
 
-def table(title, rows, pop, classes):
+def pct(est, lo, hi):  # 3 decimals for rates below 0.1% so they don't round to 0.00
+    f = (lambda x: f'{x:.3f}') if est < 0.1 else (lambda x: f'{x:.2f}')
+    return f'{f(est)} ({f(lo)}–{f(hi)})'
+
+
+def table(title, rows, pop, classes, root=None, unit='% of pages with this counter'):
+    """Per-stratum counts and the extrapolated rate within pop; with root (desktop root pages per stratum),
+    also the rate among all desktop root pages, counting pages outside pop as non-readers."""
     n = collections.Counter(r['stratum'] for r in rows)
     by = collections.defaultdict(collections.Counter)
     for r in rows:
@@ -43,8 +50,11 @@ def table(title, rows, pop, classes):
     strata = [s for s in STRATA if n[s]]
     total = sum(pop[s] for s in strata)
     print(f'\n{title}\n')
-    print('| Class | ' + ' | '.join(f'{s} (n={n[s]})' for s in strata) + ' | Extrapolated % (95% bounds) |')
-    print('|---|' + '---|' * (len(strata) + 1))
+    head = '| Class | ' + ' | '.join(f'{s} (n={n[s]})' for s in strata)
+    if root:
+        head += ' | % of desktop root pages (95% bounds)'
+    print(head + f' | {unit} (95% bounds) |')
+    print('|---|' + '---|' * (len(strata) + 1 + bool(root)))
     for c in ['any read'] + classes:
         est = lo = hi = 0.0
         for s in strata:
@@ -52,8 +62,10 @@ def table(title, rows, pop, classes):
             est += k / n[s] * pop[s]
             a, b = cp(k, n[s])
             lo, hi = lo + a * pop[s], hi + b * pop[s]
-        print(f'| {c} | ' + ' | '.join(str(by[s][c]) for s in strata) +
-              f' | {100 * est / total:.2f} ({100 * lo / total:.2f}–{100 * hi / total:.2f}) |')
+        line = f'| {c} | ' + ' | '.join(str(by[s][c]) for s in strata)
+        for d in ([sum(root[s] for s in strata)] if root else []) + [total]:
+            line += ' | ' + pct(100 * est / d, 100 * lo / d, 100 * hi / d)
+        print(line + ' |')
     return total
 
 
@@ -72,17 +84,25 @@ def main(results, groups_path, classes_path, sample_path):
             continue
         s = sample[r['idx']]
         ok.append({'stratum': s['stratum'], 'picks': s['pick'].split(), 'classes': page_cls.get(r['page'], set()), 'row': s})
-    print('Desktop root pages, 2026-11-01 crawl, loaded without errors. Class = most significant use on the page.')
+    print('Desktop root pages, 2026-11-01 crawl, loaded without errors. Class = most significant use on the page '
+          '(definitions in the README). Bounds: per-stratum Clopper–Pearson 95%, summed (conservative).')
     for pick, col in PICKS.items():
         rows = [r for r in ok if pick in r['picks']]
-        pop = {}
+        pop, root = {}, {}
         for r in rows:
             pop[r['stratum']] = int(r['row'][col])
+            root[r['stratum']] = int(r['row']['stratum_pages'])
         title = {'random': 'Random pages with an Intl constructor counter, per rank stratum',
-                 'locale_info': 'Pages with the LocaleInfoFunctions WebDX counter (Intl.Locale get*() info methods)',
+                 'locale_info': 'Pages with the LocaleInfoFunctions WebDX counter (`Intl.Locale` `get*()` info methods)',
                  'intl_locale': 'Pages with the Intl.Locale constructor counter'}[pick]
-        total = table(title, rows, pop, ORDER)
-        print(f'\nPopulation: {total:,} pages (' + ', '.join(f'{s} {pop[s]:,}' for s in STRATA if s in pop) + ').')
+        if pick == 'random':
+            total = table(title, rows, pop, ORDER, root, '% of pages with an Intl counter')
+            print(f'\nPopulation: {total:,} pages with an Intl counter (' + ', '.join(f'{s} {pop[s]:,}' for s in STRATA if s in pop) +
+                  f') of {sum(root.values()):,} desktop root pages (' + ', '.join(f'{s} {root[s]:,}' for s in STRATA if s in root) +
+                  '). Pages without an Intl counter in the crawl count as non-readers: reading `resolvedOptions()` needs a constructed Intl object.')
+        else:
+            total = table(title, rows, pop, ORDER)
+            print(f'\nPopulation: {total:,} pages (' + ', '.join(f'{s} {pop[s]:,}' for s in STRATA if s in pop) + ').')
 
 
 if __name__ == '__main__':
