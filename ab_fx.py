@@ -12,12 +12,16 @@ from selenium import webdriver
 import ab_diff, harness
 
 FIREFOX = '/Applications/Firefox Nightly.app/Contents/MacOS/firefox'
+# Full page text (not the template's first 3000 characters): formatted dates sit anywhere.
+FULL_TEXT = harness.MEASURE_JS = harness.MEASURE_JS.replace('.slice(0, 3000)', '.slice(0, 50000)')
 REWRITE = open(harness.here('ab', 'rewrite.js')).read()
 PASSBACK = open(harness.here('ab', 'passback.js')).read()
-MEASURE = 'return (' + harness.MEASURE_JS.strip() + ')()'
+MEASURE = 'return (' + FULL_TEXT.strip() + ')()'
 EXTRA = """return ((() => {
   const v = s => [...document.querySelectorAll(s)].map(e => (e.value || '').length);
   return { rewrites: window.__abRewrites ?? null, passback: window.__abPassback ?? null,
+           visible: (() => { const p = window.__abPassback, t = document.body ? document.body.innerText : '';
+             return p ? p.samples.filter(s => typeof s.got === 'string' && s.got.length > 1 && t.includes(s.got)).length : null; })(),
            defaultLocale: new Intl.DateTimeFormat().resolvedOptions().locale,
            turnstile: v('[name="cf-turnstile-response"]'), hcaptcha: v('[name="h-captcha-response"]'),
            recaptcha: v('[name="g-recaptcha-response"]') };

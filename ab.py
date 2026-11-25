@@ -13,11 +13,15 @@ from playwright.async_api import async_playwright
 import ab_diff, change, harness
 
 CHROME = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
+# Full page text (not the template's first 3000 characters): formatted dates sit anywhere.
+FULL_TEXT = harness.MEASURE_JS = harness.MEASURE_JS.replace('.slice(0, 3000)', '.slice(0, 50000)')
 REWRITE = open(harness.here('ab', 'rewrite.js')).read()
 PASSBACK = open(harness.here('ab', 'passback.js')).read()
 CHALLENGE_JS = """() => {
   const v = s => [...document.querySelectorAll(s)].map(e => (e.value || '').length);
   return { rewrites: window.__abRewrites ?? null, passback: window.__abPassback ?? null,
+           visible: (() => { const p = window.__abPassback, t = document.body ? document.body.innerText : '';
+             return p ? p.samples.filter(s => typeof s.got === 'string' && s.got.length > 1 && t.includes(s.got)).length : null; })(),
            defaultLocale: new Intl.DateTimeFormat().resolvedOptions().locale,
            turnstile: v('[name="cf-turnstile-response"]'), hcaptcha: v('[name="h-captcha-response"]'),
            recaptcha: v('[name="g-recaptcha-response"]') };
@@ -46,7 +50,16 @@ class CdpChrome:
                 break
             time.sleep(0.1)
         port = open(port_file).read().split()[0]
-        self.b = await self.p.chromium.connect_over_cdp(f'http://127.0.0.1:{port}')
+        for attempt in range(5):  # the port file can appear before Chrome accepts connections
+            try:
+                self.b = await self.p.chromium.connect_over_cdp(f'http://127.0.0.1:{port}', timeout=30000)
+                break
+            except Exception:
+                if attempt == 4:
+                    self.proc.kill()
+                    shutil.rmtree(self.dir, ignore_errors=True)
+                    raise
+                await asyncio.sleep(2)
         self.version = self.b.version
         return self
 
