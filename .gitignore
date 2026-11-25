@@ -19,3 +19,4 @@ dossiers/
 queries/*.err
 out-detect/*.log
 env/*.err
+review-raw/

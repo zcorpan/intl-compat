@@ -1,0 +1,10 @@
+250 pages without detected reads; 47 with static matches
+  19  intl-messageformat lazy defaultLocale
+   7  timeZone only (regex false positive)
+   6  other
+   4  several: intl-messageformat lazy defaultLocale, other
+   4  Sentry CultureContext (runs on error events)
+   3  several: Sentry CultureContext (runs on error events), intl-messageformat lazy defaultLocale
+   2  several: Luxon system locale/zone, other
+   1  several: Luxon system locale/zone, Sentry CultureContext (runs on error events), other
+   1  several: Sentry CultureContext (runs on error events), other

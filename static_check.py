@@ -34,7 +34,7 @@ async def visit(browser, url):
             for m in list(PAT.finditer(b))[:3]:
                 a = max(0, m.start() - 200)
                 rec['hits'].append({'url': scrub(r.url), 'sha': hashlib.sha256(b).hexdigest()[:16],
-                                    'snippet': b[a:m.end() + 100].decode('utf-8', 'replace')})
+                                    'snippet': scrub(b[a:m.end() + 100].decode('utf-8', 'replace'))})
     except Exception as e:
         rec['error'] = scrub(str(e).splitlines()[0])[:300]
     try:
@@ -62,7 +62,7 @@ async def main(chrome, results, out, n, seed):
                         rec = await asyncio.wait_for(visit(b, r['page']), 90)
                     except asyncio.TimeoutError:
                         rec = {'error': 'timeout', 'hits': []}
-                    f.write(json.dumps({'page': r['page'], 'stratum': r['stratum'], **rec}, ensure_ascii=False) + '\n')
+                    f.write(json.dumps({'page': scrub(r['page']), 'stratum': r['stratum'], **rec}, ensure_ascii=False) + '\n')
                     f.flush()
             await asyncio.gather(*[worker() for _ in range(6)])
         await b.close()

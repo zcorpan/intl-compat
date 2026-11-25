@@ -1,0 +1,139 @@
+group,key,pages,category,vendor,note
+0,challenges.cloudflare.com/(turnstile),142,bot-or-fraud,Cloudflare Turnstile,signal in a bot-challenge or fraud-scoring payload
+1,js.hs-analytics.net/analytics,32,fingerprint-id,FingerprintJS in HubSpot analytics,component of a hashed visitor or ad ID
+2,static.parastorage.com/services/<id>/<v>/<id>.bundle.min.js,12,passthrough,intl-messageformat in Wix widgets,stored as a library default locale and passed back to Intl
+3,cdn.tsyndicate.com/sdk,10,fingerprint-id,TrafficStars ad SDK,fed back with -u-nu-latn to derive a 12/24 h signal
+4,tag.digitaltarget.ru/adcm.js,8,fingerprint-id,Amber ID (FingerprintJS-derived),component of a hashed visitor or ad ID
+5,c.adsco.re/,8,bot-or-fraud,Adscore,signal in a bot-challenge or fraud-scoring payload
+6,newassets.hcaptcha.com/hsw.js,7,bot-or-fraud,hCaptcha,signal in a bot-challenge or fraud-scoring payload
+7,beacon.riskified.com/,7,bot-or-fraud,Riskified beacon,signal in a bot-challenge or fraud-scoring payload
+8,static.parastorage.com/services/pro-gallery-tpa/<v>/<id>.bundle.min.js,4,passthrough,intl-messageformat (Wix pro-gallery),stored as a library default locale and passed back to Intl
+9,bridge.shopflo.com/js/shopflo.bundle.js,4,fingerprint-id,Shopflo checkout,component of a hashed visitor or ad ID
+10,events.framer.com/script,3,analytics,Framer events,"sent as telemetry, not used locally"
+11,ask.ai.finalsite.com/chatbot/static/widget.js,2,fingerprint-id,FingerprintJS in Finalsite chatbot,component of a hashed visitor or ad ID
+12,static.parastorage.com/services/form-app/<v>/<id>.bundle.min.js,2,passthrough,intl-messageformat (Wix form-app),stored as a library default locale and passed back to Intl
+13,assets.squarespace.com/universal/scripts-compressed/<n>-<h>-min.en-US.js,2,analytics,Sentry CultureContext,"sent as telemetry, not used locally"
+14,cdn.shopify.com/extensions/<h>-<n>-740e-b0fe-<h>/<id>/assets/ip-blocker-embed.min.js,2,tag-sensitive,Blockify (Shopify IP blocker app),"exact zh-HK/zh-TW comparison, ORed with navigator.language and time zone, picks HK/TW/CN area for a store IP-block app"
+15,cdn-scripts.signifyd.com/o/lite.js,2,bot-or-fraud,Signifyd,signal in a bot-challenge or fraud-scoring payload
+16,cdn.traffmovie.com/libs/e.js,2,fingerprint-id,traffmovie ad network,component of a hashed visitor or ad ID
+17,sf16-website-login.neutral.tiktokcdn-eu.com/obj/<id>/webmssdk/<v>/webmssdk.js,2,bot-or-fraud,TikTok webmssdk,signal in a bot-challenge or fraud-scoring payload
+18,(no url frame: inline/eval),2,unclear,inline/eval,script body not captured
+19,f.static.mmcdn.com/aG34bH-ant.min.js,2,bot-or-fraud,Fingerprint Pro 3.12,signal in a bot-challenge or fraud-scoring payload
+20,marketplace-web-assets.vinted.com/_next/static/chunks/2l9v12psf6cwd.js,2,bot-or-fraud,Vinted device fingerprint,signal in a bot-challenge or fraud-scoring payload
+21,shopify-checkout.cashfree.com/cf-widget/<v>/cf-widget.js,2,fingerprint-id,Cashfree widget (FingerprintJS),component of a hashed visitor or ad ID
+22,deo.shopeemobile.com/shopee/<id>/assets/sfu-stable.<h>.<n>.js,2,bot-or-fraud,Shopee anti-fraud SDK,signal in a bot-challenge or fraud-scoring payload
+23,assets.adobedtm.com/<h>/<h>/launch-<h>.min.js,1,fingerprint-id,FingerprintJS inside Adobe Launch,component of a hashed visitor or ad ID
+24,js.pelcro.com/sdk/main.min.js,1,analytics,Pelcro SDK,"sent as telemetry, not used locally"
+25,framerusercontent.com/sites/<id>/script_main.BrEVegrI.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally"
+26,framerusercontent.com/sites/<id>/framer.D8TYbhpa.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally"
+27,ob.itstarsbuilding.com/i/<h>.js,1,bot-or-fraud,unknown bot/fraud vendor,signal in a bot-challenge or fraud-scoring payload
+28,e-office.itb.ac.id/web/assets/<n>-<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),stored as a library default locale and passed back to Intl
+29,cdn2.booqable.com/vite/assets/datePicker-BZI5pGGq.js,1,fingerprint-id,FingerprintJS in Booqable,component of a hashed visitor or ad ID
+30,cdnjs.cloudflare.com/ajax/libs/luxon/<v>/luxon.min.js,1,passthrough,Luxon 3.0.3,stored as a library default locale and passed back to Intl
+31,mypopups.com/api/embed/element,1,language-only,MyPopUps,only the language subtag is used
+32,js.hubspot.com/analytics/<n>.js,1,fingerprint-id,FingerprintJS in HubSpot,component of a hashed visitor or ad ID
+33,s.uenicdn.com/assets/<h>/static/js/vendors.<h>.js,1,passthrough,react-intl (UENI),stored as a library default locale and passed back to Intl
+34,eadtu.odoo.com/web/assets/1/<n>/web.<id>.min.js,1,passthrough,Luxon (Odoo),stored as a library default locale and passed back to Intl
+35,f.vimeocdn.com/p/<v>/js/player.module.js,1,analytics,Vimeo player telemetry,"sent as telemetry, not used locally"
+36,connect.podium.com/widget.js,1,passthrough,react-intl (Podium),stored as a library default locale and passed back to Intl
+37,stroly.com/_next/static/chunks/main-<h>.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally"
+38,personaliuudised.ee/_next/static/chunks/38n3rt3hid1jw.js,1,passthrough,Luxon (Next.js),stored as a library default locale and passed back to Intl
+39,personaliuudised.ee/_next/static/chunks/20v1pqzqmqa8n.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally"
+40,jatapronto.com.br/_next/static/chunks/0-uz1i2n97mbo.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally"
+41,framerusercontent.com/sites/<id>/script_main.DnH1X_hh.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally"
+42,framerusercontent.com/sites/<id>/framer.D95LZcls.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally"
+43,cdn.botpress.cloud/webchat/v3.3/messagePreview.js,1,passthrough,Luxon (Botpress webchat),stored as a library default locale and passed back to Intl
+44,static.parastorage.com/services/events-viewer/<v>/<id>.bundle.min.js,1,passthrough,intl-messageformat in Wix events-viewer,stored as a library default locale and passed back to Intl
+45,production-<id>.z01.azurefd.net/sitecontent/website/scripts/luxon.min.js,1,passthrough,Luxon,stored as a library default locale and passed back to Intl
+46,cdn-lightspeed.teamwork.com/static/js/useI18n-BsxJYe_b.js,1,passthrough,likely Luxon (Teamwork),stored as a library default locale and passed back to Intl
+47,virtualtours.360totaal.nl/mp-sdk/<v>/js/showcase.<h>.js,1,language-only,Matterport SDK,only the language subtag is used
+48,thehotelsnetwork.com/cdn/v200/@thehotelsnetwork/agent-fingerprint@<v>/<id>/es<n>/agent-fingerprint.system.js,1,fingerprint-id,The Hotels Network,component of a hashed visitor or ad ID
+49,apps.mews.com/distributor/release/production/<v>/distributor-app.js,1,passthrough,Luxon (Mews booking),stored as a library default locale and passed back to Intl
+50,cdn.seonintelligence.com/js/v6/agent.umd.js,1,bot-or-fraud,SEON fraud agent,signal in a bot-challenge or fraud-scoring payload
+51,vansmx.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl/intl-messageformat (VTEX),stored as a library default locale and passed back to Intl
+52,adalytics.prixacdn.net/static/dist/js/adalytics.js,1,fingerprint-id,Prixa adalytics,component of a hashed visitor or ad ID
+53,aripaev.ee/_next/static/chunks/38n3rt3hid1jw.js,1,passthrough,Luxon,stored as a library default locale and passed back to Intl
+54,aripaev.ee/_next/static/chunks/20v1pqzqmqa8n.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally"
+55,widget-assets.ap3.ee/assets/Spinner-<h>.js,1,passthrough,Luxon (older),stored as a library default locale and passed back to Intl
+56,frontend-cdn.housecallpro.com/pros/<n>-<h>.chunk.js,1,unclear,Housecall Pro bundle,script body not captured
+57,modivo.ua/pwa/assets/312.<n>dc8.chunk.js,1,passthrough,Luxon (modivo),stored as a library default locale and passed back to Intl
+58,myntraspectrum.myntassets.com/spectrum-assets/spectrum/partners/assets/<id>.<h>.js,1,passthrough,Luxon 1.x (Myntra partners),stored as a library default locale and passed back to Intl
+59,c.riskified.com/,1,bot-or-fraud,Riskified,signal in a bot-challenge or fraud-scoring payload
+60,oekastatic.orf.at/mojo.compressed/1_4_1/oeka//oeka/main.js,1,tag-sensitive,ORF ad setup,"startsWith(""de-AT"") ORed with time zone and another locale value flags Austrian users for ad targeting"
+61,identity.healthsafe-id.com/static/js/summer.js,1,fallback-probe,ZZ-probe VM (healthsafe-id),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense"
+62,edv.ecsc.gov.et/ICSMISCensus/main-SBGIPVXC.js,1,passthrough,Luxon (Angular),stored as a library default locale and passed back to Intl
+63,servicepipe.tech/static/checkjs/345b01/XtfLrq4RKz.js,1,bot-or-fraud,Servicepipe anti-bot,signal in a bot-challenge or fraud-scoring payload
+64,ob.starsbuildingweb.com/i/<h>.js,1,bot-or-fraud,unrecognized bot detection,signal in a bot-challenge or fraud-scoring payload
+65,portal.ifood.com.br/static/js/async/f5.<h>.js,1,unclear,iFood portal bundle,script body not captured
+66,portal.ifood.com.br/static/js/async/06.<h>.js,1,unclear,iFood portal bundle,script body not captured
+67,stevia.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl
+68,jtexpress.mx/js/vendor.<h>.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID
+69,p.toadmash.net/<h>/<h>-791f-4e27-9f22-<h>.js,1,bot-or-fraud,unknown obfuscated vendor,signal in a bot-challenge or fraud-scoring payload
+70,ob.cheqzone.com/<id>.js,1,bot-or-fraud,CHEQ ClickTrue,signal in a bot-challenge or fraud-scoring payload
+71,skechers.cl/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload
+72,attijarinet.attijariwafa.com/attijarinettlmtr.js,1,fallback-probe,obfuscated VM bot defense,"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense"
+73,integration.prefixbox.com/<h>-5bb5-4d6b-b27a-<h>,1,passthrough,LiquidJS (Prefixbox),stored as a library default locale and passed back to Intl
+74,sf16-website-login.neutral.ttwstatic.com/obj/<id>/ttweb_webmssdk_ex/<v>/webmssdk_ex.js,1,bot-or-fraud,TikTok webmssdk,signal in a bot-challenge or fraud-scoring payload
+75,webresource.tripcdn.com/ares2/risk/ubtrms/*/default/dist/new/d.min.js,1,bot-or-fraud,Trip.com risk control,signal in a bot-challenge or fraud-scoring payload
+76,trackfield.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl
+77,netshort.com/_next/static/chunks/<n>.<h>.js,1,fingerprint-id,FingerprintJS 5.1.0,component of a hashed visitor or ad ID
+78,checkoutshopper-live.adyen.com/checkoutshopper/assets/js/<id>/risk.<v>.js,1,bot-or-fraud,Adyen risk.js (FingerprintJS),signal in a bot-challenge or fraud-scoring payload
+79,online.bpi.com.ph/baseipb.js,1,fallback-probe,obfuscated VM bot defense (BPI),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense"
+80,app.datatruck.io/assets/index-DXklQkx1.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally"
+81,skechers.hu/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload
+82,cdn.shopify.com/extensions/<h>-b36f-72a8-a07e-<h>/<id>/assets/glood-ai-bundles.js,1,passthrough,LiquidJS (Glood.ai Shopify),stored as a library default locale and passed back to Intl
+83,cdn.shopify.com/extensions/<h>-b36f-72a8-a07e-<h>/<id>/assets/<id>.js,1,passthrough,LiquidJS (Glood.ai),stored as a library default locale and passed back to Intl
+84,victoriassecret.com/assets/<id>/vendor/signals-sdk-<v>.js,1,fingerprint-id,FingerprintJS 4.6.1 in signals-sdk,component of a hashed visitor or ad ID
+85,sthlstatic.com/sthl/js/fingerprintjs-v4.min.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID
+86,cdn.schoolpt.info/_next/static/immutable/chunks/2cmhynr88eyo9.js,1,passthrough,Luxon 3.x with weekSettings,stored as a library default locale and passed back to Intl
+87,f.vimeocdn.com/cms/_next/static/chunks/<n>-<h>.js,1,analytics,Vimeo telemetry,"sent as telemetry, not used locally"
+88,justpaste.it/build/<n>.<h>.js,1,fingerprint-id,FingerprintJS 5.2.0,component of a hashed visitor or ad ID
+89,static.cdn.seaart.me/web/prod/_nuxt/czax7efhumVwnIwJ.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID
+90,peacocktv.com/assets/peacock_common.js,1,fallback-probe,ZZ-probe VM (Peacock),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense"
+91,bilimclass.kz/spa/dateTime-CCwy0O8s.js,1,passthrough,Luxon 3.x,stored as a library default locale and passed back to Intl
+92,poppen.de/v2-static/client/js/client.<h>.js,1,fingerprint-id,FingerprintJS 5.2.0,component of a hashed visitor or ad ID
+93,cdn.trafficbass.com/libs/e.js,1,fingerprint-id,trafficbass/traffmovie,component of a hashed visitor or ad ID
+94,goal.com/_next/static/chunks/<h>-<h>.js,1,passthrough,Luxon (goal.com),stored as a library default locale and passed back to Intl
+95,goal.com/_next/static/chunks/<n>-<h>.js,1,passthrough,Luxon (goal.com),stored as a library default locale and passed back to Intl
+96,calciomercato.com/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon (calciomercato),stored as a library default locale and passed back to Intl
+97,calciomercato.com/_next/static/chunks/<n>-<h>.js,1,passthrough,Luxon (calciomercato),stored as a library default locale and passed back to Intl
+98,res.wx.qq.com/mpres/zh_CN/htmledition/pages/vendors~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~album/list/list~b~vendors.<h>.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID
+99,verified.capitalone.com/assets/enterprise/js/cp_common.js,1,fallback-probe,ZZ-probe VM (Capital One),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense"
+100,mrds66.com/usr/themes/Mirages/js/<v>/fp.min.js,1,fingerprint-id,FingerprintJS 4.6.2,component of a hashed visitor or ad ID
+101,cdn.jsdelivr.net/npm/luxon@<v>/build/global/luxon.min.js,1,passthrough,Luxon 2.3.1,stored as a library default locale and passed back to Intl
+102,euob.forroundprince.com/sxp/i/<h>.js,1,bot-or-fraud,CHEQ-style bot detection,signal in a bot-challenge or fraud-scoring payload
+103,construplaza.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl
+104,fpnpmcdn.net/v3/<id>/loader_v3.<v>.js,1,bot-or-fraud,Fingerprint Pro,signal in a bot-challenge or fraud-scoring payload
+105,fluminense.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl/intl-messageformat (VTEX),stored as a library default locale and passed back to Intl
+106,jdw-auth.co.uk/build/assets/AppVersion-<v>.js,1,passthrough,Luxon (newer),stored as a library default locale and passed back to Intl
+107,motos.honda.com.gt/web/assets/1/1a5b69b/web.<id>.min.js,1,passthrough,Luxon in Odoo,stored as a library default locale and passed back to Intl
+108,framerusercontent.com/sites/<id>/script_main.DDMp_2Of.mjs,1,unclear,Framer runtime,script body not captured
+109,framerusercontent.com/sites/<id>/framer.BSsbpkTa.mjs,1,unclear,Framer runtime,script body not captured
+110,afirme.com/AfirmebotCert.js,1,fallback-probe,ZZ-probe VM (Afirme),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense"
+111,cdn.shopify.com/extensions/<h>-e75e-7be8-<n>-<h>/simesy-faq-76/assets/simesy-faq.js,1,passthrough,LiquidJS (Simesy FAQ),stored as a library default locale and passed back to Intl
+112,gcaptcha.eo.gtimg.com/<id>.js,1,bot-or-fraud,Tencent EdgeOne JS challenge,signal in a bot-challenge or fraud-scoring payload
+113,arsonyb2c.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl
+114,officemax.vtexassets.com/_v/public/assets/v1/npm/react-intl@<v>/dist/react-intl.min.js,1,passthrough,react-intl (VTEX),stored as a library default locale and passed back to Intl
+115,jollymax.com/_nuxt/<h>.js,1,unclear,JollyMax Nuxt bundle,script body not captured
+116,arveres.mbvk.hu/chunk-KROTFIA2.js,1,passthrough,Luxon,stored as a library default locale and passed back to Intl
+117,static.elfsight.com/apps/google-reviews/stable/<h>/app/googleReviews.js,1,passthrough,Luxon (Elfsight reviews widget),stored as a library default locale and passed back to Intl
+118,framerusercontent.com/sites/<id>/script_main.CFrEKnGa.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally"
+119,framerusercontent.com/sites/<id>/framer.BA8-MsxN.mjs,1,analytics,Framer analytics,"sent as telemetry, not used locally"
+120,www2.geap.org.br/geap_common.js,1,fallback-probe,ZZ-probe VM (GEAP),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense"
+121,login.disney.com/_next/static/chunks/<n>-<h>.js,1,passthrough,Luxon 3.x (Disney login),stored as a library default locale and passed back to Intl
+122,m.media-amazon.com/images/I/B12b1xb+yiL.js,1,passthrough,Amazon Prime Video lib-strings,stored as a library default locale and passed back to Intl
+123,cfl.dropboxstatic.com/static/atlas/warp/<id>/<id>.js,1,bot-or-fraud,Fingerprint Pro (Dropbox),signal in a bot-challenge or fraud-scoring payload
+124,kakuyomu.jp/_next/static/chunks/pages/_app-<h>.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally"
+125,api.nike.com/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada (Nike),signal in a bot-challenge or fraud-scoring payload
+126,servicepipe.tech/static/checkjs/345b01/yNbmL34xJ9.js,1,bot-or-fraud,Servicepipe anti-bot,signal in a bot-challenge or fraud-scoring payload
+127,assets.production.linktr.ee/client-brfp/br-fp-script.js,1,bot-or-fraud,Linktree fingerprint script,signal in a bot-challenge or fraud-scoring payload
+128,kick.com/UcggFnr2hNhLCwLf/ylHrE6EhtV2cmcV8/web/v4/<id>,1,bot-or-fraud,Fingerprint Pro agent v4 (Kick),signal in a bot-challenge or fraud-scoring payload
+129,kick.com/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload
+130,assets-netstorage.groww.in/web-assets/<id>/prod/_next/static/chunks/pages/_app-<h>.js,1,analytics,Sentry CultureContext,"sent as telemetry, not used locally"
+131,nu.nl/assets/vendor-kW24POmk.js,1,analytics,likely Sentry,"sent as telemetry, not used locally"
+132,servicos.acesso.gov.br/assets/index-H-R4F0yt.js,1,passthrough,likely Luxon (gov.br SSO),stored as a library default locale and passed back to Intl
+133,otto.de/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload
+134,publiccdn.litnet.com/super-assets/main-RKUWU3O7.js,1,fingerprint-id,FingerprintJS 5.2.0,component of a hashed visitor or ad ID
+135,assets.targetimg1.com/ssx/ssx.mod.js,1,fallback-probe,obfuscated VM bot defense (Target),"constructs with ""ZZ"" and [] and reads the fallback locale; obfuscated VM bot defense"
+136,costco.com/<h>-01fa-4fb0-aad4-<h>/<h>-8ed7-437e-a3be-<h>/ips.js,1,bot-or-fraud,Kasada,signal in a bot-challenge or fraud-scoring payload
+137,kooora.com/_next/static/chunks/pages/_app-<h>.js,1,passthrough,Luxon isEnglish (kooora),"Luxon isEnglish prefix check against lowercase en-us, which never matches either way"

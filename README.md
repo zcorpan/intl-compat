@@ -7,10 +7,14 @@ Options under discussion (unicode-org/icu4x#8736, unicode-org/icu4x#5868, tc39/e
 
 ## Summary
 
-<!-- Real cases, not argument structure. Typically: exposure (pages using the feature, % of the
-     denominator); sample results by rating; extrapolated broken/worse with the denominator;
-     what's behind broken and worse (sites, libraries, patterns, and fixes shipped upstream);
-     how the field rate (use counters) compares with the crawl rate; anything the crawl can't size. -->
+Status: detection and code review done; the A/B comparison waits on the variant definitions below.
+
+- 22.1% (18.1–26.5%) of desktop root pages that construct an Intl object read `resolvedOptions().locale` during load, about 6.8% of all desktop root pages ([class-summary.md](out-detect/class-summary.md)). Almost all reads follow construction without a locales argument; explicit-argument reads came from a few news sites and the fallback probes.
+- What the value is used for, by page (most significant use): bot-challenge or fraud signal 8.6% of Intl pages (Cloudflare Turnstile alone on 142 of 354 reading pages, plus hCaptcha, Kasada, Riskified, Signifyd, Adyen, TikTok); passed back to Intl as a library default locale 6.7% (Luxon, intl-messageformat via react-intl/i18next on Wix and VTEX, LiquidJS); hashed visitor or ad ID 4.6% (FingerprintJS); telemetry 1.9% (Sentry, Framer, Vimeo); language subtag only 0.2%.
+- Only 3 sampled pages compare full tags: a Shopify IP-block app checks `zh-HK`/`zh-TW` exactly (already never matching in Firefox, which reports `zh-Hant-TW`; navigator.language and the time zone cover it), and an Austrian news site checks `startsWith("de-AT")` for ad targeting.
+- `Intl.Segmenter`'s locale is read on 8 sampled pages, all by one obfuscated bot-defense VM on banking, retail and streaming sign-in pages, which constructs Segmenter, Collator, DisplayNames and DateTimeFormat with `"ZZ"` and `[]` and reads the fallback.
+- Passing the reported locale back to Intl is the visible risk: in Chrome, `en-US`→`en`, `pt-BR`→`pt`, `zh-CN`→`zh`, `zh-TW`→`zh-Hant`, `sv-SE`→`sv` format identically, but `en-GB`→`en` (US date order), `pt-PT`→`pt`, `ar-EG`/`ar-SA`→`ar` (Latin instead of Arabic-Indic digits), `zh-HK`→`zh-Hant`, `de-AT`, `es-MX`, `fr-CA` don't ([passback-chrome.jsonl](env/passback-chrome.jsonl)). So dropping every region would visibly change dates and numbers on Luxon-style pages, while dropping only data-identical regions shouldn't.
+- Shipped browsers already differ: Chrome's default locale is its UI language, so an Arabic (Saudi Arabia or Egypt) Mac gets `ar`, an Icelandic Mac `en-US`, English with a non-US/UK region `en-GB`, and Chinese (Hong Kong) `zh-TW`; Firefox reports `zh-Hans-CN`/`zh-Hant-TW` where Chrome reports `zh-CN`/`zh-TW`; Chrome's PluralRules already reports `en` for `en-US` and `zh` for `zh-TW` when requested explicitly ([env/](env/)).
 
 ## Scope
 
@@ -23,63 +27,70 @@ Options under discussion (unicode-org/icu4x#8736, unicode-org/icu4x#5868, tc39/e
 
 ## What breaks and why
 
-<!-- Only if something breaks: the cause, traced to the spec or engine code, and each variant
-     measured against the change's goal, with the one you'd recommend. The sections below hold
-     the data; don't repeat it here. -->
+Not measured yet. Variants proposed for the A/B comparison, to check with Henri:
+
+- B1 (stress test): every `resolvedOptions().locale` reports the language only; `zh-TW`/`zh-HK` (and Firefox's `zh-Hant-TW`/`zh-Hant-HK`) report `zh-Hant`; `zh-CN`/`zh-Hans-CN` report `zh`. Formatting is unchanged; only the reported string changes.
+- B2 (data-identical drop, an approximation of the ICU4X "best fit" model): drop the region only where formatting with the shorter tag is identical ([passback](env/passback.js)): `en-US`, `pt-BR`, `zh-CN`, `zh-TW`→`zh-Hant`, `sv-SE`, probably `is-IS`; keep `en-GB`, `pt-PT`, `ar-EG`, `ar-SA`, `zh-HK`.
+- Fallback for invalid or unsupported requests (`"ZZ"`, `[]`) unchanged in both, unless the model changes it.
+
+Open questions:
+
+- Is B2 what the ICU4X model would report for each test locale, including `ar-EG` (its data differs from `ar` in Chrome) and `zh-HK` (`zh-Hant-HK`?), and for Collator (`en`/root-valid languages) and Segmenter (language only? something else)?
+- Does the model's deduplication consider region-derived preferences a library gets by passing the tag back (week info, hour cycle, default calendar and numbering system), not only the locale's own data?
+- Does it change `supportedLocalesOf()` results or the fallback for `"ZZ"`/`[]`?
 
 ## 1. HTTP Archive
 
-<!-- If a Common Crawl corpus was used too: crawl, seed, WARC count, HTML responses, and which
-     numbers come from it (cc.py pick/download). Its pages aren't only root pages. -->
+[queries/sample.sql](queries/sample.sql) (0.189 TiB): desktop root pages of the 2026-11-01 crawl ([latest_date.sql](queries/latest_date.sql)) that hit a Blink Intl constructor counter (Collator 2593 to Segmenter 2600, DisplayNames 3172). V8 counts these at the start of each constructor, so they say nothing about `resolvedOptions()`, and no counter covers it or `.locale`. 400 pages per rank stratum, seed `intl-compat-1` ([sample.csv](queries/sample.csv); 1885 pages, since only 285 top-1k pages qualify).
 
-<!-- Crawl date, table, clients, root and/or non-root pages. Each query file, what it selects
-     (use counters with where they're incremented, or custom metric fields with a link to the
-     metric's source at a commit), and its output file. -->
+| | desktop |
+|---|---|
+| Root pages crawled | 11,388,038 |
+| With an Intl constructor counter | 3,514,922 (30.9%) |
 
-| | desktop | mobile |
-|---|---|---|
-| Pages crawled | | |
-| <condition> | | |
+Chrome's field rate for DateTimeFormat alone is about 37% of page loads (chromestatus, November 2026).
 
 ## 2. Live comparison on a sample
 
-<!-- sample.py's strata, seed, and size (sample.jsonl). The browser and version; the before and
-     after setups (flags, build, or emulation, from change.py); the sanity check. compare.py's
-     visits: A and A2 before, B after, crawl-like viewports, waits, what's recorded (scrubbed at capture); output
-     in out/results.jsonl. Adult pages flagged by nsfw_check.py (out/nsfw.csv). analyze.py's
-     auto-ratings and how many pages were reviewed by hand (out/review/, out/review.csv);
-     rechecks with recheck.py. -->
+Locale environments ([env_test.py](env_test.py), [env/](env/)): in Chrome Canary 160, `-AppleLanguages (<tag>)` sets the UI language, the JS default locale, workers and Accept-Language as for a real Mac user; `-AppleLocale` (Formats region) has no effect, and headless Chrome ignored every switch. In Firefox Nightly 163, langpacks plus `intl.locale.requested` reproduce a localized build, but `-AppleLanguages` doesn't reach Firefox's OS locale lookup (the path that gives English UI + Finnish region `en-FI`); WebDriver BiDi `emulation.setLocaleOverride` reproduces those values. Chrome's CDP locale override can produce states real Chrome users can't (`is-IS` reported with root formatting), so Chrome runs use launch arguments.
 
-<!-- extrapolate.py output (out/summary.md): -->
+Detection ([detect.py](detect.py), [detect/trace.js](detect/trace.js)): Chrome Canary, headless, 1366x768, default `en-US`, a preload script in all frames making `locale` on every `resolvedOptions()` result a logging accessor (service, constructor locales argument, value, stack), checked on [detect/test.html](detect/test.html) for property reads, destructuring, spread, `JSON.stringify` and `Object.assign`, with page-visible results unchanged. Not traced: workers. Results in [out-detect/results.jsonl](out-detect/results.jsonl), 1885 pages, 35 load errors.
 
-| Stratum | Pages | Sampled | Broken | Worse | No visible change | Not assessable |
-|---|---|---|---|---|---|---|
+Grouping and review: reads grouped by calling script ([group.py](group.py), [groups.json](out-detect/groups.json), 138 groups), dossiers of beautified code around each frame (not committed: third-party code), each group classified by read-only reviewers, with the tag-sensitive and Luxon groups checked by hand ([classes.csv](out-detect/classes.csv)).
 
-| Group | Broken | Worse | No visible change | Not assessable |
-|---|---|---|---|---|
+[class-summary.md](out-detect/class-summary.md):
 
-What's behind the ratings:
+| Class | top1k (n=281) | top10k (n=390) | top100k (n=387) | top1M (n=395) | rest (n=397) | Extrapolated % of Intl pages | % of all root pages |
+|---|---|---|---|---|---|---|---|
+| any read | 52 | 67 | 76 | 70 | 89 | 22.1 (18.1–26.5) | 6.82 |
+| tag-sensitive | 0 | 0 | 3 | 0 | 0 | 0.0 (0.0–0.9) | 0.00 |
+| fallback-probe | 1 | 2 | 3 | 2 | 0 | 0.0 (0.0–1.0) | 0.01 |
+| passthrough | 4 | 5 | 9 | 9 | 28 | 6.7 (4.5–9.6) | 2.07 |
+| bot-or-fraud | 35 | 40 | 49 | 36 | 34 | 8.6 (6.1–11.8) | 2.66 |
+| fingerprint-id | 9 | 17 | 9 | 20 | 18 | 4.6 (2.7–7.1) | 1.40 |
+| analytics | 3 | 1 | 1 | 2 | 8 | 1.9 (0.8–3.8) | 0.59 |
+| language-only | 0 | 0 | 0 | 0 | 1 | 0.2 (0.0–1.4) | 0.07 |
+| unclear | 0 | 2 | 2 | 1 | 0 | 0.0 (0.0–1.0) | 0.01 |
 
-<!-- One bullet per stratum group and rating that matters: the pattern, named sites or
-     libraries, the cause, and the review image (out/review/NNN.png) for the clearest case.
-     Mark pages in out/nsfw.csv "(nsfw)" and link a repro test instead of an image. -->
+Stratum sizes (root pages / with an Intl counter): top1k 568/285, top10k 5370/2696, top100k 53731/23479, top1M 587034/217810, rest 10741335/3270652. Intervals: per-stratum Clopper–Pearson bounds summed (conservative).
 
-## 3. Top-ranked pages
 
-<!-- If the sample has few or no pages in the top rank buckets, run every top-ranked hit through
-     the same steps (out-top<N>/) and report the results here. Otherwise delete this section. -->
+Recall: a seeded 250 of the pages without detected reads were loaded again and their script bodies searched for `resolvedOptions()` near `.locale` ([static_check.py](static_check.py)); 47 matched, mostly code that runs only later: intl-messageformat's lazy default-locale getter, Sentry's culture context (on error events), Luxon, plus 7 regex false positives ([static-summary.txt](out-detect/static-summary.txt)). So load-only detection undercounts readers, but what it misses is the same libraries.
 
 ## Not covered
 
-<!-- What the crawl and this method can't see: pages the crawl doesn't visit, interaction,
-     logged-in state, special cases in the change, other engines. -->
+- Workers (not traced), code that runs after interaction (see Recall), logged-in pages.
+- Server-side use of values sent by bot-defense and fraud scripts: a changed locale only shows in challenge or checkout outcomes, which the A/B comparison will look at.
+- Safari, and Firefox's OS regional-preferences path with a real macOS region change.
 
 ## Query bytes
 
-All on the <crawl date> crawl, run on <date>:
+All on the 2026-11-01 crawl, run on 2026-11-25:
 
 | Query | Bytes processed (TiB) |
 |---|---|
+| [latest_date.sql](queries/latest_date.sql) | 0.005 |
+| [sample.sql](queries/sample.sql) | 0.189 |
 
 ## Reproduce
 
