@@ -23,7 +23,7 @@ Status: detection and code review done; the A/B comparison waits on the variant 
 - Pages: 2000 desktop root pages from the latest HTTP Archive crawl that hit a Blink Intl constructor counter, seeded, stratified by rank. Detection in Chrome with a preload script that logs every read of `locale` on a `resolvedOptions()` result.
 - Recall check: static scan of `httparchive.sample_data.requests_10k` bodies.
 - Then: classify the uses by code review; stop for the variant definitions to be checked before the A/B comparison (A, A2 = locale L; B = same with `resolvedOptions().locale` rewritten per variant), Chrome first, then Firefox.
-- Budget: 0.5 TiB of queries.
+- Budget: 0.5 TiB of queries, raised to 5.5 TiB on 2026-11-25.
 
 ## What breaks and why
 

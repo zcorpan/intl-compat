@@ -23,3 +23,4 @@ review-raw/
 out-ab-*/shots/
 out-ab-*/*.log
 out-ab-*/diffs.jsonl
+security/
