@@ -18,6 +18,9 @@ window.__sanity = () => {
     name: Intl.DateTimeFormat.prototype.resolvedOptions.name,
     passback: new Intl.DateTimeFormat(loc, { dateStyle: 'short', timeZone: 'UTC' }).format(d),
     actual: new Intl.DateTimeFormat(undefined, { dateStyle: 'short', timeZone: 'UTC' }).format(d),
+    toLocale: d.toLocaleDateString(loc, { timeZone: 'UTC' }),
+    weekStart: new Intl.Locale(loc).getWeekInfo().firstDay,
+    stats: window.__abPassback,
   };
 };
 </script>

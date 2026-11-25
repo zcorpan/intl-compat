@@ -10,13 +10,14 @@ Results: <out-dir>/results.jsonl, one line per (page, locale, variant); rerun to
 """
 import argparse, asyncio, json, os, shutil, subprocess, sys, tempfile, time
 from playwright.async_api import async_playwright
-import change, harness
+import ab_diff, change, harness
 
 CHROME = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
 REWRITE = open(harness.here('ab', 'rewrite.js')).read()
+PASSBACK = open(harness.here('ab', 'passback.js')).read()
 CHALLENGE_JS = """() => {
   const v = s => [...document.querySelectorAll(s)].map(e => (e.value || '').length);
-  return { rewrites: window.__abRewrites ?? null,
+  return { rewrites: window.__abRewrites ?? null, passback: window.__abPassback ?? null,
            defaultLocale: new Intl.DateTimeFormat().resolvedOptions().locale,
            turnstile: v('[name="cf-turnstile-response"]'), hcaptcha: v('[name="h-captcha-response"]'),
            recaptcha: v('[name="g-recaptcha-response"]') };
@@ -70,7 +71,7 @@ class CdpChrome:
 
 def configure(variant):
     # A counts what the variant would change; B's __abVariant takes precedence and applies it.
-    change.INIT_JS = REWRITE + '\n' + setvar('__abCount', variant)
+    change.INIT_JS = REWRITE + '\n' + setvar('__abCount', variant) + '\n' + PASSBACK
     change.AFTER_INIT_JS = setvar('__abVariant', variant)
     change.EXTRA_MEASURE_JS = CHALLENGE_JS
 
@@ -83,7 +84,7 @@ async def sanity(p, locale, variant):
         out = {}
         for setup in ('before', 'after'):
             ctx = await br.new_context()
-            await ctx.add_init_script(REWRITE)
+            await ctx.add_init_script(REWRITE + '\n' + PASSBACK)
             await ctx.add_init_script(setvar('__abVariant', variant) if setup == 'after' else setvar('__abCount', variant))
             pg = await ctx.new_page()
             await pg.goto(url)
@@ -133,6 +134,7 @@ async def run(args):
                    'textRatioAA2': harness.text_ratio(a, a2), 'textRatioAB': harness.text_ratio(a, b),
                    'pixAA2': harness.pixel_diff(a.get('shot'), a2.get('shot')),
                    'pixAB': harness.pixel_diff(a.get('shot'), b.get('shot'))}
+            ab_diff.write(f'{args.out_dir}/diffs.jsonl', res, a, a2, b)
             with open(path, 'a') as f:
                 f.write(json.dumps(harness.scrub_record(res), ensure_ascii=False) + '\n')
             print(r['idx'], r['class'], res['textRatioAA2'], res['textRatioAB'], res['pixAB'],

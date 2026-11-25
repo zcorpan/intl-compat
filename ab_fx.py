@@ -9,14 +9,15 @@ usage: .venv/bin/python ab_fx.py <locale> <variant> ab/pages.jsonl <out-dir> [--
 """
 import argparse, concurrent.futures, json, os, threading, time, warnings
 from selenium import webdriver
-import harness
+import ab_diff, harness
 
 FIREFOX = '/Applications/Firefox Nightly.app/Contents/MacOS/firefox'
 REWRITE = open(harness.here('ab', 'rewrite.js')).read()
+PASSBACK = open(harness.here('ab', 'passback.js')).read()
 MEASURE = 'return (' + harness.MEASURE_JS.strip() + ')()'
 EXTRA = """return ((() => {
   const v = s => [...document.querySelectorAll(s)].map(e => (e.value || '').length);
-  return { rewrites: window.__abRewrites ?? null,
+  return { rewrites: window.__abRewrites ?? null, passback: window.__abPassback ?? null,
            defaultLocale: new Intl.DateTimeFormat().resolvedOptions().locale,
            turnstile: v('[name="cf-turnstile-response"]'), hcaptcha: v('[name="h-captcha-response"]'),
            recaptcha: v('[name="g-recaptcha-response"]') };
@@ -38,7 +39,7 @@ def session(locale, variant, setup):
     var = setvar('__abVariant', variant) if setup == 'after' else setvar('__abCount', variant)
     # A function declaration, not an IIFE: BiDi calls it. (pin() is the newer name; this one works.)
     warnings.simplefilter('ignore', DeprecationWarning)
-    d.script.add_preload_script('() => {\n' + var + '\n' + REWRITE + '\n}')
+    d.script.add_preload_script('() => {\n' + var + '\n' + REWRITE + '\n' + PASSBACK + '\n}')
     d.emulation.set_locale_override(locale=locale, user_contexts=['default'])
     d.set_window_size(1366, 768)
     iw, ih = d.execute_script('return [innerWidth, innerHeight]')
@@ -104,6 +105,7 @@ def run(args):
                'textRatioAA2': harness.text_ratio(a, a2), 'textRatioAB': harness.text_ratio(a, b),
                'pixAA2': harness.pixel_diff(a.get('shot'), a2.get('shot')),
                'pixAB': harness.pixel_diff(a.get('shot'), b.get('shot'))}
+        ab_diff.write(f'{args.out_dir}/diffs.jsonl', res, a, a2, b)
         with lock, open(path, 'a') as f:
             f.write(json.dumps(harness.scrub_record(res), ensure_ascii=False) + '\n')
         print(r['idx'], r['class'], res['textRatioAA2'], res['textRatioAB'], res['pixAB'],

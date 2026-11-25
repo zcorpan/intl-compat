@@ -22,3 +22,4 @@ env/*.err
 review-raw/
 out-ab-*/shots/
 out-ab-*/*.log
+out-ab-*/diffs.jsonl

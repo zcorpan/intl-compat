@@ -41,12 +41,15 @@
   };
   let rewrites = 0;
   Object.defineProperty(window, '__abRewrites', { get: () => rewrites });
+  const originalOf = new Map();  // rewritten tag -> original, for ab/passback.js
+  Object.defineProperty(window, '__abOriginalOf', { value: originalOf });
   const nativeToString = Function.prototype.toString;
   const fakes = new WeakMap();
   Function.prototype.toString = new Proxy(nativeToString, {
     apply(t, self, a) { return Reflect.apply(t, fakes.get(self) || self, a); }
   });
   fakes.set(Function.prototype.toString, nativeToString);
+  Object.defineProperty(window, '__abFakes', { value: fakes });
   for (const svc of ['Collator', 'DateTimeFormat', 'NumberFormat', 'PluralRules', 'RelativeTimeFormat',
                      'ListFormat', 'Segmenter', 'DisplayNames', 'DurationFormat']) {
     const C = Intl[svc];
@@ -59,7 +62,10 @@
         const mapped = f(r.locale);
         if (mapped !== r.locale) {
           rewrites++;
-          if (v) r.locale = mapped;
+          if (v) {
+            if (!originalOf.has(mapped)) originalOf.set(mapped, r.locale);
+            r.locale = mapped;
+          }
         }
       }
       return r;
