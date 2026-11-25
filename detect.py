@@ -30,7 +30,7 @@ async def visit(browser, url, wait=3000):
 
     def on_event(source, ev):
         if isinstance(ev, dict) and len(events) < 300:
-            if ev.get('kind') == 'locale':
+            if ev.get('kind', '').startswith('locale'):
                 raw_urls.update(STACK_URL.findall(ev.get('stack', ''))[:4])
             ev = {k: (scrub_stack(v) if k == 'stack' else scrub(v))[:2000] if isinstance(v, str) else v
                   for k, v in ev.items()}

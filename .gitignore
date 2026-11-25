@@ -20,3 +20,5 @@ queries/*.err
 out-detect/*.log
 env/*.err
 review-raw/
+out-ab-*/shots/
+out-ab-*/*.log

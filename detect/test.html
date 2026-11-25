@@ -7,8 +7,11 @@ function viaSpread() { return { ...Intl.Collator('zh-TW').resolvedOptions() }.lo
 function viaJSON() { return JSON.stringify(new Intl.Segmenter('is-IS').resolvedOptions()); }
 function viaAssign() { return Object.assign({}, new Intl.PluralRules(['en-GB']).resolvedOptions()); }
 function timeZoneOnly() { return Intl.DateTimeFormat().resolvedOptions().timeZone; }
+function localeFromResolved() { const l = new Intl.Locale(viaProp()); return [l.region, l.maximize().script, l.getWeekInfo().firstDay]; }
+function localeInfoOther() { return new Intl.Locale('fr-CA').getHourCycles(); }
 function viaSupported() { return Intl.NumberFormat.supportedLocalesOf(['en-US', 'xx']); }
-const r = [viaProp(), viaDestructure(), viaSpread(), viaJSON(), viaAssign(), timeZoneOnly(), viaSupported(),
+const r = [localeFromResolved(), localeInfoOther(), String(Object.getOwnPropertyDescriptor(Intl.Locale.prototype, 'region').get),
+           String(Intl.Locale.prototype.getWeekInfo), Intl.Locale.name, new Intl.Locale('en') instanceof Intl.Locale, viaProp(), viaDestructure(), viaSpread(), viaJSON(), viaAssign(), timeZoneOnly(), viaSupported(),
            String(Intl.DateTimeFormat.prototype.resolvedOptions), Intl.DateTimeFormat.name,
            new Intl.DateTimeFormat() instanceof Intl.DateTimeFormat, Intl.DateTimeFormat.length];
 document.title = JSON.stringify(r);
