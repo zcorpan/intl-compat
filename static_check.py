@@ -53,7 +53,7 @@ async def main(chrome, results, out, n, seed):
     for r in todo:
         q.put_nowait(r)
     async with async_playwright() as p:
-        b = await p.chromium.launch(executable_path=chrome)
+        b = await p.chromium.launch(executable_path=chrome, chromium_sandbox=True, ignore_default_args=['--disable-background-networking', '--disable-component-update'])
         with open(out, 'w') as f:
             async def worker():
                 while not q.empty():

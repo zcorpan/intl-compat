@@ -63,7 +63,8 @@ class ExtensionBrowser:
         s.close()
         self.dirs.append(tempfile.mkdtemp(prefix='ext-profile-'))
         ctx = await self.p.chromium.launch_persistent_context(
-            self.dirs[-1], executable_path=self.executable, ignore_default_args=['--disable-extensions'],
+            self.dirs[-1], executable_path=self.executable, chromium_sandbox=True,
+            ignore_default_args=['--disable-background-networking', '--disable-component-update', '--disable-extensions'],
             args=self.args + ['--enable-unsafe-extension-debugging', f'--remote-debugging-port={port}'], **kwargs)
         cdp = await self.p.chromium.connect_over_cdp(f'http://127.0.0.1:{port}')
         await (await cdp.new_browser_cdp_session()).send('Extensions.loadUnpacked', {'path': self.extension})
@@ -77,7 +78,7 @@ class ExtensionBrowser:
 async def launch(p, executable, setup):
     args = change.BEFORE_ARGS if setup == 'before' else change.AFTER_ARGS
     extension = change.BEFORE_EXTENSION if setup == 'before' else change.AFTER_EXTENSION
-    browser = await p.chromium.launch(executable_path=executable, args=args)
+    browser = await p.chromium.launch(executable_path=executable, chromium_sandbox=True, args=args, ignore_default_args=['--disable-background-networking', '--disable-component-update'])
     if not extension:
         return browser
     version = browser.version

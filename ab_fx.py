@@ -39,6 +39,8 @@ def session(locale, variant, setup):
     o.enable_bidi = True
     o.add_argument('-headless')
     o.set_preference('intl.accept_languages', locale)
+    for k in ('browser.safebrowsing.malware.enabled', 'browser.safebrowsing.phishing.enabled'):
+        o.set_preference(k, True)  # Marionette turns Safe Browsing off
     o.accept_insecure_certs = True
     d = webdriver.Firefox(options=o)
     var = setvar('__abVariant', variant) if setup == 'after' else setvar('__abCount', variant)

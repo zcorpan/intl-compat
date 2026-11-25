@@ -13,7 +13,7 @@ JS = open(here('env', 'passback.js')).read()
 
 async def main():
     async with async_playwright() as p:
-        b = await p.chromium.launch(executable_path=CHROME)
+        b = await p.chromium.launch(executable_path=CHROME, chromium_sandbox=True, ignore_default_args=['--disable-background-networking', '--disable-component-update'])
         pg = await b.new_page()
         await pg.goto('about:blank')
         await pg.add_script_tag(content=JS)

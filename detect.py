@@ -108,7 +108,7 @@ async def run(chrome, rows, out, concurrency):
     t0 = time.time()
     n = 0
     async with async_playwright() as p:
-        state = {'browser': await p.chromium.launch(executable_path=chrome), 'fails': 0}
+        state = {'browser': await p.chromium.launch(executable_path=chrome, chromium_sandbox=True, ignore_default_args=['--disable-background-networking', '--disable-component-update']), 'fails': 0}
         lock = asyncio.Lock()
         with open(out, 'a') as f:
             async def worker():
@@ -132,7 +132,7 @@ async def run(chrome, rows, out, concurrency):
                                 await state['browser'].close()
                             except Exception:
                                 pass
-                            state['browser'] = await p.chromium.launch(executable_path=chrome)
+                            state['browser'] = await p.chromium.launch(executable_path=chrome, chromium_sandbox=True, ignore_default_args=['--disable-background-networking', '--disable-component-update'])
                             state['fails'] = 0
             await asyncio.gather(*[worker() for _ in range(concurrency)])
         await state['browser'].close()
@@ -141,7 +141,7 @@ async def run(chrome, rows, out, concurrency):
 async def selftest(chrome):
     base = serve(here('detect'))
     async with async_playwright() as p:
-        b = await p.chromium.launch(executable_path=chrome)
+        b = await p.chromium.launch(executable_path=chrome, chromium_sandbox=True, ignore_default_args=['--disable-background-networking', '--disable-component-update'])
         rec = await visit(b, base + 'test.html', wait=500)
         ctx = await b.new_context()
         pg = await ctx.new_page()
