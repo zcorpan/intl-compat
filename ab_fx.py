@@ -33,7 +33,13 @@ def setvar(name, value):
     return f"Object.defineProperty(window, {json.dumps(name)}, {{ value: {json.dumps(value)} }});"
 
 
+UPDATES = os.path.expanduser('~/Library/Caches/Mozilla/updates/Applications/Firefox Nightly/updates/0')
+
+
 def session(locale, variant, setup):
+    # A Firefox started while an update is staged applies it (an installer and an OS prompt per session).
+    if os.path.isdir(UPDATES) and os.listdir(UPDATES):
+        raise SystemExit(f'a Firefox update is staged in {UPDATES}; apply it (restart Firefox) before running')
     o = webdriver.FirefoxOptions()
     o.binary_location = FIREFOX
     o.enable_bidi = True
