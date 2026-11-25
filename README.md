@@ -30,7 +30,7 @@ Status: detection and code review done; the A/B comparison waits on the variant 
 Not measured yet. Variants proposed for the A/B comparison, to check with Henri:
 
 - B1 (stress test): every `resolvedOptions().locale` reports the language only; `zh-TW`/`zh-HK` (and Firefox's `zh-Hant-TW`/`zh-Hant-HK`) report `zh-Hant`; `zh-CN`/`zh-Hans-CN` report `zh`. Formatting is unchanged; only the reported string changes.
-- B2 (data-identical drop, an approximation of the ICU4X "best fit" model): drop the region only where formatting with the shorter tag is identical ([passback](env/passback.js)): `en-US`, `pt-BR`, `zh-CN`, `zh-TW`→`zh-Hant`, `sv-SE`, `is-IS`; keep `en-GB`, `pt-PT`, `ar-EG`, `ar-SA`, `zh-HK`.
+- B2 (likely-subtags dedup, my approximation of the ICU4X "best fit" model): report the first of language, language-Script that maximizes to the same tag as the resolved one: `en-US`→`en`, `pt-BR`→`pt`, `zh-CN`/`zh-Hans-CN`→`zh`, `zh-TW`→`zh-Hant`, `sv-SE`→`sv`, `is-IS`→`is`, `ar-EG`→`ar`; `en-GB`, `pt-PT`, `ar-SA`, `zh-HK` kept. Of the tags tested, only `ar-EG`→`ar` formats differently when passed back ([passback](env/passback.js)), so a model that drops only data-identical regions would keep `ar-EG`.
 - Fallback for invalid or unsupported requests (`"ZZ"`, `[]`) unchanged in both, unless the model changes it.
 
 Open questions:
@@ -76,6 +76,8 @@ Stratum sizes (root pages / with an Intl counter): top1k 568/285, top10k 5370/26
 
 
 Recall: a seeded 250 of the pages without detected reads were loaded again and their script bodies searched for `resolvedOptions()` near `.locale` ([static_check.py](static_check.py)); 47 matched, mostly code that runs only later: intl-messageformat's lazy default-locale getter, Sentry's culture context (on error events), Luxon, plus 7 regex false positives ([static-summary.txt](out-detect/static-summary.txt)). So load-only detection undercounts readers, but what it misses is the same libraries.
+
+A/B setup ([ab.py](ab.py) for Chrome, [ab_fx.py](ab_fx.py) for Firefox; pages from [ab_pages.py](ab_pages.py): all 71 passthrough, tag-sensitive, fallback-probe and unclear pages, plus a seeded 30 of the 194 bot-or-fraud pages). A and A2 load the page as a user with locale L gets it (Chrome: a headed Canary launched with `-AppleLanguages (L)`; Firefox: BiDi locale override plus `intl.accept_languages`), with [ab/rewrite.js](ab/rewrite.js) wrapping every `resolvedOptions()` and only counting the reads the variant would change; B is the same with the variant applied. Since the same wrapper is in A and B, pages checking for tampered natives see no difference between them. Checked on [ab/sanity.html](ab/sanity.html) in both browsers: default and explicit-locale reads are rewritten in B only, the wrapper's `toString()` looks native, and passing the B value back to Intl gives `en`'s formatting for `en-GB` under B1. Not covered: workers, and in Firefox, frames other than the top one in the measurements.
 
 ## Not covered
 
