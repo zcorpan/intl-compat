@@ -9,7 +9,7 @@ usage: .venv/bin/python ab_fx.py <locale> <variant> ab/pages.jsonl <out-dir> [--
 """
 import argparse, concurrent.futures, json, os, threading, time, warnings
 from selenium import webdriver
-import ab_diff, harness
+import ab_diff, blocklist, harness
 
 FIREFOX = '/Applications/Firefox Nightly.app/Contents/MacOS/firefox'
 # Full page text (not the template's first 3000 characters): formatted dates sit anywhere.
@@ -41,6 +41,8 @@ def session(locale, variant, setup):
     o.set_preference('intl.accept_languages', locale)
     for k in ('browser.safebrowsing.malware.enabled', 'browser.safebrowsing.phishing.enabled'):
         o.set_preference(k, True)  # Marionette turns Safe Browsing off
+    for k, v in blocklist.firefox_prefs().items():
+        o.set_preference(k, v)
     o.accept_insecure_certs = True
     d = webdriver.Firefox(options=o)
     var = setvar('__abVariant', variant) if setup == 'after' else setvar('__abCount', variant)
@@ -99,7 +101,8 @@ def run(args):
     path = f'{args.out_dir}/results.jsonl'
     key = lambda r: (r['page'], r['locale'], r['variant'])
     done = {key(r) for r in map(json.loads, open(path))} if os.path.exists(path) else set()
-    rows = [r for r in map(json.loads, open(args.pages)) if (r['page'], args.locale, args.variant) not in done]
+    rows = [r for r in map(json.loads, open(args.pages)) if (r['page'], args.locale, args.variant) not in done
+            and not blocklist.listed(r['page'])]
     lock = threading.Lock()
 
     def one(r):

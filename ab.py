@@ -10,7 +10,7 @@ Results: <out-dir>/results.jsonl, one line per (page, locale, variant); rerun to
 """
 import argparse, asyncio, json, os, shutil, subprocess, sys, tempfile, time
 from playwright.async_api import async_playwright
-import ab_diff, change, harness
+import ab_diff, blocklist, change, harness
 
 CHROME = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
 # Full page text (not the template's first 3000 characters): formatted dates sit anywhere.
@@ -43,7 +43,7 @@ class CdpChrome:
         self.dir = tempfile.mkdtemp(prefix='ab-chrome-')
         self.proc = subprocess.Popen(
             [CHROME, f'--user-data-dir={self.dir}', '--remote-debugging-port=0', '--no-first-run',
-             '--no-default-browser-check', '--window-position=0,0', '-AppleLanguages', f'({self.locale})',
+             '--no-default-browser-check', '--window-position=0,0', *blocklist.chrome_args(), '-AppleLanguages', f'({self.locale})',
              'about:blank'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         port_file = os.path.join(self.dir, 'DevToolsActivePort')
         for _ in range(200):
@@ -115,7 +115,7 @@ async def run(args):
     path = f'{args.out_dir}/results.jsonl'
     key = lambda r: (r['page'], r['locale'], r['variant'])
     done = {key(r) for r in map(json.loads, open(path))} if os.path.exists(path) else set()
-    rows = [json.loads(l) for l in open(args.pages)]
+    rows = [r for r in map(json.loads, open(args.pages)) if not blocklist.listed(r['page'])]
     async with async_playwright() as p:
         state = {'br': await CdpChrome(p, args.locale).start(), 'timeouts': 0}
         print('chrome', state['br'].version, args.locale, args.variant, flush=True)
