@@ -18,6 +18,7 @@ FULL_TEXT = harness.MEASURE_JS = harness.MEASURE_JS.replace('.slice(0, 3000)', '
 REWRITE = open(harness.here('ab', 'rewrite.js')).read().replace(
     '/*CLDR_TABLE*/null', open(harness.here('ab', 'cldr-table.json')).read())
 PASSBACK = open(harness.here('ab', 'passback.js')).read()
+HEADLESS = bool(os.environ.get('AB_HEADLESS'))
 CHALLENGE_JS = """() => {
   const v = s => [...document.querySelectorAll(s)].map(e => (e.value || '').length);
   return { rewrites: window.__abRewrites ?? null, passback: window.__abPassback ?? null,
@@ -43,8 +44,9 @@ class CdpChrome:
         self.dir = tempfile.mkdtemp(prefix='ab-chrome-')
         self.proc = subprocess.Popen(
             [CHROME, f'--user-data-dir={self.dir}', '--remote-debugging-port=0', '--no-first-run',
-             '--no-default-browser-check', '--window-position=0,0', *blocklist.chrome_args(), '-AppleLanguages', f'({self.locale})',
-             'about:blank'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+             '--no-default-browser-check', '--window-position=0,0', *blocklist.chrome_args(),
+             # Headless Chrome takes -AppleLanguages for URLs, so it gets the locale per context instead.
+             *(['--headless=new'] if HEADLESS else ['-AppleLanguages', f'({self.locale})', 'about:blank'])], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         port_file = os.path.join(self.dir, 'DevToolsActivePort')
         for _ in range(200):
             if os.path.exists(port_file) and open(port_file).read().strip():
@@ -68,6 +70,11 @@ class CdpChrome:
         return self.b.is_connected()
 
     async def new_context(self, **kw):
+        if HEADLESS:  # the locale a user with this UI language gets, and a non-headless UA
+            kw.setdefault('locale', self.locale)
+            if not kw.get('user_agent'):
+                kw['user_agent'] = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) '
+                                    f'Chrome/{self.version.split(".")[0]}.0.0.0 Safari/537.36')
         return await self.b.new_context(**kw)
 
     async def close(self):
