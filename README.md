@@ -1,112 +1,127 @@
 # Does the web care what `resolvedOptions().locale` returns?
 
-Options under discussion (unicode-org/icu4x#8736, unicode-org/icu4x#5868, tc39/ecma402#947): ICU4X-based "best fit" locale resolution in engines, which would make ECMA-402 `Intl.*.prototype.resolvedOptions().locale` report less than today's ICU4C-shaped lookup: e.g. `en` instead of `en-US`, `zh-Hant` instead of `zh-TW` or `zh-HK`, and possibly something else for `Intl.Segmenter` and `Intl.Collator`. Formatting output would not change; only the reported locale would.
+An engine that resolves locales with ICU4X's "best fit" (unicode-org/icu4x#8736, unicode-org/icu4x#5868, tc39/ecma402#947) would make `Intl.*.prototype.resolvedOptions().locale` report less than today's ICU4C-shaped lookup, e.g. `en` instead of `en-US`, or `zh-Hant` instead of `zh-TW`. Formatting doesn't change, only the reported string. This measures what breaks on the web if a browser ships that. Desktop pages, Chrome Canary 160 and Firefox Nightly 163 on macOS.
 
-## Summary
+## The options tested
 
-Desktop pages, Chrome Canary 160 and Firefox Nightly 163 on macOS; variants defined by Henri (below).
+Henri Sivonen (Mozilla) defined these as candidate behaviors (rules in [ab/rewrite.js](ab/rewrite.js), tables from CLDR by [cldr_table.py](cldr_table.py)). `·` = reported as today.
 
-- 24.0% (22.1–26.0%) of desktop root pages that construct an Intl object read `resolvedOptions().locale` during load, about 7.4% of all desktop root pages ([class-summary.md](out-detect2/class-summary.md), 12,397 pages). Pages with the `Intl.Locale` or LocaleInfoFunctions counters read it at the same rate (25.9%, 24.1%).
-- What the value is used for, by page (most significant use, % of Intl pages): bot-challenge or fraud signal 10.9%; hashed visitor or ad ID 5.4%; passed back to Intl as a library default 5.3%; telemetry 1.7%; tag- or region-sensitive 0.39% (0.17–0.77%); fallback probe 0.11%; language subtag only 0.10%; unclear 0.15%.
-- B3 (region dropped where CLDR has no data for it, objects other than Collator constructed without locales) on 189 pages as `en-US`, `pt-BR` and `zh-TW` users, in both browsers: one visible change on load, MapQuest's map scale switching US users from `1000 ft` to `300 m` (it checks `=== "en-US"`). When pages passed the value back to Intl, no formatted output changed; the only changed results were `new Intl.Locale(locale).region` reads becoming `undefined` (a video widget, a retailer's analytics country, which falls back to US, a shop language switcher, two chat widgets), none visible on load. Code review finds more that only shows later in the page flow: a vaccination booking site switching US users to metric, v-calendar date pickers using their `zh-CN` table (first day of week, masks) for `zh-Hant`, a Brazilian billing site loading English locale data for `pt`, an ad stack losing country targeting, a sign-up form losing its default phone country.
-- Collator (C1, C2) is read almost only by bot-defense and fraud scripts (10.0% of Intl pages, always after construction without locales; Cloudflare Turnstile on most). C1 and C2 on 95 pages changed nothing visible in either browser.
-- Segmenter's locale is read only by one obfuscated bot-defense VM (0.11% of Intl pages), on a Segmenter constructed with `[]`; SU (`und`) and SL (language only, mismatching DateTimeFormat) on its 30 pages changed nothing visible. What a changed value does to challenge or fraud scores (server side) can't be seen from load-only visits.
-- Bot and fraud scripts read every service except Segmenter and DurationFormat after construction without locales: DateTimeFormat on 11.0% of Intl pages, the others on 10.0–10.2% ([bot-noarg.md](out-detect2/bot-noarg.md)).
-- `ar` vs `ar-EG` differing in CLDR is documented behavior, not a bug, and no region that is empty in CLDR's `main/` changes collation, so a no-argument DateTimeFormat locale passed into Collator can't lose a distinction under B3 (see CLDR checks).
-- Dropping regions that do carry data would be visible: in both browsers `en-GB`→`en` (US date order), `pt-PT`→`pt`, `ar-EG`/`ar-SA`→`ar` (Latin instead of Arabic-Indic digits), `zh-HK`→`zh-Hant`, `de-AT`, `es-MX`, `fr-CA` format differently ([passback-chrome.jsonl](env/passback-chrome.jsonl), [passback-firefox.jsonl](env/passback-firefox.jsonl)), and the pilot A/B saw such changes on pages (`19 November 2026` → `November 19, 2026`).
-- Shipped browsers already differ: Chrome's default locale is its UI language, so an Arabic (Saudi Arabia or Egypt) Mac gets `ar`, an Icelandic Mac `en-US`, English with a non-US/UK region `en-GB`, and Chinese (Hong Kong) `zh-TW`; Firefox reports `zh-Hans-CN`, `zh-Hant-TW` and `zh-Hant-HK` where Chrome reports `zh-CN`, `zh-TW` and `zh-HK`, so exact `zh-TW`/`zh-HK` checks (a Shopify IP-block app, a Cafe24 language switcher, both also checking navigator.language) already miss in Firefox; Chrome's PluralRules already reports `en` for `en-US` and `zh` for `zh-TW` when requested explicitly ([env/](env/)).
-- A Chrome use counter would give a field rate for what matters here: `resolvedOptions()` on an object constructed without locales whose result is passed to an Intl constructor, `toLocale*()` or `Intl.Locale` (or, simpler, `Intl.Locale.prototype.region` read on a Locale built from the default locale).
+| Option | Applies to | `en-US` | `en-GB` | `pt-BR` | `ar-EG` | `ar-SA` | `zh-CN` | `zh-TW` | `zh-HK` |
+|---|---|---|---|---|---|---|---|---|---|
+| B3: drop the region where CLDR has no data for it | all services except Collator, constructed without a locales argument | `en` | · | `pt` | · | · | `zh` | `zh-Hant` | · |
+| C1: drop regions that don't change collation, `zh-Hant` for Traditional | Collator, any construction | `en` | `en` | · | · | `ar` | `zh` | `zh-Hant` | `zh-Hant` |
+| C2: as C1, but `zh-u-co-stroke` for Traditional | Collator, any construction | `en` | `en` | · | · | `ar` | `zh` | `zh-u-co-stroke` | `zh-u-co-stroke` |
+| SU: `und` | Segmenter | `und` | `und` | `und` | `und` | `und` | `und` | `und` | `und` |
+| SL: language only | Segmenter | `en` | `en` | `pt` | `ar` | `ar` | `zh` | `zh` | `zh` |
+| B1 (pilot only): language only, script kept for Chinese | everything | `en` | `en` | `pt` | `ar` | `ar` | `zh` | `zh-Hant` | `zh-Hant` |
 
-## Scope
+B3 is "no data" in the strict sense: CLDR's `common/main/` file for the region holds nothing but its identity, so formatting with the shorter tag is identical. It also drops `is-IS`, `sv-SE`, `de-DE`, `fr-FR`, `ja-JP` and so on (429 region files), and keeps `en-FI`, `pt-PT`, `de-AT`. C1 and C2 cover only Henri's Collator tags (`en-US`, `en-GB`, `ar-SA`, `zh-CN` and Traditional Chinese), each checked against CLDR's collation data. B1 (Henri's first question taken literally, as a stress test) and B2 (my approximation of the ICU4X model, likely-subtags dedup, which wrongly drops `ar-EG`, see [CLDR checks](#cldr-checks)) came first; Henri replaced both with the rules above. B1 ran as the pilot, so it shows what dropping regions that do carry data does; B2 never ran. Not tested, as Henri suggested: `supportedLocalesOf()` and the fallback for unsupported requests (`"ZZ"`, `[]`).
 
-- Questions: which pages read `resolvedOptions().locale`, from which service, after constructing with no locales argument or an explicit one; what they do with the value; whether pages break if the region is dropped (and `zh-TW`/`zh-HK` become `zh-Hant`); whether anything reads Segmenter's locale.
-- Locale environments: Firefox Nightly and Chrome Canary on macOS, configured per process with real launch arguments where they reproduce a real setup; the per-page locale override (CDP/BiDi) only where they can't. Test locales: `en-US`, `en-GB`, `ar-SA`, `ar-EG`, `pt-BR`, `pt-PT`, `zh-CN`, `zh-TW`, `zh-HK`, `is-IS`, plus a mixed language/region setup (e.g. English UI with a non-English region). No VPN.
-- Pages: 2000 desktop root pages from the latest HTTP Archive crawl that hit a Blink Intl constructor counter, seeded, stratified by rank, later extended to 12,397 (same seed) with targeted picks for `Intl.Locale` and LocaleInfoFunctions. Detection in Chrome with a preload script that logs every read of `locale` on a `resolvedOptions()` result.
-- Recall check: static scan of `httparchive.sample_data.requests_10k` bodies.
-- Then: classify the uses by code review; stop for the variant definitions to be checked before the A/B comparison (A, A2 = locale L; B = same with `resolvedOptions().locale` rewritten per variant), Chrome first, then Firefox.
-- Budget: 0.5 TiB of queries, raised to 5.5 TiB on 2026-11-25.
+Each A/B loads a page three times as a user with a given locale: A and A2 unchanged (A2 shows how much the page varies by itself) and B with the option applied. A page is flagged when B differs from A more than A2 does, and flagged pages were checked by hand.
 
-## What breaks and why
+## What would break if a browser shipped it
 
-Variants (Henri's, replacing the earlier B1/B2 proposals; [ab/rewrite.js](ab/rewrite.js), tables from CLDR 1cfc52b by [cldr_table.py](cldr_table.py), [cldr-report.txt](cldr-report.txt)):
+Rates are of desktop root pages in the 2026-11-01 HTTP Archive crawl (11.4M), with 95% bounds.
 
-- B3: objects other than Collator constructed without a locales argument report the default locale without its region when CLDR's `common/main/<lang>[_<Script>]_<REGION>.xml` has nothing but `<identity>` and its parent is the same locale without the region: `en-US`→`en`, `pt-BR`→`pt`, `zh-CN`→`zh`, `zh-TW` and `zh-Hant-TW`→`zh-Hant`, `is-IS`, `sv-SE`, `de-DE`, `fr-FR`, `ja-JP` likewise; `en-GB`, `en-FI`, `ar-EG`, `ar-SA`, `pt-PT`, `zh-HK` kept. Of the 429 such files (of 750 region files), 64 aren't CLDR default content locales (e.g. `de_BE`, `en_AS`, `fr_MC`), so for those the region still changes region-keyed supplemental data (week, hour cycle, currency); 4 empty `en_*` files whose parent is `en_001` aren't dropped.
-- C1: Collator (with or without a locales argument) reports `en-US`, `en-GB`→`en`, `ar-SA`→`ar`, `zh-CN`→`zh`, and `zh-TW`/`zh-HK`→`zh-Hant`; C2 the same but `zh-TW`/`zh-HK`→`zh-u-co-stroke`. In `common/collation/`, none of these regions changes the collation used (`en_US.xml` is empty, `en_US_POSIX` ignored, `zh_TW`/`zh_HK` resolve to `zh_Hant`).
-- SU: Segmenter reports `und`; SL: Segmenter reports the language only, so it differs from DateTimeFormat.
-- Not tested, as Henri suggested: `supportedLocalesOf()` and the `"ZZ"`/`[]` fallback.
+- **B3**: one visible change on load, in 189 pages picked as the likeliest to react: MapQuest's map scale shows `300 m` instead of `1000 ft` for `en-US` users (it checks `=== "en-US"`). Code review finds five more that show only later in the page flow: a vaccination booking site and an ad stack that read the region from the tag (US users get metric; ads lose country targeting), v-calendar date pickers that fall back to their `zh-CN` table for `zh-Hant` (wrong first day of week for `zh-TW` users), a Brazilian billing site that loads its `pt-BR` data only for an exact `pt-BR` (English otherwise), and a sign-up form losing its default phone country. Formatted output never changed. Code that depends on the full tag is on 0.12% (0.05–0.24%) of pages; that's an upper bound, as most of it didn't change behavior. Affects users whose locale has a data-less region (`en-US`, `pt-BR`, `zh-CN`, `zh-TW`, `de-DE`, `fr-FR`, `ja-JP`, …).
+- **C1, C2**: nothing changed on 95 pages. Collator's locale is read almost only by bot-defense and fraud scripts (Cloudflare Turnstile on most), on 3.1% (2.7–3.5%) of pages, which send it to their servers. Whether a changed value worsens challenge or fraud scores can't be seen from page loads; the vendors would know.
+- **SU, SL**: nothing changed on 30 pages. Only one obfuscated bot-defense script reads Segmenter's locale, on 0.034% (0.005–0.117%) of pages; same server-side caveat.
+- **Dropping regions that carry data** (B1, or likely-subtags for `ar-EG`): not safe. Pages pass the reported locale back to Intl as their default (1.6% of pages), so `en-GB` users get `November 19, 2026` instead of `19 November 2026`, and `ar-EG` users Latin digits instead of Arabic-Indic ones (pilot A/B).
 
-CLDR checks:
+Shipped browsers already differ: Chrome's default locale is its UI language, so an Arabic (Saudi Arabia or Egypt) Mac gets `ar`, an Icelandic Mac `en-US`, and English with a non-US/UK region `en-GB`; Firefox reports `zh-Hant-TW` where Chrome reports `zh-TW`, so exact `zh-TW`/`zh-HK` checks already miss in Firefox; and Chrome's PluralRules already reports `en` for `en-US` ([env/](env/)).
 
-- `ar` vs `ar-EG`: `ar_EG.xml` sets `defaultNumberingSystem` `arab` (and a display name), so `ar-EG` formats with Arabic-Indic digits and `ar` with Latin ones. That's documented behavior, not a CLDR bug: likely subtags map `ar` to `ar_Arab_EG`, but `ar`'s default content locale is `ar_001`, and TR35 says default content "Should not be used for locale matching or likely subtags" ([tr35.md, Inheritance vs Related Information](https://github.com/unicode-org/cldr/blob/1cfc52bc791ae3058bcc113c6c87e141cf5941f5/docs/ldml/tr35.md#inheritance-vs-related-information)). Default content locales are empty by definition; likely-subtags regions needn't be.
-- No region that is empty in `common/main/` changes collation (checked over all 429 files with `common/collation/` and its collation parent locales), so a no-argument DateTimeFormat locale passed into Collator can't lose a collation distinction under B3.
+## How much the data can tell
 
-## 1. HTTP Archive
+The page rates come from 12,397 pages loaded with a trace of every `locale` read: random pages with an Intl constructor counter in 5 rank strata, which covers the top 10k almost entirely (2,867 of its 2,981 such pages) and samples 2,000–3,000 pages from each lower stratum. The first pass (400 per stratum) only bounded full-tag-dependent code to 0–0.28% of pages; the extension, sized by the time and query budget rather than a target precision, narrowed that to 0.05–0.24%. The bound is dominated by the long tail beyond the top 1M (94% of pages), where the sample is 2,000 pages. Bounds are exact per-stratum intervals, summed, so they're conservative.
 
-[queries/sample.sql](queries/sample.sql) (0.189 TiB): desktop root pages of the 2026-11-01 crawl ([latest_date.sql](queries/latest_date.sql)) that hit a Blink Intl constructor counter (Collator 2593 to Segmenter 2600, DisplayNames 3172). V8 counts these at the start of each constructor, so they say nothing about `resolvedOptions()`, and no counter covers it or `.locale`. 400 pages per rank stratum, seed `intl-compat-1` ([sample.csv](queries/sample.csv); 1885 pages, since only 285 top-1k pages qualify). [queries/sample2.sql](queries/sample2.sql) extends it with the same seed and ordering (so the first sample's pages come first) to 9,981 random pages, plus 1,500 pages each with the `Intl.Locale` counter (2598) and the LocaleInfoFunctions WebDX counter (244, `Intl.Locale` `get*()` methods, which depend on the region) ([sample2.csv](queries/sample2.csv), 12,397 pages).
+What this can't see:
 
-Luxon recall: [luxon_urls.sql](queries/luxon_urls.sql) lists 2026-11-01 desktop root pages loading a script whose URL names a known Luxon carrier, and [luxon_10k.sql](queries/luxon_10k.sql) the 10k sample's pages with a body carrying Luxon's signature; a seeded 40 of the latter went into the B3 A/B, since Luxon reads the default locale lazily, often after load.
+- Code that runs after interaction, in workers, or on logged-in pages; mobile; Safari. A recall check found that what load-only tracing misses is the same libraries running later.
+- Page loads, as opposed to pages: popular pages count once, like any other.
+- What servers do with the values (challenges never complete in load-only visits).
+- Locales other than those tested, in particular the 64 regions B3 drops that aren't CLDR default content (e.g. `de_BE`, `fr_MC`), where region-keyed data such as week start, hour cycle or currency can differ from the language's.
 
-| | desktop |
-|---|---|
-| Root pages crawled | 11,388,038 |
-| With an Intl constructor counter | 3,514,922 (30.9%) |
+A Chrome use counter would give the traffic-weighted rate, including later code and mobile: `resolvedOptions()` on an object constructed without locales whose result is passed to an Intl constructor, `toLocale*()` or `Intl.Locale` (or, simpler, `Intl.Locale.prototype.region` read on a Locale built from the default locale).
 
-Chrome's field rate for DateTimeFormat alone is about 37% of page loads (chromestatus, November 2026).
+## Why these locales
 
-## 2. Live comparison on a sample
+Henri's list, each probing one way a rule could go wrong, plus one mixed setup:
 
-Locale environments ([env_test.py](env_test.py), [env/](env/)): in Chrome Canary 160, `-AppleLanguages (<tag>)` sets the UI language, the JS default locale, workers and Accept-Language as for a real Mac user; `-AppleLocale` (Formats region) has no effect, and headless Chrome ignored every switch. In Firefox Nightly 163, langpacks plus `intl.locale.requested` reproduce a localized build, but `-AppleLanguages` doesn't reach Firefox's OS locale lookup (the path that gives English UI + Finnish region `en-FI`); WebDriver BiDi `emulation.setLocaleOverride` reproduces those values. Chrome's CDP locale override can produce states real Chrome users can't (`is-IS` reported with root formatting), so Chrome runs use launch arguments.
+- `en-US` / `en-GB`: a region without data next to one with data, for the same language.
+- `pt-BR` / `pt-PT`: the same, where the region without data (Brazil) is the language's default.
+- `ar-SA` / `ar-EG`: both carry data (`ar-EG` its own default numbering system), although likely subtags make Egypt `ar`'s default region.
+- `zh-CN` / `zh-TW` / `zh-HK`: for Chinese the script matters, not the region; `zh-TW` would become `zh-Hant`, and `zh-HK` carries data.
+- `is-IS`: a language spoken in one country.
+- `en-FI`, English with a Finnish region (not Henri's): with `en-FI` at the top of the macOS language list, Firefox's JS default locale is `en-FI` while `navigator.language` stays `en-US`.
 
-With the macOS region set to Finland and English (US) kept as the language (`AppleLocale` `en_US@rg=fizzzz`), Chrome Canary and Firefox Nightly still report `en-US` everywhere ([firefox-os-region-fi.jsonl](env/firefox-os-region-fi.jsonl), [chrome-os-region-fi.jsonl](env/chrome-os-region-fi.jsonl)). On macOS, Gecko's "regional prefs" locales are the preferred-language list (`CFLocaleCopyPreferredLanguages`, [OSPreferences_mac.cpp](https://github.com/mozilla-firefox/firefox/blob/47f2a88cbab9072c8f8f156494b92d6891e488fb/intl/locale/mac/OSPreferences_mac.cpp#L59-L62)), not the region, so an `en-FI` default needs `en-FI` in that list. `-AppleLanguages (en-FI)` does give `en-FI` in Firefox's parent process, but content processes don't get the arguments and keep the system list's `en-US` ([env_fx_locales.py](env_fx_locales.py)).
+The A/B runs used the locales where each option changes something: B3 as `en-US`, `pt-BR` (region dropped) and `zh-TW` (region replaced by script); C1 as `en-US` and `zh-CN`; C2 as `zh-TW`, the only place it differs from C1; SU and SL as `en-US`. The pilot ran B1 as `en-GB`, `en-FI` and `ar-EG`, regions that carry data.
 
-With `en-FI` at the top of the system list (`defaults write -g AppleLanguages`, restored after the test), Firefox Nightly reports `en-FI` in every Intl service and in workers, with Finnish-English formatting (`31/01/2026`, `16.04.00`, `h23`), also with the en-GB langpack, while `navigator.language` stays `en-US` (or `en-GB`) ([firefox-os-lang-en-FI.jsonl](env/firefox-os-lang-en-FI.jsonl)). Chrome Canary gives `en-GB`, its nearest UI language, everywhere ([chrome-os-lang-en-FI.jsonl](env/chrome-os-lang-en-FI.jsonl)), as with `-AppleLanguages (en-FI)`. The BiDi override gives Firefox the same Intl values, but also sets `navigator.language` and Accept-Language to `en-FI`, which the real setup doesn't.
+## Method
 
-Detection ([detect.py](detect.py), [detect/trace.js](detect/trace.js)): Chrome Canary, headless, 1366x768, default `en-US`, a preload script in all frames making `locale` on every `resolvedOptions()` result a logging accessor (service, constructor locales argument, value, stack), checked on [detect/test.html](detect/test.html) for property reads, destructuring, spread, `JSON.stringify` and `Object.assign`, with page-visible results unchanged. Not traced: workers. Results in [out-detect/results.jsonl](out-detect/results.jsonl) (1885 pages) and, for the extension, out-detect2/results.jsonl.gz (12,397 pages, 308 load errors; it also traces tags passed into `Intl.Locale` and its info methods).
+### Sample
 
-Grouping and review: reads grouped by calling script ([group.py](group.py), [out-detect2/groups.json](out-detect2/groups.json), 692 groups), dossiers of beautified code around each frame ([dossier.py](dossier.py); not committed: third-party code), new groups matched to already classified ones by the normalized code around the read ([fingerprint.py](fingerprint.py)), the rest classified by read-only reviewers, with the tag-sensitive, unclear and Luxon groups checked by hand ([classes.csv](out-detect2/classes.csv)).
+[queries/sample.sql](queries/sample.sql) (first pass, 1,885 pages) and [queries/sample2.sql](queries/sample2.sql) (extension, same seed and ordering, 12,397 pages): desktop root pages of the 2026-11-01 crawl ([latest_date.sql](queries/latest_date.sql)) that hit a Blink Intl constructor counter (Collator 2593 to Segmenter 2600, DisplayNames 3172), seeded and stratified by rank, plus 1,500 pages each with the `Intl.Locale` counter (2598) and the LocaleInfoFunctions WebDX counter (244, `Intl.Locale` `get*()` methods, which depend on the region). V8 counts these at the start of each constructor; no counter covers `resolvedOptions()` or `.locale`. Of 11,388,038 desktop root pages, 3,514,922 (30.9%) have an Intl counter; Chrome's field rate for DateTimeFormat alone is about 37% of page loads (chromestatus, November 2026). Pages without a counter in the crawl count as non-readers.
 
-[class-summary.md](out-detect2/class-summary.md) ([classify2.py](classify2.py)), random picks:
+Luxon reads the default locale lazily, often after load, so [luxon_10k.sql](queries/luxon_10k.sql) finds pages in the 10k sample whose bodies carry Luxon's signature, and a seeded 40 of them went into the B3 A/B ([luxon_urls.sql](queries/luxon_urls.sql), by script URL, recalls few: Luxon is mostly bundled).
 
-| Class | top1k (n=279) | top10k (n=2588) | top100k (n=2906) | top1M (n=1961) | rest (n=1967) | Extrapolated % of Intl pages (95% bounds) |
-|---|---|---|---|---|---|---|
-| any read | 52 | 458 | 528 | 368 | 480 | 24.01 (22.14–25.95) |
-| tag-sensitive | 0 | 8 | 16 | 17 | 7 | 0.39 (0.17–0.77) |
-| fallback-probe | 1 | 11 | 10 | 4 | 2 | 0.11 (0.02–0.38) |
-| passthrough | 4 | 32 | 62 | 51 | 109 | 5.33 (4.39–6.42) |
-| bot-or-fraud | 35 | 299 | 327 | 200 | 215 | 10.89 (9.55–12.35) |
-| fingerprint-id | 9 | 86 | 86 | 79 | 108 | 5.38 (4.43–6.47) |
-| analytics | 3 | 16 | 22 | 14 | 34 | 1.66 (1.14–2.32) |
-| language-only | 0 | 0 | 0 | 2 | 2 | 0.10 (0.01–0.37) |
-| unclear | 0 | 6 | 5 | 1 | 3 | 0.15 (0.03–0.43) |
+### Locale setups
 
-Population: 3,514,922 desktop root pages with an Intl counter (top1k 285, top10k 2,696, top100k 23,479, top1M 217,810, rest 3,270,652) of 11,388,038. Intervals: per-stratum Clopper–Pearson bounds summed (conservative). The targeted picks, as rates within their own populations, are in the same file.
+[env_test.py](env_test.py), results in [env/](env/). In Chrome Canary, `-AppleLanguages (<tag>)` sets the UI language, the JS default locale, workers and Accept-Language as for a real Mac user; `-AppleLocale` (Formats region) has no effect. Chrome's CDP locale override can produce states real users can't (`is-IS` with root formatting), so the pilot used launch arguments; the later runs set the locale per headless browser context, which gave the same Intl, `navigator.language` and Accept-Language values as launch arguments for the 4 locales compared. In Firefox Nightly, langpacks plus `intl.locale.requested` reproduce a localized build, and WebDriver BiDi `emulation.setLocaleOverride` gives the same Intl values.
 
-Tag-sensitive uses, by script (most on one page each): exact `zh-HK`/`zh-TW` or `zh-Hant` checks choosing a store area or language (a Shopify app, Cafe24), `Intl.Locale` region as a country (analytics, phone input default, GDPR/CCPA gating, imperial units, a locale rollout gate), `=== "en-US"` or `includes("us")` picking imperial units (MapQuest, a vaccination booking site), full-tag table lookups falling back to the language (v-calendar and similar date pickers), "is English" full-tag checks that only change a listing path, and `startsWith("de-AT")` ad targeting on Austrian news sites (kept by B3: `de_AT.xml` has data).
+The macOS region alone (`AppleLocale` `en_US@rg=fizzzz`) reaches neither browser's JS locale ([firefox-os-region-fi.jsonl](env/firefox-os-region-fi.jsonl), [chrome-os-region-fi.jsonl](env/chrome-os-region-fi.jsonl)): Gecko's "regional prefs" on macOS are the preferred-language list ([OSPreferences_mac.cpp](https://github.com/mozilla-firefox/firefox/blob/47f2a88cbab9072c8f8f156494b92d6891e488fb/intl/locale/mac/OSPreferences_mac.cpp#L59-L62)). With `en-FI` at the top of that list, Firefox reports `en-FI` in every Intl service and in workers, with Finnish-English formatting (`31/01/2026`, `16.04.00`, `h23`), while `navigator.language` stays `en-US`; Chrome gives `en-GB`, its nearest UI language ([firefox-os-lang-en-FI.jsonl](env/firefox-os-lang-en-FI.jsonl), [chrome-os-lang-en-FI.jsonl](env/chrome-os-lang-en-FI.jsonl)). `-AppleLanguages (en-FI)` doesn't reach Firefox's content processes ([env_fx_locales.py](env_fx_locales.py)), and the BiDi override also sets `navigator.language`, which the real setup doesn't.
 
-Recall: a seeded 250 of the pages without detected reads were loaded again and their script bodies searched for `resolvedOptions()` near `.locale` ([static_check.py](static_check.py)); 47 matched, mostly code that runs only later: intl-messageformat's lazy default-locale getter, Sentry's culture context (on error events), Luxon, plus 7 regex false positives ([static-summary.txt](out-detect/static-summary.txt)). So load-only detection undercounts readers, but what it misses is the same libraries.
+### Detection and classification
 
-A/B setup ([ab.py](ab.py) for Chrome, [ab_fx.py](ab_fx.py) for Firefox; pages from [ab_pages.py](ab_pages.py): all 71 passthrough, tag-sensitive, fallback-probe and unclear pages, plus a seeded 30 of the 194 bot-or-fraud pages). A and A2 load the page as a user with locale L gets it (Chrome: a headed Canary launched with `-AppleLanguages (L)`; Firefox: BiDi locale override plus `intl.accept_languages`), with [ab/rewrite.js](ab/rewrite.js) wrapping every `resolvedOptions()` and only counting the reads the variant would change; B is the same with the variant applied. Since the same wrapper is in A and B, pages checking for tampered natives see no difference between them. Checked on [ab/sanity.html](ab/sanity.html) in both browsers: default and explicit-locale reads are rewritten in B only, the wrapper's `toString()` looks native, and passing the B value back to Intl gives `en`'s formatting for `en-GB` under B1. Not covered: workers, and in Firefox, frames other than the top one in the measurements.
+[detect.py](detect.py) loads each page in headless Chrome Canary (1366x768, `en-US`) with a preload script in all frames ([detect/trace.js](detect/trace.js)) that makes `locale` on every `resolvedOptions()` result a logging accessor (service, constructor locales argument, value, stack), checked on [detect/test.html](detect/test.html) for property reads, destructuring, spread, `JSON.stringify` and `Object.assign`. Results: out-detect2/results.jsonl.gz (12,397 pages, 308 load errors; [out-detect](out-detect/) has the first pass). Reads are grouped by calling script ([group.py](group.py), [groups.json](out-detect2/groups.json), 692 groups), new groups matched to classified ones by the code around the read ([fingerprint.py](fingerprint.py)), and the rest classified by read-only reviewers from beautified code ([dossier.py](dossier.py); not committed: third-party code), with the tag-sensitive, unclear and Luxon groups checked by hand ([classes.csv](out-detect2/classes.csv)).
+
+Each page gets its most significant use ([classify2.py](classify2.py), per stratum and for the targeted picks in [class-summary.md](out-detect2/class-summary.md)):
+
+| Class | What the page does with the value | % of desktop root pages (95% bounds) |
+|---|---|---|
+| any read | | 7.41 (6.83–8.01) |
+| tag-sensitive | compares the full tag, looks it up in a table keyed by full tags, or extracts the region | 0.12 (0.05–0.24) |
+| fallback-probe | constructs with an unsupported request (`"ZZ"`, `[]`) to see what comes back | 0.034 (0.005–0.117) |
+| passthrough | keeps it as a default and passes it back to Intl or `toLocale*()` (Luxon, intl-messageformat, date libraries) | 1.65 (1.35–1.98) |
+| bot-or-fraud | sends it as one signal in a bot challenge or fraud score | 3.36 (2.95–3.81) |
+| fingerprint-id | hashes it into a visitor or ad ID | 1.66 (1.37–2.00) |
+| analytics | sends it to telemetry or error reporting | 0.51 (0.35–0.72) |
+| language-only | uses only the language subtag | 0.031 (0.004–0.113) |
+| unclear | can't tell from the code | 0.045 (0.009–0.134) |
+
+Pages with the `Intl.Locale` or LocaleInfoFunctions counters read the locale at the same rate (25.9%, 24.1% of those pages). Bot and fraud scripts read every service except Segmenter and DurationFormat, always after construction without locales ([bot-noarg.md](out-detect2/bot-noarg.md)).
+
+Tag-sensitive uses, by script (most on one page each): exact `zh-HK`/`zh-TW` or `zh-Hant` checks choosing a store area or language (a Shopify app, Cafe24, both also checking `navigator.language`), `Intl.Locale` region as a country (analytics, phone input default, GDPR/CCPA gating, imperial units, a locale rollout gate), `=== "en-US"` or `includes("us")` picking imperial units (MapQuest, a vaccination booking site), full-tag table lookups falling back to the language (v-calendar and similar date pickers), "is English" full-tag checks that only change a listing path, and `startsWith("de-AT")` ad targeting on Austrian news sites (kept by B3: `de_AT.xml` has data).
+
+Recall: a seeded 250 of the first pass's pages without detected reads were loaded again and their script bodies searched for `resolvedOptions()` near `.locale` ([static_check.py](static_check.py)); 47 matched, mostly code that runs only later: intl-messageformat's lazy default-locale getter, Sentry's culture context (on error events), Luxon, plus 7 regex false positives ([static-summary.txt](out-detect/static-summary.txt)).
+
+### CLDR checks
+
+CLDR 1cfc52b, [cldr-report.txt](cldr-report.txt).
+
+- B3 drops a region when `common/main/<lang>[_<Script>]_<REGION>.xml` has nothing but `<identity>` and its parent is the same locale without the region: 429 of 750 region files. 64 of them aren't default content locales (e.g. `de_BE`, `en_AS`, `fr_MC`), so for those the region still changes region-keyed supplemental data; 4 empty `en_*` files whose parent is `en_001` aren't dropped.
+- `ar` vs `ar-EG`: `ar_EG.xml` sets `defaultNumberingSystem` `arab`, so `ar-EG` formats with Arabic-Indic digits and `ar` with Latin ones. That's documented, not a CLDR bug: likely subtags map `ar` to `ar_Arab_EG`, but `ar`'s default content locale is `ar_001`, and TR35 says default content "Should not be used for locale matching or likely subtags" ([tr35.md, Inheritance vs Related Information](https://github.com/unicode-org/cldr/blob/1cfc52bc791ae3058bcc113c6c87e141cf5941f5/docs/ldml/tr35.md#inheritance-vs-related-information)). So a likely-subtags rule (B2) would change formatting for `ar-EG`.
+- Collation: none of C1's regions changes the collation used (`en_US.xml` is empty, `en_US_POSIX` ignored, `zh_TW`/`zh_HK` resolve to `zh_Hant`), and no region that is empty in `common/main/` changes collation (all 429 checked), so a no-argument DateTimeFormat locale passed into Collator can't lose a distinction under B3.
+- Formatting with a region that carries data differs in both browsers: `en-GB`→`en` (US date order), `pt-PT`→`pt`, `ar-EG`/`ar-SA`→`ar`, `zh-HK`→`zh-Hant`, `de-AT`, `es-MX`, `fr-CA` ([passback-chrome.jsonl](env/passback-chrome.jsonl), [passback-firefox.jsonl](env/passback-firefox.jsonl)).
+
+### A/B setup
+
+[ab.py](ab.py) for Chrome, [ab_fx.py](ab_fx.py) for Firefox, [run_ab2.py](run_ab2.py) for the option runs. [ab/rewrite.js](ab/rewrite.js) wraps every `resolvedOptions()` in A, A2 and B alike, so pages checking for tampered natives see no difference; A and A2 only count the reads the option would change, B applies it. In B, [ab/passback.js](ab/passback.js) records every Intl call made with a rewritten tag (constructors, `toLocale*()`, `localeCompare`, `Intl.Locale` and its `get*()` methods), formats the same input with the original tag, and counts outputs that differ and whether they appear in the page text. Checked on [ab/sanity.html](ab/sanity.html) in both browsers. Live runs keep Chrome's sandbox and Safe Browsing on in both browsers and make known malware hosts unresolvable ([blocklist.py](blocklist.py)); pages on a listed host are left out. Not covered: workers, and in Firefox, console messages (only JS errors) and frames other than the top one.
 
 ### Pilot A/B (B1)
 
-B1 on the 101 A/B pages, Chrome Canary as an `en-GB` user and Firefox Nightly as `en-FI` and `ar-EG` users. What it changed about the setup:
-
-- Pixel diffs are mostly lazy loading (an image or a social widget that's in B's screenshot but not A's), and the first 3000 characters of text miss most dates. So [ab/passback.js](ab/passback.js) now records, in B, every Intl call made with a rewritten tag (constructors, `toLocale*()`, `localeCompare`, `Intl.Locale` and its `get*()` methods), formats the same input with the original tag, and counts the outputs that differ and whether they appear in the page text; runs keep the full page text (up to 50,000 characters).
-- Challenge tokens (`cf-turnstile-response`, `h-captcha-response`, `g-recaptcha-response`) were empty in every A, A2 and B visit, so load-only visits can't tell whether a changed locale fails a challenge.
-
-Results so far:
+B1 on 101 pages ([ab_pages.py](ab_pages.py): all passthrough, tag-sensitive, fallback-probe and unclear pages of the first pass, plus a seeded 30 bot-or-fraud ones).
 
 | Setup | Pages with a rewritten read | Pass a rewritten tag back during load | Output differs | Examples |
 |---|---|---|---|---|
 | Chrome `en-GB` | 76 of 101 | 8 | 4 | `19 November 2026` → `November 19, 2026`, `23 Nov 2026` → `Nov 23, 2026`, `Sept` → `Sep` |
-| Firefox `ar-EG` | not counted | 3 | 3 | Arabic-Indic digits become Latin: `قبل ٥ أيام` → `قبل 5 أيام` in a reviews widget, visible in the page text |
+| Firefox `ar-EG` | not counted | 3 | 3 | `قبل ٥ أيام` → `قبل 5 أيام` in a reviews widget, visible in the page text |
 | Firefox `en-FI` | 75 of 101 | (run before the recorder) | | |
 
-The other 47 passthrough pages didn't pass the value back during load: their libraries format later, or with the site's own locale. One page that changed output in Chrome showed none of the changed strings in its text (tooltips, attributes or widgets not yet opened). No B-only failure reproduced in the other browser: a sign-in page that showed only a spinner in Chrome's B rendered normally in Firefox's.
+The other 47 passthrough pages didn't pass the value back during load: their libraries format later, or with the site's own locale. Pixel diffs were mostly lazy loading, which is why the recorder above was added. A sign-in page that showed only a spinner in Chrome's B rendered normally in Firefox's. Challenge tokens (`cf-turnstile-response`, `h-captcha-response`, `g-recaptcha-response`) were empty in every visit, so load-only visits can't tell whether a changed locale fails a challenge.
 
-## 3. A/B of Henri's variants
+### A/B of the options
 
-Pages ([ab_pages2.py](ab_pages2.py), from the extended detection): for B3, every tag-sensitive (59), unclear (16) and language-only (5) page, 9 pages with an `Intl.Locale` use the reviewers couldn't settle, a seeded 60 passthrough pages and a seeded 40 of the Luxon pages from the 10k body scan (189); for Collator, the 65 pages reading a Collator's locale other than through Turnstile plus a seeded 30 Turnstile pages (95); for Segmenter, all 30 pages reading its locale. Runs ([run_ab2.py](run_ab2.py)): B3 as `en-US`, `zh-TW` and `pt-BR` users, C1 as `en-US` and `zh-CN`, C2 as `zh-TW`, SU and SL as `en-US`. Chrome Canary ran headless with the locale and a regular user agent set per browser context, which gave the same Intl, `navigator.language` and Accept-Language values as headed Canary launched with `-AppleLanguages` for the 4 locales compared; Firefox Nightly used the BiDi locale override as before. Live runs keep Chrome's sandbox and Safe Browsing on in both browsers, and make a list of known malware hosts unresolvable ([blocklist.py](blocklist.py)); pages on a listed host are left out.
+Pages ([ab_pages2.py](ab_pages2.py)): for B3, every tag-sensitive (59), unclear (16) and language-only (5) page, 9 pages with an `Intl.Locale` use the reviewers couldn't settle, a seeded 60 passthrough pages and a seeded 40 Luxon pages (189); for C1 and C2, the 65 pages reading a Collator's locale other than through Turnstile plus a seeded 30 Turnstile pages (95); for SU and SL, all 30 pages reading Segmenter's locale.
 
 | Run | Pages | B rewrote a read | Passed a rewritten tag back to Intl | Result differs | Flagged, B rewrote a read | Confirmed change visible on load |
 |---|---|---|---|---|---|---|
@@ -119,31 +134,15 @@ Pages ([ab_pages2.py](ab_pages2.py), from the extended detection): for B3, every
 | SU `en-US` | 30 | 26 / 28 | 0 / 0 | 0 / 0 | 4 / 2 | none |
 | SL `en-US` | 30 | 27 / 28 | 1 / 1 | 0 / 0 | 3 / 4 | none |
 
-Counts are pages, Chrome / Firefox. "Result differs" is in all cases an `Intl.Locale(locale).region` read; no formatted output differed. Per-run flags: [chrome](out-ab-henri-chrome/flagged.md), [firefox](out-ab-henri-firefox/flagged.md) ([ab_analyze.py](ab_analyze.py), [ab_passback.py](ab_passback.py)).
+Counts are pages, Chrome / Firefox. "Result differs" is in all cases an `Intl.Locale(locale).region` read becoming `undefined`; no formatted output differed. Flags per run: [chrome](out-ab-henri-chrome/flagged.md), [firefox](out-ab-henri-firefox/flagged.md) ([ab_analyze.py](ab_analyze.py), [ab_passback.py](ab_passback.py)).
 
-Flagged pages (B differs from A by more than A2 does in text or pixels, or has an error A and A2 don't) were looked at one by one: text diffs ([ab_diff.py](ab_diff.py), not committed: page text), errors, and for a consistent pixel-only difference, crops rated by a read-only reviewer. Three pages whose B difference looked consistent were repeated three times (out-ab-recheck-firefox-*, out-ab-recheck2-firefox-*); A or A2 showed the same difference in the repeats. Almost all are page noise: rotating banners and products, carousels on another slide, a header or page that sometimes doesn't render in A or A2 either, server errors in one visit, ad and analytics network errors.
+Flagged pages were looked at one by one: text diffs ([ab_diff.py](ab_diff.py), not committed: page text), errors, and for a consistent pixel-only difference, crops rated by a read-only reviewer. Almost all are page noise: rotating banners and products, carousels on another slide, a header that sometimes doesn't render in A or A2 either, server errors in one visit, ad and analytics network errors. Pages whose B difference looked consistent were repeated three times (`out-ab-recheck-firefox-*`, `out-ab-recheck2-firefox-*`, and for the bot-defense script's pages under C1, C2, SU and SL, `out-ab-recheck4-*`, `out-ab-recheck5-chrome-*`); A or A2 showed the same difference in the repeats. The exception: a police site whose loads failed in A, A2 and B alike (also with nothing rewritten), but in Chrome somewhat more often in B, the third load in a row.
 
-What B3 changed:
-
-- MapQuest (`en-US`, both browsers): the map scale shows `300 m` instead of `1000 ft`; its code picks imperial units only for `=== "en-US"`.
-- `new Intl.Locale(locale).region` is `undefined` instead of `US`/`BR`/`TW` on 9 pages: a video widget (hundreds of reads per page), a retailer sending it to analytics as the country (falling back to `US`), a shop language switcher (navigator.languages first), two chat or UI widgets that also read the language, and one read on a Shopify store from a script the trace didn't pin down. Nothing visible on load. (The recorder dropped these samples in the main runs, since `undefined` didn't serialize; rerun with the fix: out-ab-pbcheck-*, out-ab-recheck3-chrome.)
-- An Amazon careers page logs `Provided Locale is invalid: locale=null` and continues with the reported locale (`en`, `pt`, `zh-Hant`) in every Chrome B visit; the page looked the same.
-- No formatted output changed when pages passed the value back to Intl (dates, numbers, relative time, plural rules): B3 only drops regions whose CLDR data is the language's.
-- Not reached on load, from code review: a vaccination booking site that picks imperial units when the lowercased tag includes `us` (US users get metric under B3); v-calendar and similar date pickers, whose full-tag tables have `zh-TW` but not `zh-Hant`, so `zh-TW` users get the `zh-CN` first day of week and masks; a Brazilian billing site that registers its `pt-BR` locale data only for an exact `pt-BR` and otherwise uses English; an ad stack using the lowercased full tag as country targeting; a sign-up form using the region as the default phone country.
-
-What C1, C2, SU and SL changed: nothing seen. The bot-defense VM's pages were the most likely to react, so its three flagged pages were repeated three times per variant in both browsers (out-ab-recheck4-*): a police site's loads failed in A, A2 and B alike (also with nothing rewritten, out-ab-recheck5-chrome-*; in Chrome B failed somewhat more often, being the third load in a row), and a bank's login text and a cookie banner varied between A and A2 too. Collator readers are bot-defense, fraud and fingerprinting scripts that send the value to a server, so the effect, if any, is on challenge or fraud outcomes, which load-only visits don't show (see Not covered).
-
-## Not covered
-
-- Workers (not traced), code that runs after interaction (see Recall), logged-in pages, mobile.
-- Whether bot challenges and fraud scoring react to a changed locale: challenges don't complete during load-only visits (see Pilot), and the values these scripts send are judged server side.
-- Locales other than those tested, in particular regions B3 drops that aren't CLDR default content (64 of the 429, e.g. `de_BE`, `fr_MC`), where region-keyed supplemental data (week, hour cycle, currency) can differ from the language's.
-- In Firefox, console messages (only JS errors are compared) and frames other than the top one.
-- Safari.
+Besides MapQuest, B3 made `new Intl.Locale(locale).region` `undefined` instead of `US`/`BR`/`TW` on 9 pages, none visibly on load: a video widget, a retailer sending it to analytics as the country (falling back to `US`), a shop language switcher (which tries `navigator.languages` first), two chat or UI widgets, and a Shopify store script the trace didn't pin down (rerun with a recorder fix: `out-ab-pbcheck-*`, `out-ab-recheck3-chrome`). An Amazon careers page logs `Provided Locale is invalid: locale=null` in every Chrome B visit and continues with the reported locale; it looked the same.
 
 ## Query bytes
 
-All on the 2026-11-01 crawl (or the 10k sample tables), run on 2026-11-25; 0.568 TiB in total:
+All on the 2026-11-01 crawl (or the 10k sample tables), run on 2026-11-25; 0.568 TiB in total, of a 5.5 TiB budget:
 
 | Query | Bytes processed (TiB) |
 |---|---|
@@ -171,10 +170,10 @@ python3 bot_noarg.py out-detect2/results.jsonl out-detect2/groups.json out-detec
 python3 cldr_table.py ~/git/unicode-org/cldr > cldr-report.txt  # CLDR at 1cfc52b; writes ab/cldr-table.json
 python3 ab_pages2.py
 AB_HEADLESS=1 .venv/bin/python run_ab2.py chrome out-ab-henri-chrome; .venv/bin/python run_ab2.py firefox out-ab-henri-firefox
-python3 ab_analyze.py out-ab-henri-*/results.jsonl; python3 ab_passback.py out-ab-henri-*/results.jsonl
+python3 ab_analyze.py out-ab-henri-chrome/results.jsonl > out-ab-henri-chrome/flagged.md; python3 ab_analyze.py out-ab-henri-firefox/results.jsonl > out-ab-henri-firefox/flagged.md
+python3 ab_passback.py out-ab-henri-*/results.jsonl
 ```
 
 ## License
 
 MIT, see [LICENSE](LICENSE), for the scripts, analysis and text written for this research. Content from the crawl and the live web (`queries/`, `crawl/`, screenshots, page snippets) and third-party code (`vendor/`) belongs to its owners and isn't covered.
-
