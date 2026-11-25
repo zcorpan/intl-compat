@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>A/B sanity</title>
+<script>
+window.__sanity = () => {
+  const svcs = ['Collator', 'DateTimeFormat', 'NumberFormat', 'PluralRules', 'RelativeTimeFormat', 'ListFormat',
+                'Segmenter', 'DisplayNames', 'DurationFormat'];
+  const make = (s, l) => s === 'DisplayNames' ? new Intl[s](l, { type: 'region' }) : new Intl[s](l);
+  const defaults = Object.fromEntries(svcs.map(s => [s, make(s).resolvedOptions().locale]));
+  const explicit = Object.fromEntries(['en-US', 'en-GB', 'ar-EG', 'zh-TW', 'zh-HK', 'zh-Hans-CN', 'pt-BR', 'en-US-u-hc-h23']
+    .map(l => [l, new Intl.DateTimeFormat(l).resolvedOptions().locale]));
+  const loc = new Intl.DateTimeFormat().resolvedOptions().locale;
+  const d = new Date(Date.UTC(2026, 8, 3, 13, 4));
+  return {
+    defaults, explicit, rewrites: window.__abRewrites,
+    navigatorLanguage: navigator.language,
+    nativeLooking: String(Intl.DateTimeFormat.prototype.resolvedOptions),
+    name: Intl.DateTimeFormat.prototype.resolvedOptions.name,
+    passback: new Intl.DateTimeFormat(loc, { dateStyle: 'short', timeZone: 'UTC' }).format(d),
+    actual: new Intl.DateTimeFormat(undefined, { dateStyle: 'short', timeZone: 'UTC' }).format(d),
+  };
+};
+</script>
