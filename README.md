@@ -83,9 +83,27 @@ Recall: a seeded 250 of the pages without detected reads were loaded again and t
 
 A/B setup ([ab.py](ab.py) for Chrome, [ab_fx.py](ab_fx.py) for Firefox; pages from [ab_pages.py](ab_pages.py): all 71 passthrough, tag-sensitive, fallback-probe and unclear pages, plus a seeded 30 of the 194 bot-or-fraud pages). A and A2 load the page as a user with locale L gets it (Chrome: a headed Canary launched with `-AppleLanguages (L)`; Firefox: BiDi locale override plus `intl.accept_languages`), with [ab/rewrite.js](ab/rewrite.js) wrapping every `resolvedOptions()` and only counting the reads the variant would change; B is the same with the variant applied. Since the same wrapper is in A and B, pages checking for tampered natives see no difference between them. Checked on [ab/sanity.html](ab/sanity.html) in both browsers: default and explicit-locale reads are rewritten in B only, the wrapper's `toString()` looks native, and passing the B value back to Intl gives `en`'s formatting for `en-GB` under B1. Not covered: workers, and in Firefox, frames other than the top one in the measurements.
 
+### Pilot A/B (B1)
+
+B1 on the 101 A/B pages, Chrome Canary as an `en-GB` user and Firefox Nightly as `en-FI` and `ar-EG` users. What it changed about the setup:
+
+- Pixel diffs are mostly lazy loading (an image or a social widget that's in B's screenshot but not A's), and the first 3000 characters of text miss most dates. So [ab/passback.js](ab/passback.js) now records, in B, every Intl call made with a rewritten tag (constructors, `toLocale*()`, `localeCompare`, `Intl.Locale` and its `get*()` methods), formats the same input with the original tag, and counts the outputs that differ and whether they appear in the page text; runs keep the full page text (up to 50,000 characters).
+- Challenge tokens (`cf-turnstile-response`, `h-captcha-response`, `g-recaptcha-response`) were empty in every A, A2 and B visit, so load-only visits can't tell whether a changed locale fails a challenge.
+
+Results so far:
+
+| Setup | Pages with a rewritten read | Pass a rewritten tag back during load | Output differs | Examples |
+|---|---|---|---|---|
+| Chrome `en-GB` | 76 of 101 | 8 | 4 | `19 November 2026` → `November 19, 2026`, `23 Nov 2026` → `Nov 23, 2026`, `Sept` → `Sep` |
+| Firefox `ar-EG` | not counted | 3 | 3 | Arabic-Indic digits become Latin: `قبل ٥ أيام` → `قبل 5 أيام` in a reviews widget, visible in the page text |
+| Firefox `en-FI` | 75 of 101 | (run before the recorder) | | |
+
+The other 47 passthrough pages didn't pass the value back during load: their libraries format later, or with the site's own locale. One page that changed output in Chrome showed none of the changed strings in its text (tooltips, attributes or widgets not yet opened). No B-only failure reproduced in the other browser: a sign-in page that showed only a spinner in Chrome's B rendered normally in Firefox's.
+
 ## Not covered
 
 - Workers (not traced), code that runs after interaction (see Recall), logged-in pages.
+- Whether bot challenges and fraud scoring react to a changed locale: challenges don't complete during load-only visits (see Pilot).
 - Server-side use of values sent by bot-defense and fraud scripts: a changed locale only shows in challenge or checkout outcomes, which the A/B comparison will look at.
 - Safari.
 
