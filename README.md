@@ -27,6 +27,8 @@ Rates are of desktop root pages in the 2026-11-01 HTTP Archive crawl (11.4M), wi
 - **C1, C2**: nothing changed on 95 pages. Collator's locale is read almost only by bot-defense and fraud scripts (Cloudflare Turnstile on most), on 3.1% (2.7–3.5%) of pages, which send it to their servers. Whether a changed value worsens challenge or fraud scores can't be seen from page loads; the vendors would know.
 - **SU, SL**: nothing changed on 30 pages. Only one obfuscated bot-defense script reads Segmenter's locale, on 0.034% (0.005–0.117%) of pages; same server-side caveat.
 - **Dropping regions that carry data** (B1, or likely-subtags for `ar-EG`): not safe. Pages pass the reported locale back to Intl as their default (1.6% of pages), so `en-GB` users get `November 19, 2026` instead of `19 November 2026`, and `ar-EG` users Latin digits instead of Arabic-Indic ones (pilot A/B).
+- **Region-keyed data under B3**: for the regions that matter in practice, formatting with the shorter tag is identical in both browsers. 400 of the 472 tags B3 drops maximize back to the same region; the other 72 (e.g. `de-BE`, `fr-NE`, `en-AS`) can differ in week data, hour cycle or calendar, which `Intl.Locale`'s `getWeekInfo()`, `getHourCycles()` and `getCalendars()` show for 24 tags in Chrome and 27 in Firefox, mostly rare languages (`ady`, `bgn`, `ku`, `sdh`, `ha-Arab`). Formatting changes for a handful of rare tags (`ku-Latn-IQ`, `shn-TH`, `uz-AF`, `kok-IN`, `kea-CV`), so a browser should derive the table from the data it ships ([Region data checks](#region-data-checks)).
+- **Regenerating a region from likely subtags** (a compression scheme storing `ar` for `ar-EG`): in CLDR's files only `ar` → `ar-EG` changes data, but in browsers `uz-Arab` → `uz-Arab-AF`, `kok` → `kok-IN` and, in Firefox, `kea` → `kea-CV` and `ku-Arab` → `ku-IQ` also format differently.
 
 Shipped browsers already differ: Chrome's default locale is its UI language, so an Arabic (Saudi Arabia or Egypt) Mac gets `ar`, an Icelandic Mac `en-US`, and English with a non-US/UK region `en-GB`; Firefox reports `zh-Hant-TW` where Chrome reports `zh-TW`, so exact `zh-TW`/`zh-HK` checks already miss in Firefox; and Chrome's PluralRules already reports `en` for `en-US` ([env/](env/)).
 
@@ -39,7 +41,7 @@ What this can't see:
 - Code that runs after interaction, in workers, or on logged-in pages; mobile; Safari. A recall check found that what load-only tracing misses is the same libraries running later.
 - Page loads, as opposed to pages: popular pages count once, like any other.
 - What servers do with the values (challenges never complete in load-only visits).
-- Locales other than those tested, in particular the 64 regions B3 drops that aren't CLDR default content (e.g. `de_BE`, `fr_MC`), where region-keyed data such as week start, hour cycle or currency can differ from the language's.
+- Pages loaded with locales other than those tested. The [region data checks](#region-data-checks) cover what Intl outputs for every tag B3 drops, but not what pages do with it.
 
 A Chrome use counter would give the traffic-weighted rate, including later code and mobile: `resolvedOptions()` on an object constructed without locales whose result is passed to an Intl constructor, `toLocale*()` or `Intl.Locale` (or, simpler, `Intl.Locale.prototype.region` read on a Locale built from the default locale).
 
@@ -102,6 +104,17 @@ CLDR 1cfc52b, [cldr-report.txt](cldr-report.txt).
 - `ar` vs `ar-EG`: `ar_EG.xml` sets `defaultNumberingSystem` `arab`, so `ar-EG` formats with Arabic-Indic digits and `ar` with Latin ones. That's documented, not a CLDR bug: likely subtags map `ar` to `ar_Arab_EG`, but `ar`'s default content locale is `ar_001`, and TR35 says default content "Should not be used for locale matching or likely subtags" ([tr35.md, Inheritance vs Related Information](https://github.com/unicode-org/cldr/blob/1cfc52bc791ae3058bcc113c6c87e141cf5941f5/docs/ldml/tr35.md#inheritance-vs-related-information)). So a likely-subtags rule (B2) would change formatting for `ar-EG`.
 - Collation: none of C1's regions changes the collation used (`en_US.xml` is empty, `en_US_POSIX` ignored, `zh_TW`/`zh_HK` resolve to `zh_Hant`), and no region that is empty in `common/main/` changes collation (all 429 checked), so a no-argument DateTimeFormat locale passed into Collator can't lose a distinction under B3.
 - Formatting with a region that carries data differs in both browsers: `en-GB`→`en` (US date order), `pt-PT`→`pt`, `ar-EG`/`ar-SA`→`ar`, `zh-HK`→`zh-Hant`, `de-AT`, `es-MX`, `fr-CA` ([passback-chrome.jsonl](env/passback-chrome.jsonl), [passback-firefox.jsonl](env/passback-firefox.jsonl)).
+
+### Region data checks
+
+CLDR 1cfc52b ([region-report.txt](region-report.txt), by [region_check.py](region_check.py)); Chrome Canary 160 and Firefox Nightly 163 (ICU 78.3) on `about:blank` ([region-browsers.txt](region-browsers.txt), by [region_browsers.py](region_browsers.py)), comparing date, time, number, relative time, list, plural, display name and collation output, `resolvedOptions()` and `Intl.Locale` getters for each tag and its shorter form.
+
+- Every tag B3 drops vs the tag it reports: 400 of 472 are default content and maximize to the same region. In the other 72, CLDR's region-keyed data differs for 65 (currency 44, hours 38, calendars 22, `minDays` 20, weekend 18, first day 12, measurement 8, paper 3). Intl exposes neither currency, measurement nor paper size, and `getWeekInfo()` no longer returns `minimalDays`. In browsers:
+  - `getTimeZones()` differs for every tag (none without a region).
+  - `getWeekInfo()`, `getHourCycles()` or `getCalendars()` differ for 24 tags in Chrome and 27 in Firefox (Firefox's `getHourCycles()` lists allowed cycles, Chrome's only the preferred one): `ady`, `az-Arab`, `bgn`, `ccp`, `ff`, `ha-Arab`, `ku`, `mrh`, `sdh`, `shn`, `sus` and `smj` regions, plus `ar-001`, `da-GL`, `fr-NE` and `nb-SJ`. `de-BE`, `fr-MC`, `it-SM` and `en-AS` show no difference.
+  - Formatting from region-keyed data changes only in Firefox, for languages Chrome doesn't ship: `ku-Latn-IQ` 12-hour vs 24-hour, `shn-TH` Buddhist vs Gregorian calendar.
+  - Formatting also differs where ICU's data or behavior doesn't match CLDR's empty file (I haven't traced why): `uz-AF`/`uz-Arab-AF` (default date drops the `AP` era) and `kok-IN` (time pattern) in both browsers, `kea-CV` (`1 234$50 €` vs `1 234,50 €`) and `ku-IQ` (Firefox has no Arabic-script Kurdish data; the tag gets root data, the base Latin-script Kurdish) in Firefox.
+- Likely-subtags traps, each language (or language-script) locale vs it with its likely region: in CLDR only `ar` (`ar_EG.xml` sets digits and separators, and `ar`'s default content is `ar_001`); no other likely-region file in `common/` (collation, RBNF, segments, …) has data. In browsers, 4 of 402 tags format differently in Chrome (`ar-EG`, `kok-IN`, `uz-AF`, `uz-Arab-AF`) and 6 in Firefox (plus `kea-CV`, `ku-IQ`).
 
 ### A/B setup
 
@@ -168,6 +181,8 @@ python3 group.py out-detect2/results.jsonl out-detect2/groups.json
 python3 classify2.py out-detect2/results.jsonl out-detect2/groups.json out-detect2/classes.csv queries/sample2.csv > out-detect2/class-summary.md
 python3 bot_noarg.py out-detect2/results.jsonl out-detect2/groups.json out-detect2/classes.csv queries/sample2.csv > out-detect2/bot-noarg.md
 python3 cldr_table.py ~/git/unicode-org/cldr > cldr-report.txt  # CLDR at 1cfc52b; writes ab/cldr-table.json
+python3 region_check.py ~/git/unicode-org/cldr > region-report.txt  # writes region-pairs.json
+.venv/bin/python region_browsers.py > region-browsers.txt  # writes region-browsers.json
 python3 ab_pages2.py
 AB_HEADLESS=1 .venv/bin/python run_ab2.py chrome out-ab-henri-chrome; .venv/bin/python run_ab2.py firefox out-ab-henri-firefox
 python3 ab_analyze.py out-ab-henri-chrome/results.jsonl > out-ab-henri-chrome/flagged.md; python3 ab_analyze.py out-ab-henri-firefox/results.jsonl > out-ab-henri-firefox/flagged.md

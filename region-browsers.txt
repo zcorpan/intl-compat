@@ -1,0 +1,2026 @@
+== chrome 160.0.8180.1 ==
+-- drop: 472 of 472 pairs differ
+   keys (pairs): locale timeZones 472, locale calendars 22, locale weekInfo 19, locale hourCycles 13, fmt dtf default 2, fmt toLocaleString 2, fmt dtf time full 1, fmt dtf time long 1, fmt dtf time medium 1, fmt dtf time short 1
+   aa-ET -> aa (resolve to "en-US" / "en-US"): locale timeZones
+   ab-GE -> ab (resolve to "en-US" / "en-US"): locale timeZones
+   ady-JO -> ady (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale hourCycles: ["h12"]  vs  ["h23"]
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   ady-RU -> ady (resolve to "en-US" / "en-US"): locale timeZones
+   af-ZA -> af (resolve to "af-ZA" / "af"): locale timeZones
+   agq-CM -> agq (resolve to "en-US" / "en-US"): locale timeZones
+   ak-GH -> ak (resolve to "ak-GH" / "ak"): locale timeZones
+   am-ET -> am (resolve to "am-ET" / "am"): locale timeZones
+   an-ES -> an (resolve to "en-US" / "en-US"): locale timeZones
+   ann-NG -> ann (resolve to "en-US" / "en-US"): locale timeZones
+   apc-SY -> apc (resolve to "en-US" / "en-US"): locale timeZones
+   ar-001 -> ar (resolve to "ar-001" / "ar"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":1,"weekend":[6,7]}  vs  {"firstDay":6,"weekend":[5,6]}
+      locale calendars: ["gregory"]  vs  ["gregory","coptic","islamic","islamic-civil","islamic-tbla"]
+   arn-CL -> arn (resolve to "en-US" / "en-US"): locale timeZones
+   ary-MA -> ary (resolve to "en-US" / "en-US"): locale timeZones
+   as-IN -> as (resolve to "en-US" / "en-US"): locale timeZones
+   asa-TZ -> asa (resolve to "en-US" / "en-US"): locale timeZones
+   ast-ES -> ast (resolve to "en-US" / "en-US"): locale timeZones
+   az-AZ -> az (resolve to "az-AZ" / "az"): locale timeZones
+   az-Arab-IQ -> az-Arab (resolve to "az" / "az"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":6,"weekend":[5]}
+      locale hourCycles: ["h12"]  vs  ["h23"]
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["persian","gregory","islamic","islamic-civil","islamic-tbla"]
+   az-Arab-IR -> az-Arab (resolve to "az" / "az"): locale timeZones
+   az-Arab-TR -> az-Arab (resolve to "az" / "az"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":1,"weekend":[6,7]}  vs  {"firstDay":6,"weekend":[5]}
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["persian","gregory","islamic","islamic-civil","islamic-tbla"]
+   az-Cyrl-AZ -> az-Cyrl (resolve to "az-Cyrl-AZ" / "az-Cyrl"): locale timeZones
+   az-IQ -> az-Arab (resolve to "az" / "az"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":6,"weekend":[5]}
+      locale hourCycles: ["h12"]  vs  ["h23"]
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["persian","gregory","islamic","islamic-civil","islamic-tbla"]
+   az-IR -> az-Arab (resolve to "az" / "az"): locale timeZones
+   az-Latn-AZ -> az-Latn (resolve to "az" / "az"): locale timeZones
+   ba-RU -> ba (resolve to "en-US" / "en-US"): locale timeZones
+   bal-Arab-PK -> bal-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   bal-Latn-PK -> bal-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   bal-PK -> bal (resolve to "en-US" / "en-US"): locale timeZones
+   bas-CM -> bas (resolve to "en-US" / "en-US"): locale timeZones
+   be-BY -> be (resolve to "en-US" / "en-US"): locale timeZones
+   bem-ZM -> bem (resolve to "en-US" / "en-US"): locale timeZones
+   bew-ID -> bew (resolve to "en-US" / "en-US"): locale timeZones
+   bez-TZ -> bez (resolve to "en-US" / "en-US"): locale timeZones
+   bg-BG -> bg (resolve to "bg-BG" / "bg"): locale timeZones
+   bgc-IN -> bgc (resolve to "en-US" / "en-US"): locale timeZones
+   bgn-AE -> bgn (resolve to "en-US" / "en-US"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":1,"weekend":[6,7]}  vs  {"firstDay":7,"weekend":[6,7]}
+      locale calendars: ["gregory","islamic-umalqura","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic","islamic-civil","islamic-tbla"]
+   bgn-AF -> bgn (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[4,5]}  vs  {"firstDay":7,"weekend":[6,7]}
+      locale hourCycles: ["h23"]  vs  ["h12"]
+      locale calendars: ["persian","gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic","islamic-civil","islamic-tbla"]
+   bgn-IR -> bgn (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5]}  vs  {"firstDay":7,"weekend":[6,7]}
+      locale hourCycles: ["h23"]  vs  ["h12"]
+      locale calendars: ["persian","gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic","islamic-civil","islamic-tbla"]
+   bgn-OM -> bgn (resolve to "en-US" / "en-US"): locale weekInfo, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":7,"weekend":[6,7]}
+   bgn-PK -> bgn (resolve to "en-US" / "en-US"): locale timeZones
+   bho-IN -> bho (resolve to "en-US" / "en-US"): locale timeZones
+   blo-BJ -> blo (resolve to "en-US" / "en-US"): locale timeZones
+   blt-VN -> blt (resolve to "en-US" / "en-US"): locale timeZones
+   bm-ML -> bm (resolve to "en-US" / "en-US"): locale timeZones
+   bm-Nkoo-ML -> bm-Nkoo (resolve to "en-US" / "en-US"): locale timeZones
+   bn-BD -> bn (resolve to "bn-BD" / "bn"): locale timeZones
+   bo-CN -> bo (resolve to "en-US" / "en-US"): locale timeZones
+   bqi-IR -> bqi (resolve to "en-US" / "en-US"): locale timeZones
+   br-FR -> br (resolve to "en-US" / "en-US"): locale timeZones
+   brh-PK -> brh (resolve to "en-US" / "en-US"): locale timeZones
+   brx-IN -> brx (resolve to "en-US" / "en-US"): locale timeZones
+   bs-BA -> bs (resolve to "bs-BA" / "bs"): locale timeZones
+   bs-Cyrl-BA -> bs-Cyrl (resolve to "bs-Cyrl-BA" / "bs-Cyrl"): locale timeZones
+   bs-Latn-BA -> bs-Latn (resolve to "bs" / "bs"): locale timeZones
+   bss-CM -> bss (resolve to "en-US" / "en-US"): locale timeZones
+   bua-RU -> bua (resolve to "en-US" / "en-US"): locale timeZones
+   byn-ER -> byn (resolve to "en-US" / "en-US"): locale timeZones
+   ca-AD -> ca (resolve to "ca-AD" / "ca"): locale timeZones
+   ca-ES -> ca (resolve to "ca-ES" / "ca"): locale timeZones
+   ca-IT -> ca (resolve to "ca-IT" / "ca"): locale timeZones
+   cad-US -> cad (resolve to "en-US" / "en-US"): locale timeZones
+   cch-NG -> cch (resolve to "en-US" / "en-US"): locale timeZones
+   ccp-BD -> ccp (resolve to "en-US" / "en-US"): locale timeZones
+   ccp-IN -> ccp (resolve to "en-US" / "en-US"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":7,"weekend":[7]}  vs  {"firstDay":7,"weekend":[6,7]}
+      locale calendars: ["gregory","indian"]  vs  ["gregory","islamic","islamic-civil","islamic-tbla"]
+   ce-RU -> ce (resolve to "en-US" / "en-US"): locale timeZones
+   ceb-PH -> ceb (resolve to "en-US" / "en-US"): locale timeZones
+   cgg-UG -> cgg (resolve to "en-US" / "en-US"): locale timeZones
+   cho-US -> cho (resolve to "en-US" / "en-US"): locale timeZones
+   chr-US -> chr (resolve to "en-US" / "en-US"): locale timeZones
+   cic-US -> cic (resolve to "en-US" / "en-US"): locale timeZones
+   ckb-IQ -> ckb (resolve to "en-US" / "en-US"): locale timeZones
+   co-FR -> co (resolve to "en-US" / "en-US"): locale timeZones
+   cop-EG -> cop (resolve to "en-US" / "en-US"): locale timeZones
+   cs-CZ -> cs (resolve to "cs-CZ" / "cs"): locale timeZones
+   csw-CA -> csw (resolve to "en-US" / "en-US"): locale timeZones
+   cu-RU -> cu (resolve to "en-US" / "en-US"): locale timeZones
+   cv-RU -> cv (resolve to "en-US" / "en-US"): locale timeZones
+   cy-GB -> cy (resolve to "en-US" / "en-US"): locale timeZones
+   da-DK -> da (resolve to "da-DK" / "da"): locale timeZones
+   da-GL -> da (resolve to "da-GL" / "da"): locale timeZones
+   dav-KE -> dav (resolve to "en-US" / "en-US"): locale timeZones
+   de-BE -> de (resolve to "de-BE" / "de"): locale timeZones
+   de-DE -> de (resolve to "de-DE" / "de"): locale timeZones
+   dje-NE -> dje (resolve to "en-US" / "en-US"): locale timeZones
+   doi-IN -> doi (resolve to "en-US" / "en-US"): locale timeZones
+   dsb-DE -> dsb (resolve to "en-US" / "en-US"): locale timeZones
+   dua-CM -> dua (resolve to "en-US" / "en-US"): locale timeZones
+   dv-MV -> dv (resolve to "en-US" / "en-US"): locale timeZones
+   dyo-SN -> dyo (resolve to "en-US" / "en-US"): locale timeZones
+   dz-BT -> dz (resolve to "en-US" / "en-US"): locale timeZones
+   ebu-KE -> ebu (resolve to "en-US" / "en-US"): locale timeZones
+   ee-GH -> ee (resolve to "en-US" / "en-US"): locale timeZones
+   el-CY -> el (resolve to "el-CY" / "el"): locale timeZones
+   el-GR -> el (resolve to "el-GR" / "el"): locale timeZones
+   en-AS -> en (resolve to "en-AS" / "en"): locale timeZones
+   en-Dsrt-US -> en-Dsrt (resolve to "en" / "en"): locale timeZones
+   en-PR -> en (resolve to "en-PR" / "en"): locale timeZones
+   en-Shaw-GB -> en-Shaw (resolve to "en" / "en"): locale timeZones
+   en-UM -> en (resolve to "en-UM" / "en"): locale timeZones
+   en-US -> en (resolve to "en-US" / "en"): locale timeZones
+   en-VI -> en (resolve to "en-VI" / "en"): locale timeZones
+   eo-001 -> eo (resolve to "en-US" / "en-US"): locale timeZones
+   es-EA -> es (resolve to "es-EA" / "es"): locale timeZones
+   es-ES -> es (resolve to "es-ES" / "es"): locale timeZones
+   es-IC -> es (resolve to "es-IC" / "es"): locale timeZones
+   et-EE -> et (resolve to "et-EE" / "et"): locale timeZones
+   eu-ES -> eu (resolve to "en-US" / "en-US"): locale timeZones
+   ewo-CM -> ewo (resolve to "en-US" / "en-US"): locale timeZones
+   fa-IR -> fa (resolve to "fa-IR" / "fa"): locale timeZones
+   ff-Adlm-GN -> ff-Adlm (resolve to "en-US" / "en-US"): locale timeZones
+   ff-BF -> ff (resolve to "en-US" / "en-US"): locale timeZones
+   ff-CM -> ff (resolve to "en-US" / "en-US"): locale timeZones
+   ff-GW -> ff (resolve to "en-US" / "en-US"): locale timeZones
+   ff-Latn-BF -> ff-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   ff-Latn-CM -> ff-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   ff-Latn-GW -> ff-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   ff-Latn-NE -> ff-Latn (resolve to "en-US" / "en-US"): locale calendars, locale timeZones
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   ff-Latn-SN -> ff-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   ff-NE -> ff (resolve to "en-US" / "en-US"): locale calendars, locale timeZones
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   ff-SN -> ff (resolve to "en-US" / "en-US"): locale timeZones
+   fi-FI -> fi (resolve to "fi-FI" / "fi"): locale timeZones
+   fil-PH -> fil (resolve to "fil-PH" / "fil"): locale timeZones
+   fo-FO -> fo (resolve to "en-US" / "en-US"): locale timeZones
+   fr-BF -> fr (resolve to "fr-BF" / "fr"): locale timeZones
+   fr-BJ -> fr (resolve to "fr-BJ" / "fr"): locale timeZones
+   fr-BL -> fr (resolve to "fr-BL" / "fr"): locale timeZones
+   fr-CF -> fr (resolve to "fr-CF" / "fr"): locale timeZones
+   fr-CG -> fr (resolve to "fr-CG" / "fr"): locale timeZones
+   fr-FR -> fr (resolve to "fr-FR" / "fr"): locale timeZones
+   fr-GA -> fr (resolve to "fr-GA" / "fr"): locale timeZones
+   fr-GP -> fr (resolve to "fr-GP" / "fr"): locale timeZones
+   fr-GQ -> fr (resolve to "fr-GQ" / "fr"): locale timeZones
+   fr-MC -> fr (resolve to "fr-MC" / "fr"): locale timeZones
+   fr-MF -> fr (resolve to "fr-MF" / "fr"): locale timeZones
+   fr-MQ -> fr (resolve to "fr-MQ" / "fr"): locale timeZones
+   fr-NC -> fr (resolve to "fr-NC" / "fr"): locale timeZones
+   fr-NE -> fr (resolve to "fr-NE" / "fr"): locale calendars, locale timeZones
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   fr-PF -> fr (resolve to "fr-PF" / "fr"): locale timeZones
+   fr-PM -> fr (resolve to "fr-PM" / "fr"): locale timeZones
+   fr-TG -> fr (resolve to "fr-TG" / "fr"): locale timeZones
+   fr-WF -> fr (resolve to "fr-WF" / "fr"): locale timeZones
+   fr-YT -> fr (resolve to "fr-YT" / "fr"): locale timeZones
+   frr-DE -> frr (resolve to "en-US" / "en-US"): locale timeZones
+   fur-IT -> fur (resolve to "en-US" / "en-US"): locale timeZones
+   fy-NL -> fy (resolve to "en-US" / "en-US"): locale timeZones
+   ga-GB -> ga (resolve to "en-US" / "en-US"): locale timeZones
+   ga-IE -> ga (resolve to "en-US" / "en-US"): locale timeZones
+   gaa-GH -> gaa (resolve to "en-US" / "en-US"): locale timeZones
+   gd-GB -> gd (resolve to "en-US" / "en-US"): locale timeZones
+   gez-ET -> gez (resolve to "en-US" / "en-US"): locale timeZones
+   gl-ES -> gl (resolve to "en-US" / "en-US"): locale timeZones
+   gn-PY -> gn (resolve to "en-US" / "en-US"): locale timeZones
+   gsw-CH -> gsw (resolve to "en-US" / "en-US"): locale timeZones
+   gsw-FR -> gsw (resolve to "en-US" / "en-US"): locale timeZones
+   gsw-LI -> gsw (resolve to "en-US" / "en-US"): locale timeZones
+   gu-IN -> gu (resolve to "gu-IN" / "gu"): locale timeZones
+   guz-KE -> guz (resolve to "en-US" / "en-US"): locale timeZones
+   gv-IM -> gv (resolve to "en-US" / "en-US"): locale timeZones
+   ha-Arab-NG -> ha-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   ha-Arab-SD -> ha-Arab (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale hourCycles: ["h12"]  vs  ["h23"]
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   ha-NG -> ha (resolve to "en-US" / "en-US"): locale timeZones
+   ha-SD -> ha-Arab (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale hourCycles: ["h12"]  vs  ["h23"]
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   haw-US -> haw (resolve to "en-US" / "en-US"): locale timeZones
+   he-IL -> he (resolve to "he-IL" / "he"): locale timeZones
+   hi-IN -> hi (resolve to "hi-IN" / "hi"): locale timeZones
+   hi-Latn-IN -> hi-Latn (resolve to "hi-Latn-IN" / "hi-Latn"): locale timeZones
+   hnj-Hmnp-US -> hnj-Hmnp (resolve to "en-US" / "en-US"): locale timeZones
+   hnj-US -> hnj (resolve to "en-US" / "en-US"): locale timeZones
+   hr-HR -> hr (resolve to "hr-HR" / "hr"): locale timeZones
+   hrx-BR -> hrx (resolve to "en-US" / "en-US"): locale timeZones
+   hsb-DE -> hsb (resolve to "en-US" / "en-US"): locale timeZones
+   ht-HT -> ht (resolve to "en-US" / "en-US"): locale timeZones
+   hu-HU -> hu (resolve to "hu-HU" / "hu"): locale timeZones
+   hy-AM -> hy (resolve to "en-US" / "en-US"): locale timeZones
+   ia-001 -> ia (resolve to "en-US" / "en-US"): locale timeZones
+   id-ID -> id (resolve to "id-ID" / "id"): locale timeZones
+   ie-EE -> ie (resolve to "en-US" / "en-US"): locale timeZones
+   ig-NG -> ig (resolve to "en-US" / "en-US"): locale timeZones
+   ii-CN -> ii (resolve to "en-US" / "en-US"): locale timeZones
+   io-001 -> io (resolve to "en-US" / "en-US"): locale timeZones
+   is-IS -> is (resolve to "en-US" / "en-US"): locale timeZones
+   isv-001 -> isv (resolve to "en-US" / "en-US"): locale timeZones
+   isv-Cyrl-001 -> isv-Cyrl (resolve to "en-US" / "en-US"): locale timeZones
+   isv-Latn-001 -> isv-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   it-IT -> it (resolve to "it-IT" / "it"): locale timeZones
+   it-SM -> it (resolve to "it-SM" / "it"): locale timeZones
+   it-VA -> it (resolve to "it-VA" / "it"): locale timeZones
+   iu-CA -> iu (resolve to "en-US" / "en-US"): locale timeZones
+   iu-Latn-CA -> iu-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   ja-JP -> ja (resolve to "ja-JP" / "ja"): locale timeZones
+   jbo-001 -> jbo (resolve to "en-US" / "en-US"): locale timeZones
+   jgo-CM -> jgo (resolve to "en-US" / "en-US"): locale timeZones
+   jmc-TZ -> jmc (resolve to "en-US" / "en-US"): locale timeZones
+   jv-ID -> jv (resolve to "en-US" / "en-US"): locale timeZones
+   ka-GE -> ka (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-Cyrl-UZ -> kaa-Cyrl (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-Latn-UZ -> kaa-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-UZ -> kaa (resolve to "en-US" / "en-US"): locale timeZones
+   kab-DZ -> kab (resolve to "en-US" / "en-US"): locale timeZones
+   kaj-NG -> kaj (resolve to "en-US" / "en-US"): locale timeZones
+   kam-KE -> kam (resolve to "en-US" / "en-US"): locale timeZones
+   kbd-RU -> kbd (resolve to "en-US" / "en-US"): locale timeZones
+   kcg-NG -> kcg (resolve to "en-US" / "en-US"): locale timeZones
+   kde-TZ -> kde (resolve to "en-US" / "en-US"): locale timeZones
+   kea-CV -> kea (resolve to "en-US" / "en-US"): locale timeZones
+   kek-GT -> kek (resolve to "en-US" / "en-US"): locale timeZones
+   ken-CM -> ken (resolve to "en-US" / "en-US"): locale timeZones
+   kgp-BR -> kgp (resolve to "en-US" / "en-US"): locale timeZones
+   khq-ML -> khq (resolve to "en-US" / "en-US"): locale timeZones
+   ki-KE -> ki (resolve to "en-US" / "en-US"): locale timeZones
+   kk-Arab-CN -> kk-Arab (resolve to "kk-Arab-CN" / "kk-Arab"): locale timeZones
+   kk-CN -> kk-Arab (resolve to "kk-CN" / "kk-Arab"): locale timeZones
+   kk-Cyrl-KZ -> kk-Cyrl (resolve to "kk" / "kk"): locale timeZones
+   kk-KZ -> kk (resolve to "kk" / "kk"): locale timeZones
+   kkj-CM -> kkj (resolve to "en-US" / "en-US"): locale timeZones
+   kl-GL -> kl (resolve to "en-US" / "en-US"): locale timeZones
+   kln-KE -> kln (resolve to "en-US" / "en-US"): locale timeZones
+   km-KH -> km (resolve to "en-US" / "en-US"): locale timeZones
+   kn-IN -> kn (resolve to "kn-IN" / "kn"): locale timeZones
+   ko-KR -> ko (resolve to "ko-KR" / "ko"): locale timeZones
+   kok-Deva-IN -> kok-Deva (resolve to "kok" / "kok"): locale timeZones
+   kok-IN -> kok (resolve to "kok-IN" / "kok"): fmt dtf time full, fmt dtf time long, fmt dtf time medium, fmt dtf time short, locale timeZones
+      fmt dtf time full: ["3:04:05 PM Coordinated Universal Time","3:04:05 AM Coordinated Universal Time"]  vs  ["03:04:05 PM Coordinated Universal Time","03:04:05 AM Coordinated Universal Time"]
+      fmt dtf time long: ["3:04:05 PM UTC","3:04:05 AM UTC"]  vs  ["03:04:05 PM UTC","03:04:05 AM UTC"]
+      fmt dtf time medium: ["3:04:05 PM","3:04:05 AM"]  vs  ["03:04:05 PM","03:04:05 AM"]
+      fmt dtf time short: ["3:04 PM","3:04 AM"]  vs  ["03:04 PM","03:04 AM"]
+   kok-Latn-IN -> kok-Latn (resolve to "kok-Latn-IN" / "kok-Latn"): locale timeZones
+   kpe-LR -> kpe (resolve to "en-US" / "en-US"): locale timeZones
+   ks-Arab-IN -> ks-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   ks-Deva-IN -> ks-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   ks-IN -> ks (resolve to "en-US" / "en-US"): locale timeZones
+   ksb-TZ -> ksb (resolve to "en-US" / "en-US"): locale timeZones
+   ksf-CM -> ksf (resolve to "en-US" / "en-US"): locale timeZones
+   ksh-DE -> ksh (resolve to "en-US" / "en-US"): locale timeZones
+   ku-Arab-IQ -> ku-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   ku-Arab-IR -> ku-Arab (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5]}  vs  {"firstDay":6,"weekend":[5,6]}
+      locale hourCycles: ["h23"]  vs  ["h12"]
+      locale calendars: ["persian","gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic","islamic-civil","islamic-tbla"]
+   ku-IQ -> ku-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   ku-IR -> ku-Arab (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5]}  vs  {"firstDay":6,"weekend":[5,6]}
+      locale hourCycles: ["h23"]  vs  ["h12"]
+      locale calendars: ["persian","gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic","islamic-civil","islamic-tbla"]
+   ku-Latn-IQ -> ku-Latn (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale hourCycles: ["h12"]  vs  ["h23"]
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic-civil","islamic-tbla"]
+   ku-Latn-SY -> ku-Latn (resolve to "en-US" / "en-US"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic-civil","islamic-tbla"]
+   ku-Latn-TR -> ku-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   ku-SY -> ku (resolve to "en-US" / "en-US"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic-civil","islamic-tbla"]
+   ku-TR -> ku (resolve to "en-US" / "en-US"): locale timeZones
+   kw-GB -> kw (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-Deva-IN -> kxv-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-IN -> kxv (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-Latn-IN -> kxv-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-Orya-IN -> kxv-Orya (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-Telu-IN -> kxv-Telu (resolve to "en-US" / "en-US"): locale timeZones
+   ky-KG -> ky (resolve to "en-US" / "en-US"): locale timeZones
+   la-VA -> la (resolve to "en-US" / "en-US"): locale timeZones
+   lag-TZ -> lag (resolve to "en-US" / "en-US"): locale timeZones
+   lb-LU -> lb (resolve to "en-US" / "en-US"): locale timeZones
+   lg-UG -> lg (resolve to "en-US" / "en-US"): locale timeZones
+   lij-IT -> lij (resolve to "en-US" / "en-US"): locale timeZones
+   lkt-US -> lkt (resolve to "en-US" / "en-US"): locale timeZones
+   lld-IT -> lld (resolve to "en-US" / "en-US"): locale timeZones
+   lmo-IT -> lmo (resolve to "en-US" / "en-US"): locale timeZones
+   ln-CD -> ln (resolve to "en-US" / "en-US"): locale timeZones
+   ln-CF -> ln (resolve to "en-US" / "en-US"): locale timeZones
+   ln-CG -> ln (resolve to "en-US" / "en-US"): locale timeZones
+   lo-LA -> lo (resolve to "en-US" / "en-US"): locale timeZones
+   lrc-IR -> lrc (resolve to "en-US" / "en-US"): locale timeZones
+   lt-LT -> lt (resolve to "lt-LT" / "lt"): locale timeZones
+   ltg-LV -> ltg (resolve to "en-US" / "en-US"): locale timeZones
+   lu-CD -> lu (resolve to "en-US" / "en-US"): locale timeZones
+   luo-KE -> luo (resolve to "en-US" / "en-US"): locale timeZones
+   luy-KE -> luy (resolve to "en-US" / "en-US"): locale timeZones
+   lv-LV -> lv (resolve to "lv-LV" / "lv"): locale timeZones
+   lzz-TR -> lzz (resolve to "en-US" / "en-US"): locale timeZones
+   mai-IN -> mai (resolve to "en-US" / "en-US"): locale timeZones
+   mas-KE -> mas (resolve to "en-US" / "en-US"): locale timeZones
+   mdf-RU -> mdf (resolve to "en-US" / "en-US"): locale timeZones
+   mer-KE -> mer (resolve to "en-US" / "en-US"): locale timeZones
+   mfe-MU -> mfe (resolve to "en-US" / "en-US"): locale timeZones
+   mg-MG -> mg (resolve to "en-US" / "en-US"): locale timeZones
+   mgh-MZ -> mgh (resolve to "en-US" / "en-US"): locale timeZones
+   mgo-CM -> mgo (resolve to "en-US" / "en-US"): locale timeZones
+   mhn-IT -> mhn (resolve to "en-US" / "en-US"): locale timeZones
+   mi-NZ -> mi (resolve to "en-US" / "en-US"): locale timeZones
+   mic-CA -> mic (resolve to "en-US" / "en-US"): locale timeZones
+   mk-MK -> mk (resolve to "en-US" / "en-US"): locale timeZones
+   ml-IN -> ml (resolve to "ml-IN" / "ml"): locale timeZones
+   mn-CN -> mn-Mong (resolve to "en-US" / "en-US"): locale timeZones
+   mn-MN -> mn (resolve to "en-US" / "en-US"): locale timeZones
+   mn-Mong-CN -> mn-Mong (resolve to "en-US" / "en-US"): locale timeZones
+   mni-Beng-IN -> mni-Beng (resolve to "en-US" / "en-US"): locale timeZones
+   mni-IN -> mni (resolve to "en-US" / "en-US"): locale timeZones
+   mni-Mtei-IN -> mni-Mtei (resolve to "en-US" / "en-US"): locale timeZones
+   moh-CA -> moh (resolve to "en-US" / "en-US"): locale timeZones
+   mr-IN -> mr (resolve to "mr-IN" / "mr"): locale timeZones
+   mrh-IN -> mrh (resolve to "en-US" / "en-US"): locale timeZones
+   mrh-MM -> mrh (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":7,"weekend":[6,7]}  vs  {"firstDay":7,"weekend":[7]}
+      locale hourCycles: ["h23"]  vs  ["h12"]
+      locale calendars: ["gregory"]  vs  ["gregory","indian"]
+   ms-Arab-MY -> ms-Arab (resolve to "ms" / "ms"): locale timeZones
+   ms-MY -> ms (resolve to "ms-MY" / "ms"): locale timeZones
+   mt-MT -> mt (resolve to "en-US" / "en-US"): locale timeZones
+   mua-CM -> mua (resolve to "en-US" / "en-US"): locale timeZones
+   mus-US -> mus (resolve to "en-US" / "en-US"): locale timeZones
+   mww-Hmnp-US -> mww-Hmnp (resolve to "en-US" / "en-US"): locale timeZones
+   mww-US -> mww (resolve to "en-US" / "en-US"): locale timeZones
+   my-MM -> my (resolve to "en-US" / "en-US"): locale timeZones
+   myv-RU -> myv (resolve to "en-US" / "en-US"): locale timeZones
+   mzn-IR -> mzn (resolve to "en-US" / "en-US"): locale timeZones
+   naq-NA -> naq (resolve to "en-US" / "en-US"): locale timeZones
+   nb-NO -> nb (resolve to "nb" / "nb"): locale timeZones
+   nb-SJ -> nb (resolve to "nb" / "nb"): locale timeZones
+   nd-ZW -> nd (resolve to "en-US" / "en-US"): locale timeZones
+   nds-DE -> nds (resolve to "en-US" / "en-US"): locale timeZones
+   ne-NP -> ne (resolve to "en-US" / "en-US"): locale timeZones
+   nl-NL -> nl (resolve to "nl-NL" / "nl"): locale timeZones
+   nmg-CM -> nmg (resolve to "en-US" / "en-US"): locale timeZones
+   nn-NO -> nn (resolve to "en-US" / "en-US"): locale timeZones
+   nnh-CM -> nnh (resolve to "en-US" / "en-US"): locale timeZones
+   nqo-GN -> nqo (resolve to "en-US" / "en-US"): locale timeZones
+   nr-ZA -> nr (resolve to "en-US" / "en-US"): locale timeZones
+   nso-ZA -> nso (resolve to "en-US" / "en-US"): locale timeZones
+   nus-SS -> nus (resolve to "en-US" / "en-US"): locale timeZones
+   nv-US -> nv (resolve to "en-US" / "en-US"): locale timeZones
+   ny-MW -> ny (resolve to "en-US" / "en-US"): locale timeZones
+   nyn-UG -> nyn (resolve to "en-US" / "en-US"): locale timeZones
+   oc-FR -> oc (resolve to "en-US" / "en-US"): locale timeZones
+   oka-CA -> oka (resolve to "en-US" / "en-US"): locale timeZones
+   oka-US -> oka (resolve to "en-US" / "en-US"): locale timeZones
+   om-ET -> om (resolve to "en-US" / "en-US"): locale timeZones
+   or-IN -> or (resolve to "en-US" / "en-US"): locale timeZones
+   os-GE -> os (resolve to "en-US" / "en-US"): locale timeZones
+   osa-US -> osa (resolve to "en-US" / "en-US"): locale timeZones
+   pa-Arab-PK -> pa-Arab (resolve to "pa-Arab-PK" / "pa-Arab"): locale timeZones
+   pa-Guru-IN -> pa-Guru (resolve to "pa" / "pa"): locale timeZones
+   pa-IN -> pa (resolve to "pa" / "pa"): locale timeZones
+   pa-PK -> pa-Arab (resolve to "pa-PK" / "pa-Arab"): locale timeZones
+   pap-AW -> pap (resolve to "en-US" / "en-US"): locale timeZones
+   pap-CW -> pap (resolve to "en-US" / "en-US"): locale timeZones
+   pcm-NG -> pcm (resolve to "en-US" / "en-US"): locale timeZones
+   pi-GB -> pi (resolve to "en-US" / "en-US"): locale timeZones
+   pi-Latn-GB -> pi-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   pis-SB -> pis (resolve to "en-US" / "en-US"): locale timeZones
+   pl-PL -> pl (resolve to "pl-PL" / "pl"): locale timeZones
+   pms-IT -> pms (resolve to "en-US" / "en-US"): locale timeZones
+   prg-PL -> prg (resolve to "en-US" / "en-US"): locale timeZones
+   ps-AF -> ps (resolve to "en-US" / "en-US"): locale timeZones
+   pt-BR -> pt (resolve to "pt-BR" / "pt"): locale timeZones
+   qu-PE -> qu (resolve to "en-US" / "en-US"): locale timeZones
+   quc-GT -> quc (resolve to "en-US" / "en-US"): locale timeZones
+   raj-IN -> raj (resolve to "en-US" / "en-US"): locale timeZones
+   rhg-MM -> rhg (resolve to "en-US" / "en-US"): locale timeZones
+   rhg-Rohg-MM -> rhg-Rohg (resolve to "en-US" / "en-US"): locale timeZones
+   rif-MA -> rif (resolve to "en-US" / "en-US"): locale timeZones
+   rm-CH -> rm (resolve to "en-US" / "en-US"): locale timeZones
+   rn-BI -> rn (resolve to "en-US" / "en-US"): locale timeZones
+   ro-RO -> ro (resolve to "ro-RO" / "ro"): locale timeZones
+   rof-TZ -> rof (resolve to "en-US" / "en-US"): locale timeZones
+   ru-RU -> ru (resolve to "ru-RU" / "ru"): locale timeZones
+   rw-RW -> rw (resolve to "en-US" / "en-US"): locale timeZones
+   rwk-TZ -> rwk (resolve to "en-US" / "en-US"): locale timeZones
+   sa-IN -> sa (resolve to "en-US" / "en-US"): locale timeZones
+   sah-RU -> sah (resolve to "en-US" / "en-US"): locale timeZones
+   saq-KE -> saq (resolve to "en-US" / "en-US"): locale timeZones
+   sat-Deva-IN -> sat-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   sat-IN -> sat (resolve to "en-US" / "en-US"): locale timeZones
+   sat-Olck-IN -> sat-Olck (resolve to "en-US" / "en-US"): locale timeZones
+   sbp-TZ -> sbp (resolve to "en-US" / "en-US"): locale timeZones
+   sc-IT -> sc (resolve to "en-US" / "en-US"): locale timeZones
+   scn-IT -> scn (resolve to "en-US" / "en-US"): locale timeZones
+   sd-Arab-PK -> sd-Arab (resolve to "sd" / "sd"): locale timeZones
+   sd-Deva-IN -> sd-Deva (resolve to "sd-Deva-IN" / "sd-Deva"): locale timeZones
+   sd-IN -> sd-Deva (resolve to "sd-IN" / "sd-Deva"): locale timeZones
+   sd-PK -> sd (resolve to "sd" / "sd"): locale timeZones
+   sdh-IQ -> sdh (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":6,"weekend":[5]}
+      locale hourCycles: ["h12"]  vs  ["h23"]
+      locale calendars: ["gregory","islamic","islamic-civil","islamic-tbla"]  vs  ["persian","gregory","islamic","islamic-civil","islamic-tbla"]
+   sdh-IR -> sdh (resolve to "en-US" / "en-US"): locale timeZones
+   se-NO -> se (resolve to "en-US" / "en-US"): locale timeZones
+   seh-MZ -> seh (resolve to "en-US" / "en-US"): locale timeZones
+   ses-ML -> ses (resolve to "en-US" / "en-US"): locale timeZones
+   sg-CF -> sg (resolve to "en-US" / "en-US"): locale timeZones
+   sgs-LT -> sgs (resolve to "en-US" / "en-US"): locale timeZones
+   shi-Latn-MA -> shi-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   shi-MA -> shi (resolve to "en-US" / "en-US"): locale timeZones
+   shi-Tfng-MA -> shi-Tfng (resolve to "en-US" / "en-US"): locale timeZones
+   shn-MM -> shn (resolve to "en-US" / "en-US"): locale timeZones
+   shn-TH -> shn (resolve to "en-US" / "en-US"): locale calendars, locale timeZones
+      locale calendars: ["buddhist","gregory"]  vs  ["gregory"]
+   si-LK -> si (resolve to "en-US" / "en-US"): locale timeZones
+   sid-ET -> sid (resolve to "en-US" / "en-US"): locale timeZones
+   sk-SK -> sk (resolve to "sk-SK" / "sk"): locale timeZones
+   skr-PK -> skr (resolve to "en-US" / "en-US"): locale timeZones
+   sl-SI -> sl (resolve to "sl-SI" / "sl"): locale timeZones
+   sma-SE -> sma (resolve to "en-US" / "en-US"): locale timeZones
+   smj-NO -> smj (resolve to "en-US" / "en-US"): locale timeZones
+   smj-SE -> smj (resolve to "en-US" / "en-US"): locale timeZones
+   smn-FI -> smn (resolve to "en-US" / "en-US"): locale timeZones
+   sms-FI -> sms (resolve to "en-US" / "en-US"): locale timeZones
+   sn-ZW -> sn (resolve to "en-US" / "en-US"): locale timeZones
+   so-SO -> so (resolve to "en-US" / "en-US"): locale timeZones
+   sq-AL -> sq (resolve to "en-US" / "en-US"): locale timeZones
+   sr-Cyrl-RS -> sr-Cyrl (resolve to "sr-Cyrl-RS" / "sr-Cyrl"): locale timeZones
+   sr-Latn-RS -> sr-Latn (resolve to "sr-Latn-RS" / "sr-Latn"): locale timeZones
+   sr-RS -> sr (resolve to "sr-RS" / "sr"): locale timeZones
+   ss-ZA -> ss (resolve to "en-US" / "en-US"): locale timeZones
+   ssy-ER -> ssy (resolve to "en-US" / "en-US"): locale timeZones
+   st-ZA -> st (resolve to "en-US" / "en-US"): locale timeZones
+   su-ID -> su (resolve to "en-US" / "en-US"): locale timeZones
+   su-Latn-ID -> su-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   sus-GN -> sus (resolve to "en-US" / "en-US"): locale timeZones
+   sus-SL -> sus (resolve to "en-US" / "en-US"): locale hourCycles, locale timeZones
+      locale hourCycles: ["h12"]  vs  ["h23"]
+   suz-Deva-NP -> suz-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   suz-NP -> suz (resolve to "en-US" / "en-US"): locale timeZones
+   suz-Sunu-NP -> suz-Sunu (resolve to "en-US" / "en-US"): locale timeZones
+   sv-SE -> sv (resolve to "sv-SE" / "sv"): locale timeZones
+   sw-TZ -> sw (resolve to "sw-TZ" / "sw"): locale timeZones
+   syr-IQ -> syr (resolve to "en-US" / "en-US"): locale timeZones
+   syr-SY -> syr (resolve to "en-US" / "en-US"): locale timeZones
+   szl-PL -> szl (resolve to "en-US" / "en-US"): locale timeZones
+   ta-IN -> ta (resolve to "ta-IN" / "ta"): locale timeZones
+   te-IN -> te (resolve to "te-IN" / "te"): locale timeZones
+   teo-UG -> teo (resolve to "en-US" / "en-US"): locale timeZones
+   tg-TJ -> tg (resolve to "en-US" / "en-US"): locale timeZones
+   th-TH -> th (resolve to "th-TH" / "th"): locale timeZones
+   ti-ET -> ti (resolve to "en-US" / "en-US"): locale timeZones
+   tig-ER -> tig (resolve to "en-US" / "en-US"): locale timeZones
+   tk-TM -> tk (resolve to "en-US" / "en-US"): locale timeZones
+   tn-ZA -> tn (resolve to "en-US" / "en-US"): locale timeZones
+   to-TO -> to (resolve to "en-US" / "en-US"): locale timeZones
+   tok-001 -> tok (resolve to "en-US" / "en-US"): locale timeZones
+   tpi-PG -> tpi (resolve to "en-US" / "en-US"): locale timeZones
+   tr-TR -> tr (resolve to "tr-TR" / "tr"): locale timeZones
+   trv-TW -> trv (resolve to "en-US" / "en-US"): locale timeZones
+   trw-PK -> trw (resolve to "en-US" / "en-US"): locale timeZones
+   ts-ZA -> ts (resolve to "en-US" / "en-US"): locale timeZones
+   tt-RU -> tt (resolve to "en-US" / "en-US"): locale timeZones
+   twq-NE -> twq (resolve to "en-US" / "en-US"): locale timeZones
+   tyv-RU -> tyv (resolve to "en-US" / "en-US"): locale timeZones
+   tzm-MA -> tzm (resolve to "en-US" / "en-US"): locale timeZones
+   ug-CN -> ug (resolve to "en-US" / "en-US"): locale timeZones
+   uk-UA -> uk (resolve to "uk-UA" / "uk"): locale timeZones
+   ur-PK -> ur (resolve to "ur-PK" / "ur"): locale timeZones
+   uz-AF -> uz-Arab (resolve to "uz-AF" / "uz-Arab"): fmt dtf default, fmt toLocaleString, locale timeZones
+      fmt dtf default: ["۱۴۰۲-۱۰-۱۷","۱۴۰۳-۰۴-۱۱"]  vs  ["AP ۱۴۰۲-۱۰-۱۷","AP ۱۴۰۳-۰۴-۱۱"]
+      fmt toLocaleString: ["۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]  vs  ["AP ۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","AP ۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]
+   uz-Arab-AF -> uz-Arab (resolve to "uz-Arab-AF" / "uz-Arab"): fmt dtf default, fmt toLocaleString, locale timeZones
+      fmt dtf default: ["۱۴۰۲-۱۰-۱۷","۱۴۰۳-۰۴-۱۱"]  vs  ["AP ۱۴۰۲-۱۰-۱۷","AP ۱۴۰۳-۰۴-۱۱"]
+      fmt toLocaleString: ["۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]  vs  ["AP ۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","AP ۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]
+   uz-Cyrl-UZ -> uz-Cyrl (resolve to "uz-Cyrl-UZ" / "uz-Cyrl"): locale timeZones
+   uz-Latn-UZ -> uz-Latn (resolve to "uz" / "uz"): locale timeZones
+   uz-UZ -> uz (resolve to "uz-UZ" / "uz"): locale timeZones
+   vai-LR -> vai (resolve to "en-US" / "en-US"): locale timeZones
+   vai-Latn-LR -> vai-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   vai-Vaii-LR -> vai-Vaii (resolve to "en-US" / "en-US"): locale timeZones
+   ve-ZA -> ve (resolve to "en-US" / "en-US"): locale timeZones
+   vec-IT -> vec (resolve to "en-US" / "en-US"): locale timeZones
+   vi-VN -> vi (resolve to "vi-VN" / "vi"): locale timeZones
+   vmw-MZ -> vmw (resolve to "en-US" / "en-US"): locale timeZones
+   vo-001 -> vo (resolve to "en-US" / "en-US"): locale timeZones
+   vun-TZ -> vun (resolve to "en-US" / "en-US"): locale timeZones
+   wa-BE -> wa (resolve to "en-US" / "en-US"): locale timeZones
+   wae-CH -> wae (resolve to "en-US" / "en-US"): locale timeZones
+   wal-ET -> wal (resolve to "en-US" / "en-US"): locale timeZones
+   wbp-AU -> wbp (resolve to "en-US" / "en-US"): locale timeZones
+   wo-SN -> wo (resolve to "en-US" / "en-US"): locale timeZones
+   xdq-RU -> xdq (resolve to "en-US" / "en-US"): locale timeZones
+   xh-ZA -> xh (resolve to "en-US" / "en-US"): locale timeZones
+   xnr-IN -> xnr (resolve to "en-US" / "en-US"): locale timeZones
+   xog-UG -> xog (resolve to "en-US" / "en-US"): locale timeZones
+   yav-CM -> yav (resolve to "en-US" / "en-US"): locale timeZones
+   yi-UA -> yi (resolve to "en-US" / "en-US"): locale timeZones
+   yo-NG -> yo (resolve to "en-US" / "en-US"): locale timeZones
+   yrl-BR -> yrl (resolve to "en-US" / "en-US"): locale timeZones
+   yue-CN -> yue-Hans (resolve to "en-US" / "en-US"): locale timeZones
+   yue-HK -> yue (resolve to "en-US" / "en-US"): locale timeZones
+   yue-Hans-CN -> yue-Hans (resolve to "en-US" / "en-US"): locale timeZones
+   yue-Hant-HK -> yue-Hant (resolve to "en-US" / "en-US"): locale timeZones
+   yue-Hant-MO -> yue-Hant (resolve to "en-US" / "en-US"): locale timeZones
+   yue-MO -> yue (resolve to "en-US" / "en-US"): locale timeZones
+   za-CN -> za (resolve to "en-US" / "en-US"): locale timeZones
+   zgh-MA -> zgh (resolve to "en-US" / "en-US"): locale timeZones
+   zh-CN -> zh (resolve to "zh-CN" / "zh"): locale timeZones
+   zh-Hans-CN -> zh-Hans (resolve to "zh-Hans-CN" / "zh-Hans"): locale timeZones
+   zh-Hant-TW -> zh-Hant (resolve to "zh-Hant-TW" / "zh-Hant"): locale timeZones
+   zh-Latn-CN -> zh-Latn (resolve to "zh" / "zh"): locale timeZones
+   zh-TW -> zh-Hant (resolve to "zh-TW" / "zh-Hant"): locale timeZones
+   zu-ZA -> zu (resolve to "en-US" / "en-US"): locale timeZones
+-- likely: 402 of 402 pairs differ
+   keys (pairs): locale timeZones 402, fmt dtf default 3, fmt toLocaleString 3, fmt dtf time full 2, fmt dtf time long 2, fmt dtf time medium 2, fmt dtf time short 2, fmt dtf date full 1, fmt dtf date long 1, fmt dtf date medium 1, fmt dtf date short 1, fmt dtf hour 1, fmt dtf hour minute 1, fmt dtf weekday month 1, fmt dtf dayPeriod 1, fmt dtf range 1, fmt nf default 1, fmt nf percent 1, fmt nf compact 1, fmt nf compact long 1, fmt nf EUR 1, fmt nf USD 1, fmt nf unit 1, fmt nf small 1, fmt rtf 1, opts dtf hourCycle/calendar/numberingSystem 1, opts nf numberingSystem 1, locale numberingSystems 1
+   aa-ET -> aa (resolve to "en-US" / "en-US"): locale timeZones
+   ab-GE -> ab (resolve to "en-US" / "en-US"): locale timeZones
+   ady-RU -> ady (resolve to "en-US" / "en-US"): locale timeZones
+   af-ZA -> af (resolve to "af-ZA" / "af"): locale timeZones
+   agq-CM -> agq (resolve to "en-US" / "en-US"): locale timeZones
+   ak-GH -> ak (resolve to "ak-GH" / "ak"): locale timeZones
+   am-ET -> am (resolve to "am-ET" / "am"): locale timeZones
+   an-ES -> an (resolve to "en-US" / "en-US"): locale timeZones
+   ann-NG -> ann (resolve to "en-US" / "en-US"): locale timeZones
+   apc-SY -> apc (resolve to "en-US" / "en-US"): locale timeZones
+   ar-EG -> ar (resolve to "ar-EG" / "ar"): fmt dtf default, fmt dtf date full, fmt dtf time full, fmt dtf date long, fmt dtf time long, fmt dtf date medium, fmt dtf time medium, fmt dtf date short, fmt dtf time short, fmt dtf hour, fmt dtf hour minute, fmt dtf weekday month, fmt dtf dayPeriod, fmt toLocaleString, fmt dtf range, fmt nf default, fmt nf percent, fmt nf compact, fmt nf compact long, fmt nf EUR, fmt nf USD, fmt nf unit, fmt nf small, fmt rtf, opts dtf hourCycle/calendar/numberingSystem, opts nf numberingSystem, locale numberingSystems, locale timeZones
+      fmt dtf default: ["٧‏/١‏/٢٠٢٤","١‏/٧‏/٢٠٢٤"]  vs  ["7‏/1‏/2024","1‏/7‏/2024"]
+      fmt dtf date full: ["الأحد، ٧ يناير ٢٠٢٤","الاثنين، ١ يوليو ٢٠٢٤"]  vs  ["الأحد، 7 يناير 2024","الاثنين، 1 يوليو 2024"]
+      fmt dtf time full: ["٣:٠٤:٠٥ م التوقيت العالمي المنسق","٣:٠٤:٠٥ ص التوقيت العالمي المنسق"]  vs  ["3:04:05 م التوقيت العالمي المنسق","3:04:05 ص التوقيت العالمي المنسق"]
+      fmt dtf date long: ["٧ يناير ٢٠٢٤","١ يوليو ٢٠٢٤"]  vs  ["7 يناير 2024","1 يوليو 2024"]
+      fmt dtf time long: ["٣:٠٤:٠٥ م UTC","٣:٠٤:٠٥ ص UTC"]  vs  ["3:04:05 م UTC","3:04:05 ص UTC"]
+      fmt dtf date medium: ["٠٧‏/٠١‏/٢٠٢٤","٠١‏/٠٧‏/٢٠٢٤"]  vs  ["07‏/01‏/2024","01‏/07‏/2024"]
+      fmt dtf time medium: ["٣:٠٤:٠٥ م","٣:٠٤:٠٥ ص"]  vs  ["3:04:05 م","3:04:05 ص"]
+      fmt dtf date short: ["٧‏/١‏/٢٠٢٤","١‏/٧‏/٢٠٢٤"]  vs  ["7‏/1‏/2024","1‏/7‏/2024"]
+      fmt dtf time short: ["٣:٠٤ م","٣:٠٤ ص"]  vs  ["3:04 م","3:04 ص"]
+      fmt dtf hour: ["٣ م","٣ ص"]  vs  ["3 م","3 ص"]
+      fmt dtf hour minute: ["٣:٠٤ م","٣:٠٤ ص"]  vs  ["3:04 م","3:04 ص"]
+      fmt dtf weekday month: ["الأحد، ٧ يناير","الاثنين، ١ يوليو"]  vs  ["الأحد، 7 يناير","الاثنين، 1 يوليو"]
+      fmt dtf dayPeriod: ["٣ بعد الظهر","٣ فجرًا"]  vs  ["3 بعد الظهر","3 فجرًا"]
+      fmt toLocaleString: ["٧‏/١‏/٢٠٢٤، ٣:٠٤:٠٥ م","١‏/٧‏/٢٠٢٤، ٣:٠٤:٠٥ ص"]  vs  ["7‏/1‏/2024، 3:04:05 م","1‏/7‏/2024، 3:04:05 ص"]
+      fmt dtf range: "٧‏/١‏/٢٠٢٤ – ١‏/٧‏/٢٠٢٤"  vs  "7‏/1‏/2024 – 1‏/7‏/2024"
+      fmt nf default: "١٬٢٣٤٬٥٦٧٫٨٩١"  vs  "1,234,567.891"
+      fmt nf percent: "٢٦٪؜"  vs  "26‎%‎"
+      fmt nf compact: "١٫٢ مليون"  vs  "1.2 مليون"
+      fmt nf compact long: "١٫٢ مليون"  vs  "1.2 مليون"
+      fmt nf EUR: "‏١٬٢٣٤٫٥٠ €"  vs  "‏1,234.50 €"
+      fmt nf USD: "‏١٬٢٣٤٫٥٠ US$"  vs  "‏1,234.50 US$"
+      fmt nf unit: "١٢ كيلومتر في الساعة"  vs  "12 كيلومتر في الساعة"
+      fmt nf small: "١٬٢٣٤"  vs  "1,234"
+      fmt rtf: ["أمس","قبل ٥ أيام","خلال ٣ ساعات"]  vs  ["أمس","قبل 5 أيام","خلال 3 ساعات"]
+      opts dtf hourCycle/calendar/numberingSystem: ["h12","gregory","arab"]  vs  ["h12","gregory","latn"]
+      opts nf numberingSystem: "arab"  vs  "latn"
+      locale numberingSystems: ["arab"]  vs  ["latn"]
+   arn-CL -> arn (resolve to "en-US" / "en-US"): locale timeZones
+   ary-MA -> ary (resolve to "en-US" / "en-US"): locale timeZones
+   as-IN -> as (resolve to "en-US" / "en-US"): locale timeZones
+   asa-TZ -> asa (resolve to "en-US" / "en-US"): locale timeZones
+   ast-ES -> ast (resolve to "en-US" / "en-US"): locale timeZones
+   az-AZ -> az (resolve to "az-AZ" / "az"): locale timeZones
+   az-Arab-IR -> az-Arab (resolve to "az" / "az"): locale timeZones
+   az-IR -> az-Arab (resolve to "az" / "az"): locale timeZones
+   az-Cyrl-AZ -> az-Cyrl (resolve to "az-Cyrl-AZ" / "az-Cyrl"): locale timeZones
+   az-Latn-AZ -> az-Latn (resolve to "az" / "az"): locale timeZones
+   ba-RU -> ba (resolve to "en-US" / "en-US"): locale timeZones
+   bal-PK -> bal (resolve to "en-US" / "en-US"): locale timeZones
+   bal-Arab-PK -> bal-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   bal-Latn-PK -> bal-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   bas-CM -> bas (resolve to "en-US" / "en-US"): locale timeZones
+   be-BY -> be (resolve to "en-US" / "en-US"): locale timeZones
+   bem-ZM -> bem (resolve to "en-US" / "en-US"): locale timeZones
+   bew-ID -> bew (resolve to "en-US" / "en-US"): locale timeZones
+   bez-TZ -> bez (resolve to "en-US" / "en-US"): locale timeZones
+   bg-BG -> bg (resolve to "bg-BG" / "bg"): locale timeZones
+   bgc-IN -> bgc (resolve to "en-US" / "en-US"): locale timeZones
+   bgn-PK -> bgn (resolve to "en-US" / "en-US"): locale timeZones
+   bho-IN -> bho (resolve to "en-US" / "en-US"): locale timeZones
+   blo-BJ -> blo (resolve to "en-US" / "en-US"): locale timeZones
+   blt-VN -> blt (resolve to "en-US" / "en-US"): locale timeZones
+   bm-ML -> bm (resolve to "en-US" / "en-US"): locale timeZones
+   bm-Nkoo-ML -> bm-Nkoo (resolve to "en-US" / "en-US"): locale timeZones
+   bn-BD -> bn (resolve to "bn-BD" / "bn"): locale timeZones
+   bo-CN -> bo (resolve to "en-US" / "en-US"): locale timeZones
+   bqi-IR -> bqi (resolve to "en-US" / "en-US"): locale timeZones
+   br-FR -> br (resolve to "en-US" / "en-US"): locale timeZones
+   brh-PK -> brh (resolve to "en-US" / "en-US"): locale timeZones
+   brx-IN -> brx (resolve to "en-US" / "en-US"): locale timeZones
+   bs-BA -> bs (resolve to "bs-BA" / "bs"): locale timeZones
+   bs-Cyrl-BA -> bs-Cyrl (resolve to "bs-Cyrl-BA" / "bs-Cyrl"): locale timeZones
+   bs-Latn-BA -> bs-Latn (resolve to "bs" / "bs"): locale timeZones
+   bss-CM -> bss (resolve to "en-US" / "en-US"): locale timeZones
+   bua-RU -> bua (resolve to "en-US" / "en-US"): locale timeZones
+   byn-ER -> byn (resolve to "en-US" / "en-US"): locale timeZones
+   ca-ES -> ca (resolve to "ca-ES" / "ca"): locale timeZones
+   cad-US -> cad (resolve to "en-US" / "en-US"): locale timeZones
+   cch-NG -> cch (resolve to "en-US" / "en-US"): locale timeZones
+   ccp-BD -> ccp (resolve to "en-US" / "en-US"): locale timeZones
+   ce-RU -> ce (resolve to "en-US" / "en-US"): locale timeZones
+   ceb-PH -> ceb (resolve to "en-US" / "en-US"): locale timeZones
+   cgg-UG -> cgg (resolve to "en-US" / "en-US"): locale timeZones
+   cho-US -> cho (resolve to "en-US" / "en-US"): locale timeZones
+   chr-US -> chr (resolve to "en-US" / "en-US"): locale timeZones
+   cic-US -> cic (resolve to "en-US" / "en-US"): locale timeZones
+   ckb-IQ -> ckb (resolve to "en-US" / "en-US"): locale timeZones
+   co-FR -> co (resolve to "en-US" / "en-US"): locale timeZones
+   cop-EG -> cop (resolve to "en-US" / "en-US"): locale timeZones
+   cs-CZ -> cs (resolve to "cs-CZ" / "cs"): locale timeZones
+   csw-CA -> csw (resolve to "en-US" / "en-US"): locale timeZones
+   cu-RU -> cu (resolve to "en-US" / "en-US"): locale timeZones
+   cv-RU -> cv (resolve to "en-US" / "en-US"): locale timeZones
+   cy-GB -> cy (resolve to "en-US" / "en-US"): locale timeZones
+   da-DK -> da (resolve to "da-DK" / "da"): locale timeZones
+   dav-KE -> dav (resolve to "en-US" / "en-US"): locale timeZones
+   de-DE -> de (resolve to "de-DE" / "de"): locale timeZones
+   dje-NE -> dje (resolve to "en-US" / "en-US"): locale timeZones
+   doi-IN -> doi (resolve to "en-US" / "en-US"): locale timeZones
+   dsb-DE -> dsb (resolve to "en-US" / "en-US"): locale timeZones
+   dua-CM -> dua (resolve to "en-US" / "en-US"): locale timeZones
+   dv-MV -> dv (resolve to "en-US" / "en-US"): locale timeZones
+   dyo-SN -> dyo (resolve to "en-US" / "en-US"): locale timeZones
+   dz-BT -> dz (resolve to "en-US" / "en-US"): locale timeZones
+   ebu-KE -> ebu (resolve to "en-US" / "en-US"): locale timeZones
+   ee-GH -> ee (resolve to "en-US" / "en-US"): locale timeZones
+   el-GR -> el (resolve to "el-GR" / "el"): locale timeZones
+   en-US -> en (resolve to "en-US" / "en"): locale timeZones
+   en-Dsrt-US -> en-Dsrt (resolve to "en" / "en"): locale timeZones
+   en-Shaw-GB -> en-Shaw (resolve to "en" / "en"): locale timeZones
+   eo-001 -> eo (resolve to "en-US" / "en-US"): locale timeZones
+   es-ES -> es (resolve to "es-ES" / "es"): locale timeZones
+   et-EE -> et (resolve to "et-EE" / "et"): locale timeZones
+   eu-ES -> eu (resolve to "en-US" / "en-US"): locale timeZones
+   ewo-CM -> ewo (resolve to "en-US" / "en-US"): locale timeZones
+   fa-IR -> fa (resolve to "fa-IR" / "fa"): locale timeZones
+   ff-SN -> ff (resolve to "en-US" / "en-US"): locale timeZones
+   ff-Adlm-GN -> ff-Adlm (resolve to "en-US" / "en-US"): locale timeZones
+   ff-Latn-SN -> ff-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   fi-FI -> fi (resolve to "fi-FI" / "fi"): locale timeZones
+   fil-PH -> fil (resolve to "fil-PH" / "fil"): locale timeZones
+   fo-FO -> fo (resolve to "en-US" / "en-US"): locale timeZones
+   fr-FR -> fr (resolve to "fr-FR" / "fr"): locale timeZones
+   frr-DE -> frr (resolve to "en-US" / "en-US"): locale timeZones
+   fur-IT -> fur (resolve to "en-US" / "en-US"): locale timeZones
+   fy-NL -> fy (resolve to "en-US" / "en-US"): locale timeZones
+   ga-IE -> ga (resolve to "en-US" / "en-US"): locale timeZones
+   gaa-GH -> gaa (resolve to "en-US" / "en-US"): locale timeZones
+   gd-GB -> gd (resolve to "en-US" / "en-US"): locale timeZones
+   gez-ET -> gez (resolve to "en-US" / "en-US"): locale timeZones
+   gl-ES -> gl (resolve to "en-US" / "en-US"): locale timeZones
+   gn-PY -> gn (resolve to "en-US" / "en-US"): locale timeZones
+   gsw-CH -> gsw (resolve to "en-US" / "en-US"): locale timeZones
+   gu-IN -> gu (resolve to "gu-IN" / "gu"): locale timeZones
+   guz-KE -> guz (resolve to "en-US" / "en-US"): locale timeZones
+   gv-IM -> gv (resolve to "en-US" / "en-US"): locale timeZones
+   ha-NG -> ha (resolve to "en-US" / "en-US"): locale timeZones
+   ha-Arab-NG -> ha-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   haw-US -> haw (resolve to "en-US" / "en-US"): locale timeZones
+   he-IL -> he (resolve to "he-IL" / "he"): locale timeZones
+   hi-IN -> hi (resolve to "hi-IN" / "hi"): locale timeZones
+   hi-Latn-IN -> hi-Latn (resolve to "hi-Latn-IN" / "hi-Latn"): locale timeZones
+   hnj-US -> hnj (resolve to "en-US" / "en-US"): locale timeZones
+   hnj-Hmnp-US -> hnj-Hmnp (resolve to "en-US" / "en-US"): locale timeZones
+   hr-HR -> hr (resolve to "hr-HR" / "hr"): locale timeZones
+   hrx-BR -> hrx (resolve to "en-US" / "en-US"): locale timeZones
+   hsb-DE -> hsb (resolve to "en-US" / "en-US"): locale timeZones
+   ht-HT -> ht (resolve to "en-US" / "en-US"): locale timeZones
+   hu-HU -> hu (resolve to "hu-HU" / "hu"): locale timeZones
+   hy-AM -> hy (resolve to "en-US" / "en-US"): locale timeZones
+   ia-001 -> ia (resolve to "en-US" / "en-US"): locale timeZones
+   id-ID -> id (resolve to "id-ID" / "id"): locale timeZones
+   ie-EE -> ie (resolve to "en-US" / "en-US"): locale timeZones
+   ig-NG -> ig (resolve to "en-US" / "en-US"): locale timeZones
+   ii-CN -> ii (resolve to "en-US" / "en-US"): locale timeZones
+   io-001 -> io (resolve to "en-US" / "en-US"): locale timeZones
+   is-IS -> is (resolve to "en-US" / "en-US"): locale timeZones
+   isv-001 -> isv (resolve to "en-US" / "en-US"): locale timeZones
+   isv-Cyrl-001 -> isv-Cyrl (resolve to "en-US" / "en-US"): locale timeZones
+   isv-Latn-001 -> isv-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   it-IT -> it (resolve to "it-IT" / "it"): locale timeZones
+   iu-CA -> iu (resolve to "en-US" / "en-US"): locale timeZones
+   iu-Latn-CA -> iu-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   ja-JP -> ja (resolve to "ja-JP" / "ja"): locale timeZones
+   jbo-001 -> jbo (resolve to "en-US" / "en-US"): locale timeZones
+   jgo-CM -> jgo (resolve to "en-US" / "en-US"): locale timeZones
+   jmc-TZ -> jmc (resolve to "en-US" / "en-US"): locale timeZones
+   jv-ID -> jv (resolve to "en-US" / "en-US"): locale timeZones
+   ka-GE -> ka (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-UZ -> kaa (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-Cyrl-UZ -> kaa-Cyrl (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-Latn-UZ -> kaa-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   kab-DZ -> kab (resolve to "en-US" / "en-US"): locale timeZones
+   kaj-NG -> kaj (resolve to "en-US" / "en-US"): locale timeZones
+   kam-KE -> kam (resolve to "en-US" / "en-US"): locale timeZones
+   kbd-RU -> kbd (resolve to "en-US" / "en-US"): locale timeZones
+   kcg-NG -> kcg (resolve to "en-US" / "en-US"): locale timeZones
+   kde-TZ -> kde (resolve to "en-US" / "en-US"): locale timeZones
+   kea-CV -> kea (resolve to "en-US" / "en-US"): locale timeZones
+   kek-GT -> kek (resolve to "en-US" / "en-US"): locale timeZones
+   ken-CM -> ken (resolve to "en-US" / "en-US"): locale timeZones
+   kgp-BR -> kgp (resolve to "en-US" / "en-US"): locale timeZones
+   khq-ML -> khq (resolve to "en-US" / "en-US"): locale timeZones
+   ki-KE -> ki (resolve to "en-US" / "en-US"): locale timeZones
+   kk-KZ -> kk (resolve to "kk" / "kk"): locale timeZones
+   kk-Arab-CN -> kk-Arab (resolve to "kk-Arab-CN" / "kk-Arab"): locale timeZones
+   kk-CN -> kk-Arab (resolve to "kk-CN" / "kk-Arab"): locale timeZones
+   kk-Cyrl-KZ -> kk-Cyrl (resolve to "kk" / "kk"): locale timeZones
+   kkj-CM -> kkj (resolve to "en-US" / "en-US"): locale timeZones
+   kl-GL -> kl (resolve to "en-US" / "en-US"): locale timeZones
+   kln-KE -> kln (resolve to "en-US" / "en-US"): locale timeZones
+   km-KH -> km (resolve to "en-US" / "en-US"): locale timeZones
+   kn-IN -> kn (resolve to "kn-IN" / "kn"): locale timeZones
+   ko-KR -> ko (resolve to "ko-KR" / "ko"): locale timeZones
+   kok-IN -> kok (resolve to "kok-IN" / "kok"): fmt dtf time full, fmt dtf time long, fmt dtf time medium, fmt dtf time short, locale timeZones
+      fmt dtf time full: ["3:04:05 PM Coordinated Universal Time","3:04:05 AM Coordinated Universal Time"]  vs  ["03:04:05 PM Coordinated Universal Time","03:04:05 AM Coordinated Universal Time"]
+      fmt dtf time long: ["3:04:05 PM UTC","3:04:05 AM UTC"]  vs  ["03:04:05 PM UTC","03:04:05 AM UTC"]
+      fmt dtf time medium: ["3:04:05 PM","3:04:05 AM"]  vs  ["03:04:05 PM","03:04:05 AM"]
+      fmt dtf time short: ["3:04 PM","3:04 AM"]  vs  ["03:04 PM","03:04 AM"]
+   kok-Deva-IN -> kok-Deva (resolve to "kok" / "kok"): locale timeZones
+   kok-Latn-IN -> kok-Latn (resolve to "kok-Latn-IN" / "kok-Latn"): locale timeZones
+   kpe-LR -> kpe (resolve to "en-US" / "en-US"): locale timeZones
+   ks-IN -> ks (resolve to "en-US" / "en-US"): locale timeZones
+   ks-Arab-IN -> ks-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   ks-Deva-IN -> ks-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   ksb-TZ -> ksb (resolve to "en-US" / "en-US"): locale timeZones
+   ksf-CM -> ksf (resolve to "en-US" / "en-US"): locale timeZones
+   ksh-DE -> ksh (resolve to "en-US" / "en-US"): locale timeZones
+   ku-TR -> ku (resolve to "en-US" / "en-US"): locale timeZones
+   ku-Arab-IQ -> ku-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   ku-IQ -> ku-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   ku-Latn-TR -> ku-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   kw-GB -> kw (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-IN -> kxv (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-Deva-IN -> kxv-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-Latn-IN -> kxv-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-Orya-IN -> kxv-Orya (resolve to "en-US" / "en-US"): locale timeZones
+   kxv-Telu-IN -> kxv-Telu (resolve to "en-US" / "en-US"): locale timeZones
+   ky-KG -> ky (resolve to "en-US" / "en-US"): locale timeZones
+   la-VA -> la (resolve to "en-US" / "en-US"): locale timeZones
+   lag-TZ -> lag (resolve to "en-US" / "en-US"): locale timeZones
+   lb-LU -> lb (resolve to "en-US" / "en-US"): locale timeZones
+   lg-UG -> lg (resolve to "en-US" / "en-US"): locale timeZones
+   lij-IT -> lij (resolve to "en-US" / "en-US"): locale timeZones
+   lkt-US -> lkt (resolve to "en-US" / "en-US"): locale timeZones
+   lld-IT -> lld (resolve to "en-US" / "en-US"): locale timeZones
+   lmo-IT -> lmo (resolve to "en-US" / "en-US"): locale timeZones
+   ln-CD -> ln (resolve to "en-US" / "en-US"): locale timeZones
+   lo-LA -> lo (resolve to "en-US" / "en-US"): locale timeZones
+   lrc-IR -> lrc (resolve to "en-US" / "en-US"): locale timeZones
+   lt-LT -> lt (resolve to "lt-LT" / "lt"): locale timeZones
+   ltg-LV -> ltg (resolve to "en-US" / "en-US"): locale timeZones
+   lu-CD -> lu (resolve to "en-US" / "en-US"): locale timeZones
+   luo-KE -> luo (resolve to "en-US" / "en-US"): locale timeZones
+   luy-KE -> luy (resolve to "en-US" / "en-US"): locale timeZones
+   lv-LV -> lv (resolve to "lv-LV" / "lv"): locale timeZones
+   lzz-TR -> lzz (resolve to "en-US" / "en-US"): locale timeZones
+   mai-IN -> mai (resolve to "en-US" / "en-US"): locale timeZones
+   mas-KE -> mas (resolve to "en-US" / "en-US"): locale timeZones
+   mdf-RU -> mdf (resolve to "en-US" / "en-US"): locale timeZones
+   mer-KE -> mer (resolve to "en-US" / "en-US"): locale timeZones
+   mfe-MU -> mfe (resolve to "en-US" / "en-US"): locale timeZones
+   mg-MG -> mg (resolve to "en-US" / "en-US"): locale timeZones
+   mgh-MZ -> mgh (resolve to "en-US" / "en-US"): locale timeZones
+   mgo-CM -> mgo (resolve to "en-US" / "en-US"): locale timeZones
+   mhn-IT -> mhn (resolve to "en-US" / "en-US"): locale timeZones
+   mi-NZ -> mi (resolve to "en-US" / "en-US"): locale timeZones
+   mic-CA -> mic (resolve to "en-US" / "en-US"): locale timeZones
+   mk-MK -> mk (resolve to "en-US" / "en-US"): locale timeZones
+   ml-IN -> ml (resolve to "ml-IN" / "ml"): locale timeZones
+   mn-MN -> mn (resolve to "en-US" / "en-US"): locale timeZones
+   mn-Mong-CN -> mn-Mong (resolve to "en-US" / "en-US"): locale timeZones
+   mn-CN -> mn-Mong (resolve to "en-US" / "en-US"): locale timeZones
+   mni-IN -> mni (resolve to "en-US" / "en-US"): locale timeZones
+   mni-Beng-IN -> mni-Beng (resolve to "en-US" / "en-US"): locale timeZones
+   mni-Mtei-IN -> mni-Mtei (resolve to "en-US" / "en-US"): locale timeZones
+   moh-CA -> moh (resolve to "en-US" / "en-US"): locale timeZones
+   mr-IN -> mr (resolve to "mr-IN" / "mr"): locale timeZones
+   mrh-IN -> mrh (resolve to "en-US" / "en-US"): locale timeZones
+   ms-MY -> ms (resolve to "ms-MY" / "ms"): locale timeZones
+   ms-Arab-MY -> ms-Arab (resolve to "ms" / "ms"): locale timeZones
+   mt-MT -> mt (resolve to "en-US" / "en-US"): locale timeZones
+   mua-CM -> mua (resolve to "en-US" / "en-US"): locale timeZones
+   mus-US -> mus (resolve to "en-US" / "en-US"): locale timeZones
+   mww-US -> mww (resolve to "en-US" / "en-US"): locale timeZones
+   mww-Hmnp-US -> mww-Hmnp (resolve to "en-US" / "en-US"): locale timeZones
+   my-MM -> my (resolve to "en-US" / "en-US"): locale timeZones
+   myv-RU -> myv (resolve to "en-US" / "en-US"): locale timeZones
+   mzn-IR -> mzn (resolve to "en-US" / "en-US"): locale timeZones
+   naq-NA -> naq (resolve to "en-US" / "en-US"): locale timeZones
+   nb-NO -> nb (resolve to "nb" / "nb"): locale timeZones
+   nd-ZW -> nd (resolve to "en-US" / "en-US"): locale timeZones
+   nds-DE -> nds (resolve to "en-US" / "en-US"): locale timeZones
+   ne-NP -> ne (resolve to "en-US" / "en-US"): locale timeZones
+   nl-NL -> nl (resolve to "nl-NL" / "nl"): locale timeZones
+   nmg-CM -> nmg (resolve to "en-US" / "en-US"): locale timeZones
+   nn-NO -> nn (resolve to "en-US" / "en-US"): locale timeZones
+   nnh-CM -> nnh (resolve to "en-US" / "en-US"): locale timeZones
+   no-NO -> no (resolve to "no-NO" / "no"): locale timeZones
+   nqo-GN -> nqo (resolve to "en-US" / "en-US"): locale timeZones
+   nr-ZA -> nr (resolve to "en-US" / "en-US"): locale timeZones
+   nso-ZA -> nso (resolve to "en-US" / "en-US"): locale timeZones
+   nus-SS -> nus (resolve to "en-US" / "en-US"): locale timeZones
+   nv-US -> nv (resolve to "en-US" / "en-US"): locale timeZones
+   ny-MW -> ny (resolve to "en-US" / "en-US"): locale timeZones
+   nyn-UG -> nyn (resolve to "en-US" / "en-US"): locale timeZones
+   oc-FR -> oc (resolve to "en-US" / "en-US"): locale timeZones
+   oka-CA -> oka (resolve to "en-US" / "en-US"): locale timeZones
+   om-ET -> om (resolve to "en-US" / "en-US"): locale timeZones
+   or-IN -> or (resolve to "en-US" / "en-US"): locale timeZones
+   os-GE -> os (resolve to "en-US" / "en-US"): locale timeZones
+   osa-US -> osa (resolve to "en-US" / "en-US"): locale timeZones
+   pa-IN -> pa (resolve to "pa" / "pa"): locale timeZones
+   pa-Arab-PK -> pa-Arab (resolve to "pa-Arab-PK" / "pa-Arab"): locale timeZones
+   pa-PK -> pa-Arab (resolve to "pa-PK" / "pa-Arab"): locale timeZones
+   pa-Guru-IN -> pa-Guru (resolve to "pa" / "pa"): locale timeZones
+   pap-CW -> pap (resolve to "en-US" / "en-US"): locale timeZones
+   pcm-NG -> pcm (resolve to "en-US" / "en-US"): locale timeZones
+   pi-GB -> pi (resolve to "en-US" / "en-US"): locale timeZones
+   pi-Latn-GB -> pi-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   pis-SB -> pis (resolve to "en-US" / "en-US"): locale timeZones
+   pl-PL -> pl (resolve to "pl-PL" / "pl"): locale timeZones
+   pms-IT -> pms (resolve to "en-US" / "en-US"): locale timeZones
+   prg-PL -> prg (resolve to "en-US" / "en-US"): locale timeZones
+   ps-AF -> ps (resolve to "en-US" / "en-US"): locale timeZones
+   pt-BR -> pt (resolve to "pt-BR" / "pt"): locale timeZones
+   qu-PE -> qu (resolve to "en-US" / "en-US"): locale timeZones
+   quc-GT -> quc (resolve to "en-US" / "en-US"): locale timeZones
+   raj-IN -> raj (resolve to "en-US" / "en-US"): locale timeZones
+   rhg-MM -> rhg (resolve to "en-US" / "en-US"): locale timeZones
+   rhg-Rohg-MM -> rhg-Rohg (resolve to "en-US" / "en-US"): locale timeZones
+   rif-MA -> rif (resolve to "en-US" / "en-US"): locale timeZones
+   rm-CH -> rm (resolve to "en-US" / "en-US"): locale timeZones
+   rn-BI -> rn (resolve to "en-US" / "en-US"): locale timeZones
+   ro-RO -> ro (resolve to "ro-RO" / "ro"): locale timeZones
+   rof-TZ -> rof (resolve to "en-US" / "en-US"): locale timeZones
+   ru-RU -> ru (resolve to "ru-RU" / "ru"): locale timeZones
+   rw-RW -> rw (resolve to "en-US" / "en-US"): locale timeZones
+   rwk-TZ -> rwk (resolve to "en-US" / "en-US"): locale timeZones
+   sa-IN -> sa (resolve to "en-US" / "en-US"): locale timeZones
+   sah-RU -> sah (resolve to "en-US" / "en-US"): locale timeZones
+   saq-KE -> saq (resolve to "en-US" / "en-US"): locale timeZones
+   sat-IN -> sat (resolve to "en-US" / "en-US"): locale timeZones
+   sat-Deva-IN -> sat-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   sat-Olck-IN -> sat-Olck (resolve to "en-US" / "en-US"): locale timeZones
+   sbp-TZ -> sbp (resolve to "en-US" / "en-US"): locale timeZones
+   sc-IT -> sc (resolve to "en-US" / "en-US"): locale timeZones
+   scn-IT -> scn (resolve to "en-US" / "en-US"): locale timeZones
+   sd-PK -> sd (resolve to "sd" / "sd"): locale timeZones
+   sd-Arab-PK -> sd-Arab (resolve to "sd" / "sd"): locale timeZones
+   sd-Deva-IN -> sd-Deva (resolve to "sd-Deva-IN" / "sd-Deva"): locale timeZones
+   sd-IN -> sd-Deva (resolve to "sd-IN" / "sd-Deva"): locale timeZones
+   sdh-IR -> sdh (resolve to "en-US" / "en-US"): locale timeZones
+   se-NO -> se (resolve to "en-US" / "en-US"): locale timeZones
+   seh-MZ -> seh (resolve to "en-US" / "en-US"): locale timeZones
+   ses-ML -> ses (resolve to "en-US" / "en-US"): locale timeZones
+   sg-CF -> sg (resolve to "en-US" / "en-US"): locale timeZones
+   sgs-LT -> sgs (resolve to "en-US" / "en-US"): locale timeZones
+   shi-MA -> shi (resolve to "en-US" / "en-US"): locale timeZones
+   shi-Latn-MA -> shi-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   shi-Tfng-MA -> shi-Tfng (resolve to "en-US" / "en-US"): locale timeZones
+   shn-MM -> shn (resolve to "en-US" / "en-US"): locale timeZones
+   si-LK -> si (resolve to "en-US" / "en-US"): locale timeZones
+   sid-ET -> sid (resolve to "en-US" / "en-US"): locale timeZones
+   sk-SK -> sk (resolve to "sk-SK" / "sk"): locale timeZones
+   skr-PK -> skr (resolve to "en-US" / "en-US"): locale timeZones
+   sl-SI -> sl (resolve to "sl-SI" / "sl"): locale timeZones
+   sma-SE -> sma (resolve to "en-US" / "en-US"): locale timeZones
+   smj-SE -> smj (resolve to "en-US" / "en-US"): locale timeZones
+   smn-FI -> smn (resolve to "en-US" / "en-US"): locale timeZones
+   sms-FI -> sms (resolve to "en-US" / "en-US"): locale timeZones
+   sn-ZW -> sn (resolve to "en-US" / "en-US"): locale timeZones
+   so-SO -> so (resolve to "en-US" / "en-US"): locale timeZones
+   sq-AL -> sq (resolve to "en-US" / "en-US"): locale timeZones
+   sr-RS -> sr (resolve to "sr-RS" / "sr"): locale timeZones
+   sr-Cyrl-RS -> sr-Cyrl (resolve to "sr-Cyrl-RS" / "sr-Cyrl"): locale timeZones
+   sr-Latn-RS -> sr-Latn (resolve to "sr-Latn-RS" / "sr-Latn"): locale timeZones
+   ss-ZA -> ss (resolve to "en-US" / "en-US"): locale timeZones
+   ssy-ER -> ssy (resolve to "en-US" / "en-US"): locale timeZones
+   st-ZA -> st (resolve to "en-US" / "en-US"): locale timeZones
+   su-ID -> su (resolve to "en-US" / "en-US"): locale timeZones
+   su-Latn-ID -> su-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   sus-GN -> sus (resolve to "en-US" / "en-US"): locale timeZones
+   suz-NP -> suz (resolve to "en-US" / "en-US"): locale timeZones
+   suz-Deva-NP -> suz-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   suz-Sunu-NP -> suz-Sunu (resolve to "en-US" / "en-US"): locale timeZones
+   sv-SE -> sv (resolve to "sv-SE" / "sv"): locale timeZones
+   sw-TZ -> sw (resolve to "sw-TZ" / "sw"): locale timeZones
+   syr-IQ -> syr (resolve to "en-US" / "en-US"): locale timeZones
+   szl-PL -> szl (resolve to "en-US" / "en-US"): locale timeZones
+   ta-IN -> ta (resolve to "ta-IN" / "ta"): locale timeZones
+   te-IN -> te (resolve to "te-IN" / "te"): locale timeZones
+   teo-UG -> teo (resolve to "en-US" / "en-US"): locale timeZones
+   tg-TJ -> tg (resolve to "en-US" / "en-US"): locale timeZones
+   th-TH -> th (resolve to "th-TH" / "th"): locale timeZones
+   ti-ET -> ti (resolve to "en-US" / "en-US"): locale timeZones
+   tig-ER -> tig (resolve to "en-US" / "en-US"): locale timeZones
+   tk-TM -> tk (resolve to "en-US" / "en-US"): locale timeZones
+   tn-ZA -> tn (resolve to "en-US" / "en-US"): locale timeZones
+   to-TO -> to (resolve to "en-US" / "en-US"): locale timeZones
+   tok-001 -> tok (resolve to "en-US" / "en-US"): locale timeZones
+   tpi-PG -> tpi (resolve to "en-US" / "en-US"): locale timeZones
+   tr-TR -> tr (resolve to "tr-TR" / "tr"): locale timeZones
+   trv-TW -> trv (resolve to "en-US" / "en-US"): locale timeZones
+   trw-PK -> trw (resolve to "en-US" / "en-US"): locale timeZones
+   ts-ZA -> ts (resolve to "en-US" / "en-US"): locale timeZones
+   tt-RU -> tt (resolve to "en-US" / "en-US"): locale timeZones
+   twq-NE -> twq (resolve to "en-US" / "en-US"): locale timeZones
+   tyv-RU -> tyv (resolve to "en-US" / "en-US"): locale timeZones
+   tzm-MA -> tzm (resolve to "en-US" / "en-US"): locale timeZones
+   ug-CN -> ug (resolve to "en-US" / "en-US"): locale timeZones
+   uk-UA -> uk (resolve to "uk-UA" / "uk"): locale timeZones
+   ur-PK -> ur (resolve to "ur-PK" / "ur"): locale timeZones
+   uz-UZ -> uz (resolve to "uz-UZ" / "uz"): locale timeZones
+   uz-Arab-AF -> uz-Arab (resolve to "uz-Arab-AF" / "uz-Arab"): fmt dtf default, fmt toLocaleString, locale timeZones
+      fmt dtf default: ["۱۴۰۲-۱۰-۱۷","۱۴۰۳-۰۴-۱۱"]  vs  ["AP ۱۴۰۲-۱۰-۱۷","AP ۱۴۰۳-۰۴-۱۱"]
+      fmt toLocaleString: ["۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]  vs  ["AP ۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","AP ۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]
+   uz-AF -> uz-Arab (resolve to "uz-AF" / "uz-Arab"): fmt dtf default, fmt toLocaleString, locale timeZones
+      fmt dtf default: ["۱۴۰۲-۱۰-۱۷","۱۴۰۳-۰۴-۱۱"]  vs  ["AP ۱۴۰۲-۱۰-۱۷","AP ۱۴۰۳-۰۴-۱۱"]
+      fmt toLocaleString: ["۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]  vs  ["AP ۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","AP ۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]
+   uz-Cyrl-UZ -> uz-Cyrl (resolve to "uz-Cyrl-UZ" / "uz-Cyrl"): locale timeZones
+   uz-Latn-UZ -> uz-Latn (resolve to "uz" / "uz"): locale timeZones
+   vai-LR -> vai (resolve to "en-US" / "en-US"): locale timeZones
+   vai-Latn-LR -> vai-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   vai-Vaii-LR -> vai-Vaii (resolve to "en-US" / "en-US"): locale timeZones
+   ve-ZA -> ve (resolve to "en-US" / "en-US"): locale timeZones
+   vec-IT -> vec (resolve to "en-US" / "en-US"): locale timeZones
+   vi-VN -> vi (resolve to "vi-VN" / "vi"): locale timeZones
+   vmw-MZ -> vmw (resolve to "en-US" / "en-US"): locale timeZones
+   vo-001 -> vo (resolve to "en-US" / "en-US"): locale timeZones
+   vun-TZ -> vun (resolve to "en-US" / "en-US"): locale timeZones
+   wa-BE -> wa (resolve to "en-US" / "en-US"): locale timeZones
+   wae-CH -> wae (resolve to "en-US" / "en-US"): locale timeZones
+   wal-ET -> wal (resolve to "en-US" / "en-US"): locale timeZones
+   wbp-AU -> wbp (resolve to "en-US" / "en-US"): locale timeZones
+   wo-SN -> wo (resolve to "en-US" / "en-US"): locale timeZones
+   xdq-RU -> xdq (resolve to "en-US" / "en-US"): locale timeZones
+   xh-ZA -> xh (resolve to "en-US" / "en-US"): locale timeZones
+   xnr-IN -> xnr (resolve to "en-US" / "en-US"): locale timeZones
+   xog-UG -> xog (resolve to "en-US" / "en-US"): locale timeZones
+   yav-CM -> yav (resolve to "en-US" / "en-US"): locale timeZones
+   yi-UA -> yi (resolve to "en-US" / "en-US"): locale timeZones
+   yo-NG -> yo (resolve to "en-US" / "en-US"): locale timeZones
+   yrl-BR -> yrl (resolve to "en-US" / "en-US"): locale timeZones
+   yue-HK -> yue (resolve to "en-US" / "en-US"): locale timeZones
+   yue-Hans-CN -> yue-Hans (resolve to "en-US" / "en-US"): locale timeZones
+   yue-CN -> yue-Hans (resolve to "en-US" / "en-US"): locale timeZones
+   yue-Hant-HK -> yue-Hant (resolve to "en-US" / "en-US"): locale timeZones
+   za-CN -> za (resolve to "en-US" / "en-US"): locale timeZones
+   zgh-MA -> zgh (resolve to "en-US" / "en-US"): locale timeZones
+   zh-CN -> zh (resolve to "zh-CN" / "zh"): locale timeZones
+   zh-Hans-CN -> zh-Hans (resolve to "zh-Hans-CN" / "zh-Hans"): locale timeZones
+   zh-Hant-TW -> zh-Hant (resolve to "zh-Hant-TW" / "zh-Hant"): locale timeZones
+   zh-TW -> zh-Hant (resolve to "zh-TW" / "zh-Hant"): locale timeZones
+   zh-Latn-CN -> zh-Latn (resolve to "zh" / "zh"): locale timeZones
+   zu-ZA -> zu (resolve to "en-US" / "en-US"): locale timeZones
+== firefox 163.0a1 20261125210957 ==
+-- drop: 472 of 472 pairs differ
+   keys (pairs): locale timeZones 472, locale weekInfo 19, locale hourCycles 19, locale calendars 19, fmt toLocaleString 5, fmt dtf default 4, opts dtf hourCycle/calendar/numberingSystem 3, fmt nf EUR 2, fmt nf USD 2, fmt dtf time full 2, fmt dtf time long 2, fmt dtf time medium 2, fmt dtf time short 2, fmt dtf date full 2, fmt dtf date long 2, fmt dtf date medium 2, fmt dtf date short 2, fmt dtf hour 2, fmt dtf hour minute 2, fmt dtf dayPeriod 2, fmt dtf range 2, fmt dtf weekday month 1, fmt nf default 1, fmt nf percent 1, fmt nf compact 1, fmt nf compact long 1, fmt nf unit 1, fmt nf small 1, fmt rtf 1, fmt list 1, fmt displaynames 1
+   aa-ET -> aa (resolve to "en-US" / "en-US"): locale timeZones
+   ab-GE -> ab (resolve to "en-US" / "en-US"): locale timeZones
+   ady-JO -> ady (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale hourCycles: ["h12","h23"]  vs  ["h23"]
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   ady-RU -> ady (resolve to "en-US" / "en-US"): locale timeZones
+   af-ZA -> af (resolve to "af-ZA" / "af"): locale timeZones
+   agq-CM -> agq (resolve to "agq-CM" / "agq"): locale timeZones
+   ak-GH -> ak (resolve to "ak-GH" / "ak"): locale timeZones
+   am-ET -> am (resolve to "am-ET" / "am"): locale timeZones
+   an-ES -> an (resolve to "en-US" / "en-US"): locale timeZones
+   ann-NG -> ann (resolve to "en-US" / "en-US"): locale timeZones
+   apc-SY -> apc (resolve to "en-US" / "en-US"): locale timeZones
+   ar-001 -> ar (resolve to "ar-001" / "ar"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":1,"weekend":[6,7]}  vs  {"firstDay":6,"weekend":[5,6]}
+      locale calendars: ["gregory"]  vs  ["gregory","coptic","islamic-civil","islamic-tbla"]
+   arn-CL -> arn (resolve to "en-US" / "en-US"): locale timeZones
+   ary-MA -> ary (resolve to "en-US" / "en-US"): locale timeZones
+   as-IN -> as (resolve to "as-IN" / "as"): locale timeZones
+   asa-TZ -> asa (resolve to "asa-TZ" / "asa"): locale timeZones
+   ast-ES -> ast (resolve to "ast-ES" / "ast"): locale timeZones
+   az-AZ -> az (resolve to "az-AZ" / "az"): locale timeZones
+   az-Arab-IQ -> az-Arab (resolve to "az" / "az"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":6,"weekend":[5]}
+      locale hourCycles: ["h12","h23"]  vs  ["h23","h12"]
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["persian","gregory","islamic-civil","islamic-tbla"]
+   az-Arab-IR -> az-Arab (resolve to "az" / "az"): locale timeZones
+   az-Arab-TR -> az-Arab (resolve to "az" / "az"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":1,"weekend":[6,7]}  vs  {"firstDay":6,"weekend":[5]}
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["persian","gregory","islamic-civil","islamic-tbla"]
+   az-Cyrl-AZ -> az-Cyrl (resolve to "az-Cyrl-AZ" / "az-Cyrl"): locale timeZones
+   az-IQ -> az-Arab (resolve to "az" / "az"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":6,"weekend":[5]}
+      locale hourCycles: ["h12","h23"]  vs  ["h23","h12"]
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["persian","gregory","islamic-civil","islamic-tbla"]
+   az-IR -> az-Arab (resolve to "az" / "az"): locale timeZones
+   az-Latn-AZ -> az-Latn (resolve to "az-Latn-AZ" / "az-Latn"): locale timeZones
+   ba-RU -> ba (resolve to "ba-RU" / "ba"): locale timeZones
+   bal-Arab-PK -> bal-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   bal-Latn-PK -> bal-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   bal-PK -> bal (resolve to "en-US" / "en-US"): locale timeZones
+   bas-CM -> bas (resolve to "bas-CM" / "bas"): locale timeZones
+   be-BY -> be (resolve to "be-BY" / "be"): locale timeZones
+   bem-ZM -> bem (resolve to "bem-ZM" / "bem"): locale timeZones
+   bew-ID -> bew (resolve to "en-US" / "en-US"): locale timeZones
+   bez-TZ -> bez (resolve to "bez-TZ" / "bez"): locale timeZones
+   bg-BG -> bg (resolve to "bg-BG" / "bg"): locale timeZones
+   bgc-IN -> bgc (resolve to "bgc-IN" / "bgc"): locale timeZones
+   bgn-AE -> bgn (resolve to "en-US" / "en-US"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":1,"weekend":[6,7]}  vs  {"firstDay":7,"weekend":[6,7]}
+      locale calendars: ["gregory","islamic-umalqura","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic-civil","islamic-tbla"]
+   bgn-AF -> bgn (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[4,5]}  vs  {"firstDay":7,"weekend":[6,7]}
+      locale hourCycles: ["h23","h12"]  vs  ["h12","h23"]
+      locale calendars: ["persian","gregory","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic-civil","islamic-tbla"]
+   bgn-IR -> bgn (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5]}  vs  {"firstDay":7,"weekend":[6,7]}
+      locale hourCycles: ["h23","h12"]  vs  ["h12","h23"]
+      locale calendars: ["persian","gregory","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic-civil","islamic-tbla"]
+   bgn-OM -> bgn (resolve to "en-US" / "en-US"): locale weekInfo, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":7,"weekend":[6,7]}
+   bgn-PK -> bgn (resolve to "en-US" / "en-US"): locale timeZones
+   bho-IN -> bho (resolve to "bho-IN" / "bho"): locale timeZones
+   blo-BJ -> blo (resolve to "blo-BJ" / "blo"): locale timeZones
+   blt-VN -> blt (resolve to "en-US" / "en-US"): locale timeZones
+   bm-ML -> bm (resolve to "bm-ML" / "bm"): locale timeZones
+   bm-Nkoo-ML -> bm-Nkoo (resolve to "bm" / "bm"): locale timeZones
+   bn-BD -> bn (resolve to "bn-BD" / "bn"): locale timeZones
+   bo-CN -> bo (resolve to "bo-CN" / "bo"): locale timeZones
+   bqi-IR -> bqi (resolve to "en-US" / "en-US"): locale timeZones
+   br-FR -> br (resolve to "br-FR" / "br"): locale timeZones
+   brh-PK -> brh (resolve to "en-US" / "en-US"): locale timeZones
+   brx-IN -> brx (resolve to "brx-IN" / "brx"): locale timeZones
+   bs-BA -> bs (resolve to "bs-BA" / "bs"): locale timeZones
+   bs-Cyrl-BA -> bs-Cyrl (resolve to "bs-Cyrl-BA" / "bs-Cyrl"): locale timeZones
+   bs-Latn-BA -> bs-Latn (resolve to "bs-Latn-BA" / "bs-Latn"): locale timeZones
+   bss-CM -> bss (resolve to "en-US" / "en-US"): locale timeZones
+   bua-RU -> bua (resolve to "bua-RU" / "bua"): locale timeZones
+   byn-ER -> byn (resolve to "en-US" / "en-US"): locale timeZones
+   ca-AD -> ca (resolve to "ca-AD" / "ca"): locale timeZones
+   ca-ES -> ca (resolve to "ca-ES" / "ca"): locale timeZones
+   ca-IT -> ca (resolve to "ca-IT" / "ca"): locale timeZones
+   cad-US -> cad (resolve to "en-US" / "en-US"): locale timeZones
+   cch-NG -> cch (resolve to "en-US" / "en-US"): locale timeZones
+   ccp-BD -> ccp (resolve to "ccp-BD" / "ccp"): locale timeZones
+   ccp-IN -> ccp (resolve to "ccp-IN" / "ccp"): locale weekInfo, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":7,"weekend":[7]}  vs  {"firstDay":7,"weekend":[6,7]}
+      locale calendars: ["gregory","indian"]  vs  ["gregory","islamic-civil","islamic-tbla"]
+   ce-RU -> ce (resolve to "ce-RU" / "ce"): locale timeZones
+   ceb-PH -> ceb (resolve to "ceb-PH" / "ceb"): locale timeZones
+   cgg-UG -> cgg (resolve to "cgg-UG" / "cgg"): locale timeZones
+   cho-US -> cho (resolve to "en-US" / "en-US"): locale timeZones
+   chr-US -> chr (resolve to "chr-US" / "chr"): locale timeZones
+   cic-US -> cic (resolve to "en-US" / "en-US"): locale timeZones
+   ckb-IQ -> ckb (resolve to "ckb-IQ" / "ckb"): locale timeZones
+   co-FR -> co (resolve to "en-US" / "en-US"): locale timeZones
+   cop-EG -> cop (resolve to "en-US" / "en-US"): locale timeZones
+   cs-CZ -> cs (resolve to "cs-CZ" / "cs"): locale timeZones
+   csw-CA -> csw (resolve to "csw-CA" / "csw"): locale timeZones
+   cu-RU -> cu (resolve to "en-US" / "en-US"): locale timeZones
+   cv-RU -> cv (resolve to "cv-RU" / "cv"): locale timeZones
+   cy-GB -> cy (resolve to "cy-GB" / "cy"): locale timeZones
+   da-DK -> da (resolve to "da-DK" / "da"): locale timeZones
+   da-GL -> da (resolve to "da-GL" / "da"): locale hourCycles, locale timeZones
+      locale hourCycles: ["h23","h12"]  vs  ["h23"]
+   dav-KE -> dav (resolve to "dav-KE" / "dav"): locale timeZones
+   de-BE -> de (resolve to "de-BE" / "de"): locale timeZones
+   de-DE -> de (resolve to "de-DE" / "de"): locale timeZones
+   dje-NE -> dje (resolve to "dje-NE" / "dje"): locale timeZones
+   doi-IN -> doi (resolve to "doi-IN" / "doi"): locale timeZones
+   dsb-DE -> dsb (resolve to "dsb-DE" / "dsb"): locale timeZones
+   dua-CM -> dua (resolve to "dua-CM" / "dua"): locale timeZones
+   dv-MV -> dv (resolve to "en-US" / "en-US"): locale timeZones
+   dyo-SN -> dyo (resolve to "dyo-SN" / "dyo"): locale timeZones
+   dz-BT -> dz (resolve to "dz-BT" / "dz"): locale timeZones
+   ebu-KE -> ebu (resolve to "ebu-KE" / "ebu"): locale timeZones
+   ee-GH -> ee (resolve to "ee-GH" / "ee"): locale timeZones
+   el-CY -> el (resolve to "el-CY" / "el"): locale timeZones
+   el-GR -> el (resolve to "el-GR" / "el"): locale timeZones
+   en-AS -> en (resolve to "en-AS" / "en"): locale timeZones
+   en-Dsrt-US -> en-Dsrt (resolve to "en" / "en"): locale timeZones
+   en-PR -> en (resolve to "en-PR" / "en"): locale timeZones
+   en-Shaw-GB -> en-Shaw (resolve to "en" / "en"): locale timeZones
+   en-UM -> en (resolve to "en-UM" / "en"): locale timeZones
+   en-US -> en (resolve to "en-US" / "en"): locale timeZones
+   en-VI -> en (resolve to "en-VI" / "en"): locale timeZones
+   eo-001 -> eo (resolve to "eo-001" / "eo"): locale timeZones
+   es-EA -> es (resolve to "es-EA" / "es"): locale timeZones
+   es-ES -> es (resolve to "es-ES" / "es"): locale timeZones
+   es-IC -> es (resolve to "es-IC" / "es"): locale timeZones
+   et-EE -> et (resolve to "et-EE" / "et"): locale timeZones
+   eu-ES -> eu (resolve to "eu-ES" / "eu"): locale timeZones
+   ewo-CM -> ewo (resolve to "ewo-CM" / "ewo"): locale timeZones
+   fa-IR -> fa (resolve to "fa-IR" / "fa"): locale timeZones
+   ff-Adlm-GN -> ff-Adlm (resolve to "ff-Adlm-GN" / "ff-Adlm"): locale timeZones
+   ff-BF -> ff (resolve to "ff-BF" / "ff"): locale timeZones
+   ff-CM -> ff (resolve to "ff-CM" / "ff"): locale timeZones
+   ff-GW -> ff (resolve to "ff-GW" / "ff"): locale timeZones
+   ff-Latn-BF -> ff-Latn (resolve to "ff-Latn-BF" / "ff-Latn"): locale timeZones
+   ff-Latn-CM -> ff-Latn (resolve to "ff-Latn-CM" / "ff-Latn"): locale timeZones
+   ff-Latn-GW -> ff-Latn (resolve to "ff-Latn-GW" / "ff-Latn"): locale timeZones
+   ff-Latn-NE -> ff-Latn (resolve to "ff-Latn-NE" / "ff-Latn"): locale hourCycles, locale calendars, locale timeZones
+      locale hourCycles: ["h23"]  vs  ["h23","h12"]
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   ff-Latn-SN -> ff-Latn (resolve to "ff-Latn-SN" / "ff-Latn"): locale timeZones
+   ff-NE -> ff (resolve to "ff-NE" / "ff"): locale hourCycles, locale calendars, locale timeZones
+      locale hourCycles: ["h23"]  vs  ["h23","h12"]
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   ff-SN -> ff (resolve to "ff-SN" / "ff"): locale timeZones
+   fi-FI -> fi (resolve to "fi-FI" / "fi"): locale timeZones
+   fil-PH -> fil (resolve to "fil-PH" / "fil"): locale timeZones
+   fo-FO -> fo (resolve to "fo-FO" / "fo"): locale timeZones
+   fr-BF -> fr (resolve to "fr-BF" / "fr"): locale timeZones
+   fr-BJ -> fr (resolve to "fr-BJ" / "fr"): locale timeZones
+   fr-BL -> fr (resolve to "fr-BL" / "fr"): locale timeZones
+   fr-CF -> fr (resolve to "fr-CF" / "fr"): locale timeZones
+   fr-CG -> fr (resolve to "fr-CG" / "fr"): locale timeZones
+   fr-FR -> fr (resolve to "fr-FR" / "fr"): locale timeZones
+   fr-GA -> fr (resolve to "fr-GA" / "fr"): locale timeZones
+   fr-GP -> fr (resolve to "fr-GP" / "fr"): locale timeZones
+   fr-GQ -> fr (resolve to "fr-GQ" / "fr"): locale timeZones
+   fr-MC -> fr (resolve to "fr-MC" / "fr"): locale timeZones
+   fr-MF -> fr (resolve to "fr-MF" / "fr"): locale timeZones
+   fr-MQ -> fr (resolve to "fr-MQ" / "fr"): locale timeZones
+   fr-NC -> fr (resolve to "fr-NC" / "fr"): locale timeZones
+   fr-NE -> fr (resolve to "fr-NE" / "fr"): locale hourCycles, locale calendars, locale timeZones
+      locale hourCycles: ["h23"]  vs  ["h23","h12"]
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   fr-PF -> fr (resolve to "fr-PF" / "fr"): locale timeZones
+   fr-PM -> fr (resolve to "fr-PM" / "fr"): locale timeZones
+   fr-TG -> fr (resolve to "fr-TG" / "fr"): locale timeZones
+   fr-WF -> fr (resolve to "fr-WF" / "fr"): locale timeZones
+   fr-YT -> fr (resolve to "fr-YT" / "fr"): locale timeZones
+   frr-DE -> frr (resolve to "en-US" / "en-US"): locale timeZones
+   fur-IT -> fur (resolve to "fur-IT" / "fur"): locale timeZones
+   fy-NL -> fy (resolve to "fy-NL" / "fy"): locale timeZones
+   ga-GB -> ga (resolve to "ga-GB" / "ga"): locale timeZones
+   ga-IE -> ga (resolve to "ga-IE" / "ga"): locale timeZones
+   gaa-GH -> gaa (resolve to "gaa-GH" / "gaa"): locale timeZones
+   gd-GB -> gd (resolve to "gd-GB" / "gd"): locale timeZones
+   gez-ET -> gez (resolve to "en-US" / "en-US"): locale timeZones
+   gl-ES -> gl (resolve to "gl-ES" / "gl"): locale timeZones
+   gn-PY -> gn (resolve to "en-US" / "en-US"): locale timeZones
+   gsw-CH -> gsw (resolve to "gsw-CH" / "gsw"): locale timeZones
+   gsw-FR -> gsw (resolve to "gsw-FR" / "gsw"): locale timeZones
+   gsw-LI -> gsw (resolve to "gsw-LI" / "gsw"): locale timeZones
+   gu-IN -> gu (resolve to "gu-IN" / "gu"): locale timeZones
+   guz-KE -> guz (resolve to "guz-KE" / "guz"): locale timeZones
+   gv-IM -> gv (resolve to "gv-IM" / "gv"): locale timeZones
+   ha-Arab-NG -> ha-Arab (resolve to "ha" / "ha"): locale timeZones
+   ha-Arab-SD -> ha-Arab (resolve to "ha" / "ha"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale hourCycles: ["h12","h23"]  vs  ["h23","h12"]
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   ha-NG -> ha (resolve to "ha-NG" / "ha"): locale timeZones
+   ha-SD -> ha-Arab (resolve to "ha" / "ha"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale hourCycles: ["h12","h23"]  vs  ["h23","h12"]
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["gregory"]
+   haw-US -> haw (resolve to "haw-US" / "haw"): locale timeZones
+   he-IL -> he (resolve to "he-IL" / "he"): locale timeZones
+   hi-IN -> hi (resolve to "hi-IN" / "hi"): locale timeZones
+   hi-Latn-IN -> hi-Latn (resolve to "hi-Latn-IN" / "hi-Latn"): locale timeZones
+   hnj-Hmnp-US -> hnj-Hmnp (resolve to "en-US" / "en-US"): locale timeZones
+   hnj-US -> hnj (resolve to "en-US" / "en-US"): locale timeZones
+   hr-HR -> hr (resolve to "hr-HR" / "hr"): locale timeZones
+   hrx-BR -> hrx (resolve to "en-US" / "en-US"): locale timeZones
+   hsb-DE -> hsb (resolve to "hsb-DE" / "hsb"): locale timeZones
+   ht-HT -> ht (resolve to "en-US" / "en-US"): locale timeZones
+   hu-HU -> hu (resolve to "hu-HU" / "hu"): locale timeZones
+   hy-AM -> hy (resolve to "hy-AM" / "hy"): locale timeZones
+   ia-001 -> ia (resolve to "ia-001" / "ia"): locale timeZones
+   id-ID -> id (resolve to "id-ID" / "id"): locale timeZones
+   ie-EE -> ie (resolve to "ie-EE" / "ie"): locale timeZones
+   ig-NG -> ig (resolve to "ig-NG" / "ig"): locale timeZones
+   ii-CN -> ii (resolve to "ii-CN" / "ii"): locale timeZones
+   io-001 -> io (resolve to "en-US" / "en-US"): locale timeZones
+   is-IS -> is (resolve to "is-IS" / "is"): locale timeZones
+   isv-001 -> isv (resolve to "en-US" / "en-US"): locale timeZones
+   isv-Cyrl-001 -> isv-Cyrl (resolve to "en-US" / "en-US"): locale timeZones
+   isv-Latn-001 -> isv-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   it-IT -> it (resolve to "it-IT" / "it"): locale timeZones
+   it-SM -> it (resolve to "it-SM" / "it"): locale timeZones
+   it-VA -> it (resolve to "it-VA" / "it"): locale timeZones
+   iu-CA -> iu (resolve to "en-US" / "en-US"): locale timeZones
+   iu-Latn-CA -> iu-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   ja-JP -> ja (resolve to "ja-JP" / "ja"): locale timeZones
+   jbo-001 -> jbo (resolve to "en-US" / "en-US"): locale timeZones
+   jgo-CM -> jgo (resolve to "jgo-CM" / "jgo"): locale timeZones
+   jmc-TZ -> jmc (resolve to "jmc-TZ" / "jmc"): locale timeZones
+   jv-ID -> jv (resolve to "jv-ID" / "jv"): locale timeZones
+   ka-GE -> ka (resolve to "ka-GE" / "ka"): locale timeZones
+   kaa-Cyrl-UZ -> kaa-Cyrl (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-Latn-UZ -> kaa-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-UZ -> kaa (resolve to "en-US" / "en-US"): locale timeZones
+   kab-DZ -> kab (resolve to "kab-DZ" / "kab"): locale timeZones
+   kaj-NG -> kaj (resolve to "en-US" / "en-US"): locale timeZones
+   kam-KE -> kam (resolve to "kam-KE" / "kam"): locale timeZones
+   kbd-RU -> kbd (resolve to "en-US" / "en-US"): locale timeZones
+   kcg-NG -> kcg (resolve to "en-US" / "en-US"): locale timeZones
+   kde-TZ -> kde (resolve to "kde-TZ" / "kde"): locale timeZones
+   kea-CV -> kea (resolve to "kea-CV" / "kea"): fmt nf EUR, fmt nf USD, locale timeZones
+      fmt nf EUR: "1 234$50 €"  vs  "1 234,50 €"
+      fmt nf USD: "1 234$50 US$"  vs  "1 234,50 US$"
+   kek-GT -> kek (resolve to "en-US" / "en-US"): locale timeZones
+   ken-CM -> ken (resolve to "en-US" / "en-US"): locale timeZones
+   kgp-BR -> kgp (resolve to "kgp-BR" / "kgp"): locale timeZones
+   khq-ML -> khq (resolve to "khq-ML" / "khq"): locale timeZones
+   ki-KE -> ki (resolve to "ki-KE" / "ki"): locale timeZones
+   kk-Arab-CN -> kk-Arab (resolve to "kk-Arab-CN" / "kk-Arab"): locale timeZones
+   kk-CN -> kk-Arab (resolve to "kk-CN" / "kk-Arab"): locale timeZones
+   kk-Cyrl-KZ -> kk-Cyrl (resolve to "kk-Cyrl-KZ" / "kk-Cyrl"): locale timeZones
+   kk-KZ -> kk (resolve to "kk-KZ" / "kk"): locale timeZones
+   kkj-CM -> kkj (resolve to "kkj-CM" / "kkj"): locale timeZones
+   kl-GL -> kl (resolve to "kl-GL" / "kl"): locale timeZones
+   kln-KE -> kln (resolve to "kln-KE" / "kln"): locale timeZones
+   km-KH -> km (resolve to "km-KH" / "km"): locale timeZones
+   kn-IN -> kn (resolve to "kn-IN" / "kn"): locale timeZones
+   ko-KR -> ko (resolve to "ko-KR" / "ko"): locale timeZones
+   kok-Deva-IN -> kok-Deva (resolve to "kok-Deva-IN" / "kok-Deva"): locale timeZones
+   kok-IN -> kok (resolve to "kok-IN" / "kok"): fmt dtf time full, fmt dtf time long, fmt dtf time medium, fmt dtf time short, locale timeZones
+      fmt dtf time full: ["PM 3:04:05 समन्वित वैश्विक वेळ","AM 3:04:05 समन्वित वैश्विक वेळ"]  vs  ["3:04:05 PM समन्वित वैश्विक वेळ","3:04:05 AM समन्वित वैश्विक वेळ"]
+      fmt dtf time long: ["PM 3:04:05 UTC","AM 3:04:05 UTC"]  vs  ["3:04:05 PM UTC","3:04:05 AM UTC"]
+      fmt dtf time medium: ["PM 3:04:05","AM 3:04:05"]  vs  ["3:04:05 PM","3:04:05 AM"]
+      fmt dtf time short: ["PM 3:04","AM 3:04"]  vs  ["3:04 PM","3:04 AM"]
+   kok-Latn-IN -> kok-Latn (resolve to "kok-Latn-IN" / "kok-Latn"): locale timeZones
+   kpe-LR -> kpe (resolve to "en-US" / "en-US"): locale timeZones
+   ks-Arab-IN -> ks-Arab (resolve to "ks-Arab-IN" / "ks-Arab"): locale timeZones
+   ks-Deva-IN -> ks-Deva (resolve to "ks-Deva-IN" / "ks-Deva"): locale timeZones
+   ks-IN -> ks (resolve to "ks-IN" / "ks"): locale timeZones
+   ksb-TZ -> ksb (resolve to "ksb-TZ" / "ksb"): locale timeZones
+   ksf-CM -> ksf (resolve to "ksf-CM" / "ksf"): locale timeZones
+   ksh-DE -> ksh (resolve to "ksh-DE" / "ksh"): locale timeZones
+   ku-Arab-IQ -> ku-Arab (resolve to "ku" / "ku"): locale timeZones
+   ku-Arab-IR -> ku-Arab (resolve to "ku" / "ku"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5]}  vs  {"firstDay":6,"weekend":[5,6]}
+      locale hourCycles: ["h23","h12"]  vs  ["h12","h23"]
+      locale calendars: ["persian","gregory","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic-civil","islamic-tbla"]
+   ku-IQ -> ku-Arab (resolve to "ku-IQ" / "ku"): fmt dtf default, fmt dtf date full, fmt dtf time full, fmt dtf date long, fmt dtf time long, fmt dtf date medium, fmt dtf time medium, fmt dtf date short, fmt dtf time short, fmt dtf hour, fmt dtf hour minute, fmt dtf weekday month, fmt dtf dayPeriod, fmt toLocaleString, fmt dtf range, fmt nf default, fmt nf percent, fmt nf compact, fmt nf compact long, fmt nf EUR, fmt nf USD, fmt nf unit, fmt nf small, fmt rtf, fmt list, fmt displaynames, opts dtf hourCycle/calendar/numberingSystem, locale timeZones
+      fmt dtf default: ["2024-01-07","2024-07-01"]  vs  ["07.01.2024","01.07.2024"]
+      fmt dtf date full: ["2024 M01 7, Sun","2024 M07 1, Mon"]  vs  ["yekşem, 7ê rêbendana 2024an","duşem, 1ê tîrmeha 2024an"]
+      fmt dtf time full: ["3:04:05 PM GMT+00:00","3:04:05 AM GMT+00:00"]  vs  ["15:04:05 Saeta Gerdûnî ya Hevdemî","03:04:05 Saeta Gerdûnî ya Hevdemî"]
+      fmt dtf date long: ["2024 M01 7","2024 M07 1"]  vs  ["7ê rêbendana 2024an","1ê tîrmeha 2024an"]
+      fmt dtf time long: ["3:04:05 PM UTC","3:04:05 AM UTC"]  vs  ["15:04:05 SGH","03:04:05 SGH"]
+      fmt dtf date medium: ["2024 M01 7","2024 M07 1"]  vs  ["7 rbn, 2024","1 trm, 2024"]
+      fmt dtf time medium: ["3:04:05 PM","3:04:05 AM"]  vs  ["15:04:05","03:04:05"]
+      fmt dtf date short: ["2024-01-07","2024-07-01"]  vs  ["07.01.2024","01.07.2024"]
+      fmt dtf time short: ["3:04 PM","3:04 AM"]  vs  ["15:04","03:04"]
+      fmt dtf hour: ["3 PM","3 AM"]  vs  ["15","03"]
+      fmt dtf hour minute: ["3:04 PM","3:04 AM"]  vs  ["15:04","03:04"]
+      fmt dtf weekday month: ["M01 7, Sun","M07 1, Mon"]  vs  ["7 rêbendan, yekşem","1 tîrmeh, duşem"]
+      fmt dtf dayPeriod: ["3 PM","3 AM"]  vs  ["15","03"]
+      fmt toLocaleString: ["2024-01-07 3:04:05 PM","2024-07-01 3:04:05 AM"]  vs  ["07.01.2024 15:04:05","01.07.2024 03:04:05"]
+      fmt dtf range: "2024 M01 7 – M07 1"  vs  "7 rbn – 1 trm, 2024"
+      fmt nf default: "1,234,567.891"  vs  "1.234.567,891"
+      fmt nf percent: "26%"  vs  "%26"
+      fmt nf compact: "1.2M"  vs  "1,2MN"
+      fmt nf compact long: "1.2M"  vs  "1,2 milyon"
+      fmt nf EUR: "€ 1,234.50"  vs  "1.234,50 €"
+      fmt nf USD: "US$ 1,234.50"  vs  "1.234,50 $"
+      fmt nf unit: "12 km/h"  vs  "12 km/st"
+      fmt nf small: "1,234"  vs  "1.234"
+      fmt rtf: ["yesterday","-5 d","+3 h"]  vs  ["duh","berî 5 rojan","piştî 3 saetan"]
+      fmt list: "a, b, c"  vs  "a, b û c"
+      fmt displaynames: ["US","DE","fr","en-US"]  vs  ["Dewletên Amerîkayê yên Yekbûyî","Almanya","fransizî","îngilîzî (amerîkî)"]
+      opts dtf hourCycle/calendar/numberingSystem: ["h12","gregory","latn"]  vs  ["h23","gregory","latn"]
+   ku-IR -> ku-Arab (resolve to "ku" / "ku"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5]}  vs  {"firstDay":6,"weekend":[5,6]}
+      locale hourCycles: ["h23","h12"]  vs  ["h12","h23"]
+      locale calendars: ["persian","gregory","islamic-civil","islamic-tbla"]  vs  ["gregory","islamic-civil","islamic-tbla"]
+   ku-Latn-IQ -> ku-Latn (resolve to "ku-Latn-IQ" / "ku-Latn"): fmt dtf hour, fmt dtf hour minute, fmt dtf dayPeriod, fmt toLocaleString, opts dtf hourCycle/calendar/numberingSystem, locale weekInfo, locale hourCycles, locale timeZones
+      fmt dtf hour: ["3 PN","3 BN"]  vs  ["15","03"]
+      fmt dtf hour minute: ["3:04 PN","3:04 BN"]  vs  ["15:04","03:04"]
+      fmt dtf dayPeriod: ["3 PN","3 BN"]  vs  ["15","03"]
+      fmt toLocaleString: ["07.01.2024 3:04:05 PN","01.07.2024 3:04:05 BN"]  vs  ["07.01.2024 15:04:05","01.07.2024 03:04:05"]
+      opts dtf hourCycle/calendar/numberingSystem: ["h12","gregory","latn"]  vs  ["h23","gregory","latn"]
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+      locale hourCycles: ["h12","h23"]  vs  ["h23","h12"]
+   ku-Latn-SY -> ku-Latn (resolve to "ku-Latn-SY" / "ku-Latn"): locale weekInfo, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+   ku-Latn-TR -> ku-Latn (resolve to "ku-Latn-TR" / "ku-Latn"): locale timeZones
+   ku-SY -> ku (resolve to "ku-SY" / "ku"): locale weekInfo, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":1,"weekend":[6,7]}
+   ku-TR -> ku (resolve to "ku-TR" / "ku"): locale timeZones
+   kw-GB -> kw (resolve to "kw-GB" / "kw"): locale timeZones
+   kxv-Deva-IN -> kxv-Deva (resolve to "kxv-Deva-IN" / "kxv-Deva"): locale timeZones
+   kxv-IN -> kxv (resolve to "kxv-IN" / "kxv"): locale timeZones
+   kxv-Latn-IN -> kxv-Latn (resolve to "kxv-Latn-IN" / "kxv-Latn"): locale timeZones
+   kxv-Orya-IN -> kxv-Orya (resolve to "kxv-Orya-IN" / "kxv-Orya"): locale timeZones
+   kxv-Telu-IN -> kxv-Telu (resolve to "kxv-Telu-IN" / "kxv-Telu"): locale timeZones
+   ky-KG -> ky (resolve to "ky-KG" / "ky"): locale timeZones
+   la-VA -> la (resolve to "en-US" / "en-US"): locale timeZones
+   lag-TZ -> lag (resolve to "lag-TZ" / "lag"): locale timeZones
+   lb-LU -> lb (resolve to "lb-LU" / "lb"): locale timeZones
+   lg-UG -> lg (resolve to "lg-UG" / "lg"): locale timeZones
+   lij-IT -> lij (resolve to "lij-IT" / "lij"): locale timeZones
+   lkt-US -> lkt (resolve to "lkt-US" / "lkt"): locale timeZones
+   lld-IT -> lld (resolve to "en-US" / "en-US"): locale timeZones
+   lmo-IT -> lmo (resolve to "lmo-IT" / "lmo"): locale timeZones
+   ln-CD -> ln (resolve to "ln-CD" / "ln"): locale timeZones
+   ln-CF -> ln (resolve to "ln-CF" / "ln"): locale timeZones
+   ln-CG -> ln (resolve to "ln-CG" / "ln"): locale timeZones
+   lo-LA -> lo (resolve to "lo-LA" / "lo"): locale timeZones
+   lrc-IR -> lrc (resolve to "lrc-IR" / "lrc"): locale timeZones
+   lt-LT -> lt (resolve to "lt-LT" / "lt"): locale timeZones
+   ltg-LV -> ltg (resolve to "en-US" / "en-US"): locale timeZones
+   lu-CD -> lu (resolve to "lu-CD" / "lu"): locale timeZones
+   luo-KE -> luo (resolve to "luo-KE" / "luo"): locale timeZones
+   luy-KE -> luy (resolve to "luy-KE" / "luy"): locale timeZones
+   lv-LV -> lv (resolve to "lv-LV" / "lv"): locale timeZones
+   lzz-TR -> lzz (resolve to "en-US" / "en-US"): locale timeZones
+   mai-IN -> mai (resolve to "mai-IN" / "mai"): locale timeZones
+   mas-KE -> mas (resolve to "mas-KE" / "mas"): locale timeZones
+   mdf-RU -> mdf (resolve to "en-US" / "en-US"): locale timeZones
+   mer-KE -> mer (resolve to "mer-KE" / "mer"): locale timeZones
+   mfe-MU -> mfe (resolve to "mfe-MU" / "mfe"): locale timeZones
+   mg-MG -> mg (resolve to "mg-MG" / "mg"): locale timeZones
+   mgh-MZ -> mgh (resolve to "mgh-MZ" / "mgh"): locale timeZones
+   mgo-CM -> mgo (resolve to "mgo-CM" / "mgo"): locale timeZones
+   mhn-IT -> mhn (resolve to "en-US" / "en-US"): locale timeZones
+   mi-NZ -> mi (resolve to "mi-NZ" / "mi"): locale timeZones
+   mic-CA -> mic (resolve to "en-US" / "en-US"): locale timeZones
+   mk-MK -> mk (resolve to "mk-MK" / "mk"): locale timeZones
+   ml-IN -> ml (resolve to "ml-IN" / "ml"): locale timeZones
+   mn-CN -> mn-Mong (resolve to "mn" / "mn"): locale timeZones
+   mn-MN -> mn (resolve to "mn-MN" / "mn"): locale timeZones
+   mn-Mong-CN -> mn-Mong (resolve to "mn" / "mn"): locale timeZones
+   mni-Beng-IN -> mni-Beng (resolve to "mni-Beng-IN" / "mni-Beng"): locale timeZones
+   mni-IN -> mni (resolve to "mni-IN" / "mni"): locale timeZones
+   mni-Mtei-IN -> mni-Mtei (resolve to "mni" / "mni"): locale timeZones
+   moh-CA -> moh (resolve to "en-US" / "en-US"): locale timeZones
+   mr-IN -> mr (resolve to "mr-IN" / "mr"): locale timeZones
+   mrh-IN -> mrh (resolve to "en-US" / "en-US"): locale timeZones
+   mrh-MM -> mrh (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":7,"weekend":[6,7]}  vs  {"firstDay":7,"weekend":[7]}
+      locale hourCycles: ["h23","h12"]  vs  ["h12","h23"]
+      locale calendars: ["gregory"]  vs  ["gregory","indian"]
+   ms-Arab-MY -> ms-Arab (resolve to "ms" / "ms"): locale timeZones
+   ms-MY -> ms (resolve to "ms-MY" / "ms"): locale timeZones
+   mt-MT -> mt (resolve to "mt-MT" / "mt"): locale timeZones
+   mua-CM -> mua (resolve to "mua-CM" / "mua"): locale timeZones
+   mus-US -> mus (resolve to "en-US" / "en-US"): locale timeZones
+   mww-Hmnp-US -> mww-Hmnp (resolve to "en-US" / "en-US"): locale timeZones
+   mww-US -> mww (resolve to "en-US" / "en-US"): locale timeZones
+   my-MM -> my (resolve to "my-MM" / "my"): locale timeZones
+   myv-RU -> myv (resolve to "en-US" / "en-US"): locale timeZones
+   mzn-IR -> mzn (resolve to "mzn-IR" / "mzn"): locale timeZones
+   naq-NA -> naq (resolve to "naq-NA" / "naq"): locale timeZones
+   nb-NO -> nb (resolve to "nb-NO" / "nb"): locale timeZones
+   nb-SJ -> nb (resolve to "nb-SJ" / "nb"): locale hourCycles, locale timeZones
+      locale hourCycles: ["h23"]  vs  ["h23","h12"]
+   nd-ZW -> nd (resolve to "nd-ZW" / "nd"): locale timeZones
+   nds-DE -> nds (resolve to "nds-DE" / "nds"): locale timeZones
+   ne-NP -> ne (resolve to "ne-NP" / "ne"): locale timeZones
+   nl-NL -> nl (resolve to "nl-NL" / "nl"): locale timeZones
+   nmg-CM -> nmg (resolve to "nmg-CM" / "nmg"): locale timeZones
+   nn-NO -> nn (resolve to "nn-NO" / "nn"): locale timeZones
+   nnh-CM -> nnh (resolve to "nnh-CM" / "nnh"): locale timeZones
+   nqo-GN -> nqo (resolve to "nqo-GN" / "nqo"): locale timeZones
+   nr-ZA -> nr (resolve to "en-US" / "en-US"): locale timeZones
+   nso-ZA -> nso (resolve to "nso-ZA" / "nso"): locale timeZones
+   nus-SS -> nus (resolve to "nus-SS" / "nus"): locale timeZones
+   nv-US -> nv (resolve to "en-US" / "en-US"): locale timeZones
+   ny-MW -> ny (resolve to "en-US" / "en-US"): locale timeZones
+   nyn-UG -> nyn (resolve to "nyn-UG" / "nyn"): locale timeZones
+   oc-FR -> oc (resolve to "oc-FR" / "oc"): locale timeZones
+   oka-CA -> oka (resolve to "en-US" / "en-US"): locale timeZones
+   oka-US -> oka (resolve to "en-US" / "en-US"): locale timeZones
+   om-ET -> om (resolve to "om-ET" / "om"): locale timeZones
+   or-IN -> or (resolve to "or-IN" / "or"): locale timeZones
+   os-GE -> os (resolve to "os-GE" / "os"): locale timeZones
+   osa-US -> osa (resolve to "en-US" / "en-US"): locale timeZones
+   pa-Arab-PK -> pa-Arab (resolve to "pa-Arab-PK" / "pa-Arab"): locale timeZones
+   pa-Guru-IN -> pa-Guru (resolve to "pa-Guru-IN" / "pa-Guru"): locale timeZones
+   pa-IN -> pa (resolve to "pa-IN" / "pa"): locale timeZones
+   pa-PK -> pa-Arab (resolve to "pa-PK" / "pa-Arab"): locale timeZones
+   pap-AW -> pap (resolve to "en-US" / "en-US"): locale timeZones
+   pap-CW -> pap (resolve to "en-US" / "en-US"): locale timeZones
+   pcm-NG -> pcm (resolve to "pcm-NG" / "pcm"): locale timeZones
+   pi-GB -> pi (resolve to "en-US" / "en-US"): locale timeZones
+   pi-Latn-GB -> pi-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   pis-SB -> pis (resolve to "en-US" / "en-US"): locale timeZones
+   pl-PL -> pl (resolve to "pl-PL" / "pl"): locale timeZones
+   pms-IT -> pms (resolve to "pms-IT" / "pms"): locale timeZones
+   prg-PL -> prg (resolve to "prg-PL" / "prg"): locale timeZones
+   ps-AF -> ps (resolve to "ps-AF" / "ps"): locale timeZones
+   pt-BR -> pt (resolve to "pt-BR" / "pt"): locale timeZones
+   qu-PE -> qu (resolve to "qu-PE" / "qu"): locale timeZones
+   quc-GT -> quc (resolve to "en-US" / "en-US"): locale timeZones
+   raj-IN -> raj (resolve to "raj-IN" / "raj"): locale timeZones
+   rhg-MM -> rhg (resolve to "en-US" / "en-US"): locale timeZones
+   rhg-Rohg-MM -> rhg-Rohg (resolve to "en-US" / "en-US"): locale timeZones
+   rif-MA -> rif (resolve to "en-US" / "en-US"): locale timeZones
+   rm-CH -> rm (resolve to "rm-CH" / "rm"): locale timeZones
+   rn-BI -> rn (resolve to "rn-BI" / "rn"): locale timeZones
+   ro-RO -> ro (resolve to "ro-RO" / "ro"): locale timeZones
+   rof-TZ -> rof (resolve to "rof-TZ" / "rof"): locale timeZones
+   ru-RU -> ru (resolve to "ru-RU" / "ru"): locale timeZones
+   rw-RW -> rw (resolve to "rw-RW" / "rw"): locale timeZones
+   rwk-TZ -> rwk (resolve to "rwk-TZ" / "rwk"): locale timeZones
+   sa-IN -> sa (resolve to "sa-IN" / "sa"): locale timeZones
+   sah-RU -> sah (resolve to "sah-RU" / "sah"): locale timeZones
+   saq-KE -> saq (resolve to "saq-KE" / "saq"): locale timeZones
+   sat-Deva-IN -> sat-Deva (resolve to "sat" / "sat"): locale timeZones
+   sat-IN -> sat (resolve to "sat-IN" / "sat"): locale timeZones
+   sat-Olck-IN -> sat-Olck (resolve to "sat-Olck-IN" / "sat-Olck"): locale timeZones
+   sbp-TZ -> sbp (resolve to "sbp-TZ" / "sbp"): locale timeZones
+   sc-IT -> sc (resolve to "sc-IT" / "sc"): locale timeZones
+   scn-IT -> scn (resolve to "scn-IT" / "scn"): locale timeZones
+   sd-Arab-PK -> sd-Arab (resolve to "sd-Arab-PK" / "sd-Arab"): locale timeZones
+   sd-Deva-IN -> sd-Deva (resolve to "sd-Deva-IN" / "sd-Deva"): locale timeZones
+   sd-IN -> sd-Deva (resolve to "sd-IN" / "sd-Deva"): locale timeZones
+   sd-PK -> sd (resolve to "sd-PK" / "sd"): locale timeZones
+   sdh-IQ -> sdh (resolve to "en-US" / "en-US"): locale weekInfo, locale hourCycles, locale calendars, locale timeZones
+      locale weekInfo: {"firstDay":6,"weekend":[5,6]}  vs  {"firstDay":6,"weekend":[5]}
+      locale hourCycles: ["h12","h23"]  vs  ["h23","h12"]
+      locale calendars: ["gregory","islamic-civil","islamic-tbla"]  vs  ["persian","gregory","islamic-civil","islamic-tbla"]
+   sdh-IR -> sdh (resolve to "en-US" / "en-US"): locale timeZones
+   se-NO -> se (resolve to "se-NO" / "se"): locale timeZones
+   seh-MZ -> seh (resolve to "seh-MZ" / "seh"): locale timeZones
+   ses-ML -> ses (resolve to "ses-ML" / "ses"): locale timeZones
+   sg-CF -> sg (resolve to "sg-CF" / "sg"): locale timeZones
+   sgs-LT -> sgs (resolve to "en-US" / "en-US"): locale timeZones
+   shi-Latn-MA -> shi-Latn (resolve to "shi-Latn-MA" / "shi-Latn"): locale timeZones
+   shi-MA -> shi (resolve to "shi-MA" / "shi"): locale timeZones
+   shi-Tfng-MA -> shi-Tfng (resolve to "shi-Tfng-MA" / "shi-Tfng"): locale timeZones
+   shn-MM -> shn (resolve to "shn-MM" / "shn"): locale timeZones
+   shn-TH -> shn (resolve to "shn-TH" / "shn"): fmt dtf default, fmt dtf date full, fmt dtf date long, fmt dtf date medium, fmt dtf date short, fmt toLocaleString, fmt dtf range, opts dtf hourCycle/calendar/numberingSystem, locale calendars, locale timeZones
+      fmt dtf default: ["ပ.သ. 2567-01-07","ပ.သ. 2567-07-01"]  vs  ["2024-01-07","2024-07-01"]
+      fmt dtf date full: ["ပ.သ. 2567 ၸၼ်ႇဝႃႇရီႇ 7 - ဝၼ်းဢႃးတိတ်ႉ","ပ.သ. 2567 ၸူႇလၢႆႇ 1 - ဝၼ်းၸၼ်"]  vs  ["2024 ၸၼ်ႇဝႃႇရီႇ 7 - ဝၼ်းဢႃးတိတ်ႉ","2024 ၸူႇလၢႆႇ 1 - ဝၼ်းၸၼ်"]
+      fmt dtf date long: ["ပ.သ. 2567 ၸၼ်ႇဝႃႇရီႇ 7","ပ.သ. 2567 ၸူႇလၢႆႇ 1"]  vs  ["2024 ၸၼ်ႇဝႃႇရီႇ 7","2024 ၸူႇလၢႆႇ 1"]
+      fmt dtf date medium: ["ပ.သ. 2567 ၸၼ်ႇ 7","ပ.သ. 2567 ၸူႇ 1"]  vs  ["2024 ၸၼ်ႇ 7","2024 ၸူႇ 1"]
+      fmt dtf date short: ["ပ.သ. 2567-01-07","ပ.သ. 2567-07-01"]  vs  ["2024-01-07","2024-07-01"]
+      fmt toLocaleString: ["ပ.သ. 2567-01-07 15:04:05","ပ.သ. 2567-07-01 03:04:05"]  vs  ["2024-01-07 15:04:05","2024-07-01 03:04:05"]
+      fmt dtf range: "ပ.သ. 2567 ၸၼ်ႇ 7 – ၸူႇ 1"  vs  "2024 ၸၼ်ႇ 7 – ၸူႇ 1"
+      opts dtf hourCycle/calendar/numberingSystem: ["h23","buddhist","latn"]  vs  ["h23","gregory","latn"]
+      locale calendars: ["buddhist","gregory"]  vs  ["gregory"]
+   si-LK -> si (resolve to "si-LK" / "si"): locale timeZones
+   sid-ET -> sid (resolve to "en-US" / "en-US"): locale timeZones
+   sk-SK -> sk (resolve to "sk-SK" / "sk"): locale timeZones
+   skr-PK -> skr (resolve to "en-US" / "en-US"): locale timeZones
+   sl-SI -> sl (resolve to "sl-SI" / "sl"): locale timeZones
+   sma-SE -> sma (resolve to "en-US" / "en-US"): locale timeZones
+   smj-NO -> smj (resolve to "en-US" / "en-US"): locale hourCycles, locale timeZones
+      locale hourCycles: ["h23","h12"]  vs  ["h23"]
+   smj-SE -> smj (resolve to "en-US" / "en-US"): locale timeZones
+   smn-FI -> smn (resolve to "smn-FI" / "smn"): locale timeZones
+   sms-FI -> sms (resolve to "en-US" / "en-US"): locale timeZones
+   sn-ZW -> sn (resolve to "sn-ZW" / "sn"): locale timeZones
+   so-SO -> so (resolve to "so-SO" / "so"): locale timeZones
+   sq-AL -> sq (resolve to "sq-AL" / "sq"): locale timeZones
+   sr-Cyrl-RS -> sr-Cyrl (resolve to "sr-Cyrl-RS" / "sr-Cyrl"): locale timeZones
+   sr-Latn-RS -> sr-Latn (resolve to "sr-Latn-RS" / "sr-Latn"): locale timeZones
+   sr-RS -> sr (resolve to "sr-RS" / "sr"): locale timeZones
+   ss-ZA -> ss (resolve to "en-US" / "en-US"): locale timeZones
+   ssy-ER -> ssy (resolve to "en-US" / "en-US"): locale timeZones
+   st-ZA -> st (resolve to "st-ZA" / "st"): locale timeZones
+   su-ID -> su (resolve to "su-ID" / "su"): locale timeZones
+   su-Latn-ID -> su-Latn (resolve to "su-Latn-ID" / "su-Latn"): locale timeZones
+   sus-GN -> sus (resolve to "en-US" / "en-US"): locale timeZones
+   sus-SL -> sus (resolve to "en-US" / "en-US"): locale hourCycles, locale timeZones
+      locale hourCycles: ["h12","h23"]  vs  ["h23","h12"]
+   suz-Deva-NP -> suz-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   suz-NP -> suz (resolve to "en-US" / "en-US"): locale timeZones
+   suz-Sunu-NP -> suz-Sunu (resolve to "en-US" / "en-US"): locale timeZones
+   sv-SE -> sv (resolve to "sv-SE" / "sv"): locale timeZones
+   sw-TZ -> sw (resolve to "sw-TZ" / "sw"): locale timeZones
+   syr-IQ -> syr (resolve to "syr-IQ" / "syr"): locale timeZones
+   syr-SY -> syr (resolve to "syr-SY" / "syr"): locale timeZones
+   szl-PL -> szl (resolve to "szl-PL" / "szl"): locale timeZones
+   ta-IN -> ta (resolve to "ta-IN" / "ta"): locale timeZones
+   te-IN -> te (resolve to "te-IN" / "te"): locale timeZones
+   teo-UG -> teo (resolve to "teo-UG" / "teo"): locale timeZones
+   tg-TJ -> tg (resolve to "tg-TJ" / "tg"): locale timeZones
+   th-TH -> th (resolve to "th-TH" / "th"): locale timeZones
+   ti-ET -> ti (resolve to "ti-ET" / "ti"): locale timeZones
+   tig-ER -> tig (resolve to "en-US" / "en-US"): locale timeZones
+   tk-TM -> tk (resolve to "tk-TM" / "tk"): locale timeZones
+   tn-ZA -> tn (resolve to "tn-ZA" / "tn"): locale timeZones
+   to-TO -> to (resolve to "to-TO" / "to"): locale timeZones
+   tok-001 -> tok (resolve to "tok-001" / "tok"): locale timeZones
+   tpi-PG -> tpi (resolve to "en-US" / "en-US"): locale timeZones
+   tr-TR -> tr (resolve to "tr-TR" / "tr"): locale timeZones
+   trv-TW -> trv (resolve to "en-US" / "en-US"): locale timeZones
+   trw-PK -> trw (resolve to "en-US" / "en-US"): locale timeZones
+   ts-ZA -> ts (resolve to "en-US" / "en-US"): locale timeZones
+   tt-RU -> tt (resolve to "tt-RU" / "tt"): locale timeZones
+   twq-NE -> twq (resolve to "twq-NE" / "twq"): locale timeZones
+   tyv-RU -> tyv (resolve to "tyv-RU" / "tyv"): locale timeZones
+   tzm-MA -> tzm (resolve to "tzm-MA" / "tzm"): locale timeZones
+   ug-CN -> ug (resolve to "ug-CN" / "ug"): locale timeZones
+   uk-UA -> uk (resolve to "uk-UA" / "uk"): locale timeZones
+   ur-PK -> ur (resolve to "ur-PK" / "ur"): locale timeZones
+   uz-AF -> uz-Arab (resolve to "uz-AF" / "uz-Arab"): fmt dtf default, fmt toLocaleString, locale timeZones
+      fmt dtf default: ["۱۴۰۲-۱۰-۱۷","۱۴۰۳-۰۴-۱۱"]  vs  ["AP ۱۴۰۲-۱۰-۱۷","AP ۱۴۰۳-۰۴-۱۱"]
+      fmt toLocaleString: ["۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]  vs  ["AP ۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","AP ۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]
+   uz-Arab-AF -> uz-Arab (resolve to "uz-Arab-AF" / "uz-Arab"): fmt dtf default, fmt toLocaleString, locale timeZones
+      fmt dtf default: ["۱۴۰۲-۱۰-۱۷","۱۴۰۳-۰۴-۱۱"]  vs  ["AP ۱۴۰۲-۱۰-۱۷","AP ۱۴۰۳-۰۴-۱۱"]
+      fmt toLocaleString: ["۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]  vs  ["AP ۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","AP ۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]
+   uz-Cyrl-UZ -> uz-Cyrl (resolve to "uz-Cyrl-UZ" / "uz-Cyrl"): locale timeZones
+   uz-Latn-UZ -> uz-Latn (resolve to "uz-Latn-UZ" / "uz-Latn"): locale timeZones
+   uz-UZ -> uz (resolve to "uz-UZ" / "uz"): locale timeZones
+   vai-LR -> vai (resolve to "vai-LR" / "vai"): locale timeZones
+   vai-Latn-LR -> vai-Latn (resolve to "vai-Latn-LR" / "vai-Latn"): locale timeZones
+   vai-Vaii-LR -> vai-Vaii (resolve to "vai-Vaii-LR" / "vai-Vaii"): locale timeZones
+   ve-ZA -> ve (resolve to "en-US" / "en-US"): locale timeZones
+   vec-IT -> vec (resolve to "vec-IT" / "vec"): locale timeZones
+   vi-VN -> vi (resolve to "vi-VN" / "vi"): locale timeZones
+   vmw-MZ -> vmw (resolve to "vmw-MZ" / "vmw"): locale timeZones
+   vo-001 -> vo (resolve to "en-US" / "en-US"): locale timeZones
+   vun-TZ -> vun (resolve to "vun-TZ" / "vun"): locale timeZones
+   wa-BE -> wa (resolve to "en-US" / "en-US"): locale timeZones
+   wae-CH -> wae (resolve to "wae-CH" / "wae"): locale timeZones
+   wal-ET -> wal (resolve to "en-US" / "en-US"): locale timeZones
+   wbp-AU -> wbp (resolve to "en-US" / "en-US"): locale timeZones
+   wo-SN -> wo (resolve to "wo-SN" / "wo"): locale timeZones
+   xdq-RU -> xdq (resolve to "en-US" / "en-US"): locale timeZones
+   xh-ZA -> xh (resolve to "xh-ZA" / "xh"): locale timeZones
+   xnr-IN -> xnr (resolve to "xnr-IN" / "xnr"): locale timeZones
+   xog-UG -> xog (resolve to "xog-UG" / "xog"): locale timeZones
+   yav-CM -> yav (resolve to "yav-CM" / "yav"): locale timeZones
+   yi-UA -> yi (resolve to "yi-UA" / "yi"): locale timeZones
+   yo-NG -> yo (resolve to "yo-NG" / "yo"): locale timeZones
+   yrl-BR -> yrl (resolve to "yrl-BR" / "yrl"): locale timeZones
+   yue-CN -> yue-Hans (resolve to "yue-CN" / "yue-Hans"): locale timeZones
+   yue-HK -> yue (resolve to "yue-HK" / "yue"): locale timeZones
+   yue-Hans-CN -> yue-Hans (resolve to "yue-Hans-CN" / "yue-Hans"): locale timeZones
+   yue-Hant-HK -> yue-Hant (resolve to "yue-Hant-HK" / "yue-Hant"): locale timeZones
+   yue-Hant-MO -> yue-Hant (resolve to "yue-Hant-MO" / "yue-Hant"): locale timeZones
+   yue-MO -> yue (resolve to "yue-MO" / "yue"): locale timeZones
+   za-CN -> za (resolve to "za-CN" / "za"): locale timeZones
+   zgh-MA -> zgh (resolve to "zgh-MA" / "zgh"): locale timeZones
+   zh-CN -> zh (resolve to "zh-CN" / "zh"): locale timeZones
+   zh-Hans-CN -> zh-Hans (resolve to "zh-Hans-CN" / "zh-Hans"): locale timeZones
+   zh-Hant-TW -> zh-Hant (resolve to "zh-Hant-TW" / "zh-Hant"): locale timeZones
+   zh-Latn-CN -> zh-Latn (resolve to "zh" / "zh"): locale timeZones
+   zh-TW -> zh-Hant (resolve to "zh-TW" / "zh-Hant"): locale timeZones
+   zu-ZA -> zu (resolve to "zu-ZA" / "zu"): locale timeZones
+-- likely: 402 of 402 pairs differ
+   keys (pairs): locale timeZones 402, fmt dtf default 4, fmt toLocaleString 4, fmt dtf time full 3, fmt dtf time long 3, fmt dtf time medium 3, fmt dtf time short 3, fmt nf EUR 3, fmt nf USD 3, fmt dtf date full 2, fmt dtf date long 2, fmt dtf date medium 2, fmt dtf date short 2, fmt dtf hour 2, fmt dtf hour minute 2, fmt dtf weekday month 2, fmt dtf dayPeriod 2, fmt dtf range 2, fmt nf default 2, fmt nf percent 2, fmt nf compact 2, fmt nf compact long 2, fmt nf unit 2, fmt nf small 2, fmt rtf 2, opts dtf hourCycle/calendar/numberingSystem 2, opts nf numberingSystem 1, locale numberingSystems 1, fmt list 1, fmt displaynames 1
+   aa-ET -> aa (resolve to "en-US" / "en-US"): locale timeZones
+   ab-GE -> ab (resolve to "en-US" / "en-US"): locale timeZones
+   ady-RU -> ady (resolve to "en-US" / "en-US"): locale timeZones
+   af-ZA -> af (resolve to "af-ZA" / "af"): locale timeZones
+   agq-CM -> agq (resolve to "agq-CM" / "agq"): locale timeZones
+   ak-GH -> ak (resolve to "ak-GH" / "ak"): locale timeZones
+   am-ET -> am (resolve to "am-ET" / "am"): locale timeZones
+   an-ES -> an (resolve to "en-US" / "en-US"): locale timeZones
+   ann-NG -> ann (resolve to "en-US" / "en-US"): locale timeZones
+   apc-SY -> apc (resolve to "en-US" / "en-US"): locale timeZones
+   ar-EG -> ar (resolve to "ar-EG" / "ar"): fmt dtf default, fmt dtf date full, fmt dtf time full, fmt dtf date long, fmt dtf time long, fmt dtf date medium, fmt dtf time medium, fmt dtf date short, fmt dtf time short, fmt dtf hour, fmt dtf hour minute, fmt dtf weekday month, fmt dtf dayPeriod, fmt toLocaleString, fmt dtf range, fmt nf default, fmt nf percent, fmt nf compact, fmt nf compact long, fmt nf EUR, fmt nf USD, fmt nf unit, fmt nf small, fmt rtf, opts dtf hourCycle/calendar/numberingSystem, opts nf numberingSystem, locale numberingSystems, locale timeZones
+      fmt dtf default: ["٧‏/١‏/٢٠٢٤","١‏/٧‏/٢٠٢٤"]  vs  ["7‏/1‏/2024","1‏/7‏/2024"]
+      fmt dtf date full: ["الأحد، ٧ يناير ٢٠٢٤","الاثنين، ١ يوليو ٢٠٢٤"]  vs  ["الأحد، 7 يناير 2024","الاثنين، 1 يوليو 2024"]
+      fmt dtf time full: ["٣:٠٤:٠٥ م التوقيت العالمي المنسق","٣:٠٤:٠٥ ص التوقيت العالمي المنسق"]  vs  ["3:04:05 م التوقيت العالمي المنسق","3:04:05 ص التوقيت العالمي المنسق"]
+      fmt dtf date long: ["٧ يناير ٢٠٢٤","١ يوليو ٢٠٢٤"]  vs  ["7 يناير 2024","1 يوليو 2024"]
+      fmt dtf time long: ["٣:٠٤:٠٥ م UTC","٣:٠٤:٠٥ ص UTC"]  vs  ["3:04:05 م UTC","3:04:05 ص UTC"]
+      fmt dtf date medium: ["٠٧‏/٠١‏/٢٠٢٤","٠١‏/٠٧‏/٢٠٢٤"]  vs  ["07‏/01‏/2024","01‏/07‏/2024"]
+      fmt dtf time medium: ["٣:٠٤:٠٥ م","٣:٠٤:٠٥ ص"]  vs  ["3:04:05 م","3:04:05 ص"]
+      fmt dtf date short: ["٧‏/١‏/٢٠٢٤","١‏/٧‏/٢٠٢٤"]  vs  ["7‏/1‏/2024","1‏/7‏/2024"]
+      fmt dtf time short: ["٣:٠٤ م","٣:٠٤ ص"]  vs  ["3:04 م","3:04 ص"]
+      fmt dtf hour: ["٣ م","٣ ص"]  vs  ["3 م","3 ص"]
+      fmt dtf hour minute: ["٣:٠٤ م","٣:٠٤ ص"]  vs  ["3:04 م","3:04 ص"]
+      fmt dtf weekday month: ["الأحد، ٧ يناير","الاثنين، ١ يوليو"]  vs  ["الأحد، 7 يناير","الاثنين، 1 يوليو"]
+      fmt dtf dayPeriod: ["٣ بعد الظهر","٣ فجرًا"]  vs  ["3 بعد الظهر","3 فجرًا"]
+      fmt toLocaleString: ["٧‏/١‏/٢٠٢٤، ٣:٠٤:٠٥ م","١‏/٧‏/٢٠٢٤، ٣:٠٤:٠٥ ص"]  vs  ["7‏/1‏/2024، 3:04:05 م","1‏/7‏/2024، 3:04:05 ص"]
+      fmt dtf range: "٧‏/١‏/٢٠٢٤ – ١‏/٧‏/٢٠٢٤"  vs  "7‏/1‏/2024 – 1‏/7‏/2024"
+      fmt nf default: "١٬٢٣٤٬٥٦٧٫٨٩١"  vs  "1,234,567.891"
+      fmt nf percent: "٢٦٪؜"  vs  "26‎%‎"
+      fmt nf compact: "١٫٢ مليون"  vs  "1.2 مليون"
+      fmt nf compact long: "١٫٢ مليون"  vs  "1.2 مليون"
+      fmt nf EUR: "‏١٬٢٣٤٫٥٠ €"  vs  "‏1,234.50 €"
+      fmt nf USD: "‏١٬٢٣٤٫٥٠ US$"  vs  "‏1,234.50 US$"
+      fmt nf unit: "١٢ كيلومتر في الساعة"  vs  "12 كيلومتر في الساعة"
+      fmt nf small: "١٬٢٣٤"  vs  "1,234"
+      fmt rtf: ["أمس","قبل ٥ أيام","خلال ٣ ساعات"]  vs  ["أمس","قبل 5 أيام","خلال 3 ساعات"]
+      opts dtf hourCycle/calendar/numberingSystem: ["h12","gregory","arab"]  vs  ["h12","gregory","latn"]
+      opts nf numberingSystem: "arab"  vs  "latn"
+      locale numberingSystems: ["arab"]  vs  ["latn"]
+   arn-CL -> arn (resolve to "en-US" / "en-US"): locale timeZones
+   ary-MA -> ary (resolve to "en-US" / "en-US"): locale timeZones
+   as-IN -> as (resolve to "as-IN" / "as"): locale timeZones
+   asa-TZ -> asa (resolve to "asa-TZ" / "asa"): locale timeZones
+   ast-ES -> ast (resolve to "ast-ES" / "ast"): locale timeZones
+   az-AZ -> az (resolve to "az-AZ" / "az"): locale timeZones
+   az-Arab-IR -> az-Arab (resolve to "az" / "az"): locale timeZones
+   az-IR -> az-Arab (resolve to "az" / "az"): locale timeZones
+   az-Cyrl-AZ -> az-Cyrl (resolve to "az-Cyrl-AZ" / "az-Cyrl"): locale timeZones
+   az-Latn-AZ -> az-Latn (resolve to "az-Latn-AZ" / "az-Latn"): locale timeZones
+   ba-RU -> ba (resolve to "ba-RU" / "ba"): locale timeZones
+   bal-PK -> bal (resolve to "en-US" / "en-US"): locale timeZones
+   bal-Arab-PK -> bal-Arab (resolve to "en-US" / "en-US"): locale timeZones
+   bal-Latn-PK -> bal-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   bas-CM -> bas (resolve to "bas-CM" / "bas"): locale timeZones
+   be-BY -> be (resolve to "be-BY" / "be"): locale timeZones
+   bem-ZM -> bem (resolve to "bem-ZM" / "bem"): locale timeZones
+   bew-ID -> bew (resolve to "en-US" / "en-US"): locale timeZones
+   bez-TZ -> bez (resolve to "bez-TZ" / "bez"): locale timeZones
+   bg-BG -> bg (resolve to "bg-BG" / "bg"): locale timeZones
+   bgc-IN -> bgc (resolve to "bgc-IN" / "bgc"): locale timeZones
+   bgn-PK -> bgn (resolve to "en-US" / "en-US"): locale timeZones
+   bho-IN -> bho (resolve to "bho-IN" / "bho"): locale timeZones
+   blo-BJ -> blo (resolve to "blo-BJ" / "blo"): locale timeZones
+   blt-VN -> blt (resolve to "en-US" / "en-US"): locale timeZones
+   bm-ML -> bm (resolve to "bm-ML" / "bm"): locale timeZones
+   bm-Nkoo-ML -> bm-Nkoo (resolve to "bm" / "bm"): locale timeZones
+   bn-BD -> bn (resolve to "bn-BD" / "bn"): locale timeZones
+   bo-CN -> bo (resolve to "bo-CN" / "bo"): locale timeZones
+   bqi-IR -> bqi (resolve to "en-US" / "en-US"): locale timeZones
+   br-FR -> br (resolve to "br-FR" / "br"): locale timeZones
+   brh-PK -> brh (resolve to "en-US" / "en-US"): locale timeZones
+   brx-IN -> brx (resolve to "brx-IN" / "brx"): locale timeZones
+   bs-BA -> bs (resolve to "bs-BA" / "bs"): locale timeZones
+   bs-Cyrl-BA -> bs-Cyrl (resolve to "bs-Cyrl-BA" / "bs-Cyrl"): locale timeZones
+   bs-Latn-BA -> bs-Latn (resolve to "bs-Latn-BA" / "bs-Latn"): locale timeZones
+   bss-CM -> bss (resolve to "en-US" / "en-US"): locale timeZones
+   bua-RU -> bua (resolve to "bua-RU" / "bua"): locale timeZones
+   byn-ER -> byn (resolve to "en-US" / "en-US"): locale timeZones
+   ca-ES -> ca (resolve to "ca-ES" / "ca"): locale timeZones
+   cad-US -> cad (resolve to "en-US" / "en-US"): locale timeZones
+   cch-NG -> cch (resolve to "en-US" / "en-US"): locale timeZones
+   ccp-BD -> ccp (resolve to "ccp-BD" / "ccp"): locale timeZones
+   ce-RU -> ce (resolve to "ce-RU" / "ce"): locale timeZones
+   ceb-PH -> ceb (resolve to "ceb-PH" / "ceb"): locale timeZones
+   cgg-UG -> cgg (resolve to "cgg-UG" / "cgg"): locale timeZones
+   cho-US -> cho (resolve to "en-US" / "en-US"): locale timeZones
+   chr-US -> chr (resolve to "chr-US" / "chr"): locale timeZones
+   cic-US -> cic (resolve to "en-US" / "en-US"): locale timeZones
+   ckb-IQ -> ckb (resolve to "ckb-IQ" / "ckb"): locale timeZones
+   co-FR -> co (resolve to "en-US" / "en-US"): locale timeZones
+   cop-EG -> cop (resolve to "en-US" / "en-US"): locale timeZones
+   cs-CZ -> cs (resolve to "cs-CZ" / "cs"): locale timeZones
+   csw-CA -> csw (resolve to "csw-CA" / "csw"): locale timeZones
+   cu-RU -> cu (resolve to "en-US" / "en-US"): locale timeZones
+   cv-RU -> cv (resolve to "cv-RU" / "cv"): locale timeZones
+   cy-GB -> cy (resolve to "cy-GB" / "cy"): locale timeZones
+   da-DK -> da (resolve to "da-DK" / "da"): locale timeZones
+   dav-KE -> dav (resolve to "dav-KE" / "dav"): locale timeZones
+   de-DE -> de (resolve to "de-DE" / "de"): locale timeZones
+   dje-NE -> dje (resolve to "dje-NE" / "dje"): locale timeZones
+   doi-IN -> doi (resolve to "doi-IN" / "doi"): locale timeZones
+   dsb-DE -> dsb (resolve to "dsb-DE" / "dsb"): locale timeZones
+   dua-CM -> dua (resolve to "dua-CM" / "dua"): locale timeZones
+   dv-MV -> dv (resolve to "en-US" / "en-US"): locale timeZones
+   dyo-SN -> dyo (resolve to "dyo-SN" / "dyo"): locale timeZones
+   dz-BT -> dz (resolve to "dz-BT" / "dz"): locale timeZones
+   ebu-KE -> ebu (resolve to "ebu-KE" / "ebu"): locale timeZones
+   ee-GH -> ee (resolve to "ee-GH" / "ee"): locale timeZones
+   el-GR -> el (resolve to "el-GR" / "el"): locale timeZones
+   en-US -> en (resolve to "en-US" / "en"): locale timeZones
+   en-Dsrt-US -> en-Dsrt (resolve to "en" / "en"): locale timeZones
+   en-Shaw-GB -> en-Shaw (resolve to "en" / "en"): locale timeZones
+   eo-001 -> eo (resolve to "eo-001" / "eo"): locale timeZones
+   es-ES -> es (resolve to "es-ES" / "es"): locale timeZones
+   et-EE -> et (resolve to "et-EE" / "et"): locale timeZones
+   eu-ES -> eu (resolve to "eu-ES" / "eu"): locale timeZones
+   ewo-CM -> ewo (resolve to "ewo-CM" / "ewo"): locale timeZones
+   fa-IR -> fa (resolve to "fa-IR" / "fa"): locale timeZones
+   ff-SN -> ff (resolve to "ff-SN" / "ff"): locale timeZones
+   ff-Adlm-GN -> ff-Adlm (resolve to "ff-Adlm-GN" / "ff-Adlm"): locale timeZones
+   ff-Latn-SN -> ff-Latn (resolve to "ff-Latn-SN" / "ff-Latn"): locale timeZones
+   fi-FI -> fi (resolve to "fi-FI" / "fi"): locale timeZones
+   fil-PH -> fil (resolve to "fil-PH" / "fil"): locale timeZones
+   fo-FO -> fo (resolve to "fo-FO" / "fo"): locale timeZones
+   fr-FR -> fr (resolve to "fr-FR" / "fr"): locale timeZones
+   frr-DE -> frr (resolve to "en-US" / "en-US"): locale timeZones
+   fur-IT -> fur (resolve to "fur-IT" / "fur"): locale timeZones
+   fy-NL -> fy (resolve to "fy-NL" / "fy"): locale timeZones
+   ga-IE -> ga (resolve to "ga-IE" / "ga"): locale timeZones
+   gaa-GH -> gaa (resolve to "gaa-GH" / "gaa"): locale timeZones
+   gd-GB -> gd (resolve to "gd-GB" / "gd"): locale timeZones
+   gez-ET -> gez (resolve to "en-US" / "en-US"): locale timeZones
+   gl-ES -> gl (resolve to "gl-ES" / "gl"): locale timeZones
+   gn-PY -> gn (resolve to "en-US" / "en-US"): locale timeZones
+   gsw-CH -> gsw (resolve to "gsw-CH" / "gsw"): locale timeZones
+   gu-IN -> gu (resolve to "gu-IN" / "gu"): locale timeZones
+   guz-KE -> guz (resolve to "guz-KE" / "guz"): locale timeZones
+   gv-IM -> gv (resolve to "gv-IM" / "gv"): locale timeZones
+   ha-NG -> ha (resolve to "ha-NG" / "ha"): locale timeZones
+   ha-Arab-NG -> ha-Arab (resolve to "ha" / "ha"): locale timeZones
+   haw-US -> haw (resolve to "haw-US" / "haw"): locale timeZones
+   he-IL -> he (resolve to "he-IL" / "he"): locale timeZones
+   hi-IN -> hi (resolve to "hi-IN" / "hi"): locale timeZones
+   hi-Latn-IN -> hi-Latn (resolve to "hi-Latn-IN" / "hi-Latn"): locale timeZones
+   hnj-US -> hnj (resolve to "en-US" / "en-US"): locale timeZones
+   hnj-Hmnp-US -> hnj-Hmnp (resolve to "en-US" / "en-US"): locale timeZones
+   hr-HR -> hr (resolve to "hr-HR" / "hr"): locale timeZones
+   hrx-BR -> hrx (resolve to "en-US" / "en-US"): locale timeZones
+   hsb-DE -> hsb (resolve to "hsb-DE" / "hsb"): locale timeZones
+   ht-HT -> ht (resolve to "en-US" / "en-US"): locale timeZones
+   hu-HU -> hu (resolve to "hu-HU" / "hu"): locale timeZones
+   hy-AM -> hy (resolve to "hy-AM" / "hy"): locale timeZones
+   ia-001 -> ia (resolve to "ia-001" / "ia"): locale timeZones
+   id-ID -> id (resolve to "id-ID" / "id"): locale timeZones
+   ie-EE -> ie (resolve to "ie-EE" / "ie"): locale timeZones
+   ig-NG -> ig (resolve to "ig-NG" / "ig"): locale timeZones
+   ii-CN -> ii (resolve to "ii-CN" / "ii"): locale timeZones
+   io-001 -> io (resolve to "en-US" / "en-US"): locale timeZones
+   is-IS -> is (resolve to "is-IS" / "is"): locale timeZones
+   isv-001 -> isv (resolve to "en-US" / "en-US"): locale timeZones
+   isv-Cyrl-001 -> isv-Cyrl (resolve to "en-US" / "en-US"): locale timeZones
+   isv-Latn-001 -> isv-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   it-IT -> it (resolve to "it-IT" / "it"): locale timeZones
+   iu-CA -> iu (resolve to "en-US" / "en-US"): locale timeZones
+   iu-Latn-CA -> iu-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   ja-JP -> ja (resolve to "ja-JP" / "ja"): locale timeZones
+   jbo-001 -> jbo (resolve to "en-US" / "en-US"): locale timeZones
+   jgo-CM -> jgo (resolve to "jgo-CM" / "jgo"): locale timeZones
+   jmc-TZ -> jmc (resolve to "jmc-TZ" / "jmc"): locale timeZones
+   jv-ID -> jv (resolve to "jv-ID" / "jv"): locale timeZones
+   ka-GE -> ka (resolve to "ka-GE" / "ka"): locale timeZones
+   kaa-UZ -> kaa (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-Cyrl-UZ -> kaa-Cyrl (resolve to "en-US" / "en-US"): locale timeZones
+   kaa-Latn-UZ -> kaa-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   kab-DZ -> kab (resolve to "kab-DZ" / "kab"): locale timeZones
+   kaj-NG -> kaj (resolve to "en-US" / "en-US"): locale timeZones
+   kam-KE -> kam (resolve to "kam-KE" / "kam"): locale timeZones
+   kbd-RU -> kbd (resolve to "en-US" / "en-US"): locale timeZones
+   kcg-NG -> kcg (resolve to "en-US" / "en-US"): locale timeZones
+   kde-TZ -> kde (resolve to "kde-TZ" / "kde"): locale timeZones
+   kea-CV -> kea (resolve to "kea-CV" / "kea"): fmt nf EUR, fmt nf USD, locale timeZones
+      fmt nf EUR: "1 234$50 €"  vs  "1 234,50 €"
+      fmt nf USD: "1 234$50 US$"  vs  "1 234,50 US$"
+   kek-GT -> kek (resolve to "en-US" / "en-US"): locale timeZones
+   ken-CM -> ken (resolve to "en-US" / "en-US"): locale timeZones
+   kgp-BR -> kgp (resolve to "kgp-BR" / "kgp"): locale timeZones
+   khq-ML -> khq (resolve to "khq-ML" / "khq"): locale timeZones
+   ki-KE -> ki (resolve to "ki-KE" / "ki"): locale timeZones
+   kk-KZ -> kk (resolve to "kk-KZ" / "kk"): locale timeZones
+   kk-Arab-CN -> kk-Arab (resolve to "kk-Arab-CN" / "kk-Arab"): locale timeZones
+   kk-CN -> kk-Arab (resolve to "kk-CN" / "kk-Arab"): locale timeZones
+   kk-Cyrl-KZ -> kk-Cyrl (resolve to "kk-Cyrl-KZ" / "kk-Cyrl"): locale timeZones
+   kkj-CM -> kkj (resolve to "kkj-CM" / "kkj"): locale timeZones
+   kl-GL -> kl (resolve to "kl-GL" / "kl"): locale timeZones
+   kln-KE -> kln (resolve to "kln-KE" / "kln"): locale timeZones
+   km-KH -> km (resolve to "km-KH" / "km"): locale timeZones
+   kn-IN -> kn (resolve to "kn-IN" / "kn"): locale timeZones
+   ko-KR -> ko (resolve to "ko-KR" / "ko"): locale timeZones
+   kok-IN -> kok (resolve to "kok-IN" / "kok"): fmt dtf time full, fmt dtf time long, fmt dtf time medium, fmt dtf time short, locale timeZones
+      fmt dtf time full: ["PM 3:04:05 समन्वित वैश्विक वेळ","AM 3:04:05 समन्वित वैश्विक वेळ"]  vs  ["3:04:05 PM समन्वित वैश्विक वेळ","3:04:05 AM समन्वित वैश्विक वेळ"]
+      fmt dtf time long: ["PM 3:04:05 UTC","AM 3:04:05 UTC"]  vs  ["3:04:05 PM UTC","3:04:05 AM UTC"]
+      fmt dtf time medium: ["PM 3:04:05","AM 3:04:05"]  vs  ["3:04:05 PM","3:04:05 AM"]
+      fmt dtf time short: ["PM 3:04","AM 3:04"]  vs  ["3:04 PM","3:04 AM"]
+   kok-Deva-IN -> kok-Deva (resolve to "kok-Deva-IN" / "kok-Deva"): locale timeZones
+   kok-Latn-IN -> kok-Latn (resolve to "kok-Latn-IN" / "kok-Latn"): locale timeZones
+   kpe-LR -> kpe (resolve to "en-US" / "en-US"): locale timeZones
+   ks-IN -> ks (resolve to "ks-IN" / "ks"): locale timeZones
+   ks-Arab-IN -> ks-Arab (resolve to "ks-Arab-IN" / "ks-Arab"): locale timeZones
+   ks-Deva-IN -> ks-Deva (resolve to "ks-Deva-IN" / "ks-Deva"): locale timeZones
+   ksb-TZ -> ksb (resolve to "ksb-TZ" / "ksb"): locale timeZones
+   ksf-CM -> ksf (resolve to "ksf-CM" / "ksf"): locale timeZones
+   ksh-DE -> ksh (resolve to "ksh-DE" / "ksh"): locale timeZones
+   ku-TR -> ku (resolve to "ku-TR" / "ku"): locale timeZones
+   ku-Arab-IQ -> ku-Arab (resolve to "ku" / "ku"): locale timeZones
+   ku-IQ -> ku-Arab (resolve to "ku-IQ" / "ku"): fmt dtf default, fmt dtf date full, fmt dtf time full, fmt dtf date long, fmt dtf time long, fmt dtf date medium, fmt dtf time medium, fmt dtf date short, fmt dtf time short, fmt dtf hour, fmt dtf hour minute, fmt dtf weekday month, fmt dtf dayPeriod, fmt toLocaleString, fmt dtf range, fmt nf default, fmt nf percent, fmt nf compact, fmt nf compact long, fmt nf EUR, fmt nf USD, fmt nf unit, fmt nf small, fmt rtf, fmt list, fmt displaynames, opts dtf hourCycle/calendar/numberingSystem, locale timeZones
+      fmt dtf default: ["2024-01-07","2024-07-01"]  vs  ["07.01.2024","01.07.2024"]
+      fmt dtf date full: ["2024 M01 7, Sun","2024 M07 1, Mon"]  vs  ["yekşem, 7ê rêbendana 2024an","duşem, 1ê tîrmeha 2024an"]
+      fmt dtf time full: ["3:04:05 PM GMT+00:00","3:04:05 AM GMT+00:00"]  vs  ["15:04:05 Saeta Gerdûnî ya Hevdemî","03:04:05 Saeta Gerdûnî ya Hevdemî"]
+      fmt dtf date long: ["2024 M01 7","2024 M07 1"]  vs  ["7ê rêbendana 2024an","1ê tîrmeha 2024an"]
+      fmt dtf time long: ["3:04:05 PM UTC","3:04:05 AM UTC"]  vs  ["15:04:05 SGH","03:04:05 SGH"]
+      fmt dtf date medium: ["2024 M01 7","2024 M07 1"]  vs  ["7 rbn, 2024","1 trm, 2024"]
+      fmt dtf time medium: ["3:04:05 PM","3:04:05 AM"]  vs  ["15:04:05","03:04:05"]
+      fmt dtf date short: ["2024-01-07","2024-07-01"]  vs  ["07.01.2024","01.07.2024"]
+      fmt dtf time short: ["3:04 PM","3:04 AM"]  vs  ["15:04","03:04"]
+      fmt dtf hour: ["3 PM","3 AM"]  vs  ["15","03"]
+      fmt dtf hour minute: ["3:04 PM","3:04 AM"]  vs  ["15:04","03:04"]
+      fmt dtf weekday month: ["M01 7, Sun","M07 1, Mon"]  vs  ["7 rêbendan, yekşem","1 tîrmeh, duşem"]
+      fmt dtf dayPeriod: ["3 PM","3 AM"]  vs  ["15","03"]
+      fmt toLocaleString: ["2024-01-07 3:04:05 PM","2024-07-01 3:04:05 AM"]  vs  ["07.01.2024 15:04:05","01.07.2024 03:04:05"]
+      fmt dtf range: "2024 M01 7 – M07 1"  vs  "7 rbn – 1 trm, 2024"
+      fmt nf default: "1,234,567.891"  vs  "1.234.567,891"
+      fmt nf percent: "26%"  vs  "%26"
+      fmt nf compact: "1.2M"  vs  "1,2MN"
+      fmt nf compact long: "1.2M"  vs  "1,2 milyon"
+      fmt nf EUR: "€ 1,234.50"  vs  "1.234,50 €"
+      fmt nf USD: "US$ 1,234.50"  vs  "1.234,50 $"
+      fmt nf unit: "12 km/h"  vs  "12 km/st"
+      fmt nf small: "1,234"  vs  "1.234"
+      fmt rtf: ["yesterday","-5 d","+3 h"]  vs  ["duh","berî 5 rojan","piştî 3 saetan"]
+      fmt list: "a, b, c"  vs  "a, b û c"
+      fmt displaynames: ["US","DE","fr","en-US"]  vs  ["Dewletên Amerîkayê yên Yekbûyî","Almanya","fransizî","îngilîzî (amerîkî)"]
+      opts dtf hourCycle/calendar/numberingSystem: ["h12","gregory","latn"]  vs  ["h23","gregory","latn"]
+   ku-Latn-TR -> ku-Latn (resolve to "ku-Latn-TR" / "ku-Latn"): locale timeZones
+   kw-GB -> kw (resolve to "kw-GB" / "kw"): locale timeZones
+   kxv-IN -> kxv (resolve to "kxv-IN" / "kxv"): locale timeZones
+   kxv-Deva-IN -> kxv-Deva (resolve to "kxv-Deva-IN" / "kxv-Deva"): locale timeZones
+   kxv-Latn-IN -> kxv-Latn (resolve to "kxv-Latn-IN" / "kxv-Latn"): locale timeZones
+   kxv-Orya-IN -> kxv-Orya (resolve to "kxv-Orya-IN" / "kxv-Orya"): locale timeZones
+   kxv-Telu-IN -> kxv-Telu (resolve to "kxv-Telu-IN" / "kxv-Telu"): locale timeZones
+   ky-KG -> ky (resolve to "ky-KG" / "ky"): locale timeZones
+   la-VA -> la (resolve to "en-US" / "en-US"): locale timeZones
+   lag-TZ -> lag (resolve to "lag-TZ" / "lag"): locale timeZones
+   lb-LU -> lb (resolve to "lb-LU" / "lb"): locale timeZones
+   lg-UG -> lg (resolve to "lg-UG" / "lg"): locale timeZones
+   lij-IT -> lij (resolve to "lij-IT" / "lij"): locale timeZones
+   lkt-US -> lkt (resolve to "lkt-US" / "lkt"): locale timeZones
+   lld-IT -> lld (resolve to "en-US" / "en-US"): locale timeZones
+   lmo-IT -> lmo (resolve to "lmo-IT" / "lmo"): locale timeZones
+   ln-CD -> ln (resolve to "ln-CD" / "ln"): locale timeZones
+   lo-LA -> lo (resolve to "lo-LA" / "lo"): locale timeZones
+   lrc-IR -> lrc (resolve to "lrc-IR" / "lrc"): locale timeZones
+   lt-LT -> lt (resolve to "lt-LT" / "lt"): locale timeZones
+   ltg-LV -> ltg (resolve to "en-US" / "en-US"): locale timeZones
+   lu-CD -> lu (resolve to "lu-CD" / "lu"): locale timeZones
+   luo-KE -> luo (resolve to "luo-KE" / "luo"): locale timeZones
+   luy-KE -> luy (resolve to "luy-KE" / "luy"): locale timeZones
+   lv-LV -> lv (resolve to "lv-LV" / "lv"): locale timeZones
+   lzz-TR -> lzz (resolve to "en-US" / "en-US"): locale timeZones
+   mai-IN -> mai (resolve to "mai-IN" / "mai"): locale timeZones
+   mas-KE -> mas (resolve to "mas-KE" / "mas"): locale timeZones
+   mdf-RU -> mdf (resolve to "en-US" / "en-US"): locale timeZones
+   mer-KE -> mer (resolve to "mer-KE" / "mer"): locale timeZones
+   mfe-MU -> mfe (resolve to "mfe-MU" / "mfe"): locale timeZones
+   mg-MG -> mg (resolve to "mg-MG" / "mg"): locale timeZones
+   mgh-MZ -> mgh (resolve to "mgh-MZ" / "mgh"): locale timeZones
+   mgo-CM -> mgo (resolve to "mgo-CM" / "mgo"): locale timeZones
+   mhn-IT -> mhn (resolve to "en-US" / "en-US"): locale timeZones
+   mi-NZ -> mi (resolve to "mi-NZ" / "mi"): locale timeZones
+   mic-CA -> mic (resolve to "en-US" / "en-US"): locale timeZones
+   mk-MK -> mk (resolve to "mk-MK" / "mk"): locale timeZones
+   ml-IN -> ml (resolve to "ml-IN" / "ml"): locale timeZones
+   mn-MN -> mn (resolve to "mn-MN" / "mn"): locale timeZones
+   mn-Mong-CN -> mn-Mong (resolve to "mn" / "mn"): locale timeZones
+   mn-CN -> mn-Mong (resolve to "mn" / "mn"): locale timeZones
+   mni-IN -> mni (resolve to "mni-IN" / "mni"): locale timeZones
+   mni-Beng-IN -> mni-Beng (resolve to "mni-Beng-IN" / "mni-Beng"): locale timeZones
+   mni-Mtei-IN -> mni-Mtei (resolve to "mni" / "mni"): locale timeZones
+   moh-CA -> moh (resolve to "en-US" / "en-US"): locale timeZones
+   mr-IN -> mr (resolve to "mr-IN" / "mr"): locale timeZones
+   mrh-IN -> mrh (resolve to "en-US" / "en-US"): locale timeZones
+   ms-MY -> ms (resolve to "ms-MY" / "ms"): locale timeZones
+   ms-Arab-MY -> ms-Arab (resolve to "ms" / "ms"): locale timeZones
+   mt-MT -> mt (resolve to "mt-MT" / "mt"): locale timeZones
+   mua-CM -> mua (resolve to "mua-CM" / "mua"): locale timeZones
+   mus-US -> mus (resolve to "en-US" / "en-US"): locale timeZones
+   mww-US -> mww (resolve to "en-US" / "en-US"): locale timeZones
+   mww-Hmnp-US -> mww-Hmnp (resolve to "en-US" / "en-US"): locale timeZones
+   my-MM -> my (resolve to "my-MM" / "my"): locale timeZones
+   myv-RU -> myv (resolve to "en-US" / "en-US"): locale timeZones
+   mzn-IR -> mzn (resolve to "mzn-IR" / "mzn"): locale timeZones
+   naq-NA -> naq (resolve to "naq-NA" / "naq"): locale timeZones
+   nb-NO -> nb (resolve to "nb-NO" / "nb"): locale timeZones
+   nd-ZW -> nd (resolve to "nd-ZW" / "nd"): locale timeZones
+   nds-DE -> nds (resolve to "nds-DE" / "nds"): locale timeZones
+   ne-NP -> ne (resolve to "ne-NP" / "ne"): locale timeZones
+   nl-NL -> nl (resolve to "nl-NL" / "nl"): locale timeZones
+   nmg-CM -> nmg (resolve to "nmg-CM" / "nmg"): locale timeZones
+   nn-NO -> nn (resolve to "nn-NO" / "nn"): locale timeZones
+   nnh-CM -> nnh (resolve to "nnh-CM" / "nnh"): locale timeZones
+   no-NO -> no (resolve to "no" / "no"): locale timeZones
+   nqo-GN -> nqo (resolve to "nqo-GN" / "nqo"): locale timeZones
+   nr-ZA -> nr (resolve to "en-US" / "en-US"): locale timeZones
+   nso-ZA -> nso (resolve to "nso-ZA" / "nso"): locale timeZones
+   nus-SS -> nus (resolve to "nus-SS" / "nus"): locale timeZones
+   nv-US -> nv (resolve to "en-US" / "en-US"): locale timeZones
+   ny-MW -> ny (resolve to "en-US" / "en-US"): locale timeZones
+   nyn-UG -> nyn (resolve to "nyn-UG" / "nyn"): locale timeZones
+   oc-FR -> oc (resolve to "oc-FR" / "oc"): locale timeZones
+   oka-CA -> oka (resolve to "en-US" / "en-US"): locale timeZones
+   om-ET -> om (resolve to "om-ET" / "om"): locale timeZones
+   or-IN -> or (resolve to "or-IN" / "or"): locale timeZones
+   os-GE -> os (resolve to "os-GE" / "os"): locale timeZones
+   osa-US -> osa (resolve to "en-US" / "en-US"): locale timeZones
+   pa-IN -> pa (resolve to "pa-IN" / "pa"): locale timeZones
+   pa-Arab-PK -> pa-Arab (resolve to "pa-Arab-PK" / "pa-Arab"): locale timeZones
+   pa-PK -> pa-Arab (resolve to "pa-PK" / "pa-Arab"): locale timeZones
+   pa-Guru-IN -> pa-Guru (resolve to "pa-Guru-IN" / "pa-Guru"): locale timeZones
+   pap-CW -> pap (resolve to "en-US" / "en-US"): locale timeZones
+   pcm-NG -> pcm (resolve to "pcm-NG" / "pcm"): locale timeZones
+   pi-GB -> pi (resolve to "en-US" / "en-US"): locale timeZones
+   pi-Latn-GB -> pi-Latn (resolve to "en-US" / "en-US"): locale timeZones
+   pis-SB -> pis (resolve to "en-US" / "en-US"): locale timeZones
+   pl-PL -> pl (resolve to "pl-PL" / "pl"): locale timeZones
+   pms-IT -> pms (resolve to "pms-IT" / "pms"): locale timeZones
+   prg-PL -> prg (resolve to "prg-PL" / "prg"): locale timeZones
+   ps-AF -> ps (resolve to "ps-AF" / "ps"): locale timeZones
+   pt-BR -> pt (resolve to "pt-BR" / "pt"): locale timeZones
+   qu-PE -> qu (resolve to "qu-PE" / "qu"): locale timeZones
+   quc-GT -> quc (resolve to "en-US" / "en-US"): locale timeZones
+   raj-IN -> raj (resolve to "raj-IN" / "raj"): locale timeZones
+   rhg-MM -> rhg (resolve to "en-US" / "en-US"): locale timeZones
+   rhg-Rohg-MM -> rhg-Rohg (resolve to "en-US" / "en-US"): locale timeZones
+   rif-MA -> rif (resolve to "en-US" / "en-US"): locale timeZones
+   rm-CH -> rm (resolve to "rm-CH" / "rm"): locale timeZones
+   rn-BI -> rn (resolve to "rn-BI" / "rn"): locale timeZones
+   ro-RO -> ro (resolve to "ro-RO" / "ro"): locale timeZones
+   rof-TZ -> rof (resolve to "rof-TZ" / "rof"): locale timeZones
+   ru-RU -> ru (resolve to "ru-RU" / "ru"): locale timeZones
+   rw-RW -> rw (resolve to "rw-RW" / "rw"): locale timeZones
+   rwk-TZ -> rwk (resolve to "rwk-TZ" / "rwk"): locale timeZones
+   sa-IN -> sa (resolve to "sa-IN" / "sa"): locale timeZones
+   sah-RU -> sah (resolve to "sah-RU" / "sah"): locale timeZones
+   saq-KE -> saq (resolve to "saq-KE" / "saq"): locale timeZones
+   sat-IN -> sat (resolve to "sat-IN" / "sat"): locale timeZones
+   sat-Deva-IN -> sat-Deva (resolve to "sat" / "sat"): locale timeZones
+   sat-Olck-IN -> sat-Olck (resolve to "sat-Olck-IN" / "sat-Olck"): locale timeZones
+   sbp-TZ -> sbp (resolve to "sbp-TZ" / "sbp"): locale timeZones
+   sc-IT -> sc (resolve to "sc-IT" / "sc"): locale timeZones
+   scn-IT -> scn (resolve to "scn-IT" / "scn"): locale timeZones
+   sd-PK -> sd (resolve to "sd-PK" / "sd"): locale timeZones
+   sd-Arab-PK -> sd-Arab (resolve to "sd-Arab-PK" / "sd-Arab"): locale timeZones
+   sd-Deva-IN -> sd-Deva (resolve to "sd-Deva-IN" / "sd-Deva"): locale timeZones
+   sd-IN -> sd-Deva (resolve to "sd-IN" / "sd-Deva"): locale timeZones
+   sdh-IR -> sdh (resolve to "en-US" / "en-US"): locale timeZones
+   se-NO -> se (resolve to "se-NO" / "se"): locale timeZones
+   seh-MZ -> seh (resolve to "seh-MZ" / "seh"): locale timeZones
+   ses-ML -> ses (resolve to "ses-ML" / "ses"): locale timeZones
+   sg-CF -> sg (resolve to "sg-CF" / "sg"): locale timeZones
+   sgs-LT -> sgs (resolve to "en-US" / "en-US"): locale timeZones
+   shi-MA -> shi (resolve to "shi-MA" / "shi"): locale timeZones
+   shi-Latn-MA -> shi-Latn (resolve to "shi-Latn-MA" / "shi-Latn"): locale timeZones
+   shi-Tfng-MA -> shi-Tfng (resolve to "shi-Tfng-MA" / "shi-Tfng"): locale timeZones
+   shn-MM -> shn (resolve to "shn-MM" / "shn"): locale timeZones
+   si-LK -> si (resolve to "si-LK" / "si"): locale timeZones
+   sid-ET -> sid (resolve to "en-US" / "en-US"): locale timeZones
+   sk-SK -> sk (resolve to "sk-SK" / "sk"): locale timeZones
+   skr-PK -> skr (resolve to "en-US" / "en-US"): locale timeZones
+   sl-SI -> sl (resolve to "sl-SI" / "sl"): locale timeZones
+   sma-SE -> sma (resolve to "en-US" / "en-US"): locale timeZones
+   smj-SE -> smj (resolve to "en-US" / "en-US"): locale timeZones
+   smn-FI -> smn (resolve to "smn-FI" / "smn"): locale timeZones
+   sms-FI -> sms (resolve to "en-US" / "en-US"): locale timeZones
+   sn-ZW -> sn (resolve to "sn-ZW" / "sn"): locale timeZones
+   so-SO -> so (resolve to "so-SO" / "so"): locale timeZones
+   sq-AL -> sq (resolve to "sq-AL" / "sq"): locale timeZones
+   sr-RS -> sr (resolve to "sr-RS" / "sr"): locale timeZones
+   sr-Cyrl-RS -> sr-Cyrl (resolve to "sr-Cyrl-RS" / "sr-Cyrl"): locale timeZones
+   sr-Latn-RS -> sr-Latn (resolve to "sr-Latn-RS" / "sr-Latn"): locale timeZones
+   ss-ZA -> ss (resolve to "en-US" / "en-US"): locale timeZones
+   ssy-ER -> ssy (resolve to "en-US" / "en-US"): locale timeZones
+   st-ZA -> st (resolve to "st-ZA" / "st"): locale timeZones
+   su-ID -> su (resolve to "su-ID" / "su"): locale timeZones
+   su-Latn-ID -> su-Latn (resolve to "su-Latn-ID" / "su-Latn"): locale timeZones
+   sus-GN -> sus (resolve to "en-US" / "en-US"): locale timeZones
+   suz-NP -> suz (resolve to "en-US" / "en-US"): locale timeZones
+   suz-Deva-NP -> suz-Deva (resolve to "en-US" / "en-US"): locale timeZones
+   suz-Sunu-NP -> suz-Sunu (resolve to "en-US" / "en-US"): locale timeZones
+   sv-SE -> sv (resolve to "sv-SE" / "sv"): locale timeZones
+   sw-TZ -> sw (resolve to "sw-TZ" / "sw"): locale timeZones
+   syr-IQ -> syr (resolve to "syr-IQ" / "syr"): locale timeZones
+   szl-PL -> szl (resolve to "szl-PL" / "szl"): locale timeZones
+   ta-IN -> ta (resolve to "ta-IN" / "ta"): locale timeZones
+   te-IN -> te (resolve to "te-IN" / "te"): locale timeZones
+   teo-UG -> teo (resolve to "teo-UG" / "teo"): locale timeZones
+   tg-TJ -> tg (resolve to "tg-TJ" / "tg"): locale timeZones
+   th-TH -> th (resolve to "th-TH" / "th"): locale timeZones
+   ti-ET -> ti (resolve to "ti-ET" / "ti"): locale timeZones
+   tig-ER -> tig (resolve to "en-US" / "en-US"): locale timeZones
+   tk-TM -> tk (resolve to "tk-TM" / "tk"): locale timeZones
+   tn-ZA -> tn (resolve to "tn-ZA" / "tn"): locale timeZones
+   to-TO -> to (resolve to "to-TO" / "to"): locale timeZones
+   tok-001 -> tok (resolve to "tok-001" / "tok"): locale timeZones
+   tpi-PG -> tpi (resolve to "en-US" / "en-US"): locale timeZones
+   tr-TR -> tr (resolve to "tr-TR" / "tr"): locale timeZones
+   trv-TW -> trv (resolve to "en-US" / "en-US"): locale timeZones
+   trw-PK -> trw (resolve to "en-US" / "en-US"): locale timeZones
+   ts-ZA -> ts (resolve to "en-US" / "en-US"): locale timeZones
+   tt-RU -> tt (resolve to "tt-RU" / "tt"): locale timeZones
+   twq-NE -> twq (resolve to "twq-NE" / "twq"): locale timeZones
+   tyv-RU -> tyv (resolve to "tyv-RU" / "tyv"): locale timeZones
+   tzm-MA -> tzm (resolve to "tzm-MA" / "tzm"): locale timeZones
+   ug-CN -> ug (resolve to "ug-CN" / "ug"): locale timeZones
+   uk-UA -> uk (resolve to "uk-UA" / "uk"): locale timeZones
+   ur-PK -> ur (resolve to "ur-PK" / "ur"): locale timeZones
+   uz-UZ -> uz (resolve to "uz-UZ" / "uz"): locale timeZones
+   uz-Arab-AF -> uz-Arab (resolve to "uz-Arab-AF" / "uz-Arab"): fmt dtf default, fmt toLocaleString, locale timeZones
+      fmt dtf default: ["۱۴۰۲-۱۰-۱۷","۱۴۰۳-۰۴-۱۱"]  vs  ["AP ۱۴۰۲-۱۰-۱۷","AP ۱۴۰۳-۰۴-۱۱"]
+      fmt toLocaleString: ["۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]  vs  ["AP ۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","AP ۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]
+   uz-AF -> uz-Arab (resolve to "uz-AF" / "uz-Arab"): fmt dtf default, fmt toLocaleString, locale timeZones
+      fmt dtf default: ["۱۴۰۲-۱۰-۱۷","۱۴۰۳-۰۴-۱۱"]  vs  ["AP ۱۴۰۲-۱۰-۱۷","AP ۱۴۰۳-۰۴-۱۱"]
+      fmt toLocaleString: ["۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]  vs  ["AP ۱۴۰۲-۱۰-۱۷ ۱۵:۰۴:۰۵","AP ۱۴۰۳-۰۴-۱۱ ۰۳:۰۴:۰۵"]
+   uz-Cyrl-UZ -> uz-Cyrl (resolve to "uz-Cyrl-UZ" / "uz-Cyrl"): locale timeZones
+   uz-Latn-UZ -> uz-Latn (resolve to "uz-Latn-UZ" / "uz-Latn"): locale timeZones
+   vai-LR -> vai (resolve to "vai-LR" / "vai"): locale timeZones
+   vai-Latn-LR -> vai-Latn (resolve to "vai-Latn-LR" / "vai-Latn"): locale timeZones
+   vai-Vaii-LR -> vai-Vaii (resolve to "vai-Vaii-LR" / "vai-Vaii"): locale timeZones
+   ve-ZA -> ve (resolve to "en-US" / "en-US"): locale timeZones
+   vec-IT -> vec (resolve to "vec-IT" / "vec"): locale timeZones
+   vi-VN -> vi (resolve to "vi-VN" / "vi"): locale timeZones
+   vmw-MZ -> vmw (resolve to "vmw-MZ" / "vmw"): locale timeZones
+   vo-001 -> vo (resolve to "en-US" / "en-US"): locale timeZones
+   vun-TZ -> vun (resolve to "vun-TZ" / "vun"): locale timeZones
+   wa-BE -> wa (resolve to "en-US" / "en-US"): locale timeZones
+   wae-CH -> wae (resolve to "wae-CH" / "wae"): locale timeZones
+   wal-ET -> wal (resolve to "en-US" / "en-US"): locale timeZones
+   wbp-AU -> wbp (resolve to "en-US" / "en-US"): locale timeZones
+   wo-SN -> wo (resolve to "wo-SN" / "wo"): locale timeZones
+   xdq-RU -> xdq (resolve to "en-US" / "en-US"): locale timeZones
+   xh-ZA -> xh (resolve to "xh-ZA" / "xh"): locale timeZones
+   xnr-IN -> xnr (resolve to "xnr-IN" / "xnr"): locale timeZones
+   xog-UG -> xog (resolve to "xog-UG" / "xog"): locale timeZones
+   yav-CM -> yav (resolve to "yav-CM" / "yav"): locale timeZones
+   yi-UA -> yi (resolve to "yi-UA" / "yi"): locale timeZones
+   yo-NG -> yo (resolve to "yo-NG" / "yo"): locale timeZones
+   yrl-BR -> yrl (resolve to "yrl-BR" / "yrl"): locale timeZones
+   yue-HK -> yue (resolve to "yue-HK" / "yue"): locale timeZones
+   yue-Hans-CN -> yue-Hans (resolve to "yue-Hans-CN" / "yue-Hans"): locale timeZones
+   yue-CN -> yue-Hans (resolve to "yue-CN" / "yue-Hans"): locale timeZones
+   yue-Hant-HK -> yue-Hant (resolve to "yue-Hant-HK" / "yue-Hant"): locale timeZones
+   za-CN -> za (resolve to "za-CN" / "za"): locale timeZones
+   zgh-MA -> zgh (resolve to "zgh-MA" / "zgh"): locale timeZones
+   zh-CN -> zh (resolve to "zh-CN" / "zh"): locale timeZones
+   zh-Hans-CN -> zh-Hans (resolve to "zh-Hans-CN" / "zh-Hans"): locale timeZones
+   zh-Hant-TW -> zh-Hant (resolve to "zh-Hant-TW" / "zh-Hant"): locale timeZones
+   zh-TW -> zh-Hant (resolve to "zh-TW" / "zh-Hant"): locale timeZones
+   zh-Latn-CN -> zh-Latn (resolve to "zh" / "zh"): locale timeZones
+   zu-ZA -> zu (resolve to "zu-ZA" / "zu"): locale timeZones

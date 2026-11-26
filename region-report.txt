@@ -1,0 +1,80 @@
+== 1. Region-keyed CLDR data, tag B3 drops vs the tag it reports ==
+472 tag forms
+72 tag forms whose region differs from the shorter tag's likely region (65 with region-keyed data that differs):
+  ady-JO -> ady (maximizes to RU; not default content): firstDay sat vs mon; minDays 1 vs 4; weekend fri-sat vs sat-sun; hours h [h hB hb H] vs H [H]; calendars gregorian islamic islamic-civil islamic-tbla vs gregorian; currency JOD vs RUB
+  ar-001 -> ar (maximizes to EG; default content): firstDay mon vs sat; weekend sat-sun vs fri-sat; calendars gregorian vs gregorian coptic islamic islamic-civil islamic-tbla; currency None vs EGP
+  az-Arab-IQ -> az-Arab (maximizes to IR; not default content): weekend fri-sat vs fri-fri; hours h [h hB hb H] vs H [hB H]; calendars gregorian islamic islamic-civil islamic-tbla vs persian gregorian islamic islamic-civil islamic-tbla; currency IQD vs IRR
+  az-Arab-TR -> az-Arab (maximizes to IR; not default content): firstDay mon vs sat; weekend sat-sun vs fri-fri; hours H [H hB] vs H [hB H]; calendars gregorian islamic-civil islamic-tbla vs persian gregorian islamic islamic-civil islamic-tbla; currency TRY vs IRR
+  az-IQ -> az-Arab (maximizes to IR; not default content): weekend fri-sat vs fri-fri; hours h [h hB hb H] vs H [hB H]; calendars gregorian islamic islamic-civil islamic-tbla vs persian gregorian islamic islamic-civil islamic-tbla; currency IQD vs IRR
+  bgn-AE -> bgn (maximizes to PK; not default content): firstDay mon vs sun; hours h [h hB hb H] vs h [h hB H]; calendars gregorian islamic-umalqura islamic islamic-civil islamic-tbla vs gregorian islamic islamic-civil islamic-tbla; currency AED vs PKR
+  bgn-AF -> bgn (maximizes to PK; not default content): firstDay sat vs sun; weekend thu-fri vs sat-sun; hours H [H hb hB h] vs h [h hB H]; calendars persian gregorian islamic islamic-civil islamic-tbla vs gregorian islamic islamic-civil islamic-tbla; currency AFN vs PKR
+  bgn-IR -> bgn (maximizes to PK; not default content): firstDay sat vs sun; weekend fri-fri vs sat-sun; hours H [hB H] vs h [h hB H]; calendars persian gregorian islamic islamic-civil islamic-tbla vs gregorian islamic islamic-civil islamic-tbla; currency IRR vs PKR
+  bgn-OM -> bgn (maximizes to PK; not default content): firstDay sat vs sun; weekend fri-sat vs sat-sun; hours h [h hB hb H] vs h [h hB H]; currency OMR vs PKR
+  ca-AD -> ca (maximizes to ES; not default content): hours H [H hB] vs H [H h hB]
+  ca-IT -> ca (maximizes to ES; not default content): hours H [H hB] vs H [H h hB]
+  ccp-IN -> ccp (maximizes to BD; not default content): weekend sun-sun vs sat-sun; hours h [h H] vs h [h hB H]; calendars gregorian indian vs gregorian islamic islamic-civil islamic-tbla; currency INR vs BDT
+  da-GL -> da (maximizes to DK; not default content): minDays 1 vs 4; hours H [H h] vs H [H]
+  de-BE -> de (maximizes to DE; not default content): same
+  el-CY -> el (maximizes to GR; not default content): minDays 1 vs 4
+  en-AS -> en (maximizes to US; not default content): hours h [h H] vs h [h hb H hB]; measurement metric vs US; temperature metric vs US; paper A4 vs US-Letter
+  en-PR -> en (maximizes to US; not default content): hours h [h H hB hb] vs h [h hb H hB]; measurement metric vs US
+  en-UM -> en (maximizes to US; not default content): measurement metric vs US; temperature metric vs US; paper A4 vs US-Letter
+  en-VI -> en (maximizes to US; not default content): measurement metric vs US; temperature metric vs US; paper A4 vs US-Letter
+  es-EA -> es (maximizes to ES; not default content): minDays 1 vs 4
+  es-IC -> es (maximizes to ES; not default content): minDays 1 vs 4
+  ff-BF -> ff (maximizes to SN; not default content): hours H [H hB] vs H [H h hB]
+  ff-CM -> ff (maximizes to SN; not default content): currency XAF vs XOF
+  ff-GW -> ff (maximizes to SN; not default content): hours H [H hB] vs H [H h hB]
+  ff-Latn-BF -> ff-Latn (maximizes to SN; not default content): hours H [H hB] vs H [H h hB]
+  ff-Latn-CM -> ff-Latn (maximizes to SN; not default content): currency XAF vs XOF
+  ff-Latn-GW -> ff-Latn (maximizes to SN; not default content): hours H [H hB] vs H [H h hB]
+  ff-Latn-NE -> ff-Latn (maximizes to SN; not default content): hours H [H] vs H [H h hB]; calendars gregorian islamic islamic-civil islamic-tbla vs gregorian
+  ff-NE -> ff (maximizes to SN; not default content): hours H [H] vs H [H h hB]; calendars gregorian islamic islamic-civil islamic-tbla vs gregorian
+  fr-BF -> fr (maximizes to FR; not default content): minDays 1 vs 4; currency XOF vs EUR
+  fr-BJ -> fr (maximizes to FR; not default content): minDays 1 vs 4; currency XOF vs EUR
+  fr-BL -> fr (maximizes to FR; not default content): minDays 1 vs 4
+  fr-CF -> fr (maximizes to FR; not default content): minDays 1 vs 4; hours H [H h hB] vs H [H hB]; currency XAF vs EUR
+  fr-CG -> fr (maximizes to FR; not default content): minDays 1 vs 4; currency XAF vs EUR
+  fr-GA -> fr (maximizes to FR; not default content): minDays 1 vs 4; currency XAF vs EUR
+  fr-GP -> fr (maximizes to FR; not default content): same
+  fr-GQ -> fr (maximizes to FR; not default content): minDays 1 vs 4; hours H [H hB h hb] vs H [H hB]; currency XAF vs EUR
+  fr-MC -> fr (maximizes to FR; not default content): same
+  fr-MF -> fr (maximizes to FR; not default content): minDays 1 vs 4
+  fr-MQ -> fr (maximizes to FR; not default content): same
+  fr-NC -> fr (maximizes to FR; not default content): minDays 1 vs 4; currency XPF vs EUR
+  fr-NE -> fr (maximizes to FR; not default content): minDays 1 vs 4; hours H [H] vs H [H hB]; calendars gregorian islamic islamic-civil islamic-tbla vs gregorian; currency XOF vs EUR
+  fr-PF -> fr (maximizes to FR; not default content): minDays 1 vs 4; hours H [H h hB] vs H [H hB]; currency XPF vs EUR
+  fr-PM -> fr (maximizes to FR; not default content): minDays 1 vs 4
+  fr-TG -> fr (maximizes to FR; not default content): minDays 1 vs 4; currency XOF vs EUR
+  fr-WF -> fr (maximizes to FR; not default content): minDays 1 vs 4; currency XPF vs EUR
+  fr-YT -> fr (maximizes to FR; not default content): minDays 1 vs 4
+  ga-GB -> ga (maximizes to IE; not default content): measurement UK vs metric; temperature UK vs metric; currency GBP vs EUR
+  gsw-FR -> gsw (maximizes to CH; not default content): hours H [H hB] vs H [H hB h]; currency EUR vs CHF
+  gsw-LI -> gsw (maximizes to CH; not default content): same
+  ha-Arab-SD -> ha-Arab (maximizes to NG; not default content): firstDay sat vs mon; weekend fri-sat vs sat-sun; hours h [h hB hb H] vs H [H h hb hB]; calendars gregorian islamic islamic-civil islamic-tbla vs gregorian; currency SDG vs NGN
+  ha-SD -> ha-Arab (maximizes to NG; not default content): firstDay sat vs mon; weekend fri-sat vs sat-sun; hours h [h hB hb H] vs H [H h hb hB]; calendars gregorian islamic islamic-civil islamic-tbla vs gregorian; currency SDG vs NGN
+  it-SM -> it (maximizes to IT; not default content): same
+  it-VA -> it (maximizes to IT; not default content): same
+  ku-Arab-IR -> ku-Arab (maximizes to IQ; not default content): weekend fri-fri vs fri-sat; hours H [hB H] vs h [h hB hb H]; calendars persian gregorian islamic islamic-civil islamic-tbla vs gregorian islamic islamic-civil islamic-tbla; currency IRR vs IQD
+  ku-IR -> ku-Arab (maximizes to IQ; not default content): weekend fri-fri vs fri-sat; hours H [hB H] vs h [h hB hb H]; calendars persian gregorian islamic islamic-civil islamic-tbla vs gregorian islamic islamic-civil islamic-tbla; currency IRR vs IQD
+  ku-Latn-IQ -> ku-Latn (maximizes to TR; not default content): firstDay sat vs mon; weekend fri-sat vs sat-sun; hours h [h hB hb H] vs H [H hB]; calendars gregorian islamic islamic-civil islamic-tbla vs gregorian islamic-civil islamic-tbla; currency IQD vs TRY
+  ku-Latn-SY -> ku-Latn (maximizes to TR; not default content): firstDay sat vs mon; weekend fri-sat vs sat-sun; calendars gregorian islamic islamic-civil islamic-tbla vs gregorian islamic-civil islamic-tbla; currency SYP vs TRY
+  ku-SY -> ku (maximizes to TR; not default content): firstDay sat vs mon; weekend fri-sat vs sat-sun; calendars gregorian islamic islamic-civil islamic-tbla vs gregorian islamic-civil islamic-tbla; currency SYP vs TRY
+  ln-CF -> ln (maximizes to CD; not default content): hours H [H h hB] vs H [hB H]; currency XAF vs CDF
+  ln-CG -> ln (maximizes to CD; not default content): hours H [H hB] vs H [hB H]; currency XAF vs CDF
+  mrh-MM -> mrh (maximizes to IN; not default content): weekend sat-sun vs sun-sun; hours H [hB hb H h] vs h [h H]; calendars gregorian vs gregorian indian; measurement UK vs metric; currency MMK vs INR
+  nb-SJ -> nb (maximizes to NO; not default content): hours H [H] vs H [H h]
+  oka-US -> oka (maximizes to CA; not default content): measurement US vs metric; temperature US vs metric; currency USD vs CAD
+  pap-AW -> pap (maximizes to CW; not default content): currency AWG vs XCG
+  sdh-IQ -> sdh (maximizes to IR; not default content): weekend fri-sat vs fri-fri; hours h [h hB hb H] vs H [hB H]; calendars gregorian islamic islamic-civil islamic-tbla vs persian gregorian islamic islamic-civil islamic-tbla; currency IQD vs IRR
+  shn-TH -> shn (maximizes to MM; not default content): hours H [H h] vs H [hB hb H h]; calendars buddhist gregorian vs gregorian; measurement metric vs UK; currency THB vs MMK
+  smj-NO -> smj (maximizes to SE; not default content): hours H [H h] vs H [H]; currency NOK vs SEK
+  sus-SL -> sus (maximizes to GN; not default content): hours h [h hb H hB] vs H [H hB]; currency SLE vs GNF
+  syr-SY -> syr (maximizes to IQ; not default content): currency SYP vs IQD
+  yue-Hant-MO -> yue-Hant (maximizes to HK; not default content): currency MOP vs HKD
+  yue-MO -> yue (maximizes to HK; not default content): currency MOP vs HKD
+  fields that differ (tag forms): currency 44, hours 38, calendars 22, minDays 20, weekend 18, firstDay 12, measurement 8, temperature 5, paper 3
+
+== 2. Languages whose likely-subtags region has its own data (like ar -> ar-EG) ==
+1 of 393 language locales:
+  ar -> ar_Arab_EG (ar-EG): main data: localeDisplayNames/languages/language, numbers/defaultNumberingSystem, numbers/symbols/decimal, numbers/symbols/group; ar's default content is ar_001

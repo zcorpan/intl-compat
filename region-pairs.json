@@ -1,0 +1,4376 @@
+{
+"drop": [
+{
+"tag": "aa-ET",
+"base": "aa",
+"regionDiffers": false
+},
+{
+"tag": "ab-GE",
+"base": "ab",
+"regionDiffers": false
+},
+{
+"tag": "ady-JO",
+"base": "ady",
+"regionDiffers": true
+},
+{
+"tag": "ady-RU",
+"base": "ady",
+"regionDiffers": false
+},
+{
+"tag": "af-ZA",
+"base": "af",
+"regionDiffers": false
+},
+{
+"tag": "agq-CM",
+"base": "agq",
+"regionDiffers": false
+},
+{
+"tag": "ak-GH",
+"base": "ak",
+"regionDiffers": false
+},
+{
+"tag": "am-ET",
+"base": "am",
+"regionDiffers": false
+},
+{
+"tag": "an-ES",
+"base": "an",
+"regionDiffers": false
+},
+{
+"tag": "ann-NG",
+"base": "ann",
+"regionDiffers": false
+},
+{
+"tag": "apc-SY",
+"base": "apc",
+"regionDiffers": false
+},
+{
+"tag": "ar-001",
+"base": "ar",
+"regionDiffers": true
+},
+{
+"tag": "arn-CL",
+"base": "arn",
+"regionDiffers": false
+},
+{
+"tag": "ary-MA",
+"base": "ary",
+"regionDiffers": false
+},
+{
+"tag": "as-IN",
+"base": "as",
+"regionDiffers": false
+},
+{
+"tag": "asa-TZ",
+"base": "asa",
+"regionDiffers": false
+},
+{
+"tag": "ast-ES",
+"base": "ast",
+"regionDiffers": false
+},
+{
+"tag": "az-AZ",
+"base": "az",
+"regionDiffers": false
+},
+{
+"tag": "az-Arab-IQ",
+"base": "az-Arab",
+"regionDiffers": true
+},
+{
+"tag": "az-Arab-IR",
+"base": "az-Arab",
+"regionDiffers": false
+},
+{
+"tag": "az-Arab-TR",
+"base": "az-Arab",
+"regionDiffers": true
+},
+{
+"tag": "az-Cyrl-AZ",
+"base": "az-Cyrl",
+"regionDiffers": false
+},
+{
+"tag": "az-IQ",
+"base": "az-Arab",
+"regionDiffers": true
+},
+{
+"tag": "az-IR",
+"base": "az-Arab",
+"regionDiffers": false
+},
+{
+"tag": "az-Latn-AZ",
+"base": "az-Latn",
+"regionDiffers": false
+},
+{
+"tag": "ba-RU",
+"base": "ba",
+"regionDiffers": false
+},
+{
+"tag": "bal-Arab-PK",
+"base": "bal-Arab",
+"regionDiffers": false
+},
+{
+"tag": "bal-Latn-PK",
+"base": "bal-Latn",
+"regionDiffers": false
+},
+{
+"tag": "bal-PK",
+"base": "bal",
+"regionDiffers": false
+},
+{
+"tag": "bas-CM",
+"base": "bas",
+"regionDiffers": false
+},
+{
+"tag": "be-BY",
+"base": "be",
+"regionDiffers": false
+},
+{
+"tag": "bem-ZM",
+"base": "bem",
+"regionDiffers": false
+},
+{
+"tag": "bew-ID",
+"base": "bew",
+"regionDiffers": false
+},
+{
+"tag": "bez-TZ",
+"base": "bez",
+"regionDiffers": false
+},
+{
+"tag": "bg-BG",
+"base": "bg",
+"regionDiffers": false
+},
+{
+"tag": "bgc-IN",
+"base": "bgc",
+"regionDiffers": false
+},
+{
+"tag": "bgn-AE",
+"base": "bgn",
+"regionDiffers": true
+},
+{
+"tag": "bgn-AF",
+"base": "bgn",
+"regionDiffers": true
+},
+{
+"tag": "bgn-IR",
+"base": "bgn",
+"regionDiffers": true
+},
+{
+"tag": "bgn-OM",
+"base": "bgn",
+"regionDiffers": true
+},
+{
+"tag": "bgn-PK",
+"base": "bgn",
+"regionDiffers": false
+},
+{
+"tag": "bho-IN",
+"base": "bho",
+"regionDiffers": false
+},
+{
+"tag": "blo-BJ",
+"base": "blo",
+"regionDiffers": false
+},
+{
+"tag": "blt-VN",
+"base": "blt",
+"regionDiffers": false
+},
+{
+"tag": "bm-ML",
+"base": "bm",
+"regionDiffers": false
+},
+{
+"tag": "bm-Nkoo-ML",
+"base": "bm-Nkoo",
+"regionDiffers": false
+},
+{
+"tag": "bn-BD",
+"base": "bn",
+"regionDiffers": false
+},
+{
+"tag": "bo-CN",
+"base": "bo",
+"regionDiffers": false
+},
+{
+"tag": "bqi-IR",
+"base": "bqi",
+"regionDiffers": false
+},
+{
+"tag": "br-FR",
+"base": "br",
+"regionDiffers": false
+},
+{
+"tag": "brh-PK",
+"base": "brh",
+"regionDiffers": false
+},
+{
+"tag": "brx-IN",
+"base": "brx",
+"regionDiffers": false
+},
+{
+"tag": "bs-BA",
+"base": "bs",
+"regionDiffers": false
+},
+{
+"tag": "bs-Cyrl-BA",
+"base": "bs-Cyrl",
+"regionDiffers": false
+},
+{
+"tag": "bs-Latn-BA",
+"base": "bs-Latn",
+"regionDiffers": false
+},
+{
+"tag": "bss-CM",
+"base": "bss",
+"regionDiffers": false
+},
+{
+"tag": "bua-RU",
+"base": "bua",
+"regionDiffers": false
+},
+{
+"tag": "byn-ER",
+"base": "byn",
+"regionDiffers": false
+},
+{
+"tag": "ca-AD",
+"base": "ca",
+"regionDiffers": true
+},
+{
+"tag": "ca-ES",
+"base": "ca",
+"regionDiffers": false
+},
+{
+"tag": "ca-IT",
+"base": "ca",
+"regionDiffers": true
+},
+{
+"tag": "cad-US",
+"base": "cad",
+"regionDiffers": false
+},
+{
+"tag": "cch-NG",
+"base": "cch",
+"regionDiffers": false
+},
+{
+"tag": "ccp-BD",
+"base": "ccp",
+"regionDiffers": false
+},
+{
+"tag": "ccp-IN",
+"base": "ccp",
+"regionDiffers": true
+},
+{
+"tag": "ce-RU",
+"base": "ce",
+"regionDiffers": false
+},
+{
+"tag": "ceb-PH",
+"base": "ceb",
+"regionDiffers": false
+},
+{
+"tag": "cgg-UG",
+"base": "cgg",
+"regionDiffers": false
+},
+{
+"tag": "cho-US",
+"base": "cho",
+"regionDiffers": false
+},
+{
+"tag": "chr-US",
+"base": "chr",
+"regionDiffers": false
+},
+{
+"tag": "cic-US",
+"base": "cic",
+"regionDiffers": false
+},
+{
+"tag": "ckb-IQ",
+"base": "ckb",
+"regionDiffers": false
+},
+{
+"tag": "co-FR",
+"base": "co",
+"regionDiffers": false
+},
+{
+"tag": "cop-EG",
+"base": "cop",
+"regionDiffers": false
+},
+{
+"tag": "cs-CZ",
+"base": "cs",
+"regionDiffers": false
+},
+{
+"tag": "csw-CA",
+"base": "csw",
+"regionDiffers": false
+},
+{
+"tag": "cu-RU",
+"base": "cu",
+"regionDiffers": false
+},
+{
+"tag": "cv-RU",
+"base": "cv",
+"regionDiffers": false
+},
+{
+"tag": "cy-GB",
+"base": "cy",
+"regionDiffers": false
+},
+{
+"tag": "da-DK",
+"base": "da",
+"regionDiffers": false
+},
+{
+"tag": "da-GL",
+"base": "da",
+"regionDiffers": true
+},
+{
+"tag": "dav-KE",
+"base": "dav",
+"regionDiffers": false
+},
+{
+"tag": "de-BE",
+"base": "de",
+"regionDiffers": true
+},
+{
+"tag": "de-DE",
+"base": "de",
+"regionDiffers": false
+},
+{
+"tag": "dje-NE",
+"base": "dje",
+"regionDiffers": false
+},
+{
+"tag": "doi-IN",
+"base": "doi",
+"regionDiffers": false
+},
+{
+"tag": "dsb-DE",
+"base": "dsb",
+"regionDiffers": false
+},
+{
+"tag": "dua-CM",
+"base": "dua",
+"regionDiffers": false
+},
+{
+"tag": "dv-MV",
+"base": "dv",
+"regionDiffers": false
+},
+{
+"tag": "dyo-SN",
+"base": "dyo",
+"regionDiffers": false
+},
+{
+"tag": "dz-BT",
+"base": "dz",
+"regionDiffers": false
+},
+{
+"tag": "ebu-KE",
+"base": "ebu",
+"regionDiffers": false
+},
+{
+"tag": "ee-GH",
+"base": "ee",
+"regionDiffers": false
+},
+{
+"tag": "el-CY",
+"base": "el",
+"regionDiffers": true
+},
+{
+"tag": "el-GR",
+"base": "el",
+"regionDiffers": false
+},
+{
+"tag": "en-AS",
+"base": "en",
+"regionDiffers": true
+},
+{
+"tag": "en-Dsrt-US",
+"base": "en-Dsrt",
+"regionDiffers": false
+},
+{
+"tag": "en-PR",
+"base": "en",
+"regionDiffers": true
+},
+{
+"tag": "en-Shaw-GB",
+"base": "en-Shaw",
+"regionDiffers": false
+},
+{
+"tag": "en-UM",
+"base": "en",
+"regionDiffers": true
+},
+{
+"tag": "en-US",
+"base": "en",
+"regionDiffers": false
+},
+{
+"tag": "en-VI",
+"base": "en",
+"regionDiffers": true
+},
+{
+"tag": "eo-001",
+"base": "eo",
+"regionDiffers": false
+},
+{
+"tag": "es-EA",
+"base": "es",
+"regionDiffers": true
+},
+{
+"tag": "es-ES",
+"base": "es",
+"regionDiffers": false
+},
+{
+"tag": "es-IC",
+"base": "es",
+"regionDiffers": true
+},
+{
+"tag": "et-EE",
+"base": "et",
+"regionDiffers": false
+},
+{
+"tag": "eu-ES",
+"base": "eu",
+"regionDiffers": false
+},
+{
+"tag": "ewo-CM",
+"base": "ewo",
+"regionDiffers": false
+},
+{
+"tag": "fa-IR",
+"base": "fa",
+"regionDiffers": false
+},
+{
+"tag": "ff-Adlm-GN",
+"base": "ff-Adlm",
+"regionDiffers": false
+},
+{
+"tag": "ff-BF",
+"base": "ff",
+"regionDiffers": true
+},
+{
+"tag": "ff-CM",
+"base": "ff",
+"regionDiffers": true
+},
+{
+"tag": "ff-GW",
+"base": "ff",
+"regionDiffers": true
+},
+{
+"tag": "ff-Latn-BF",
+"base": "ff-Latn",
+"regionDiffers": true
+},
+{
+"tag": "ff-Latn-CM",
+"base": "ff-Latn",
+"regionDiffers": true
+},
+{
+"tag": "ff-Latn-GW",
+"base": "ff-Latn",
+"regionDiffers": true
+},
+{
+"tag": "ff-Latn-NE",
+"base": "ff-Latn",
+"regionDiffers": true
+},
+{
+"tag": "ff-Latn-SN",
+"base": "ff-Latn",
+"regionDiffers": false
+},
+{
+"tag": "ff-NE",
+"base": "ff",
+"regionDiffers": true
+},
+{
+"tag": "ff-SN",
+"base": "ff",
+"regionDiffers": false
+},
+{
+"tag": "fi-FI",
+"base": "fi",
+"regionDiffers": false
+},
+{
+"tag": "fil-PH",
+"base": "fil",
+"regionDiffers": false
+},
+{
+"tag": "fo-FO",
+"base": "fo",
+"regionDiffers": false
+},
+{
+"tag": "fr-BF",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-BJ",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-BL",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-CF",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-CG",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-FR",
+"base": "fr",
+"regionDiffers": false
+},
+{
+"tag": "fr-GA",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-GP",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-GQ",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-MC",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-MF",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-MQ",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-NC",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-NE",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-PF",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-PM",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-TG",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-WF",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "fr-YT",
+"base": "fr",
+"regionDiffers": true
+},
+{
+"tag": "frr-DE",
+"base": "frr",
+"regionDiffers": false
+},
+{
+"tag": "fur-IT",
+"base": "fur",
+"regionDiffers": false
+},
+{
+"tag": "fy-NL",
+"base": "fy",
+"regionDiffers": false
+},
+{
+"tag": "ga-GB",
+"base": "ga",
+"regionDiffers": true
+},
+{
+"tag": "ga-IE",
+"base": "ga",
+"regionDiffers": false
+},
+{
+"tag": "gaa-GH",
+"base": "gaa",
+"regionDiffers": false
+},
+{
+"tag": "gd-GB",
+"base": "gd",
+"regionDiffers": false
+},
+{
+"tag": "gez-ET",
+"base": "gez",
+"regionDiffers": false
+},
+{
+"tag": "gl-ES",
+"base": "gl",
+"regionDiffers": false
+},
+{
+"tag": "gn-PY",
+"base": "gn",
+"regionDiffers": false
+},
+{
+"tag": "gsw-CH",
+"base": "gsw",
+"regionDiffers": false
+},
+{
+"tag": "gsw-FR",
+"base": "gsw",
+"regionDiffers": true
+},
+{
+"tag": "gsw-LI",
+"base": "gsw",
+"regionDiffers": true
+},
+{
+"tag": "gu-IN",
+"base": "gu",
+"regionDiffers": false
+},
+{
+"tag": "guz-KE",
+"base": "guz",
+"regionDiffers": false
+},
+{
+"tag": "gv-IM",
+"base": "gv",
+"regionDiffers": false
+},
+{
+"tag": "ha-Arab-NG",
+"base": "ha-Arab",
+"regionDiffers": false
+},
+{
+"tag": "ha-Arab-SD",
+"base": "ha-Arab",
+"regionDiffers": true
+},
+{
+"tag": "ha-NG",
+"base": "ha",
+"regionDiffers": false
+},
+{
+"tag": "ha-SD",
+"base": "ha-Arab",
+"regionDiffers": true
+},
+{
+"tag": "haw-US",
+"base": "haw",
+"regionDiffers": false
+},
+{
+"tag": "he-IL",
+"base": "he",
+"regionDiffers": false
+},
+{
+"tag": "hi-IN",
+"base": "hi",
+"regionDiffers": false
+},
+{
+"tag": "hi-Latn-IN",
+"base": "hi-Latn",
+"regionDiffers": false
+},
+{
+"tag": "hnj-Hmnp-US",
+"base": "hnj-Hmnp",
+"regionDiffers": false
+},
+{
+"tag": "hnj-US",
+"base": "hnj",
+"regionDiffers": false
+},
+{
+"tag": "hr-HR",
+"base": "hr",
+"regionDiffers": false
+},
+{
+"tag": "hrx-BR",
+"base": "hrx",
+"regionDiffers": false
+},
+{
+"tag": "hsb-DE",
+"base": "hsb",
+"regionDiffers": false
+},
+{
+"tag": "ht-HT",
+"base": "ht",
+"regionDiffers": false
+},
+{
+"tag": "hu-HU",
+"base": "hu",
+"regionDiffers": false
+},
+{
+"tag": "hy-AM",
+"base": "hy",
+"regionDiffers": false
+},
+{
+"tag": "ia-001",
+"base": "ia",
+"regionDiffers": false
+},
+{
+"tag": "id-ID",
+"base": "id",
+"regionDiffers": false
+},
+{
+"tag": "ie-EE",
+"base": "ie",
+"regionDiffers": false
+},
+{
+"tag": "ig-NG",
+"base": "ig",
+"regionDiffers": false
+},
+{
+"tag": "ii-CN",
+"base": "ii",
+"regionDiffers": false
+},
+{
+"tag": "io-001",
+"base": "io",
+"regionDiffers": false
+},
+{
+"tag": "is-IS",
+"base": "is",
+"regionDiffers": false
+},
+{
+"tag": "isv-001",
+"base": "isv",
+"regionDiffers": false
+},
+{
+"tag": "isv-Cyrl-001",
+"base": "isv-Cyrl",
+"regionDiffers": false
+},
+{
+"tag": "isv-Latn-001",
+"base": "isv-Latn",
+"regionDiffers": false
+},
+{
+"tag": "it-IT",
+"base": "it",
+"regionDiffers": false
+},
+{
+"tag": "it-SM",
+"base": "it",
+"regionDiffers": true
+},
+{
+"tag": "it-VA",
+"base": "it",
+"regionDiffers": true
+},
+{
+"tag": "iu-CA",
+"base": "iu",
+"regionDiffers": false
+},
+{
+"tag": "iu-Latn-CA",
+"base": "iu-Latn",
+"regionDiffers": false
+},
+{
+"tag": "ja-JP",
+"base": "ja",
+"regionDiffers": false
+},
+{
+"tag": "jbo-001",
+"base": "jbo",
+"regionDiffers": false
+},
+{
+"tag": "jgo-CM",
+"base": "jgo",
+"regionDiffers": false
+},
+{
+"tag": "jmc-TZ",
+"base": "jmc",
+"regionDiffers": false
+},
+{
+"tag": "jv-ID",
+"base": "jv",
+"regionDiffers": false
+},
+{
+"tag": "ka-GE",
+"base": "ka",
+"regionDiffers": false
+},
+{
+"tag": "kaa-Cyrl-UZ",
+"base": "kaa-Cyrl",
+"regionDiffers": false
+},
+{
+"tag": "kaa-Latn-UZ",
+"base": "kaa-Latn",
+"regionDiffers": false
+},
+{
+"tag": "kaa-UZ",
+"base": "kaa",
+"regionDiffers": false
+},
+{
+"tag": "kab-DZ",
+"base": "kab",
+"regionDiffers": false
+},
+{
+"tag": "kaj-NG",
+"base": "kaj",
+"regionDiffers": false
+},
+{
+"tag": "kam-KE",
+"base": "kam",
+"regionDiffers": false
+},
+{
+"tag": "kbd-RU",
+"base": "kbd",
+"regionDiffers": false
+},
+{
+"tag": "kcg-NG",
+"base": "kcg",
+"regionDiffers": false
+},
+{
+"tag": "kde-TZ",
+"base": "kde",
+"regionDiffers": false
+},
+{
+"tag": "kea-CV",
+"base": "kea",
+"regionDiffers": false
+},
+{
+"tag": "kek-GT",
+"base": "kek",
+"regionDiffers": false
+},
+{
+"tag": "ken-CM",
+"base": "ken",
+"regionDiffers": false
+},
+{
+"tag": "kgp-BR",
+"base": "kgp",
+"regionDiffers": false
+},
+{
+"tag": "khq-ML",
+"base": "khq",
+"regionDiffers": false
+},
+{
+"tag": "ki-KE",
+"base": "ki",
+"regionDiffers": false
+},
+{
+"tag": "kk-Arab-CN",
+"base": "kk-Arab",
+"regionDiffers": false
+},
+{
+"tag": "kk-CN",
+"base": "kk-Arab",
+"regionDiffers": false
+},
+{
+"tag": "kk-Cyrl-KZ",
+"base": "kk-Cyrl",
+"regionDiffers": false
+},
+{
+"tag": "kk-KZ",
+"base": "kk",
+"regionDiffers": false
+},
+{
+"tag": "kkj-CM",
+"base": "kkj",
+"regionDiffers": false
+},
+{
+"tag": "kl-GL",
+"base": "kl",
+"regionDiffers": false
+},
+{
+"tag": "kln-KE",
+"base": "kln",
+"regionDiffers": false
+},
+{
+"tag": "km-KH",
+"base": "km",
+"regionDiffers": false
+},
+{
+"tag": "kn-IN",
+"base": "kn",
+"regionDiffers": false
+},
+{
+"tag": "ko-KR",
+"base": "ko",
+"regionDiffers": false
+},
+{
+"tag": "kok-Deva-IN",
+"base": "kok-Deva",
+"regionDiffers": false
+},
+{
+"tag": "kok-IN",
+"base": "kok",
+"regionDiffers": false
+},
+{
+"tag": "kok-Latn-IN",
+"base": "kok-Latn",
+"regionDiffers": false
+},
+{
+"tag": "kpe-LR",
+"base": "kpe",
+"regionDiffers": false
+},
+{
+"tag": "ks-Arab-IN",
+"base": "ks-Arab",
+"regionDiffers": false
+},
+{
+"tag": "ks-Deva-IN",
+"base": "ks-Deva",
+"regionDiffers": false
+},
+{
+"tag": "ks-IN",
+"base": "ks",
+"regionDiffers": false
+},
+{
+"tag": "ksb-TZ",
+"base": "ksb",
+"regionDiffers": false
+},
+{
+"tag": "ksf-CM",
+"base": "ksf",
+"regionDiffers": false
+},
+{
+"tag": "ksh-DE",
+"base": "ksh",
+"regionDiffers": false
+},
+{
+"tag": "ku-Arab-IQ",
+"base": "ku-Arab",
+"regionDiffers": false
+},
+{
+"tag": "ku-Arab-IR",
+"base": "ku-Arab",
+"regionDiffers": true
+},
+{
+"tag": "ku-IQ",
+"base": "ku-Arab",
+"regionDiffers": false
+},
+{
+"tag": "ku-IR",
+"base": "ku-Arab",
+"regionDiffers": true
+},
+{
+"tag": "ku-Latn-IQ",
+"base": "ku-Latn",
+"regionDiffers": true
+},
+{
+"tag": "ku-Latn-SY",
+"base": "ku-Latn",
+"regionDiffers": true
+},
+{
+"tag": "ku-Latn-TR",
+"base": "ku-Latn",
+"regionDiffers": false
+},
+{
+"tag": "ku-SY",
+"base": "ku",
+"regionDiffers": true
+},
+{
+"tag": "ku-TR",
+"base": "ku",
+"regionDiffers": false
+},
+{
+"tag": "kw-GB",
+"base": "kw",
+"regionDiffers": false
+},
+{
+"tag": "kxv-Deva-IN",
+"base": "kxv-Deva",
+"regionDiffers": false
+},
+{
+"tag": "kxv-IN",
+"base": "kxv",
+"regionDiffers": false
+},
+{
+"tag": "kxv-Latn-IN",
+"base": "kxv-Latn",
+"regionDiffers": false
+},
+{
+"tag": "kxv-Orya-IN",
+"base": "kxv-Orya",
+"regionDiffers": false
+},
+{
+"tag": "kxv-Telu-IN",
+"base": "kxv-Telu",
+"regionDiffers": false
+},
+{
+"tag": "ky-KG",
+"base": "ky",
+"regionDiffers": false
+},
+{
+"tag": "la-VA",
+"base": "la",
+"regionDiffers": false
+},
+{
+"tag": "lag-TZ",
+"base": "lag",
+"regionDiffers": false
+},
+{
+"tag": "lb-LU",
+"base": "lb",
+"regionDiffers": false
+},
+{
+"tag": "lg-UG",
+"base": "lg",
+"regionDiffers": false
+},
+{
+"tag": "lij-IT",
+"base": "lij",
+"regionDiffers": false
+},
+{
+"tag": "lkt-US",
+"base": "lkt",
+"regionDiffers": false
+},
+{
+"tag": "lld-IT",
+"base": "lld",
+"regionDiffers": false
+},
+{
+"tag": "lmo-IT",
+"base": "lmo",
+"regionDiffers": false
+},
+{
+"tag": "ln-CD",
+"base": "ln",
+"regionDiffers": false
+},
+{
+"tag": "ln-CF",
+"base": "ln",
+"regionDiffers": true
+},
+{
+"tag": "ln-CG",
+"base": "ln",
+"regionDiffers": true
+},
+{
+"tag": "lo-LA",
+"base": "lo",
+"regionDiffers": false
+},
+{
+"tag": "lrc-IR",
+"base": "lrc",
+"regionDiffers": false
+},
+{
+"tag": "lt-LT",
+"base": "lt",
+"regionDiffers": false
+},
+{
+"tag": "ltg-LV",
+"base": "ltg",
+"regionDiffers": false
+},
+{
+"tag": "lu-CD",
+"base": "lu",
+"regionDiffers": false
+},
+{
+"tag": "luo-KE",
+"base": "luo",
+"regionDiffers": false
+},
+{
+"tag": "luy-KE",
+"base": "luy",
+"regionDiffers": false
+},
+{
+"tag": "lv-LV",
+"base": "lv",
+"regionDiffers": false
+},
+{
+"tag": "lzz-TR",
+"base": "lzz",
+"regionDiffers": false
+},
+{
+"tag": "mai-IN",
+"base": "mai",
+"regionDiffers": false
+},
+{
+"tag": "mas-KE",
+"base": "mas",
+"regionDiffers": false
+},
+{
+"tag": "mdf-RU",
+"base": "mdf",
+"regionDiffers": false
+},
+{
+"tag": "mer-KE",
+"base": "mer",
+"regionDiffers": false
+},
+{
+"tag": "mfe-MU",
+"base": "mfe",
+"regionDiffers": false
+},
+{
+"tag": "mg-MG",
+"base": "mg",
+"regionDiffers": false
+},
+{
+"tag": "mgh-MZ",
+"base": "mgh",
+"regionDiffers": false
+},
+{
+"tag": "mgo-CM",
+"base": "mgo",
+"regionDiffers": false
+},
+{
+"tag": "mhn-IT",
+"base": "mhn",
+"regionDiffers": false
+},
+{
+"tag": "mi-NZ",
+"base": "mi",
+"regionDiffers": false
+},
+{
+"tag": "mic-CA",
+"base": "mic",
+"regionDiffers": false
+},
+{
+"tag": "mk-MK",
+"base": "mk",
+"regionDiffers": false
+},
+{
+"tag": "ml-IN",
+"base": "ml",
+"regionDiffers": false
+},
+{
+"tag": "mn-CN",
+"base": "mn-Mong",
+"regionDiffers": false
+},
+{
+"tag": "mn-MN",
+"base": "mn",
+"regionDiffers": false
+},
+{
+"tag": "mn-Mong-CN",
+"base": "mn-Mong",
+"regionDiffers": false
+},
+{
+"tag": "mni-Beng-IN",
+"base": "mni-Beng",
+"regionDiffers": false
+},
+{
+"tag": "mni-IN",
+"base": "mni",
+"regionDiffers": false
+},
+{
+"tag": "mni-Mtei-IN",
+"base": "mni-Mtei",
+"regionDiffers": false
+},
+{
+"tag": "moh-CA",
+"base": "moh",
+"regionDiffers": false
+},
+{
+"tag": "mr-IN",
+"base": "mr",
+"regionDiffers": false
+},
+{
+"tag": "mrh-IN",
+"base": "mrh",
+"regionDiffers": false
+},
+{
+"tag": "mrh-MM",
+"base": "mrh",
+"regionDiffers": true
+},
+{
+"tag": "ms-Arab-MY",
+"base": "ms-Arab",
+"regionDiffers": false
+},
+{
+"tag": "ms-MY",
+"base": "ms",
+"regionDiffers": false
+},
+{
+"tag": "mt-MT",
+"base": "mt",
+"regionDiffers": false
+},
+{
+"tag": "mua-CM",
+"base": "mua",
+"regionDiffers": false
+},
+{
+"tag": "mus-US",
+"base": "mus",
+"regionDiffers": false
+},
+{
+"tag": "mww-Hmnp-US",
+"base": "mww-Hmnp",
+"regionDiffers": false
+},
+{
+"tag": "mww-US",
+"base": "mww",
+"regionDiffers": false
+},
+{
+"tag": "my-MM",
+"base": "my",
+"regionDiffers": false
+},
+{
+"tag": "myv-RU",
+"base": "myv",
+"regionDiffers": false
+},
+{
+"tag": "mzn-IR",
+"base": "mzn",
+"regionDiffers": false
+},
+{
+"tag": "naq-NA",
+"base": "naq",
+"regionDiffers": false
+},
+{
+"tag": "nb-NO",
+"base": "nb",
+"regionDiffers": false
+},
+{
+"tag": "nb-SJ",
+"base": "nb",
+"regionDiffers": true
+},
+{
+"tag": "nd-ZW",
+"base": "nd",
+"regionDiffers": false
+},
+{
+"tag": "nds-DE",
+"base": "nds",
+"regionDiffers": false
+},
+{
+"tag": "ne-NP",
+"base": "ne",
+"regionDiffers": false
+},
+{
+"tag": "nl-NL",
+"base": "nl",
+"regionDiffers": false
+},
+{
+"tag": "nmg-CM",
+"base": "nmg",
+"regionDiffers": false
+},
+{
+"tag": "nn-NO",
+"base": "nn",
+"regionDiffers": false
+},
+{
+"tag": "nnh-CM",
+"base": "nnh",
+"regionDiffers": false
+},
+{
+"tag": "nqo-GN",
+"base": "nqo",
+"regionDiffers": false
+},
+{
+"tag": "nr-ZA",
+"base": "nr",
+"regionDiffers": false
+},
+{
+"tag": "nso-ZA",
+"base": "nso",
+"regionDiffers": false
+},
+{
+"tag": "nus-SS",
+"base": "nus",
+"regionDiffers": false
+},
+{
+"tag": "nv-US",
+"base": "nv",
+"regionDiffers": false
+},
+{
+"tag": "ny-MW",
+"base": "ny",
+"regionDiffers": false
+},
+{
+"tag": "nyn-UG",
+"base": "nyn",
+"regionDiffers": false
+},
+{
+"tag": "oc-FR",
+"base": "oc",
+"regionDiffers": false
+},
+{
+"tag": "oka-CA",
+"base": "oka",
+"regionDiffers": false
+},
+{
+"tag": "oka-US",
+"base": "oka",
+"regionDiffers": true
+},
+{
+"tag": "om-ET",
+"base": "om",
+"regionDiffers": false
+},
+{
+"tag": "or-IN",
+"base": "or",
+"regionDiffers": false
+},
+{
+"tag": "os-GE",
+"base": "os",
+"regionDiffers": false
+},
+{
+"tag": "osa-US",
+"base": "osa",
+"regionDiffers": false
+},
+{
+"tag": "pa-Arab-PK",
+"base": "pa-Arab",
+"regionDiffers": false
+},
+{
+"tag": "pa-Guru-IN",
+"base": "pa-Guru",
+"regionDiffers": false
+},
+{
+"tag": "pa-IN",
+"base": "pa",
+"regionDiffers": false
+},
+{
+"tag": "pa-PK",
+"base": "pa-Arab",
+"regionDiffers": false
+},
+{
+"tag": "pap-AW",
+"base": "pap",
+"regionDiffers": true
+},
+{
+"tag": "pap-CW",
+"base": "pap",
+"regionDiffers": false
+},
+{
+"tag": "pcm-NG",
+"base": "pcm",
+"regionDiffers": false
+},
+{
+"tag": "pi-GB",
+"base": "pi",
+"regionDiffers": false
+},
+{
+"tag": "pi-Latn-GB",
+"base": "pi-Latn",
+"regionDiffers": false
+},
+{
+"tag": "pis-SB",
+"base": "pis",
+"regionDiffers": false
+},
+{
+"tag": "pl-PL",
+"base": "pl",
+"regionDiffers": false
+},
+{
+"tag": "pms-IT",
+"base": "pms",
+"regionDiffers": false
+},
+{
+"tag": "prg-PL",
+"base": "prg",
+"regionDiffers": false
+},
+{
+"tag": "ps-AF",
+"base": "ps",
+"regionDiffers": false
+},
+{
+"tag": "pt-BR",
+"base": "pt",
+"regionDiffers": false
+},
+{
+"tag": "qu-PE",
+"base": "qu",
+"regionDiffers": false
+},
+{
+"tag": "quc-GT",
+"base": "quc",
+"regionDiffers": false
+},
+{
+"tag": "raj-IN",
+"base": "raj",
+"regionDiffers": false
+},
+{
+"tag": "rhg-MM",
+"base": "rhg",
+"regionDiffers": false
+},
+{
+"tag": "rhg-Rohg-MM",
+"base": "rhg-Rohg",
+"regionDiffers": false
+},
+{
+"tag": "rif-MA",
+"base": "rif",
+"regionDiffers": false
+},
+{
+"tag": "rm-CH",
+"base": "rm",
+"regionDiffers": false
+},
+{
+"tag": "rn-BI",
+"base": "rn",
+"regionDiffers": false
+},
+{
+"tag": "ro-RO",
+"base": "ro",
+"regionDiffers": false
+},
+{
+"tag": "rof-TZ",
+"base": "rof",
+"regionDiffers": false
+},
+{
+"tag": "ru-RU",
+"base": "ru",
+"regionDiffers": false
+},
+{
+"tag": "rw-RW",
+"base": "rw",
+"regionDiffers": false
+},
+{
+"tag": "rwk-TZ",
+"base": "rwk",
+"regionDiffers": false
+},
+{
+"tag": "sa-IN",
+"base": "sa",
+"regionDiffers": false
+},
+{
+"tag": "sah-RU",
+"base": "sah",
+"regionDiffers": false
+},
+{
+"tag": "saq-KE",
+"base": "saq",
+"regionDiffers": false
+},
+{
+"tag": "sat-Deva-IN",
+"base": "sat-Deva",
+"regionDiffers": false
+},
+{
+"tag": "sat-IN",
+"base": "sat",
+"regionDiffers": false
+},
+{
+"tag": "sat-Olck-IN",
+"base": "sat-Olck",
+"regionDiffers": false
+},
+{
+"tag": "sbp-TZ",
+"base": "sbp",
+"regionDiffers": false
+},
+{
+"tag": "sc-IT",
+"base": "sc",
+"regionDiffers": false
+},
+{
+"tag": "scn-IT",
+"base": "scn",
+"regionDiffers": false
+},
+{
+"tag": "sd-Arab-PK",
+"base": "sd-Arab",
+"regionDiffers": false
+},
+{
+"tag": "sd-Deva-IN",
+"base": "sd-Deva",
+"regionDiffers": false
+},
+{
+"tag": "sd-IN",
+"base": "sd-Deva",
+"regionDiffers": false
+},
+{
+"tag": "sd-PK",
+"base": "sd",
+"regionDiffers": false
+},
+{
+"tag": "sdh-IQ",
+"base": "sdh",
+"regionDiffers": true
+},
+{
+"tag": "sdh-IR",
+"base": "sdh",
+"regionDiffers": false
+},
+{
+"tag": "se-NO",
+"base": "se",
+"regionDiffers": false
+},
+{
+"tag": "seh-MZ",
+"base": "seh",
+"regionDiffers": false
+},
+{
+"tag": "ses-ML",
+"base": "ses",
+"regionDiffers": false
+},
+{
+"tag": "sg-CF",
+"base": "sg",
+"regionDiffers": false
+},
+{
+"tag": "sgs-LT",
+"base": "sgs",
+"regionDiffers": false
+},
+{
+"tag": "shi-Latn-MA",
+"base": "shi-Latn",
+"regionDiffers": false
+},
+{
+"tag": "shi-MA",
+"base": "shi",
+"regionDiffers": false
+},
+{
+"tag": "shi-Tfng-MA",
+"base": "shi-Tfng",
+"regionDiffers": false
+},
+{
+"tag": "shn-MM",
+"base": "shn",
+"regionDiffers": false
+},
+{
+"tag": "shn-TH",
+"base": "shn",
+"regionDiffers": true
+},
+{
+"tag": "si-LK",
+"base": "si",
+"regionDiffers": false
+},
+{
+"tag": "sid-ET",
+"base": "sid",
+"regionDiffers": false
+},
+{
+"tag": "sk-SK",
+"base": "sk",
+"regionDiffers": false
+},
+{
+"tag": "skr-PK",
+"base": "skr",
+"regionDiffers": false
+},
+{
+"tag": "sl-SI",
+"base": "sl",
+"regionDiffers": false
+},
+{
+"tag": "sma-SE",
+"base": "sma",
+"regionDiffers": false
+},
+{
+"tag": "smj-NO",
+"base": "smj",
+"regionDiffers": true
+},
+{
+"tag": "smj-SE",
+"base": "smj",
+"regionDiffers": false
+},
+{
+"tag": "smn-FI",
+"base": "smn",
+"regionDiffers": false
+},
+{
+"tag": "sms-FI",
+"base": "sms",
+"regionDiffers": false
+},
+{
+"tag": "sn-ZW",
+"base": "sn",
+"regionDiffers": false
+},
+{
+"tag": "so-SO",
+"base": "so",
+"regionDiffers": false
+},
+{
+"tag": "sq-AL",
+"base": "sq",
+"regionDiffers": false
+},
+{
+"tag": "sr-Cyrl-RS",
+"base": "sr-Cyrl",
+"regionDiffers": false
+},
+{
+"tag": "sr-Latn-RS",
+"base": "sr-Latn",
+"regionDiffers": false
+},
+{
+"tag": "sr-RS",
+"base": "sr",
+"regionDiffers": false
+},
+{
+"tag": "ss-ZA",
+"base": "ss",
+"regionDiffers": false
+},
+{
+"tag": "ssy-ER",
+"base": "ssy",
+"regionDiffers": false
+},
+{
+"tag": "st-ZA",
+"base": "st",
+"regionDiffers": false
+},
+{
+"tag": "su-ID",
+"base": "su",
+"regionDiffers": false
+},
+{
+"tag": "su-Latn-ID",
+"base": "su-Latn",
+"regionDiffers": false
+},
+{
+"tag": "sus-GN",
+"base": "sus",
+"regionDiffers": false
+},
+{
+"tag": "sus-SL",
+"base": "sus",
+"regionDiffers": true
+},
+{
+"tag": "suz-Deva-NP",
+"base": "suz-Deva",
+"regionDiffers": false
+},
+{
+"tag": "suz-NP",
+"base": "suz",
+"regionDiffers": false
+},
+{
+"tag": "suz-Sunu-NP",
+"base": "suz-Sunu",
+"regionDiffers": false
+},
+{
+"tag": "sv-SE",
+"base": "sv",
+"regionDiffers": false
+},
+{
+"tag": "sw-TZ",
+"base": "sw",
+"regionDiffers": false
+},
+{
+"tag": "syr-IQ",
+"base": "syr",
+"regionDiffers": false
+},
+{
+"tag": "syr-SY",
+"base": "syr",
+"regionDiffers": true
+},
+{
+"tag": "szl-PL",
+"base": "szl",
+"regionDiffers": false
+},
+{
+"tag": "ta-IN",
+"base": "ta",
+"regionDiffers": false
+},
+{
+"tag": "te-IN",
+"base": "te",
+"regionDiffers": false
+},
+{
+"tag": "teo-UG",
+"base": "teo",
+"regionDiffers": false
+},
+{
+"tag": "tg-TJ",
+"base": "tg",
+"regionDiffers": false
+},
+{
+"tag": "th-TH",
+"base": "th",
+"regionDiffers": false
+},
+{
+"tag": "ti-ET",
+"base": "ti",
+"regionDiffers": false
+},
+{
+"tag": "tig-ER",
+"base": "tig",
+"regionDiffers": false
+},
+{
+"tag": "tk-TM",
+"base": "tk",
+"regionDiffers": false
+},
+{
+"tag": "tn-ZA",
+"base": "tn",
+"regionDiffers": false
+},
+{
+"tag": "to-TO",
+"base": "to",
+"regionDiffers": false
+},
+{
+"tag": "tok-001",
+"base": "tok",
+"regionDiffers": false
+},
+{
+"tag": "tpi-PG",
+"base": "tpi",
+"regionDiffers": false
+},
+{
+"tag": "tr-TR",
+"base": "tr",
+"regionDiffers": false
+},
+{
+"tag": "trv-TW",
+"base": "trv",
+"regionDiffers": false
+},
+{
+"tag": "trw-PK",
+"base": "trw",
+"regionDiffers": false
+},
+{
+"tag": "ts-ZA",
+"base": "ts",
+"regionDiffers": false
+},
+{
+"tag": "tt-RU",
+"base": "tt",
+"regionDiffers": false
+},
+{
+"tag": "twq-NE",
+"base": "twq",
+"regionDiffers": false
+},
+{
+"tag": "tyv-RU",
+"base": "tyv",
+"regionDiffers": false
+},
+{
+"tag": "tzm-MA",
+"base": "tzm",
+"regionDiffers": false
+},
+{
+"tag": "ug-CN",
+"base": "ug",
+"regionDiffers": false
+},
+{
+"tag": "uk-UA",
+"base": "uk",
+"regionDiffers": false
+},
+{
+"tag": "ur-PK",
+"base": "ur",
+"regionDiffers": false
+},
+{
+"tag": "uz-AF",
+"base": "uz-Arab",
+"regionDiffers": false
+},
+{
+"tag": "uz-Arab-AF",
+"base": "uz-Arab",
+"regionDiffers": false
+},
+{
+"tag": "uz-Cyrl-UZ",
+"base": "uz-Cyrl",
+"regionDiffers": false
+},
+{
+"tag": "uz-Latn-UZ",
+"base": "uz-Latn",
+"regionDiffers": false
+},
+{
+"tag": "uz-UZ",
+"base": "uz",
+"regionDiffers": false
+},
+{
+"tag": "vai-LR",
+"base": "vai",
+"regionDiffers": false
+},
+{
+"tag": "vai-Latn-LR",
+"base": "vai-Latn",
+"regionDiffers": false
+},
+{
+"tag": "vai-Vaii-LR",
+"base": "vai-Vaii",
+"regionDiffers": false
+},
+{
+"tag": "ve-ZA",
+"base": "ve",
+"regionDiffers": false
+},
+{
+"tag": "vec-IT",
+"base": "vec",
+"regionDiffers": false
+},
+{
+"tag": "vi-VN",
+"base": "vi",
+"regionDiffers": false
+},
+{
+"tag": "vmw-MZ",
+"base": "vmw",
+"regionDiffers": false
+},
+{
+"tag": "vo-001",
+"base": "vo",
+"regionDiffers": false
+},
+{
+"tag": "vun-TZ",
+"base": "vun",
+"regionDiffers": false
+},
+{
+"tag": "wa-BE",
+"base": "wa",
+"regionDiffers": false
+},
+{
+"tag": "wae-CH",
+"base": "wae",
+"regionDiffers": false
+},
+{
+"tag": "wal-ET",
+"base": "wal",
+"regionDiffers": false
+},
+{
+"tag": "wbp-AU",
+"base": "wbp",
+"regionDiffers": false
+},
+{
+"tag": "wo-SN",
+"base": "wo",
+"regionDiffers": false
+},
+{
+"tag": "xdq-RU",
+"base": "xdq",
+"regionDiffers": false
+},
+{
+"tag": "xh-ZA",
+"base": "xh",
+"regionDiffers": false
+},
+{
+"tag": "xnr-IN",
+"base": "xnr",
+"regionDiffers": false
+},
+{
+"tag": "xog-UG",
+"base": "xog",
+"regionDiffers": false
+},
+{
+"tag": "yav-CM",
+"base": "yav",
+"regionDiffers": false
+},
+{
+"tag": "yi-UA",
+"base": "yi",
+"regionDiffers": false
+},
+{
+"tag": "yo-NG",
+"base": "yo",
+"regionDiffers": false
+},
+{
+"tag": "yrl-BR",
+"base": "yrl",
+"regionDiffers": false
+},
+{
+"tag": "yue-CN",
+"base": "yue-Hans",
+"regionDiffers": false
+},
+{
+"tag": "yue-HK",
+"base": "yue",
+"regionDiffers": false
+},
+{
+"tag": "yue-Hans-CN",
+"base": "yue-Hans",
+"regionDiffers": false
+},
+{
+"tag": "yue-Hant-HK",
+"base": "yue-Hant",
+"regionDiffers": false
+},
+{
+"tag": "yue-Hant-MO",
+"base": "yue-Hant",
+"regionDiffers": true
+},
+{
+"tag": "yue-MO",
+"base": "yue",
+"regionDiffers": true
+},
+{
+"tag": "za-CN",
+"base": "za",
+"regionDiffers": false
+},
+{
+"tag": "zgh-MA",
+"base": "zgh",
+"regionDiffers": false
+},
+{
+"tag": "zh-CN",
+"base": "zh",
+"regionDiffers": false
+},
+{
+"tag": "zh-Hans-CN",
+"base": "zh-Hans",
+"regionDiffers": false
+},
+{
+"tag": "zh-Hant-TW",
+"base": "zh-Hant",
+"regionDiffers": false
+},
+{
+"tag": "zh-Latn-CN",
+"base": "zh-Latn",
+"regionDiffers": false
+},
+{
+"tag": "zh-TW",
+"base": "zh-Hant",
+"regionDiffers": false
+},
+{
+"tag": "zu-ZA",
+"base": "zu",
+"regionDiffers": false
+}
+],
+"likely": [
+{
+"tag": "aa-ET",
+"base": "aa",
+"trap": false
+},
+{
+"tag": "ab-GE",
+"base": "ab",
+"trap": false
+},
+{
+"tag": "ady-RU",
+"base": "ady",
+"trap": false
+},
+{
+"tag": "af-ZA",
+"base": "af",
+"trap": false
+},
+{
+"tag": "agq-CM",
+"base": "agq",
+"trap": false
+},
+{
+"tag": "ak-GH",
+"base": "ak",
+"trap": false
+},
+{
+"tag": "am-ET",
+"base": "am",
+"trap": false
+},
+{
+"tag": "an-ES",
+"base": "an",
+"trap": false
+},
+{
+"tag": "ann-NG",
+"base": "ann",
+"trap": false
+},
+{
+"tag": "apc-SY",
+"base": "apc",
+"trap": false
+},
+{
+"tag": "ar-EG",
+"base": "ar",
+"trap": true
+},
+{
+"tag": "arn-CL",
+"base": "arn",
+"trap": false
+},
+{
+"tag": "ary-MA",
+"base": "ary",
+"trap": false
+},
+{
+"tag": "as-IN",
+"base": "as",
+"trap": false
+},
+{
+"tag": "asa-TZ",
+"base": "asa",
+"trap": false
+},
+{
+"tag": "ast-ES",
+"base": "ast",
+"trap": false
+},
+{
+"tag": "az-AZ",
+"base": "az",
+"trap": false
+},
+{
+"tag": "az-Arab-IR",
+"base": "az-Arab",
+"trap": false
+},
+{
+"tag": "az-IR",
+"base": "az-Arab",
+"trap": false
+},
+{
+"tag": "az-Cyrl-AZ",
+"base": "az-Cyrl",
+"trap": false
+},
+{
+"tag": "az-Latn-AZ",
+"base": "az-Latn",
+"trap": false
+},
+{
+"tag": "ba-RU",
+"base": "ba",
+"trap": false
+},
+{
+"tag": "bal-PK",
+"base": "bal",
+"trap": false
+},
+{
+"tag": "bal-Arab-PK",
+"base": "bal-Arab",
+"trap": false
+},
+{
+"tag": "bal-Latn-PK",
+"base": "bal-Latn",
+"trap": false
+},
+{
+"tag": "bas-CM",
+"base": "bas",
+"trap": false
+},
+{
+"tag": "be-BY",
+"base": "be",
+"trap": false
+},
+{
+"tag": "bem-ZM",
+"base": "bem",
+"trap": false
+},
+{
+"tag": "bew-ID",
+"base": "bew",
+"trap": false
+},
+{
+"tag": "bez-TZ",
+"base": "bez",
+"trap": false
+},
+{
+"tag": "bg-BG",
+"base": "bg",
+"trap": false
+},
+{
+"tag": "bgc-IN",
+"base": "bgc",
+"trap": false
+},
+{
+"tag": "bgn-PK",
+"base": "bgn",
+"trap": false
+},
+{
+"tag": "bho-IN",
+"base": "bho",
+"trap": false
+},
+{
+"tag": "blo-BJ",
+"base": "blo",
+"trap": false
+},
+{
+"tag": "blt-VN",
+"base": "blt",
+"trap": false
+},
+{
+"tag": "bm-ML",
+"base": "bm",
+"trap": false
+},
+{
+"tag": "bm-Nkoo-ML",
+"base": "bm-Nkoo",
+"trap": false
+},
+{
+"tag": "bn-BD",
+"base": "bn",
+"trap": false
+},
+{
+"tag": "bo-CN",
+"base": "bo",
+"trap": false
+},
+{
+"tag": "bqi-IR",
+"base": "bqi",
+"trap": false
+},
+{
+"tag": "br-FR",
+"base": "br",
+"trap": false
+},
+{
+"tag": "brh-PK",
+"base": "brh",
+"trap": false
+},
+{
+"tag": "brx-IN",
+"base": "brx",
+"trap": false
+},
+{
+"tag": "bs-BA",
+"base": "bs",
+"trap": false
+},
+{
+"tag": "bs-Cyrl-BA",
+"base": "bs-Cyrl",
+"trap": false
+},
+{
+"tag": "bs-Latn-BA",
+"base": "bs-Latn",
+"trap": false
+},
+{
+"tag": "bss-CM",
+"base": "bss",
+"trap": false
+},
+{
+"tag": "bua-RU",
+"base": "bua",
+"trap": false
+},
+{
+"tag": "byn-ER",
+"base": "byn",
+"trap": false
+},
+{
+"tag": "ca-ES",
+"base": "ca",
+"trap": false
+},
+{
+"tag": "cad-US",
+"base": "cad",
+"trap": false
+},
+{
+"tag": "cch-NG",
+"base": "cch",
+"trap": false
+},
+{
+"tag": "ccp-BD",
+"base": "ccp",
+"trap": false
+},
+{
+"tag": "ce-RU",
+"base": "ce",
+"trap": false
+},
+{
+"tag": "ceb-PH",
+"base": "ceb",
+"trap": false
+},
+{
+"tag": "cgg-UG",
+"base": "cgg",
+"trap": false
+},
+{
+"tag": "cho-US",
+"base": "cho",
+"trap": false
+},
+{
+"tag": "chr-US",
+"base": "chr",
+"trap": false
+},
+{
+"tag": "cic-US",
+"base": "cic",
+"trap": false
+},
+{
+"tag": "ckb-IQ",
+"base": "ckb",
+"trap": false
+},
+{
+"tag": "co-FR",
+"base": "co",
+"trap": false
+},
+{
+"tag": "cop-EG",
+"base": "cop",
+"trap": false
+},
+{
+"tag": "cs-CZ",
+"base": "cs",
+"trap": false
+},
+{
+"tag": "csw-CA",
+"base": "csw",
+"trap": false
+},
+{
+"tag": "cu-RU",
+"base": "cu",
+"trap": false
+},
+{
+"tag": "cv-RU",
+"base": "cv",
+"trap": false
+},
+{
+"tag": "cy-GB",
+"base": "cy",
+"trap": false
+},
+{
+"tag": "da-DK",
+"base": "da",
+"trap": false
+},
+{
+"tag": "dav-KE",
+"base": "dav",
+"trap": false
+},
+{
+"tag": "de-DE",
+"base": "de",
+"trap": false
+},
+{
+"tag": "dje-NE",
+"base": "dje",
+"trap": false
+},
+{
+"tag": "doi-IN",
+"base": "doi",
+"trap": false
+},
+{
+"tag": "dsb-DE",
+"base": "dsb",
+"trap": false
+},
+{
+"tag": "dua-CM",
+"base": "dua",
+"trap": false
+},
+{
+"tag": "dv-MV",
+"base": "dv",
+"trap": false
+},
+{
+"tag": "dyo-SN",
+"base": "dyo",
+"trap": false
+},
+{
+"tag": "dz-BT",
+"base": "dz",
+"trap": false
+},
+{
+"tag": "ebu-KE",
+"base": "ebu",
+"trap": false
+},
+{
+"tag": "ee-GH",
+"base": "ee",
+"trap": false
+},
+{
+"tag": "el-GR",
+"base": "el",
+"trap": false
+},
+{
+"tag": "en-US",
+"base": "en",
+"trap": false
+},
+{
+"tag": "en-Dsrt-US",
+"base": "en-Dsrt",
+"trap": false
+},
+{
+"tag": "en-Shaw-GB",
+"base": "en-Shaw",
+"trap": false
+},
+{
+"tag": "eo-001",
+"base": "eo",
+"trap": false
+},
+{
+"tag": "es-ES",
+"base": "es",
+"trap": false
+},
+{
+"tag": "et-EE",
+"base": "et",
+"trap": false
+},
+{
+"tag": "eu-ES",
+"base": "eu",
+"trap": false
+},
+{
+"tag": "ewo-CM",
+"base": "ewo",
+"trap": false
+},
+{
+"tag": "fa-IR",
+"base": "fa",
+"trap": false
+},
+{
+"tag": "ff-SN",
+"base": "ff",
+"trap": false
+},
+{
+"tag": "ff-Adlm-GN",
+"base": "ff-Adlm",
+"trap": false
+},
+{
+"tag": "ff-Latn-SN",
+"base": "ff-Latn",
+"trap": false
+},
+{
+"tag": "fi-FI",
+"base": "fi",
+"trap": false
+},
+{
+"tag": "fil-PH",
+"base": "fil",
+"trap": false
+},
+{
+"tag": "fo-FO",
+"base": "fo",
+"trap": false
+},
+{
+"tag": "fr-FR",
+"base": "fr",
+"trap": false
+},
+{
+"tag": "frr-DE",
+"base": "frr",
+"trap": false
+},
+{
+"tag": "fur-IT",
+"base": "fur",
+"trap": false
+},
+{
+"tag": "fy-NL",
+"base": "fy",
+"trap": false
+},
+{
+"tag": "ga-IE",
+"base": "ga",
+"trap": false
+},
+{
+"tag": "gaa-GH",
+"base": "gaa",
+"trap": false
+},
+{
+"tag": "gd-GB",
+"base": "gd",
+"trap": false
+},
+{
+"tag": "gez-ET",
+"base": "gez",
+"trap": false
+},
+{
+"tag": "gl-ES",
+"base": "gl",
+"trap": false
+},
+{
+"tag": "gn-PY",
+"base": "gn",
+"trap": false
+},
+{
+"tag": "gsw-CH",
+"base": "gsw",
+"trap": false
+},
+{
+"tag": "gu-IN",
+"base": "gu",
+"trap": false
+},
+{
+"tag": "guz-KE",
+"base": "guz",
+"trap": false
+},
+{
+"tag": "gv-IM",
+"base": "gv",
+"trap": false
+},
+{
+"tag": "ha-NG",
+"base": "ha",
+"trap": false
+},
+{
+"tag": "ha-Arab-NG",
+"base": "ha-Arab",
+"trap": false
+},
+{
+"tag": "haw-US",
+"base": "haw",
+"trap": false
+},
+{
+"tag": "he-IL",
+"base": "he",
+"trap": false
+},
+{
+"tag": "hi-IN",
+"base": "hi",
+"trap": false
+},
+{
+"tag": "hi-Latn-IN",
+"base": "hi-Latn",
+"trap": false
+},
+{
+"tag": "hnj-US",
+"base": "hnj",
+"trap": false
+},
+{
+"tag": "hnj-Hmnp-US",
+"base": "hnj-Hmnp",
+"trap": false
+},
+{
+"tag": "hr-HR",
+"base": "hr",
+"trap": false
+},
+{
+"tag": "hrx-BR",
+"base": "hrx",
+"trap": false
+},
+{
+"tag": "hsb-DE",
+"base": "hsb",
+"trap": false
+},
+{
+"tag": "ht-HT",
+"base": "ht",
+"trap": false
+},
+{
+"tag": "hu-HU",
+"base": "hu",
+"trap": false
+},
+{
+"tag": "hy-AM",
+"base": "hy",
+"trap": false
+},
+{
+"tag": "ia-001",
+"base": "ia",
+"trap": false
+},
+{
+"tag": "id-ID",
+"base": "id",
+"trap": false
+},
+{
+"tag": "ie-EE",
+"base": "ie",
+"trap": false
+},
+{
+"tag": "ig-NG",
+"base": "ig",
+"trap": false
+},
+{
+"tag": "ii-CN",
+"base": "ii",
+"trap": false
+},
+{
+"tag": "io-001",
+"base": "io",
+"trap": false
+},
+{
+"tag": "is-IS",
+"base": "is",
+"trap": false
+},
+{
+"tag": "isv-001",
+"base": "isv",
+"trap": false
+},
+{
+"tag": "isv-Cyrl-001",
+"base": "isv-Cyrl",
+"trap": false
+},
+{
+"tag": "isv-Latn-001",
+"base": "isv-Latn",
+"trap": false
+},
+{
+"tag": "it-IT",
+"base": "it",
+"trap": false
+},
+{
+"tag": "iu-CA",
+"base": "iu",
+"trap": false
+},
+{
+"tag": "iu-Latn-CA",
+"base": "iu-Latn",
+"trap": false
+},
+{
+"tag": "ja-JP",
+"base": "ja",
+"trap": false
+},
+{
+"tag": "jbo-001",
+"base": "jbo",
+"trap": false
+},
+{
+"tag": "jgo-CM",
+"base": "jgo",
+"trap": false
+},
+{
+"tag": "jmc-TZ",
+"base": "jmc",
+"trap": false
+},
+{
+"tag": "jv-ID",
+"base": "jv",
+"trap": false
+},
+{
+"tag": "ka-GE",
+"base": "ka",
+"trap": false
+},
+{
+"tag": "kaa-UZ",
+"base": "kaa",
+"trap": false
+},
+{
+"tag": "kaa-Cyrl-UZ",
+"base": "kaa-Cyrl",
+"trap": false
+},
+{
+"tag": "kaa-Latn-UZ",
+"base": "kaa-Latn",
+"trap": false
+},
+{
+"tag": "kab-DZ",
+"base": "kab",
+"trap": false
+},
+{
+"tag": "kaj-NG",
+"base": "kaj",
+"trap": false
+},
+{
+"tag": "kam-KE",
+"base": "kam",
+"trap": false
+},
+{
+"tag": "kbd-RU",
+"base": "kbd",
+"trap": false
+},
+{
+"tag": "kcg-NG",
+"base": "kcg",
+"trap": false
+},
+{
+"tag": "kde-TZ",
+"base": "kde",
+"trap": false
+},
+{
+"tag": "kea-CV",
+"base": "kea",
+"trap": false
+},
+{
+"tag": "kek-GT",
+"base": "kek",
+"trap": false
+},
+{
+"tag": "ken-CM",
+"base": "ken",
+"trap": false
+},
+{
+"tag": "kgp-BR",
+"base": "kgp",
+"trap": false
+},
+{
+"tag": "khq-ML",
+"base": "khq",
+"trap": false
+},
+{
+"tag": "ki-KE",
+"base": "ki",
+"trap": false
+},
+{
+"tag": "kk-KZ",
+"base": "kk",
+"trap": false
+},
+{
+"tag": "kk-Arab-CN",
+"base": "kk-Arab",
+"trap": false
+},
+{
+"tag": "kk-CN",
+"base": "kk-Arab",
+"trap": false
+},
+{
+"tag": "kk-Cyrl-KZ",
+"base": "kk-Cyrl",
+"trap": false
+},
+{
+"tag": "kkj-CM",
+"base": "kkj",
+"trap": false
+},
+{
+"tag": "kl-GL",
+"base": "kl",
+"trap": false
+},
+{
+"tag": "kln-KE",
+"base": "kln",
+"trap": false
+},
+{
+"tag": "km-KH",
+"base": "km",
+"trap": false
+},
+{
+"tag": "kn-IN",
+"base": "kn",
+"trap": false
+},
+{
+"tag": "ko-KR",
+"base": "ko",
+"trap": false
+},
+{
+"tag": "kok-IN",
+"base": "kok",
+"trap": false
+},
+{
+"tag": "kok-Deva-IN",
+"base": "kok-Deva",
+"trap": false
+},
+{
+"tag": "kok-Latn-IN",
+"base": "kok-Latn",
+"trap": false
+},
+{
+"tag": "kpe-LR",
+"base": "kpe",
+"trap": false
+},
+{
+"tag": "ks-IN",
+"base": "ks",
+"trap": false
+},
+{
+"tag": "ks-Arab-IN",
+"base": "ks-Arab",
+"trap": false
+},
+{
+"tag": "ks-Deva-IN",
+"base": "ks-Deva",
+"trap": false
+},
+{
+"tag": "ksb-TZ",
+"base": "ksb",
+"trap": false
+},
+{
+"tag": "ksf-CM",
+"base": "ksf",
+"trap": false
+},
+{
+"tag": "ksh-DE",
+"base": "ksh",
+"trap": false
+},
+{
+"tag": "ku-TR",
+"base": "ku",
+"trap": false
+},
+{
+"tag": "ku-Arab-IQ",
+"base": "ku-Arab",
+"trap": false
+},
+{
+"tag": "ku-IQ",
+"base": "ku-Arab",
+"trap": false
+},
+{
+"tag": "ku-Latn-TR",
+"base": "ku-Latn",
+"trap": false
+},
+{
+"tag": "kw-GB",
+"base": "kw",
+"trap": false
+},
+{
+"tag": "kxv-IN",
+"base": "kxv",
+"trap": false
+},
+{
+"tag": "kxv-Deva-IN",
+"base": "kxv-Deva",
+"trap": false
+},
+{
+"tag": "kxv-Latn-IN",
+"base": "kxv-Latn",
+"trap": false
+},
+{
+"tag": "kxv-Orya-IN",
+"base": "kxv-Orya",
+"trap": false
+},
+{
+"tag": "kxv-Telu-IN",
+"base": "kxv-Telu",
+"trap": false
+},
+{
+"tag": "ky-KG",
+"base": "ky",
+"trap": false
+},
+{
+"tag": "la-VA",
+"base": "la",
+"trap": false
+},
+{
+"tag": "lag-TZ",
+"base": "lag",
+"trap": false
+},
+{
+"tag": "lb-LU",
+"base": "lb",
+"trap": false
+},
+{
+"tag": "lg-UG",
+"base": "lg",
+"trap": false
+},
+{
+"tag": "lij-IT",
+"base": "lij",
+"trap": false
+},
+{
+"tag": "lkt-US",
+"base": "lkt",
+"trap": false
+},
+{
+"tag": "lld-IT",
+"base": "lld",
+"trap": false
+},
+{
+"tag": "lmo-IT",
+"base": "lmo",
+"trap": false
+},
+{
+"tag": "ln-CD",
+"base": "ln",
+"trap": false
+},
+{
+"tag": "lo-LA",
+"base": "lo",
+"trap": false
+},
+{
+"tag": "lrc-IR",
+"base": "lrc",
+"trap": false
+},
+{
+"tag": "lt-LT",
+"base": "lt",
+"trap": false
+},
+{
+"tag": "ltg-LV",
+"base": "ltg",
+"trap": false
+},
+{
+"tag": "lu-CD",
+"base": "lu",
+"trap": false
+},
+{
+"tag": "luo-KE",
+"base": "luo",
+"trap": false
+},
+{
+"tag": "luy-KE",
+"base": "luy",
+"trap": false
+},
+{
+"tag": "lv-LV",
+"base": "lv",
+"trap": false
+},
+{
+"tag": "lzz-TR",
+"base": "lzz",
+"trap": false
+},
+{
+"tag": "mai-IN",
+"base": "mai",
+"trap": false
+},
+{
+"tag": "mas-KE",
+"base": "mas",
+"trap": false
+},
+{
+"tag": "mdf-RU",
+"base": "mdf",
+"trap": false
+},
+{
+"tag": "mer-KE",
+"base": "mer",
+"trap": false
+},
+{
+"tag": "mfe-MU",
+"base": "mfe",
+"trap": false
+},
+{
+"tag": "mg-MG",
+"base": "mg",
+"trap": false
+},
+{
+"tag": "mgh-MZ",
+"base": "mgh",
+"trap": false
+},
+{
+"tag": "mgo-CM",
+"base": "mgo",
+"trap": false
+},
+{
+"tag": "mhn-IT",
+"base": "mhn",
+"trap": false
+},
+{
+"tag": "mi-NZ",
+"base": "mi",
+"trap": false
+},
+{
+"tag": "mic-CA",
+"base": "mic",
+"trap": false
+},
+{
+"tag": "mk-MK",
+"base": "mk",
+"trap": false
+},
+{
+"tag": "ml-IN",
+"base": "ml",
+"trap": false
+},
+{
+"tag": "mn-MN",
+"base": "mn",
+"trap": false
+},
+{
+"tag": "mn-Mong-CN",
+"base": "mn-Mong",
+"trap": false
+},
+{
+"tag": "mn-CN",
+"base": "mn-Mong",
+"trap": false
+},
+{
+"tag": "mni-IN",
+"base": "mni",
+"trap": false
+},
+{
+"tag": "mni-Beng-IN",
+"base": "mni-Beng",
+"trap": false
+},
+{
+"tag": "mni-Mtei-IN",
+"base": "mni-Mtei",
+"trap": false
+},
+{
+"tag": "moh-CA",
+"base": "moh",
+"trap": false
+},
+{
+"tag": "mr-IN",
+"base": "mr",
+"trap": false
+},
+{
+"tag": "mrh-IN",
+"base": "mrh",
+"trap": false
+},
+{
+"tag": "ms-MY",
+"base": "ms",
+"trap": false
+},
+{
+"tag": "ms-Arab-MY",
+"base": "ms-Arab",
+"trap": false
+},
+{
+"tag": "mt-MT",
+"base": "mt",
+"trap": false
+},
+{
+"tag": "mua-CM",
+"base": "mua",
+"trap": false
+},
+{
+"tag": "mus-US",
+"base": "mus",
+"trap": false
+},
+{
+"tag": "mww-US",
+"base": "mww",
+"trap": false
+},
+{
+"tag": "mww-Hmnp-US",
+"base": "mww-Hmnp",
+"trap": false
+},
+{
+"tag": "my-MM",
+"base": "my",
+"trap": false
+},
+{
+"tag": "myv-RU",
+"base": "myv",
+"trap": false
+},
+{
+"tag": "mzn-IR",
+"base": "mzn",
+"trap": false
+},
+{
+"tag": "naq-NA",
+"base": "naq",
+"trap": false
+},
+{
+"tag": "nb-NO",
+"base": "nb",
+"trap": false
+},
+{
+"tag": "nd-ZW",
+"base": "nd",
+"trap": false
+},
+{
+"tag": "nds-DE",
+"base": "nds",
+"trap": false
+},
+{
+"tag": "ne-NP",
+"base": "ne",
+"trap": false
+},
+{
+"tag": "nl-NL",
+"base": "nl",
+"trap": false
+},
+{
+"tag": "nmg-CM",
+"base": "nmg",
+"trap": false
+},
+{
+"tag": "nn-NO",
+"base": "nn",
+"trap": false
+},
+{
+"tag": "nnh-CM",
+"base": "nnh",
+"trap": false
+},
+{
+"tag": "no-NO",
+"base": "no",
+"trap": false
+},
+{
+"tag": "nqo-GN",
+"base": "nqo",
+"trap": false
+},
+{
+"tag": "nr-ZA",
+"base": "nr",
+"trap": false
+},
+{
+"tag": "nso-ZA",
+"base": "nso",
+"trap": false
+},
+{
+"tag": "nus-SS",
+"base": "nus",
+"trap": false
+},
+{
+"tag": "nv-US",
+"base": "nv",
+"trap": false
+},
+{
+"tag": "ny-MW",
+"base": "ny",
+"trap": false
+},
+{
+"tag": "nyn-UG",
+"base": "nyn",
+"trap": false
+},
+{
+"tag": "oc-FR",
+"base": "oc",
+"trap": false
+},
+{
+"tag": "oka-CA",
+"base": "oka",
+"trap": false
+},
+{
+"tag": "om-ET",
+"base": "om",
+"trap": false
+},
+{
+"tag": "or-IN",
+"base": "or",
+"trap": false
+},
+{
+"tag": "os-GE",
+"base": "os",
+"trap": false
+},
+{
+"tag": "osa-US",
+"base": "osa",
+"trap": false
+},
+{
+"tag": "pa-IN",
+"base": "pa",
+"trap": false
+},
+{
+"tag": "pa-Arab-PK",
+"base": "pa-Arab",
+"trap": false
+},
+{
+"tag": "pa-PK",
+"base": "pa-Arab",
+"trap": false
+},
+{
+"tag": "pa-Guru-IN",
+"base": "pa-Guru",
+"trap": false
+},
+{
+"tag": "pap-CW",
+"base": "pap",
+"trap": false
+},
+{
+"tag": "pcm-NG",
+"base": "pcm",
+"trap": false
+},
+{
+"tag": "pi-GB",
+"base": "pi",
+"trap": false
+},
+{
+"tag": "pi-Latn-GB",
+"base": "pi-Latn",
+"trap": false
+},
+{
+"tag": "pis-SB",
+"base": "pis",
+"trap": false
+},
+{
+"tag": "pl-PL",
+"base": "pl",
+"trap": false
+},
+{
+"tag": "pms-IT",
+"base": "pms",
+"trap": false
+},
+{
+"tag": "prg-PL",
+"base": "prg",
+"trap": false
+},
+{
+"tag": "ps-AF",
+"base": "ps",
+"trap": false
+},
+{
+"tag": "pt-BR",
+"base": "pt",
+"trap": false
+},
+{
+"tag": "qu-PE",
+"base": "qu",
+"trap": false
+},
+{
+"tag": "quc-GT",
+"base": "quc",
+"trap": false
+},
+{
+"tag": "raj-IN",
+"base": "raj",
+"trap": false
+},
+{
+"tag": "rhg-MM",
+"base": "rhg",
+"trap": false
+},
+{
+"tag": "rhg-Rohg-MM",
+"base": "rhg-Rohg",
+"trap": false
+},
+{
+"tag": "rif-MA",
+"base": "rif",
+"trap": false
+},
+{
+"tag": "rm-CH",
+"base": "rm",
+"trap": false
+},
+{
+"tag": "rn-BI",
+"base": "rn",
+"trap": false
+},
+{
+"tag": "ro-RO",
+"base": "ro",
+"trap": false
+},
+{
+"tag": "rof-TZ",
+"base": "rof",
+"trap": false
+},
+{
+"tag": "ru-RU",
+"base": "ru",
+"trap": false
+},
+{
+"tag": "rw-RW",
+"base": "rw",
+"trap": false
+},
+{
+"tag": "rwk-TZ",
+"base": "rwk",
+"trap": false
+},
+{
+"tag": "sa-IN",
+"base": "sa",
+"trap": false
+},
+{
+"tag": "sah-RU",
+"base": "sah",
+"trap": false
+},
+{
+"tag": "saq-KE",
+"base": "saq",
+"trap": false
+},
+{
+"tag": "sat-IN",
+"base": "sat",
+"trap": false
+},
+{
+"tag": "sat-Deva-IN",
+"base": "sat-Deva",
+"trap": false
+},
+{
+"tag": "sat-Olck-IN",
+"base": "sat-Olck",
+"trap": false
+},
+{
+"tag": "sbp-TZ",
+"base": "sbp",
+"trap": false
+},
+{
+"tag": "sc-IT",
+"base": "sc",
+"trap": false
+},
+{
+"tag": "scn-IT",
+"base": "scn",
+"trap": false
+},
+{
+"tag": "sd-PK",
+"base": "sd",
+"trap": false
+},
+{
+"tag": "sd-Arab-PK",
+"base": "sd-Arab",
+"trap": false
+},
+{
+"tag": "sd-Deva-IN",
+"base": "sd-Deva",
+"trap": false
+},
+{
+"tag": "sd-IN",
+"base": "sd-Deva",
+"trap": false
+},
+{
+"tag": "sdh-IR",
+"base": "sdh",
+"trap": false
+},
+{
+"tag": "se-NO",
+"base": "se",
+"trap": false
+},
+{
+"tag": "seh-MZ",
+"base": "seh",
+"trap": false
+},
+{
+"tag": "ses-ML",
+"base": "ses",
+"trap": false
+},
+{
+"tag": "sg-CF",
+"base": "sg",
+"trap": false
+},
+{
+"tag": "sgs-LT",
+"base": "sgs",
+"trap": false
+},
+{
+"tag": "shi-MA",
+"base": "shi",
+"trap": false
+},
+{
+"tag": "shi-Latn-MA",
+"base": "shi-Latn",
+"trap": false
+},
+{
+"tag": "shi-Tfng-MA",
+"base": "shi-Tfng",
+"trap": false
+},
+{
+"tag": "shn-MM",
+"base": "shn",
+"trap": false
+},
+{
+"tag": "si-LK",
+"base": "si",
+"trap": false
+},
+{
+"tag": "sid-ET",
+"base": "sid",
+"trap": false
+},
+{
+"tag": "sk-SK",
+"base": "sk",
+"trap": false
+},
+{
+"tag": "skr-PK",
+"base": "skr",
+"trap": false
+},
+{
+"tag": "sl-SI",
+"base": "sl",
+"trap": false
+},
+{
+"tag": "sma-SE",
+"base": "sma",
+"trap": false
+},
+{
+"tag": "smj-SE",
+"base": "smj",
+"trap": false
+},
+{
+"tag": "smn-FI",
+"base": "smn",
+"trap": false
+},
+{
+"tag": "sms-FI",
+"base": "sms",
+"trap": false
+},
+{
+"tag": "sn-ZW",
+"base": "sn",
+"trap": false
+},
+{
+"tag": "so-SO",
+"base": "so",
+"trap": false
+},
+{
+"tag": "sq-AL",
+"base": "sq",
+"trap": false
+},
+{
+"tag": "sr-RS",
+"base": "sr",
+"trap": false
+},
+{
+"tag": "sr-Cyrl-RS",
+"base": "sr-Cyrl",
+"trap": false
+},
+{
+"tag": "sr-Latn-RS",
+"base": "sr-Latn",
+"trap": false
+},
+{
+"tag": "ss-ZA",
+"base": "ss",
+"trap": false
+},
+{
+"tag": "ssy-ER",
+"base": "ssy",
+"trap": false
+},
+{
+"tag": "st-ZA",
+"base": "st",
+"trap": false
+},
+{
+"tag": "su-ID",
+"base": "su",
+"trap": false
+},
+{
+"tag": "su-Latn-ID",
+"base": "su-Latn",
+"trap": false
+},
+{
+"tag": "sus-GN",
+"base": "sus",
+"trap": false
+},
+{
+"tag": "suz-NP",
+"base": "suz",
+"trap": false
+},
+{
+"tag": "suz-Deva-NP",
+"base": "suz-Deva",
+"trap": false
+},
+{
+"tag": "suz-Sunu-NP",
+"base": "suz-Sunu",
+"trap": false
+},
+{
+"tag": "sv-SE",
+"base": "sv",
+"trap": false
+},
+{
+"tag": "sw-TZ",
+"base": "sw",
+"trap": false
+},
+{
+"tag": "syr-IQ",
+"base": "syr",
+"trap": false
+},
+{
+"tag": "szl-PL",
+"base": "szl",
+"trap": false
+},
+{
+"tag": "ta-IN",
+"base": "ta",
+"trap": false
+},
+{
+"tag": "te-IN",
+"base": "te",
+"trap": false
+},
+{
+"tag": "teo-UG",
+"base": "teo",
+"trap": false
+},
+{
+"tag": "tg-TJ",
+"base": "tg",
+"trap": false
+},
+{
+"tag": "th-TH",
+"base": "th",
+"trap": false
+},
+{
+"tag": "ti-ET",
+"base": "ti",
+"trap": false
+},
+{
+"tag": "tig-ER",
+"base": "tig",
+"trap": false
+},
+{
+"tag": "tk-TM",
+"base": "tk",
+"trap": false
+},
+{
+"tag": "tn-ZA",
+"base": "tn",
+"trap": false
+},
+{
+"tag": "to-TO",
+"base": "to",
+"trap": false
+},
+{
+"tag": "tok-001",
+"base": "tok",
+"trap": false
+},
+{
+"tag": "tpi-PG",
+"base": "tpi",
+"trap": false
+},
+{
+"tag": "tr-TR",
+"base": "tr",
+"trap": false
+},
+{
+"tag": "trv-TW",
+"base": "trv",
+"trap": false
+},
+{
+"tag": "trw-PK",
+"base": "trw",
+"trap": false
+},
+{
+"tag": "ts-ZA",
+"base": "ts",
+"trap": false
+},
+{
+"tag": "tt-RU",
+"base": "tt",
+"trap": false
+},
+{
+"tag": "twq-NE",
+"base": "twq",
+"trap": false
+},
+{
+"tag": "tyv-RU",
+"base": "tyv",
+"trap": false
+},
+{
+"tag": "tzm-MA",
+"base": "tzm",
+"trap": false
+},
+{
+"tag": "ug-CN",
+"base": "ug",
+"trap": false
+},
+{
+"tag": "uk-UA",
+"base": "uk",
+"trap": false
+},
+{
+"tag": "ur-PK",
+"base": "ur",
+"trap": false
+},
+{
+"tag": "uz-UZ",
+"base": "uz",
+"trap": false
+},
+{
+"tag": "uz-Arab-AF",
+"base": "uz-Arab",
+"trap": false
+},
+{
+"tag": "uz-AF",
+"base": "uz-Arab",
+"trap": false
+},
+{
+"tag": "uz-Cyrl-UZ",
+"base": "uz-Cyrl",
+"trap": false
+},
+{
+"tag": "uz-Latn-UZ",
+"base": "uz-Latn",
+"trap": false
+},
+{
+"tag": "vai-LR",
+"base": "vai",
+"trap": false
+},
+{
+"tag": "vai-Latn-LR",
+"base": "vai-Latn",
+"trap": false
+},
+{
+"tag": "vai-Vaii-LR",
+"base": "vai-Vaii",
+"trap": false
+},
+{
+"tag": "ve-ZA",
+"base": "ve",
+"trap": false
+},
+{
+"tag": "vec-IT",
+"base": "vec",
+"trap": false
+},
+{
+"tag": "vi-VN",
+"base": "vi",
+"trap": false
+},
+{
+"tag": "vmw-MZ",
+"base": "vmw",
+"trap": false
+},
+{
+"tag": "vo-001",
+"base": "vo",
+"trap": false
+},
+{
+"tag": "vun-TZ",
+"base": "vun",
+"trap": false
+},
+{
+"tag": "wa-BE",
+"base": "wa",
+"trap": false
+},
+{
+"tag": "wae-CH",
+"base": "wae",
+"trap": false
+},
+{
+"tag": "wal-ET",
+"base": "wal",
+"trap": false
+},
+{
+"tag": "wbp-AU",
+"base": "wbp",
+"trap": false
+},
+{
+"tag": "wo-SN",
+"base": "wo",
+"trap": false
+},
+{
+"tag": "xdq-RU",
+"base": "xdq",
+"trap": false
+},
+{
+"tag": "xh-ZA",
+"base": "xh",
+"trap": false
+},
+{
+"tag": "xnr-IN",
+"base": "xnr",
+"trap": false
+},
+{
+"tag": "xog-UG",
+"base": "xog",
+"trap": false
+},
+{
+"tag": "yav-CM",
+"base": "yav",
+"trap": false
+},
+{
+"tag": "yi-UA",
+"base": "yi",
+"trap": false
+},
+{
+"tag": "yo-NG",
+"base": "yo",
+"trap": false
+},
+{
+"tag": "yrl-BR",
+"base": "yrl",
+"trap": false
+},
+{
+"tag": "yue-HK",
+"base": "yue",
+"trap": false
+},
+{
+"tag": "yue-Hans-CN",
+"base": "yue-Hans",
+"trap": false
+},
+{
+"tag": "yue-CN",
+"base": "yue-Hans",
+"trap": false
+},
+{
+"tag": "yue-Hant-HK",
+"base": "yue-Hant",
+"trap": false
+},
+{
+"tag": "za-CN",
+"base": "za",
+"trap": false
+},
+{
+"tag": "zgh-MA",
+"base": "zgh",
+"trap": false
+},
+{
+"tag": "zh-CN",
+"base": "zh",
+"trap": false
+},
+{
+"tag": "zh-Hans-CN",
+"base": "zh-Hans",
+"trap": false
+},
+{
+"tag": "zh-Hant-TW",
+"base": "zh-Hant",
+"trap": false
+},
+{
+"tag": "zh-TW",
+"base": "zh-Hant",
+"trap": false
+},
+{
+"tag": "zh-Latn-CN",
+"base": "zh-Latn",
+"trap": false
+},
+{
+"tag": "zu-ZA",
+"base": "zu",
+"trap": false
+}
+]
+}
